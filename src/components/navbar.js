@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import NightSwitch from './nightSwitch';
 import img from '../images/logo.jpg';
 import '../css/navbar.css';
 
@@ -14,6 +15,8 @@ function NavBar() {
                 <Link className='link' to="/homepage">Home</Link>
                 <Link className='link' to="/about">About</Link>
             </nav>
+
+            <NightSwitch />
         </div>
     );
 }
