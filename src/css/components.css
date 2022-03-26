@@ -47,9 +47,22 @@ a {
     margin-bottom: 30px;
 }
 
+/* Mobile only */
+@media only screen and (max-width: 969px) {
+    h1 {
+        font-size: 11vw;
+    }
+
+    a, p, legend {
+        font-size: 3vw;
+    }
+}
+
 /* Desktop only */
 @media only screen and (min-width: 970px) {
     .main-text {
+        padding: 30px;
+        margin-bottom: 30px;
         width: 60%;
     }
 

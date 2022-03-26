@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    position: relative;
+    width: var(--logo-width);
+}
+
+.logo img {
+    border-radius: 50%;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+/* Desktop only */
+@media only screen and (min-width: 970px) {
+    .logo img {
+        border: 3px solid var(--header-border-color);
+        position: absolute;
+
+        top: calc(20px + 20px - (var(--logo-width) / 2)); /* navbar's padding, plus half of navbar's height, minus half the image's height */
+        width: calc(var(--logo-width) - (2 * 3px));
+    }
+}

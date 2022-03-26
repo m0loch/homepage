@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import NightSwitch from './nightSwitch';
 import img from '../images/logo.jpg';
+
+import '../css/logo.css';
 import '../css/navbar.css';
 
 function NavBar() {

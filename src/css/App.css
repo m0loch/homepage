@@ -5,8 +5,10 @@
   --highlight: #303030;
   --body-background-color: #F0F0F0;
   --body-color: #393939;
+  --btn-highlight: #BFBCC0;
   --a-color: #028666;
   --square-color: #FFFFFF;
+  --progress-back: #BFBCC0;
 
   --logo-width: clamp(10px, 10vw, 100px);
 }
@@ -22,6 +24,22 @@
   --a-color: #FFFF00;
   --square-color: #465e85;
   --progress-back: #465e85;
+}
+
+@media only screen and (max-width: 970px) {  
+  :root {
+    --logo-width: 30px;
+  }
+
+  .only-desktop {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 969px) {
+  .only-mobile {
+    visibility: hidden;
+  }
 }
 
 .App-footer {
