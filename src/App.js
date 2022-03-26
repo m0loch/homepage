@@ -6,6 +6,8 @@ import {
   Route
 } from "react-router-dom";
 
+import posts from './data/posts';
+
 import NavBar from './components/navbar';
 import Main from './components/main';
 import About from './components/about';
@@ -20,13 +22,9 @@ function App() {
       <Routes>
 
         <Route path="/about" element={<About/>} />
-        <Route path="/homepage" element={<Main/>} />
+        <Route path="/homepage" element={<Main posts={posts}/>} />
 
       </Routes>
-
-      <div className="App-footer">
-        <a href="mailto:romeo.graifenberg@gmail.com">Contact me</a>
-      </div>
     </div>
   );
 }

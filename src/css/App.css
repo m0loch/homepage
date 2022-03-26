@@ -41,9 +41,3 @@
     visibility: hidden;
   }
 }
-
-.App-footer {
-  display: flex;
-  justify-content: center;
-  padding: 100px 30px;
-}
