@@ -1,6 +1,18 @@
 /* Base tags */
+.App {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+ 
 body {
     transition: 0.3s;
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--body-background-color);
@@ -8,7 +20,7 @@ body {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 60px;
     line-height: 70px;
     font-weight: 300;
     margin: 10px 0;
@@ -21,7 +33,7 @@ h2 {
     margin: 50px 0 10px 0;
 }
 
-p {
+p, legend, ul li {
     font-size: 20px;
     margin: 0;
 }
@@ -33,28 +45,105 @@ a {
     color: var(--a-color);
 }
 
+p a {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+button {
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+
+    background-color: var(--body-background-color); /* ugly - especially in dark mode */
+    color:var(--body-color);
+
+    border: solid var(--a-color);
+    border-radius: 5px;    
+}
+
+button:hover {
+    background-color: var(--btn-highlight);
+}
+
+progress {
+    height: 15px;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--progress-back);
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--a-color);
+    border-radius: 5px;
+}
+
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: .85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
 /* Sections */
 .main {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 30px;
 }
-  
-.main-text {
-    padding: 30px;
-    margin-bottom: 30px;
+
+/* Squares section */
+.sub-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    transition: 0.3s;
+    width: 98%;
+    margin: 1%;
+    height: 350px;
+    background-color: var(--square-color);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.full-body {
+    align-self: center;
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    max-height: 90vh;
 }
 
 /* Mobile only */
 @media only screen and (max-width: 969px) {
     h1 {
-        font-size: 11vw;
+        font-size: 8vw;
     }
 
-    a, p, legend {
-        font-size: 3vw;
+    h2 {
+        font-size: 6vw;
+    }
+
+    a, p, legend, li {
+        font-size: 5vw;
     }
 }
 
