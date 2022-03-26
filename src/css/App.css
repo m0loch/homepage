@@ -1,0 +1,18 @@
+:root {
+  --header-background: #04FBBB;
+  --header-border-color: #FFFFFF;
+  --shadow: #028666;
+  --highlight: #303030;
+  --body-background-color: #F0F0F0;
+  --body-color: #393939;
+  --a-color: #028666;
+  --square-color: #FFFFFF;
+
+  --logo-width: clamp(10px, 10vw, 100px);
+}
+
+.App-footer {
+  display: flex;
+  justify-content: center;
+  padding: 100px 30px;
+}

@@ -1,0 +1,61 @@
+/* Base tags */
+body {
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background-color);
+    color:var(--body-color);
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin: 50px 0 10px 0;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+    color: var(--a-color);
+}
+
+/* Sections */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+  
+.main-text {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* Desktop only */
+@media only screen and (min-width: 970px) {
+    .main-text {
+        width: 60%;
+    }
+
+    .square {
+        width: 48%;
+        margin: 1%;
+        height: 350px;
+    }
+}

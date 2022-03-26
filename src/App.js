@@ -1,9 +1,12 @@
-import './App.css';
+import './css/App.css';
+import './css/components.css';
+
 import {
   Routes,
   Route
 } from "react-router-dom";
 
+import NavBar from './components/navbar';
 import Main from './components/main';
 import About from './components/about';
 
@@ -12,6 +15,8 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar/>
+
       <Routes>
 
         <Route path="/about" element={<About/>} />
@@ -19,7 +24,9 @@ function App() {
 
       </Routes>
 
-      <a href="mailto:romeo.graifenberg@gmail.com">Contact me</a>
+      <div className="App-footer">
+        <a href="mailto:romeo.graifenberg@gmail.com">Contact me</a>
+      </div>
     </div>
   );
 }
