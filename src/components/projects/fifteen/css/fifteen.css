@@ -1,0 +1,102 @@
+@keyframes slideLeft {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+  
+@keyframes slideRight {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+.container {
+  width: 40vw;
+}
+
+.root {
+  margin-top: 8px;
+  background-color: var(--header-background);
+  border-radius: 5px;
+  position: relative;
+}
+
+.tileEmbed {
+  padding: 1vw;
+}
+
+.tile {
+  display: flex;
+  background-color: var(--square-color);
+  color: var(--a-color);
+  align-content: center;
+  justify-content: center;
+  width: 8vw;
+  height: 8vw;
+}
+
+.value {
+  margin: auto;
+}
+
+.hole {
+  opacity: 0;
+}
+
+@keyframes appear {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.winpanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--header-background);
+  border-radius: 5px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  animation: appear .5s ease-in;
+}
+
+.transitionLeft {
+  animation: slideLeft 150ms linear;
+}
+
+.transitionRight {
+  animation: slideRight 150ms linear;
+}
+
+.transitionUp {
+  animation: slideUp 150ms linear;
+}
+
+.transitionDown {
+  animation: slideDown 150ms linear;
+}
+
+/* Mobile only */
+@media only screen and (max-width:969px) {
+  .container {
+    width: 80vw;
+  }
+
+  .tile {
+    width: 16vw;
+    height: 16vw;
+  }
+}

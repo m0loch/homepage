@@ -15,7 +15,8 @@ function NavBar() {
 
             <nav>
                 <Link className='link' to="/homepage">Home</Link>
-                <Link className='link' to="/about">About</Link>
+                <Link className='link' to="/homepage/projects">Projects</Link>
+                <Link className='link' to="/homepage/about">About</Link>
             </nav>
 
             <NightSwitch />
