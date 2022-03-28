@@ -7,7 +7,7 @@ function Square(props) {
             <h2>{props.title}</h2>
             <p>{props.content}</p>
             <br/>
-            <Link to={`/homepage/projects/${props.url}`}>Check it out</Link>
+            <Link to={`/projects/${props.url}`}>Check it out</Link>
         </div>
     );
 }

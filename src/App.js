@@ -24,8 +24,8 @@ function App() {
       <Routes>
 
         {/* Projects */}
-        <Route path="/homepage/projects/fifteen" element={<Fifteen/>} />
-        <Route path="/homepage/projects/next" element={
+        <Route path="/projects/fifteen" element={<Fifteen/>} />
+        <Route path="/projects/next" element={
           <section className="main">
             <div className="main-text">
               <h1>Possible followups</h1>
@@ -37,8 +37,8 @@ function App() {
 
 
         {/* Main sections  */}
-        <Route path="/homepage/about" element={<About/>} />
-        <Route path="/homepage/projects" element={
+        <Route path="/about" element={<About/>} />
+        <Route path="/projects" element={
           <section className="sub-section">
             {
               games.map(item =>
@@ -48,7 +48,7 @@ function App() {
             )}
           </section>
           } />
-        <Route path="/homepage" element={<Main posts={posts}/>} />
+        <Route path="/" element={<Main posts={posts}/>} />
 
       </Routes>
     </div>

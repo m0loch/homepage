@@ -9,14 +9,14 @@ import '../css/navbar.css';
 function NavBar() {
     return (
         <div className="navbar">
-            <Link className="logo" to="/homepage">
+            <Link className="logo" to="/">
                     <img src={img} alt="logo"></img>
             </Link>
 
             <nav>
-                <Link className='link' to="/homepage">Home</Link>
-                <Link className='link' to="/homepage/projects">Projects</Link>
-                <Link className='link' to="/homepage/about">About</Link>
+                <Link className='link' to="/">Home</Link>
+                <Link className='link' to="/projects">Projects</Link>
+                <Link className='link' to="/about">About</Link>
             </nav>
 
             <NightSwitch />
