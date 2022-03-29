@@ -5,6 +5,11 @@ import './css/fifteen.css';
 import { Grid, Container, Card } from "@mui/material";
 import { moveLeft, moveRight, moveUp, moveDown, moveTile } from './movesHandler';
 
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
 function getInitialConfiguration() {
   const shuffleBag = [];
   for (let i = 1; i <= 15; i++) {
@@ -69,6 +74,9 @@ function Fifteen() {
       }
     }, [tiles, victory]);
 
+    //////////////////////
+    // Keyboard detection
+    //////////////////////
     const handleUserKeyPress = useCallback((event) => {
         switch (event.key) {
           case 'A':
@@ -107,7 +115,54 @@ function Fifteen() {
       };
     }, [handleUserKeyPress]);
 
+    ///////////////////
+    // Swipe detection
+    ///////////////////
+    const handleSwipe = useCallback(() => {
+      const dX = touchendX - touchstartX;
+      const dY = touchendY - touchstartY;
 
+      if (Math.abs(dX) > Math.abs(dY)) {
+        // Horizontal swipe
+        if (dX > 0) {
+          performMove(moveRight);
+        } else {
+          performMove(moveLeft);
+        }
+      } else {
+        // Vertical swipe
+        if (dY > 0) {
+          performMove(moveDown);
+        } else {
+          performMove(moveUp);
+        }
+      }
+    }, [performMove]);
+
+    const detectTouchStart = useCallback((event) => {
+      touchstartX = event.changedTouches[0].screenX;
+      touchstartY = event.changedTouches[0].screenY;
+    }, []);
+
+    const detectTouchEnd = useCallback((event) => {
+      touchendX = event.changedTouches[0].screenX;
+      touchendY = event.changedTouches[0].screenY;
+
+      handleSwipe();
+    }, [handleSwipe]);
+
+    useEffect(() => {
+      window.addEventListener("touchstart", detectTouchStart);
+      window.addEventListener("touchend", detectTouchEnd);
+      return () => {
+        window.removeEventListener("touchstart", detectTouchStart);
+        window.removeEventListener("touchend", detectTouchEnd);
+      };
+    }, [detectTouchStart, detectTouchEnd]);
+
+    ////////////////////////
+    // Check for game's end
+    ////////////////////////
     if (!victory && checkVictory(tiles)) {
       setVictory(true);
     }
