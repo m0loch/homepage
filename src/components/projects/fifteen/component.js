@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 import './css/fifteen.css';
 
 import { Grid, Container, Card } from "@mui/material";
 import { moveLeft, moveRight, moveUp, moveDown, moveTile } from './movesHandler';
+
+const swipeSensibilityRatio = 20;
 
 let touchstartX = 0;
 let touchstartY = 0;
@@ -54,9 +56,12 @@ function Fifteen() {
     const [victory, setVictory] = useState(false);
     const [transition, setTransition] = useState(null);
 
+    const swiperRef = useRef(null);
+
     const newGame = () => {
-      setVictory(false);
+      setTransition(null);
       setTiles(getInitialConfiguration());
+      setVictory(false);
     }
 
     const checkVictory = (tiles) => {
@@ -124,14 +129,14 @@ function Fifteen() {
 
       if (Math.abs(dX) > Math.abs(dY)) {
         // Horizontal swipe
-        if (dX > 0) {
+        if ((Math.abs(dX) > swipeSensibilityRatio) && (dX > 0)) {
           performMove(moveRight);
         } else {
           performMove(moveLeft);
         }
       } else {
         // Vertical swipe
-        if (dY > 0) {
+        if ((Math.abs(dY) > swipeSensibilityRatio) && (dY > 0)) {
           performMove(moveDown);
         } else {
           performMove(moveUp);
@@ -140,23 +145,34 @@ function Fifteen() {
     }, [performMove]);
 
     const detectTouchStart = useCallback((event) => {
-      touchstartX = event.changedTouches[0].screenX;
-      touchstartY = event.changedTouches[0].screenY;
-    }, []);
+      if (!victory) {
+        event.preventDefault();
+        touchstartX = event.changedTouches[0].screenX;
+        touchstartY = event.changedTouches[0].screenY;
+      }
+    }, [victory]);
 
     const detectTouchEnd = useCallback((event) => {
-      touchendX = event.changedTouches[0].screenX;
-      touchendY = event.changedTouches[0].screenY;
+      if (!victory) {
+        event.preventDefault();
+        touchendX = event.changedTouches[0].screenX;
+        touchendY = event.changedTouches[0].screenY;
 
-      handleSwipe();
-    }, [handleSwipe]);
+        handleSwipe();
+      }
+    }, [handleSwipe, victory]);
 
     useEffect(() => {
-      window.addEventListener("touchstart", detectTouchStart);
-      window.addEventListener("touchend", detectTouchEnd);
+      if (swiperRef && swiperRef.current) {
+        swiperRef.current.addEventListener("touchstart", detectTouchStart);
+        swiperRef.current.addEventListener("touchend", detectTouchEnd);
+      }
+
       return () => {
-        window.removeEventListener("touchstart", detectTouchStart);
-        window.removeEventListener("touchend", detectTouchEnd);
+        if (swiperRef && swiperRef.current) {
+          swiperRef.current.removeEventListener("touchstart", detectTouchStart);
+          swiperRef.current.removeEventListener("touchend", detectTouchEnd);
+        }
       };
     }, [detectTouchStart, detectTouchEnd]);
 
@@ -169,7 +185,7 @@ function Fifteen() {
 
     return (
       <Container className="container">
-      <Grid container className="root">
+      <Grid container className="root" ref={swiperRef}>
         {victory ? <WinScreen onClick={newGame}></WinScreen> : null }
         {tiles.map((el, idx) => {
           return (<Grid container item

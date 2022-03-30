@@ -41,3 +41,7 @@
     visibility: hidden;
   }
 }
+
+html {
+  touch-action: pan-down;
+}
