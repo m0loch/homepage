@@ -185,7 +185,7 @@ function Fifteen() {
 
     return (
       <Container className="container">
-      <Grid container className="root" ref={swiperRef}>
+      <Grid container className="root mobile-norefresh" ref={swiperRef}>
         {victory ? <WinScreen onClick={newGame}></WinScreen> : null }
         {tiles.map((el, idx) => {
           return (<Grid container item
