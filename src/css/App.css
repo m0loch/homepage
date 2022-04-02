@@ -28,7 +28,7 @@
 
 @media only screen and (max-width: 970px) {  
   :root {
-    --logo-width: 30px;
+    --logo-width: 6vmin;
   }
 
   .only-desktop {

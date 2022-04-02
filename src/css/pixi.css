@@ -1,12 +1,12 @@
-/* .pixi-container {
-    /* position: relative;
+.pixi-container {
+    position: relative;
     margin: auto;
     width: 100%;
     height: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
-} */
+}
 
 @keyframes appear {
     0%   { opacity: 0; }

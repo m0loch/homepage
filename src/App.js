@@ -19,7 +19,7 @@ import Mosaic from './components/projects/mosaic/component';
 function App() {
 
   return (
-    <div className="App">
+    <>
       <NavBar/>
 
       <Routes>
@@ -53,7 +53,7 @@ function App() {
         <Route path="/" element={<Main posts={posts}/>} />
 
       </Routes>
-    </div>
+    </>
   );
 }
 

@@ -75,19 +75,21 @@ function Mosaic(props) {
     }, [newGame, props.img])
 
     return (
-        <div className="pixi-container">
+        <div className='full-body'>
             {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
-            <Stage style={{margin:"auto"}}>
-                <Board
-                    image={props.img}
-                    rows={props.rows}
-                    cols={props.cols}
-                    sprites={sprites}
-                    loaded={loaded}
-                    onVictory={onVictory}
-                    victory={victory}
-                />
-            </Stage>
+            <div className="pixi-container">
+                <Stage style={{margin:"auto"}}>
+                    <Board
+                        image={props.img}
+                        rows={props.rows}
+                        cols={props.cols}
+                        sprites={sprites}
+                        loaded={loaded}
+                        onVictory={onVictory}
+                        victory={victory}
+                    />
+                </Stage>
+            </div>
         </div>
     );
 }

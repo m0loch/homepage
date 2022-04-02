@@ -4,16 +4,18 @@
     justify-content: space-between;
   
     background-color: var(--header-background);
-    font-size: calc(10px + 2vmin);
 
     border-bottom: 3px solid var(--header-border-color);
-    padding: 5px;
+    padding: 20px;
+
+    z-index: 1;
 }
 
-/* Desktop only */
-@media only screen and (min-width: 970px) {
+/* Mobile only */
+@media only screen and (max-width: 969px) {
     .navbar {
-        padding: 20px;
+        padding: 5px;
+        max-height: calc(8vh - 5px);
     }
 }
 
