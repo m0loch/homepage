@@ -171,6 +171,7 @@ function Fifteen() {
       return () => {
         if (swiperRef && swiperRef.current) {
           swiperRef.current.removeEventListener("touchstart", detectTouchStart);
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           swiperRef.current.removeEventListener("touchend", detectTouchEnd);
         }
       };
