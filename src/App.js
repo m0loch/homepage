@@ -14,6 +14,7 @@ import Main from './components/main';
 import About from './components/about';
 import Square from './components/square';
 import Fifteen from './components/projects/fifteen/component';
+import Mosaic from './components/projects/mosaic/component';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
 
         {/* Projects */}
         <Route path="/projects/fifteen" element={<Fifteen/>} />
+        <Route path="/projects/mosaic" element={<Mosaic img='/assets/mosaic/ff7remake.jpg' rows={5} cols={10}/>} />
         <Route path="/projects/next" element={
           <section className="main">
             <div className="main-text">
