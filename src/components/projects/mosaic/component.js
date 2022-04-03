@@ -76,8 +76,8 @@ function Mosaic(props) {
 
     return (
         <div className='full-body'>
-            {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
             <div className="pixi-container">
+            {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
                 <Stage style={{margin:"auto"}}>
                     <Board
                         image={props.img}

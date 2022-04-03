@@ -51,28 +51,6 @@
   opacity: 0;
 }
 
-@keyframes appear {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.winpanel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: var(--header-background);
-  border-radius: 5px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  animation: appear .5s ease-in;
-}
-
 .transitionLeft {
   animation: slideLeft 150ms linear;
 }

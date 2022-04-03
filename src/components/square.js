@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
-
+import { Card, CardActions, CardContent } from "@mui/material";
 
 function Square(props) {
     return (
-        <div className="square" id={props.id}>
+        <Card className="square" id={props.id}>
+            <CardContent className="content">
             <h2>{props.title}</h2>
             <p>{props.content}</p>
-            <br/>
-            <Link to={`/projects/${props.url}`}>Check it out</Link>
-        </div>
+            </CardContent>
+            <CardActions className="footer">
+                <Link to={`/projects/${props.url}`}>Check it out</Link>
+            </CardActions>
+        </Card>
     );
 }
 
