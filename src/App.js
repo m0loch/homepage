@@ -13,8 +13,8 @@ import NavBar from './components/navbar';
 import Main from './components/main';
 import About from './components/about';
 import Square from './components/square';
-import Fifteen from './components/projects/fifteen/component';
-import Mosaic from './components/projects/mosaic/component';
+import Fifteen from './components/projects/fifteen/fifteen';
+import Mosaic from './components/projects/mosaic/mosaic';
 
 function App() {
 
