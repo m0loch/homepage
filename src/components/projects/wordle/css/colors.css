@@ -1,0 +1,13 @@
+:root {
+    --correct-letter: #04FBBB;
+    --misplaced-letter: #FFFF00;
+    --wrong-letter: #C0C0C0;
+    --letter-color: #028666;
+}
+
+:root .dark {
+    --correct-letter: #04844A; /* 4A3A84 */
+    --misplaced-letter: #848400; /* */
+    --wrong-letter: #232B42;
+    --letter-color: #FFFFFF;
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  grid-gap: 5px;
+}
+
+.tile {
+  display: inline-flex;
+  background-color: var(--square-color);
+  color: var(--letter-color);
+  align-content: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+}
+
+.value {
+  margin: auto;
+}
+
+.hole {
+  opacity: 0;
+}
+
+.correct {
+  background-color: var(--correct-letter);
+}
+
+.misplaced {
+  background-color: var(--misplaced-letter);
+}

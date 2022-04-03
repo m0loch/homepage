@@ -11,6 +11,12 @@ const games = [{
     url: "mosaic",
 },
 {
+    key: 2,
+    title: "Wordle",
+    content: "Just somebody else's successful idea",
+    url: "wordle",
+},
+{
     key: 100,
     title: "Possible followups",
     content: "What will the future bring upon us?",

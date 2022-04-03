@@ -1,0 +1,44 @@
+.keyboard {
+  max-width: 500px;
+  user-select: none;
+  border-radius: 5px;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  margin: 8px;
+  /* https://stackoverflow.com/questions/46167604/ios-html-disable-double-tap-to-zoom */
+  touch-action: manipulation;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 6px 0 0;
+  height: 58px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--square-color);
+  color: var(--letter-color);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: var(--correct-letter);
+}
+
+.misplaced {
+  background-color: var(--misplaced-letter);
+}
+
+.wrong {
+  background-color: var(--wrong-letter);
+}

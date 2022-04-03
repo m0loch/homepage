@@ -15,6 +15,7 @@ import About from './components/about';
 import Square from './components/square';
 import Fifteen from './components/projects/fifteen/fifteen';
 import Mosaic from './components/projects/mosaic/mosaic';
+import Wordle from './components/projects/wordle/wordle';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         {/* Projects */}
         <Route path="/projects/fifteen" element={<Fifteen/>} />
         <Route path="/projects/mosaic" element={<Mosaic img='/assets/mosaic/ff7remake.jpg' rows={5} cols={10}/>} />
+        <Route path="/projects/wordle" element={<Wordle/>} />
         <Route path="/projects/next" element={
           <section className="main">
             <div className="main-text">
