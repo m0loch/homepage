@@ -26,7 +26,7 @@
   --progress-back: #465e85;
 }
 
-@media only screen and (max-width: 970px) {  
+@media only screen and (max-width: 970px) {
   :root {
     --logo-width: 6vmin;
   }

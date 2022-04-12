@@ -10,7 +10,8 @@ import Status from './status';
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function randomizeSolution() {
-  return ValidWords[Math.floor(Math.random() * 2315)];
+  const res = ValidWords[Math.floor(Math.random() * 2315)];
+  return res;
 }
 
 function NormalizeAttempt(value, result) {
@@ -21,10 +22,13 @@ function NormalizeAttempt(value, result) {
   }
 
   [...value].forEach((letter, index) => {
-    if (!result || (result[index] < 0)) {
+    if (!result) {
       retVal.push({ value: letter })
     } else {
-      retVal.push({ value: letter, correct: result[index] === index})
+      retVal.push({
+        value: letter,
+        correct: result[index] === index ? "correct" : result[index] > 0 ? "misplaced" : "wrong",
+      })
     }
   });
 
@@ -58,8 +62,7 @@ function Wordle() {
 
     const submitAttempt = useCallback(() => {
       if (!ValidWords.includes(attempt)) {
-        // Create a better modal
-        alert('nope');
+        // Give some feedback
         return;
       }
 
@@ -96,8 +99,8 @@ function Wordle() {
       updateHints(result);
 
       if (attempt === solution) {
-        alert('WIN');
         setGameEnded(true);
+        setTimeout(() => alert('WIN'), 1600);
       } else if (updatedAttempts.length === 6) {
         alert(`WHY DIDN'T YOU TRY ${solution}?!?`);
         setGameEnded(true);
@@ -171,11 +174,13 @@ function Wordle() {
             <div className="row" key={idx}>
               {([...value]).map((c, idx) => {
                 return (
-                  <Card className={`tile ${c && ('correct' in c) ? (c.correct ? "correct" : "misplaced") : null}`}
+                  <div className="tileContainer">
+                  <Card className={`tile column${idx} ${c && ("correct" in c) ? `${c.correct} guessed` : null }`}
                     key={idx}
                   >
                     <p className="value" key={idx}>{c?.value}</p>
                   </Card>
+                  </div>
                 )})
               }
             </div>

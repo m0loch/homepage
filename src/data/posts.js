@@ -26,6 +26,33 @@ const posts = [{
     I want to point out that the FF7 remake based wallpaper used for that minigame has been taken from <a>https://syanart.com/</a>, head over there if you want to download the original piece of art or another other great ones.
     `,
     signature: `Romeo`,
-}];
+},
+{
+    key: 2,
+    title: "Wordle",
+    date: new Date("2022-04-04"),
+    content: `
+    It's monday morning and I'm tired, and I'm expecting today to be quite a boring day.
+
+    That's why I published yet another Wordle clone, even though I've yet to add working transitions (I'm having trouble with CSS delays, everything will probably just fall into place as soon as I find out what I'm doing wrong).
+
+    In the meantime stay hydrated, and remember that by refreshing the page you'll be immediately in for another word, insteading of having to wait for a full day,
+    `,
+    signature: `Romeo`,
+},
+{
+    key: 3,
+    title: "Wordle (update)",
+    date: new Date("2022-04-12"),
+    content: `
+    I spent a lot of time lately playing Yakuza: Like a Dragon and planning my trip to Paris (in order to attend the wedding of my good friend Diva with Alexis), so I'm sorry I didn't spend much time working on this site.
+
+    Anyway, I'm publishing an updated version of Wordle with some quasi acceptable animations and a slightly better keyboard for mobile.
+    Sadly I think I'll need to come up with something more <i>sophisticated</i> for the flipping animation, as the tiles change colour before the start of the animation and THAT SUCKS.
+    `,
+    signature: `More about that in the next update
+    Romeo`,
+},
+];
 
 export default posts;
