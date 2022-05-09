@@ -166,16 +166,16 @@ function Wordle() {
     }
 
     return (
-      <Container className="container">
+      <Container className="wordle-container">
       <Grid>
         {
           rows.map((value, idx) => {
             return (
-            <div className="row" key={idx}>
+            <div className="wordle-row" key={idx}>
               {([...value]).map((c, idx) => {
                 return (
-                  <div className="tileContainer">
-                  <Card className={`tile column${idx} ${c && ("correct" in c) ? `${c.correct} guessed` : null }`}
+                  <div className="wordle-tileContainer">
+                  <Card className={`wordle-tile column${idx} ${c && ("correct" in c) ? `${c.correct} guessed` : null }`}
                     key={idx}
                   >
                     <p className="value" key={idx}>{c?.value}</p>

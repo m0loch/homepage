@@ -47,7 +47,7 @@ function About() {
                     
                     <a className="contact" href="https://twitter.com/ilmeodev"><TwitterIcon/> @ilmeodev</a>
                     <a className="contact" href="https://github.com/m0loch"><GitHubIcon/>m0loch on GitHub</a>
-                    <a className="contact" href="https://m0loch666.itch.io/"><ItchIoIcon fill="red" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"/>m0loch666 on itch.io MA DAI MA CHE SCHIFO</a>
+                    <a className="contact" href="https://m0loch666.itch.io/"><ItchIoIcon fill="red" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"/>m0loch666 on itch.io</a>
                     <a className="contact" href="https://www.linkedin.com/in/romeo-graifenberg-a5770117b"><LinkedInIcon/>My LinkedIn profile</a>
                     <a className="contact" href="mailto:romeo.graifenberg@gmail.com"><MailOutlineIcon/>Send me an email</a>
 
