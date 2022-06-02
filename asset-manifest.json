@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/homepage/static/css/main.1b1a3da9.css",
-    "main.js": "/homepage/static/js/main.7dc88dc1.js",
+    "main.js": "/homepage/static/js/main.cb12b656.js",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
     "static/media/itchio-logo-textless-white.svg": "/homepage/static/media/itchio-logo-textless-white.bdb53e4f63aab9ff2bada633e16d1c01.svg",
     "index.html": "/homepage/index.html",
     "main.1b1a3da9.css.map": "/homepage/static/css/main.1b1a3da9.css.map",
-    "main.7dc88dc1.js.map": "/homepage/static/js/main.7dc88dc1.js.map"
+    "main.cb12b656.js.map": "/homepage/static/js/main.cb12b656.js.map"
   },
   "entrypoints": [
     "static/css/main.1b1a3da9.css",
-    "static/js/main.7dc88dc1.js"
+    "static/js/main.cb12b656.js"
   ]
 }
