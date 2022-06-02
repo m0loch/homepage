@@ -10,12 +10,12 @@ const games = [{
     content: "A picture has been shattered! Glue it back together before mom finds out!",
     url: "mosaic",
 },
-{
-    key: 2,
-    title: "Wordle",
-    content: "Just somebody else's successful idea",
-    url: "wordle",
-},
+// {
+//     key: 2,
+//     title: "Wordle",
+//     content: "Just somebody else's successful idea",
+//     url: "wordle",
+// },
 {
     key: 100,
     title: "Possible followups",

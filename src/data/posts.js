@@ -1,3 +1,5 @@
+import charmeo from '../media/meo.gif';
+
 const posts = [{
     key: 0,
     title: "And so, it begins",
@@ -66,6 +68,43 @@ const posts = [{
     But, for the moment, goodbye Wordle clone.
     `,
     signature: "Romeo"
+},
+{
+    key: 5,
+    title: "Missing steam project update",
+    date: new Date("2022-05-16"),
+    content: `
+    I wanted to post an update about the Steam project we're working on, but OBVIOUSLY when I set up the blog part of this mini-page I didn't come up with a way to actually include media in the posts.
+
+    Well, life sucks, especially if you can only blame yourself for the things that are missing.
+
+    We'll see if over the course of the week between working on my regular job AND the game I'll find time to fix this overlook.
+    `,
+    signature: `Lazymeo`
+},
+{
+    key: 6,
+    title: "Happy Republic Day",
+    date: new Date("2022-06-02"),
+    images: [charmeo],
+    smartContent: (
+        <>
+            <p>First of all, let's celebrate once again that Italy's a republic instead of a <s>redacted</s> monarchy.</p>
+            <br/>
+            <p>This is a tentative update with a new way to precompile posts, with <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Links</a> and other "smart" content.</p>
+            <br/>
+            <p>I know this may sound ridicolous, but I went through all the effort just for the sake of adding this gif of myself:
+                <br/>
+                <img alt="self-portraying gif" src={charmeo} style={{display: "block", margin: "15px auto 0"}}/>
+            </p>
+            <br/>
+            <p>The other big news I can bring is that I'm kind of stressed because lately things at work are being kind of heavy - not in a <i>bad</i> way, more like in a <i>they do actually require a ton of effort</i> one, but I still managed to play the full story of Inscryption in my spare time.</p>
+            <br/>
+            <h3><b style={{textAlign: "center", display: "block", margin: "auto"}}>PLAY INSCRYPTION.</b></h3>
+        </>
+    ),
+    signature: `Happy Pride month averyone
+    Romeo`
 },
 ];
 
