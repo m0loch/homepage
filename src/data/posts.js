@@ -1,4 +1,4 @@
-import charmeo from '../media/meo.gif';
+import charmeo from '../images/meo.gif';
 
 const posts = [{
     key: 0,
