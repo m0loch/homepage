@@ -20,6 +20,15 @@ const StyledContact = styled('a')(({ theme }) => ({
     columnGap: "8px",
 }));
 
+const StyledItchIoIcon = styled(ItchIoIcon)(({ theme }) => ({
+        userSelect: "none",
+        width: "1em",
+        height: "1em",
+        display: "inline-block",
+        fill: "currentColor",
+        flexShrink: 0,
+}));
+
 function calcAge() {
     const today = new Date();
     const bday = new Date("1 July 1984");
@@ -61,7 +70,7 @@ function About() {
                     
                     <StyledContact href="https://twitter.com/ilmeodev"><TwitterIcon/> @ilmeodev</StyledContact>
                     <StyledContact href="https://github.com/m0loch"><GitHubIcon/>m0loch on GitHub</StyledContact>
-                    <StyledContact href="https://m0loch666.itch.io/"><ItchIoIcon fill="red" className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"/>m0loch666 on itch.io</StyledContact>
+                    <StyledContact href="https://m0loch666.itch.io/"><StyledItchIoIcon/>m0loch666 on itch.io</StyledContact>
                     <StyledContact href="https://www.linkedin.com/in/romeo-graifenberg-a5770117b"><LinkedInIcon/>My LinkedIn profile</StyledContact>
                     <StyledContact href="mailto:romeo.graifenberg@gmail.com"><MailOutlineIcon/>Send me an email</StyledContact>
 

@@ -4,6 +4,9 @@ import './css/fifteen.css';
 
 import { Grid, Container, Card } from "@mui/material";
 import { moveLeft, moveRight, moveUp, moveDown, moveTile } from './movesHandler';
+import WinScreen from './winScreen';
+
+const isDebug = false;
 
 const swipeSensibilityRatio = 20;
 
@@ -23,7 +26,10 @@ function getInitialConfiguration() {
 
   for (; shuffleBag.length > 2;) {
     // takes a number out of the shuffle bag and inserts it at the end
-    let num = shuffleBag.splice(Math.floor(Math.random() * shuffleBag.length), 1)[0];
+    let num = shuffleBag.splice(
+      isDebug ? 0
+        : Math.floor(Math.random() * shuffleBag.length
+      ), 1)[0];
     result.push(num);
 
     // parity check - needed to keep the configuration in the domain of solvability
@@ -41,14 +47,6 @@ function getInitialConfiguration() {
   result.push(0);
 
   return result;
-}
-
-function WinScreen(props) {
-  return(
-      <div className="winpanel" onClick={props.onClick} >
-          <h1>VICTORY</h1>
-      </div>
-  );
 }
 
 function Fifteen() {
