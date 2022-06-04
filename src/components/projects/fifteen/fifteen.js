@@ -4,7 +4,7 @@ import './css/fifteen.css';
 
 import { Grid, Container, Card } from "@mui/material";
 import { moveLeft, moveRight, moveUp, moveDown, moveTile } from './movesHandler';
-import WinScreen from './winScreen';
+import WinScreen from '../common/winScreen';
 
 const isDebug = false;
 
@@ -44,7 +44,12 @@ function getInitialConfiguration() {
   // adds the last two numbers taking the parity into account
   result.push(shuffleBag.splice(parity ? 0 : 1, 1)[0]);
   result.push(shuffleBag[0]);
-  result.push(0);
+
+  if (!isDebug) {
+    result.push(0);
+  } else {
+    result.splice(result.length - 1, 0, 0);
+  }
 
   return result;
 }

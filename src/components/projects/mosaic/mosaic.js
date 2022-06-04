@@ -2,23 +2,28 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Stage } from '@inlet/react-pixi';
 import * as PIXI from 'pixi.js';
 
-import "../../../css/pixi.css";
+import { styled } from '@mui/system';
 
 import Board from './board';
+import WinScreen from '../common/winScreen';
 import RandomizeTiles from './utils/randomizeTiles';
 import CalculateTileTexture from './utils/calculateTileTexture';
 
-function WinScreen(props) {
-    
-    return(
-        <div className="winpanel" onClick={props.onClick}>
-            <h1>VICTORY</h1>
-        </div>
-    );
-}
+const isDebug = false;
+
+const PixiContainer = styled('div')(
+    ({ theme }) => ({
+        position: "relative",
+        margin: "auto",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignContent: "center",
+        justifyContent: "center",
+    })
+);
 
 function Mosaic(props) {
-
     const [loaded, setLoaded] = useState(false);
     const [sprites, setSprites] = useState([]);
     const [victory, setVictory] = useState(false);
@@ -26,10 +31,9 @@ function Mosaic(props) {
     const onVictory = () => {
         setVictory(true);
     }
-
     
     const newGame = useCallback(() => {
-        const cfg = RandomizeTiles(props.rows * props.cols);
+        const cfg = RandomizeTiles(props.rows * props.cols, isDebug);
 
         const texture = PIXI.utils.TextureCache['img'];
         const tileHeight = (texture.height / props.rows);
@@ -76,7 +80,7 @@ function Mosaic(props) {
 
     return (
         <div className='full-body'>
-            <div className="pixi-container">
+            <PixiContainer>
             {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
                 <Stage style={{margin:"auto"}}>
                     <Board
@@ -89,7 +93,7 @@ function Mosaic(props) {
                         victory={victory}
                     />
                 </Stage>
-            </div>
+            </PixiContainer>
         </div>
     );
 }
