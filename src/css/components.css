@@ -170,7 +170,7 @@ kbd {
 }
 
 /* Desktop only */
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 900px) {
     .main-text {
         padding: 30px;
         margin-bottom: 30px;

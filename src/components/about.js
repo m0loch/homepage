@@ -6,28 +6,34 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { ReactComponent as ItchIoIcon } from '../images/itchio-logo-textless-white.svg';
 
-const StyledContainer = styled('div')(({ theme }) => ({
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-}));
+const StyledContainer = styled('div')(
+    ({ theme }) => ({
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
+    })
+);
     
-const StyledContact = styled('a')(({ theme }) => ({
-    display: "flex",
-    flexDirection: "row",
-    height: "25px",
-    alignItems: "baseline",
-    columnGap: "8px",
-}));
+const StyledContact = styled('a')(
+    ({ theme }) => ({
+        display: "flex",
+        flexDirection: "row",
+        height: "25px",
+        alignItems: "baseline",
+        columnGap: "8px",
+    })
+);
 
-const StyledItchIoIcon = styled(ItchIoIcon)(({ theme }) => ({
+const StyledItchIoIcon = styled(ItchIoIcon)(
+    ({ theme }) => ({
         userSelect: "none",
         width: "1em",
         height: "1em",
         display: "inline-block",
         fill: "currentColor",
         flexShrink: 0,
-}));
+    })
+);
 
 function calcAge() {
     const today = new Date();
