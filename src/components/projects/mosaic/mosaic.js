@@ -11,6 +11,16 @@ import CalculateTileTexture from './utils/calculateTileTexture';
 
 const isDebug = false;
 
+const FullBody = styled('div')(
+    ({ theme }) => ({
+        alignSelf: "center",
+        display: "flex",
+        flex: "1 1 auto",
+        width: "100%",
+        maxHeight: "90vh",
+    })
+);
+
 const PixiContainer = styled('div')(
     ({ theme }) => ({
         position: "relative",
@@ -79,7 +89,7 @@ function Mosaic(props) {
     }, [newGame, props.img])
 
     return (
-        <div className='full-body'>
+        <FullBody>
             <PixiContainer>
             {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
                 <Stage style={{margin:"auto"}}>
@@ -94,7 +104,7 @@ function Mosaic(props) {
                     />
                 </Stage>
             </PixiContainer>
-        </div>
+        </FullBody>
     );
 }
 

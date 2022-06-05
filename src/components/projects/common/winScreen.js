@@ -13,7 +13,7 @@ const StyledPanel = styled('div')(
         zIndex: 1,
         height: "30%",
         width: "30%",
-        backgroundColor: "var(--header-background)",
+        backgroundColor: theme.palette.primary.main,
         borderRadius: "5px",
 
         display: "flex",

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { styled } from '@mui/system';
 
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -9,7 +8,7 @@ const StyledSwitch = styled('div')(
         width: "var(--logo-width)",
         height: "var(--logo-width)",
         borderRadius: "50%",
-        backgroundColor: "var(--shadow)",
+        backgroundColor: theme.palette.primary.dark,
         position: "relative",
 
         [theme.breakpoints.up('md')]: {
@@ -51,7 +50,7 @@ const StyledSun = styled(LightModeIcon, {
 })(
     ({ theme, dark }) => ({
         visibility: "hidden",
-        color: "var(--a-color)",
+        color: theme.palette.primary.contrast,
 
         [theme.breakpoints.down('md')]: {
             width: "var(--logo-size)",
@@ -84,18 +83,16 @@ const StyledMoon = styled(DarkModeIcon, {
     })
 );
 
-function NightSwitch() {
-    const [dark, setDark] = useState(false);
-
+function NightSwitch(props) {
     return (
         <StyledSwitch onClick={() => {
-                setDark(!dark);
+                props.onDarkModeSwitch();
                 document.body.classList.toggle('dark');
             }
             }>
-            <StyledFlicker dark={dark} />
-            <StyledSun dark={dark} />
-            <StyledMoon dark={dark} />
+            <StyledFlicker dark={props.dark} />
+            <StyledSun dark={props.dark} />
+            <StyledMoon dark={props.dark} />
         </StyledSwitch>
     );
 }

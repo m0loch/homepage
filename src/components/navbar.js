@@ -5,7 +5,7 @@ import NightSwitch from './nightSwitch';
 import img from '../images/logo.jpg';
 
 const StyledLogo = styled(Link)(
-    ({ theme }) => ({
+    () => ({
         display: "flex",
         position: "relative",
         width: "var(--logo-width)",
@@ -19,7 +19,7 @@ const StyledLogoImg = styled('img')(
         width: "100%",
 
         [theme.breakpoints.up('md')]: {
-           border: "3px solid var(--header-border-color)",
+           border: `3px solid ${theme.palette.primary.light}`,
            position: "absolute",
 
             /* navbar's padding, plus half of navbar's height, minus half the image's height */
@@ -29,15 +29,24 @@ const StyledLogoImg = styled('img')(
     })
 );
 
+const StyledTest = styled('div')(
+    ({theme}) => {
+        console.log(theme);
+        return ({
+            display: "none",
+        });
+    }
+)
+
 const StyledNavbar = styled('div')(
     ({ theme }) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
       
-        backgroundColor: "var(--header-background)",
+        backgroundColor: theme.palette.primary.main,
     
-        borderBottom: "3px solid var(--header-border-color)",
+        borderBottom: `3px solid ${theme.palette.primary.light}`,
         padding: "20px",
     
         zIndex: "10",
@@ -62,16 +71,17 @@ const StyledNavLink = styled(Link)(
         margin: "auto",
         textTransform: "uppercase",
         fontWeight: "700",
+        color: theme.palette.primary.contrast,
 
         "&:hover": {
-            color: "var(--highlight)",
+            color: theme.palette.primary.contrastText,
         },
 
         "&::before, &::after": {
             display: "block",
             content: '""',
             height: "5px",
-            background: "var(--highlight)",
+            background: theme.palette.primary.contrastText,
             transform: "scale(0, 1)",
             transition: "transform ease-in-out 250ms",
         },
@@ -86,12 +96,15 @@ const StyledNavLink = styled(Link)(
     })
 );
 
-function NavBar() {
+function NavBar(props) {
     return (
         <StyledNavbar>
             <StyledLogo to="/">
-                    <StyledLogoImg src={img} alt="logo" />
+                <StyledLogoImg src={img} alt="logo" />
             </StyledLogo>
+
+            {/* Only for test purposes - delete before commit */}
+            <StyledTest/>
 
             <StyledNav>
                 <StyledNavLink to="/">Home</StyledNavLink>
@@ -99,7 +112,7 @@ function NavBar() {
                 <StyledNavLink to="/about">About</StyledNavLink>
             </StyledNav>
 
-            <NightSwitch />
+            <NightSwitch {...props} />
         </StyledNavbar>
     );
 }

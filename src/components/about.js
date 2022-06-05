@@ -1,5 +1,8 @@
 import { styled } from '@mui/system';
 
+import TextSection from './common/textSection';
+import MainText from './common/mainText';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -52,9 +55,8 @@ function calcAge() {
 
 function About() {
     return (
-        <>
-            <section className="main">
-            <div className="main-text">
+        <TextSection>
+            <MainText>
                 <h1>About me</h1>
                 <br/>
                 <StyledContainer>
@@ -83,9 +85,8 @@ function About() {
                     <h2>Special thanks to:</h2>
                     <p>My friend <a href="https://www.instagram.com/silviasheroo/?hl=en">Silvia</a> for the logo image</p>
                 </StyledContainer>
-            </div>
-            </section>
-        </>
+            </MainText>
+        </TextSection>
     );
 }
 

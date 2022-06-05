@@ -1,71 +1,18 @@
-/* Base tags */
-#root {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-}
 
-html {
-    height: 100%;
-    margin: 0;
-}
- 
-body {
-    transition: 0.3s;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: var(--body-background-color);
-    color:var(--body-color);
-}
-
-h1 {
-    font-size: 60px;
-    line-height: 70px;
-    font-weight: 300;
-    margin: 10px 0;
-}
-
-h2 {
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 300;
-    margin: 50px 0 10px 0;
-}
-
-p, legend, ul li {
-    font-size: 20px;
-    margin: 0;
-}
-
-a {
-    font-size: 20px;
-    font-weight: 200;
-    text-decoration: none;
-    color: var(--a-color);
-}
-
-p a {
-    text-decoration: underline;
-}
-
-ul {
-    list-style-type: circle;
-}
-
+/*
 button {
     margin: auto;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 20px;
 
-    background-color: var(--body-background-color); /* ugly - especially in dark mode */
+    background-color: var(--body-background-color);
     color:var(--body-color);
 
     border: solid var(--a-color);
     border-radius: 5px;    
 }
-
+ 
 button:hover {
     background-color: var(--btn-highlight);
 }
@@ -97,22 +44,13 @@ kbd {
     line-height: 1;
     padding: 2px 4px;
     white-space: nowrap;
-}
-
-/* Sections */
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px;
-}
+} */
 
 /* Squares section */
-.sub-section {
+/* .sub-section {
     display: flex;
     flex-wrap: wrap;
-}
+} 
 
 .square {
     --square-width: 96%;
@@ -127,59 +65,30 @@ kbd {
     display: flex;
     flex-direction: column;
     color: var(--body-color);
-}
+} 
 
 .square > .content {
     flex-grow: 1;
-}
+} 
 
 .square > .footer {
     justify-content: space-around;
     margin: 1vmin;
-}
+} 
 
 .square h2 {
     margin-top: 30px;
-}
+} 
 
 .square p {
     margin: 30px;
-}
-
-.full-body {
-    align-self: center;
-    display: flex;
-    flex: 1 1 auto;
-    width: 100%;
-    max-height: 90vh;
-}
-
-/* Mobile only */
-@media only screen and (max-width: 969px) {
-    h1 {
-        font-size: 8vmin;
-    }
-
-    h2 {
-        font-size: 6vmin;
-    }
-
-    a, p, legend, li {
-        font-size: 5vmin;
-    }
-}
+} 
 
 /* Desktop only */
-@media only screen and (min-width: 900px) {
-    .main-text {
-        padding: 30px;
-        margin-bottom: 30px;
-        width: 60%;
-    }
-
+/* @media only screen and (min-width: 900px) {
     .square {
         width: calc(var(--square-width) / 2);
         max-height: var(--square-width);
         margin: 1%;
     }
-}
+} */
