@@ -29,15 +29,6 @@ const StyledLogoImg = styled('img')(
     })
 );
 
-const StyledTest = styled('div')(
-    ({theme}) => {
-        console.log(theme);
-        return ({
-            display: "none",
-        });
-    }
-)
-
 const StyledNavbar = styled('div')(
     ({ theme }) => ({
         display: "flex",
@@ -102,9 +93,6 @@ function NavBar(props) {
             <StyledLogo to="/">
                 <StyledLogoImg src={img} alt="logo" />
             </StyledLogo>
-
-            {/* Only for test purposes - delete before commit */}
-            <StyledTest/>
 
             <StyledNav>
                 <StyledNavLink to="/">Home</StyledNavLink>
