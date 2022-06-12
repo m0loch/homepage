@@ -1,25 +1,5 @@
 :root {
-  /* --header-background: #04FBBB;
-  --highlight: #303030;
-  --body-background-color: #F0F0F0;
-  --body-color: #393939;
-  --btn-highlight: #BFBCC0;
-  --a-color: #028666;
-  --square-color: #FFFFFF;
-  --progress-back: #BFBCC0; */
-
   --logo-width: clamp(10px, 10vw, 100px);
-}
-
-:root .dark {
-  /* --header-background: #4A3A84;
-  --highlight: #FFFFFF;
-  --body-background-color: #393939;
-  --btn-highlight: #6f6f6f;
-  --body-color: #FFFFFF;
-  --a-color: #FFFF00;
-  --square-color: #465e85;
-  --progress-back: #465e85; */
 }
 
 @media only screen and (max-width: 900px) {

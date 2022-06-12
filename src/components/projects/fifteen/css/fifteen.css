@@ -24,7 +24,6 @@
 
 .root {
   margin-top: 8px;
-  background-color: var(--header-background);
   border-radius: 5px;
   position: relative;
 }
@@ -35,8 +34,8 @@
 
 .tile {
   display: flex;
-  background-color: var(--square-color);
-  color: var(--a-color);
+  background-color: #465e85; /* #FFFFFF vs #465e85;*/
+  color: "#028666"; /*theme.palette.link,*/
   align-content: center;
   justify-content: center;
   width: 8vw;

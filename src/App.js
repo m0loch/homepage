@@ -9,6 +9,9 @@ import {
 
 import { CssBaseline } from '@mui/material';
 
+import lightTheme from './themes/lightTheme';
+import darkTheme from './themes/darkTheme';
+
 import games from './data/projects';
 import posts from './data/posts';
 
@@ -26,85 +29,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const baseTheme = {
-    typography: {
-      fontFamily: ['Ubuntu', 'sans-serif'].join(','),
-    },
-    components: {
-      MuiCssBaseline: {
-        styleOverrides: {
-          h1: {
-            fontSize: "60px",
-            lineHeight: "70px",
-            fontWeight: 300,
-            margin: "10px 0",
-          },
-          h2: {
-            fontSize: "40px",
-            lineHeight: "40px",
-            fontWeight: 300,
-            margin: "50px 0 10px 0",
-          },
-          "p, legend, ul li": {
-            fontSize: "20px",
-            margin: 0,
-          },
-          a: {
-            fontSize: "20px",
-            fontWeight: "200",
-            textDecoration: "none",
-            // color: var(--a-color);
-          },
-          "p a": {
-              textDecoration: "underline",
-          },
-          ul: {
-              listStyleType: "circle",
-          },
-          "@media only screen and (max-width: 899px)": {
-            h1: {
-              fontSize: "8vmin",
-            },
-            h2: {
-              fontSize: "6vmin",
-            },
-            "a, p, legend, li": {
-              fontSize: "5vmin",
-            },
-          }
-        }
-      },
-    },
-  };
-
-  const lightTheme = {
-    palette: {
-      mode: "light",
-      primary: {
-        main: "#04FBBB",
-        light: "#FFFFFF",
-        contrast: "#028666",
-      },
-      secondary: {
-        main: "#BFBCC0",
-      },
-    },
-  };
-
-  const darkTheme = {
-    palette: {
-      mode: "dark",
-      primary: {
-        main: "#4A3A84",
-        contrast: "#FFFF00",
-      },
-      secondary: {
-        main: "#6f6f6f",
-      },
-    },
-  };
-
-  const theme = createTheme({...(darkMode ? darkTheme : lightTheme), ...baseTheme});
+  const theme = createTheme(darkMode ? darkTheme : lightTheme);
 
   const switchDarkMode = () => {
     setDarkMode(!darkMode);
@@ -112,7 +37,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline/>
+      <CssBaseline enableColorScheme/>
       <NavBar dark={darkMode} onDarkModeSwitch={switchDarkMode} />
 
       <Routes>
@@ -126,7 +51,7 @@ function App() {
         {/* Main sections  */}
         <Route path="/about" element={<About/>} />
         <Route path="/projects" element={
-          <section className="sub-section">
+          <section style={{display: "flex", flexWrap: "wrap"}}>
             {
               games.map(item =>
                 <Square

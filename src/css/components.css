@@ -1,37 +1,13 @@
 
-/*
+/* Old code - remove this while styling wordle
 button {
     margin: auto;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 20px;
-
-    background-color: var(--body-background-color);
-    color:var(--body-color);
-
-    border: solid var(--a-color);
     border-radius: 5px;    
 }
  
-button:hover {
-    background-color: var(--btn-highlight);
-}
-
-progress {
-    height: 15px;
-    border-radius: 5px;
-}
-
-progress::-webkit-progress-bar {
-    background-color: var(--progress-back);
-    border-radius: 5px;
-}
-
-progress::-webkit-progress-value {
-    background-color: var(--a-color);
-    border-radius: 5px;
-}
-
 kbd {
     background-color: #eee;
     border-radius: 3px;
@@ -44,51 +20,22 @@ kbd {
     line-height: 1;
     padding: 2px 4px;
     white-space: nowrap;
-} */
+}
+*/
 
-/* Squares section */
-/* .sub-section {
-    display: flex;
-    flex-wrap: wrap;
-} 
-
-.square {
-    --square-width: 96%;
-    transition: 0.3s;
-    width: var(--square-width);
-    max-height: calc(var(--square-width) * 2 / 3);
-    margin: 2%;
-    background-color: var(--square-color);
-    text-align: center;
+/* Old code - remove this when importing Tetris
+progress {
+    height: 15px;
     border-radius: 5px;
+}
 
-    display: flex;
-    flex-direction: column;
-    color: var(--body-color);
-} 
+progress::-webkit-progress-bar {
+    background-color: #BFBCC0 vs #465E85;
+    border-radius: 5px;
+}
 
-.square > .content {
-    flex-grow: 1;
-} 
-
-.square > .footer {
-    justify-content: space-around;
-    margin: 1vmin;
-} 
-
-.square h2 {
-    margin-top: 30px;
-} 
-
-.square p {
-    margin: 30px;
-} 
-
-/* Desktop only */
-/* @media only screen and (min-width: 900px) {
-    .square {
-        width: calc(var(--square-width) / 2);
-        max-height: var(--square-width);
-        margin: 1%;
-    }
-} */
+progress::-webkit-progress-value {
+    background-color: ${theme.palette.link}
+    border-radius: 5px;
+}
+*/
