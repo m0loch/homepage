@@ -5,8 +5,8 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const StyledSwitch = styled('div')(
     ({ theme }) => ({
-        width: "var(--logo-width)",
-        height: "var(--logo-width)",
+        width: theme.components.logoWidth,
+        height: theme.components.logoWidth,
         borderRadius: "50%",
         backgroundColor: theme.palette.primary.dark,
         position: "relative",
@@ -65,8 +65,8 @@ const StyledMoon = styled(DarkModeIcon, {
     shouldForwardProp: (prop) => prop !== 'dark'
 })(
     ({ theme, dark }) => ({
-        width: "var(--logo-width)",
-        height: "var(--logo-width)",
+        width: theme.components.logoWidth,
+        height: theme.components.logoWidth,
         transform: "scaleX(-1)",
         position: "absolute",
         color: "#FFFFFF",

@@ -5,6 +5,7 @@ const baseTheme = (theme) => {
             fontFamily: ['Ubuntu', 'sans-serif'].join(','),
         },
         components: {
+            logoWidth: "clamp(10px, 10vw, 100px)",
             MuiCssBaseline: {
                 styleOverrides: {
                     body: {

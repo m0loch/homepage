@@ -1,7 +1,3 @@
-:root {
-  --logo-width: clamp(10px, 10vw, 100px);
-}
-
 @media only screen and (max-width: 900px) {
   :root {
     --logo-width: 6vmin;

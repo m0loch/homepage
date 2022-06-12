@@ -5,17 +5,17 @@ import NightSwitch from './nightSwitch';
 import img from '../images/logo.jpg';
 
 const StyledLogo = styled(Link)(
-    () => ({
+    ({ theme }) => ({
         display: "flex",
         position: "relative",
-        width: "var(--logo-width)",
+        width: theme.components.logoWidth,
     })
 );
 
 const StyledLogoImg = styled('img')(
     ({ theme }) => ({
         borderRadius: "50%",
-        boxSizing: "contentBox",
+        boxSizing: "content-box",
         width: "100%",
 
         [theme.breakpoints.up('md')]: {
@@ -23,8 +23,8 @@ const StyledLogoImg = styled('img')(
            position: "absolute",
 
             /* navbar's padding, plus half of navbar's height, minus half the image's height */
-           top: "calc(20px + 20px - (var(--logo-width) / 2))",
-           width: "calc(var(--logo-width) - (2 * 3px))",
+           top: `calc(20px + 20px - ${theme.components.logoWidth} / 2)`,
+           width: `calc(${theme.components.logoWidth} - (2 * 3px))`,
         }
     })
 );
