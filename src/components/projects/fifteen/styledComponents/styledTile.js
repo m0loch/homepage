@@ -2,21 +2,67 @@ import { Card, Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
 const StyledTileInternal = styled(Card)(
-    ({ theme }) => ({
-        display: "flex",
-        backgroundColor: theme.palette.background.card,
-        color: theme.palette.link,
-        alignContent: "center",
-        justifyContent: "center",
-        height: "8vw",
-        width: "8vw",
-        margin: "auto",
+    ({ theme, className }) => {
+        let animation = null;
+        switch (className) {
+            case 'transitionLeft':
+                animation = "slideLeft 150ms linear";
+                break;
 
-        [theme.breakpoints.down('md')]: {
-            width: "16vw",
-            height: "16vw",
-        }
-    })
+            case 'transitionRight':
+                animation = "slideRight 150ms linear";
+                break;
+
+            case 'transitionUp':
+                animation = "slideUp 150ms linear";
+                break;
+
+            case 'transitionDown':
+                animation = "slideDown 150ms linear";
+                break;
+
+            default:
+                break;
+        };
+
+        return ({
+            display: "flex",
+            backgroundColor: theme.palette.background.card,
+            color: theme.palette.link,
+            alignContent: "center",
+            justifyContent: "center",
+            height: "8vw",
+            width: "8vw",
+            margin: "auto",
+
+            [theme.breakpoints.down('md')]: {
+                width: "16vw",
+                height: "16vw",
+            },
+
+            '@keyframes slideLeft': {
+                '0%': { transform: "translateX(100%)" },
+                '100%': { transform: "translateX(0)" },
+            },
+
+            '@keyframes slideRight': {
+                "0%": { transform: "translateX(-100%)" },
+                "100%": { transform: "translateX(0)" },
+            },
+
+            '@keyframes slideUp': {
+                "0%": { transform: "translateY(100%)" },
+                "100%": { transform: "translateY(0)" },
+            },
+
+            '@keyframes slideDown': {
+                "0%": { transform: "translateY(-100%)" },
+                "100%": { transform: "translateY(0)" },
+            },
+
+            animation,
+        })
+    }
 );
 
 function StyledTile(props) {

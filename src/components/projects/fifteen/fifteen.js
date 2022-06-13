@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
-import './css/fifteen.css';
-
 import { Container } from "@mui/material";
 import StyledField from './styledComponents/styledField';
 import StyledTile from './styledComponents/styledTile';
