@@ -13,7 +13,3 @@
     visibility: hidden;
   }
 }
-
-mobile-norefresh {
-  touch-action: pan-down;
-}

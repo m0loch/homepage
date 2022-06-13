@@ -18,38 +18,6 @@
   100% { transform: translateY(0); }
 }
 
-.container {
-  width: 40vw;
-}
-
-.root {
-  margin-top: 8px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.tileEmbed {
-  padding: 1vw;
-}
-
-.tile {
-  display: flex;
-  background-color: #465e85; /* #FFFFFF vs #465e85;*/
-  color: "#028666"; /*theme.palette.link,*/
-  align-content: center;
-  justify-content: center;
-  width: 8vw;
-  height: 8vw;
-}
-
-.value {
-  margin: auto;
-}
-
-.hole {
-  opacity: 0;
-}
-
 .transitionLeft {
   animation: slideLeft 150ms linear;
 }
@@ -64,16 +32,4 @@
 
 .transitionDown {
   animation: slideDown 150ms linear;
-}
-
-/* Mobile only */
-@media only screen and (max-width:969px) {
-  .container {
-    width: 80vw;
-  }
-
-  .tile {
-    width: 16vw;
-    height: 16vw;
-  }
 }
