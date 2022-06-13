@@ -90,21 +90,37 @@ const posts = [{
     smartContent: (
         <>
             <p>First of all, let's celebrate once again that Italy's a republic instead of a <s>redacted</s> monarchy.</p>
-            <br/>
+            <br />
             <p>This is a tentative update with a new way to precompile posts, with <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Links</a> and other "smart" content.</p>
-            <br/>
+            <br />
             <p>I know this may sound ridicolous, but I went through all the effort just for the sake of adding this gif of myself:
-                <br/>
-                <img alt="self-portraying gif" src={charmeo} style={{display: "block", margin: "15px auto 0"}}/>
+                <br />
+                <img alt="self-portraying gif" src={charmeo} style={{ display: "block", margin: "15px auto 0" }} />
             </p>
-            <br/>
+            <br />
             <p>The other big news I can bring is that I'm kind of stressed because lately things at work are being kind of heavy - not in a <i>bad</i> way, more like in a <i>they do actually require a ton of effort</i> one, but I still managed to play the full story of Inscryption in my spare time.</p>
-            <br/>
-            <h3><b style={{textAlign: "center", display: "block", margin: "auto"}}>PLAY INSCRYPTION.</b></h3>
+            <br />
+            <h3><b style={{ textAlign: "center", display: "block", margin: "auto" }}>PLAY INSCRYPTION.</b></h3>
         </>
     ),
     signature: `Happy Pride month averyone
     Romeo`
+},
+{
+    key: 7,
+    title: "So much work, so little to update",
+    date: new Date("2022-06-13"),
+    smartContent: (
+        <>
+            <p>Well, what do you want me to say?</p>
+            <p>I spent the better part of last week transitioning away from plain CSS, rewriting everything to work with the <a href="https://mui.com/material-ui/guides/styled-engine/">@mui/styled-engine</a>.</p>
+            <br />
+            <p>Too bad that nobody's going to notice any difference, at least I've learned something that I might as well reuse in my actual working hours.</p>
+            <br />
+            <p><i>...too bad our main project is heavily based on makeStyles(), given that it still features MUI v4.</i></p>
+        </>
+    ),
+    signature: "Romeo"
 },
 ];
 
