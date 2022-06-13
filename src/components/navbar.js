@@ -25,6 +25,7 @@ const StyledLogoImg = styled('img')(
             /* navbar's padding, plus half of navbar's height, minus half the image's height */
            top: `calc(20px + 20px - ${theme.components.logoWidth} / 2)`,
            width: `calc(${theme.components.logoWidth} - (2 * 3px))`,
+           zIndex: 1,
         }
     })
 );

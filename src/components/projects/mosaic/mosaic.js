@@ -17,7 +17,7 @@ const FullBody = styled('div')(
         display: "flex",
         flex: "1 1 auto",
         width: "100%",
-        maxHeight: "90vh",
+        height: "90vh",
     })
 );
 
@@ -34,6 +34,8 @@ const PixiContainer = styled('div')(
 );
 
 function Mosaic(props) {
+    PIXI.utils.skipHello();
+
     const [loaded, setLoaded] = useState(false);
     const [sprites, setSprites] = useState([]);
     const [victory, setVictory] = useState(false);
