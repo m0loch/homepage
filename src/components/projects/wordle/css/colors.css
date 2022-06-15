@@ -3,7 +3,7 @@
     --misplaced-letter: #FFFF00;
     --wrong-letter: #C0C0C0;
     --letter-color: #028666;
-    /* --square-color: #FFFFFF; */
+    --square-color: #FFFFFF;
 }
 
 :root .dark {
@@ -11,5 +11,5 @@
     --misplaced-letter: #848400; /* */
     --wrong-letter: #232B42;
     --letter-color: #FFFFFF;
-    /* --square-color: #465e85; */
+    --square-color: #465e85;
 }

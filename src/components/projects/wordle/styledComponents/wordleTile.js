@@ -1,0 +1,111 @@
+import { Card } from "@mui/material";
+import { styled } from '@mui/system';
+import Status from "../status";
+
+const WordleTileContainer = styled('div')(
+    ({ theme }) => {
+        const desktopDim = "62px";
+        const mobileDim = "48px";
+
+        return ({
+            display: "flex",
+            width: desktopDim,
+            height: desktopDim,
+            margin: "5px",
+
+            [theme.breakpoints.down('md')]: {
+                width: mobileDim,
+                height: mobileDim,
+                }
+        })
+    }
+);
+
+const WordleTileInternal = styled(Card)(
+    ({ theme }) => ({
+        display: "flex",
+        margin: "auto",
+        width: "100%",
+        height: "100%",
+        backgroundColor: theme.palette.background.card,
+        color: "var(--letter-color)",
+        transition: "none",
+
+        // Different animations for each column, with carefully calculated delays
+
+        /************************************************************** 
+         *   0 125 250 375 500 625 750 875 1000 1125 1250 1375 1500 ms
+         *   0              33               66                 100  %
+         **************************************************************/
+
+        '@keyframes flip0': {
+            '0%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '33%':  { height: 0, backgroundColor: theme.palette.background.card },
+            '66%': { height: "100%" },
+            '100%': { height: "100%" },
+        },
+        '@keyframes flip1': {
+            '0%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '8%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '42%':  { height: 0, backgroundColor: theme.palette.background.card },
+            '75%': { height: "100%" },
+            '100%': { height: "100%" },
+        },
+        '@keyframes flip2': {
+            '0%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '17%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '50%':  { height: 0, backgroundColor: theme.palette.background.card },
+            '82%': { height: "100%" },
+            '100%': { height: "100%" },
+        },
+        '@keyframes flip3': {
+            '0%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '25%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '59%':  { height: 0, backgroundColor: theme.palette.background.card },
+            '90%': { height: "100%" },
+            '100%': { height: "100%" },
+        },
+        '@keyframes flip4': {
+            '0%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '33%': { height: "100%", backgroundColor: theme.palette.background.card },
+            '66%':  { height: 0, backgroundColor: theme.palette.background.card },
+            '100%': { height: "100%" },
+        },
+    })
+);
+
+function WordleTile(props) {
+    const style = {};
+
+    if (props.char && ("correct" in props.char)) {
+
+        style.animation = `flip${props.idx} 1.5s ease-in-out`;
+
+        switch (props.char.correct) {
+
+            case Status.Correct:
+                style.backgroundColor = "var(--correct-letter)";
+                break;
+
+            case Status.Misplaced:
+                style.backgroundColor = "var(--misplaced-letter)";
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    return (
+        <WordleTileContainer key={props.idx}>
+            <WordleTileInternal
+                key={props.idx}
+                style={style}
+            >
+                <p style={{ margin: "auto" }} key={props.idx}>{props.char?.value}</p>
+            </WordleTileInternal>
+        </WordleTileContainer>
+    );
+}
+
+export default WordleTile;
