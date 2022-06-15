@@ -53,8 +53,8 @@ const StyledSun = styled(LightModeIcon, {
         color: theme.palette.primary.contrast,
 
         [theme.breakpoints.down('md')]: {
-            width: "var(--logo-size)",
-            height: "var(--logo-size)",    
+            width: theme.components.logoWidth,
+            height: theme.components.logoWidth,    
             position: "absolute",
             visibility: dark ? "inherit" : "hidden",
         }
