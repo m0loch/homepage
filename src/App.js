@@ -1,5 +1,3 @@
-import './css/components.css';
-
 import { useState } from 'react';
 import {
   Routes,
