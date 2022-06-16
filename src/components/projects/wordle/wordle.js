@@ -37,7 +37,7 @@ function NormalizeAttempt(value, result) {
       retVal.push({
         value: letter,
         correct: result[index] === index ? Status.Correct
-          : result[index] > 0 ? Status.Misplaced
+          : result[index] >= 0 ? Status.Misplaced
             : Status.Wrong,
       })
     }
