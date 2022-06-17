@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import { styled } from '@mui/system';
+import { styled, useTheme } from '@mui/system';
 import Status from "../status";
 
 const WordleTileContainer = styled('div')(
@@ -28,7 +28,7 @@ const WordleTileInternal = styled(Card)(
         width: "100%",
         height: "100%",
         backgroundColor: theme.palette.background.card,
-        color: "var(--letter-color)",
+        color: theme.palette.wordle.text,
         transition: "none",
 
         // Different animations for each column, with carefully calculated delays
@@ -74,8 +74,10 @@ const WordleTileInternal = styled(Card)(
     })
 );
 
-function WordleTile(props) {
+function WordleTile(props) { // -> mi sa che dev'essere styled div, passando props
     const style = {};
+
+    const theme = useTheme();
 
     if (props.char && ("correct" in props.char)) {
 
@@ -84,11 +86,11 @@ function WordleTile(props) {
         switch (props.char.correct) {
 
             case Status.Correct:
-                style.backgroundColor = "var(--correct-letter)";
+                style.backgroundColor = theme.palette.wordle.correct;
                 break;
 
             case Status.Misplaced:
-                style.backgroundColor = "var(--misplaced-letter)";
+                style.backgroundColor = theme.palette.wordle.misplaced;
                 break;
 
             default:

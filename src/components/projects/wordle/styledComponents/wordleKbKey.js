@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import { styled } from '@mui/system';
+import { styled, useTheme } from '@mui/system';
 import Status from "../status";
 
 const WordleKbKeyInternal = styled(Card)(
@@ -13,20 +13,14 @@ const WordleKbKeyInternal = styled(Card)(
         margin: "0 6px 0 0",
         height: "58px",
 
-        backgroundColor: "var(--square-color)",
-        color: "var(--letter-color)",
+        backgroundColor: theme.palette.background.card,
+        color: theme.palette.wordle.text,
 
         fontFamily: "inherit",
         fontWeight: "bold",
         textTransform: "uppercase",
         cursor: "pointer",
         userSelect: "none",
-
-        // TODO: set up an animation instead of a transition
-        // in order to avoid messing with the dark mode switch
-        transitionProperty: "background-color",
-        transitionDelay: "1s",
-        transitionDuration: "1s",
     })
 );
 
@@ -34,18 +28,20 @@ const WordleKbKeyInternal = styled(Card)(
 function WordleTile(props) {
     const style = {};
 
+    const theme = useTheme();
+
     switch (props.keyStyle) {
 
         case Status.Correct:
-            style.backgroundColor = "var(--correct-letter)";
+            style.backgroundColor = theme.palette.wordle.correct;
             break;
 
         case Status.Misplaced:
-            style.backgroundColor = "var(--misplaced-letter)";
+            style.backgroundColor = theme.palette.wordle.misplaced;
             break;
 
         case Status.Wrong:
-            style.backGroundColor = "var(--wrong-letter)";
+            style.backgroundColor = theme.palette.wordle.wrong;
             break;
 
         default:

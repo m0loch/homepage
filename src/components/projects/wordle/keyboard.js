@@ -1,5 +1,3 @@
-import './css/colors.css';
-
 import React, { useCallback } from 'react';
 import WordleKeyboard from './styledComponents/wordleKeyboard';
 import WordleKbRow from './styledComponents/wordleKbRow';

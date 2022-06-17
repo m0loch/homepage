@@ -16,6 +16,12 @@ const lightTheme = baseTheme({
         secondary: {
             main: "#BFBCC0",
         },
+        wordle: {
+            text: "#028666",
+            correct: "#04FBBB",
+            misplaced: "#FFFF00",
+            wrong: "#C0C0C0",
+        }
     },
 });
 

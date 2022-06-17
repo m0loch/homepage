@@ -1,5 +1,3 @@
-import './css/colors.css';
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Grid } from "@mui/material";
 import WordleContainer from './styledComponents/wordleContainer';

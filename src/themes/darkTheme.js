@@ -15,6 +15,12 @@ const darkTheme = baseTheme({
         secondary: {
             main: "#6f6f6f",
         },
+        wordle: {
+            text: "#FFFFFF",
+            correct: "#04844A",
+            misplaced: "#848400",
+            wrong: "#232B42",
+        }
     },
 });
 
