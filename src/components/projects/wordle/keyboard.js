@@ -2,10 +2,11 @@ import React, { useCallback } from 'react';
 import WordleKeyboard from './styledComponents/wordleKeyboard';
 import WordleKbRow from './styledComponents/wordleKbRow';
 import WordleKbKey from './styledComponents/wordleKbKey';
+import WordleKbSpacer from './styledComponents/wordleKbSpacer';
 
 const rows = [
     ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",],
-    ["A", "S", "D", "F", "G", "H", "J", "K", "L",],
+    [null, "A", "S", "D", "F", "G", "H", "J", "K", "L", null,],
     ["↵", "Z", "X", "C", "V", "B", "N", "M", "←",]
 ]
 
@@ -27,13 +28,15 @@ function Keyboard(props) {
         <WordleKeyboard>
             {rows.map((row, idx) => (
                 <WordleKbRow key={idx}>
-                    {row.map((letter, idx) => (
+                    {row.map((letter, idx) => letter ? (
                         <WordleKbKey
                             key={idx}
                             keyStyle={props.hints[letter]}
                             value={letter}
                             onClick={() => handleClick(letter)}
                         />
+                    ) : (
+                        <WordleKbSpacer key={idx}/>
                     )
                     )}
                 </WordleKbRow>
