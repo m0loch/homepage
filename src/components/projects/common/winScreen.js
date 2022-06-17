@@ -33,9 +33,11 @@ const StyledPanel = styled('div')(
 );
 
 export default function WinScreen(props) {
-  return(
-    <StyledPanel onClick={props.onClick} >
-        <h1>VICTORY</h1>
-    </StyledPanel>
-  );
+    const msg = props.msg ?? "VICTORY";
+
+    return (
+        <StyledPanel onClick={props.onClick}>
+            <h1 style={{ maxWidth: "80%", textAlign: "center" }}>{msg}</h1>
+        </StyledPanel>
+    );
 }

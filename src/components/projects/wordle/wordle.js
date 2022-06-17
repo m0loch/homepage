@@ -6,6 +6,7 @@ import WordleTile from './styledComponents/wordleTile';
 import Keyboard from './keyboard';
 import ValidWords from './data/dictionary';
 import Status from './status';
+import WinScreen from '../common/winScreen';
 
 const isDebug = true;
 
@@ -108,11 +109,9 @@ function Wordle() {
     updateHints(result);
 
     if (attempt === solution) {
-      setGameEnded(true);
-      setTimeout(() => alert('WIN'), 1600);
+      setTimeout(() => setGameEnded({ win: true }), 1600);
     } else if (updatedAttempts.length === 6) {
-      alert(`WHY DIDN'T YOU TRY ${solution}?!?`);
-      setGameEnded(true);
+      setTimeout(() => setGameEnded({ win: false }), 1600);
     }
 
     setAttempt("");
@@ -152,10 +151,16 @@ function Wordle() {
     handleInput(keypressed);
   }, [attempts, handleInput]);
 
-  useEffect(() => {
+  const newGame = () => {
     setSolution(randomizeSolution());
     setGameEnded(false);
-  }, [setGameEnded, setSolution]);
+    setAttempts([]);
+    setHints({});
+  }
+
+  useEffect(() => {
+    newGame();
+  }, []);
 
   useEffect(() => {
     window.addEventListener('keydown', handleUserKeyPress);
@@ -176,6 +181,7 @@ function Wordle() {
 
   return (
     <WordleContainer>
+      {gameEnded ? <WinScreen msg={gameEnded.win ? null : `The solution was '${solution}'`} onClick={newGame}></WinScreen> : null}
       <Grid>
         {
           rows.map((value, idx) =>
