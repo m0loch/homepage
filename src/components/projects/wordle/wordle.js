@@ -54,7 +54,7 @@ function Wordle() {
 
   const updateHints = useCallback((result) => {
 
-    const newHints = hints;
+    const newHints = {...hints};
 
     result.forEach((value, index) => {
       if (value === -1) {
@@ -66,7 +66,7 @@ function Wordle() {
       }
     });
 
-    setHints(newHints);
+    setTimeout(() => setHints(newHints), 1800);
 
   }, [attempt, hints, setHints]);
 
