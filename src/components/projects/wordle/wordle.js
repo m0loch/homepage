@@ -8,7 +8,7 @@ import ValidWords from './data/dictionary';
 import Status from './status';
 import WinScreen from '../common/winScreen';
 
-const isDebug = true;
+const isDebug = false;
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -57,7 +57,7 @@ function Wordle() {
     const newHints = {...hints};
 
     result.forEach((value, index) => {
-      if (value === -1) {
+      if (value === -1 && !(attempt[index] in newHints)) {
         newHints[attempt[index]] = Status.Wrong;
       } else if (value === index) {
         newHints[attempt[index]] = Status.Correct;
