@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Grid } from "@mui/material";
 import WordleContainer from './styledComponents/wordleContainer';
 import WordleRow from './styledComponents/wordleRow';
@@ -52,6 +52,8 @@ function Wordle() {
   const [hints, setHints] = useState({});
   const [gameEnded, setGameEnded] = useState(false);
 
+  const rowRefs = useRef([]);
+
   const updateHints = useCallback((result) => {
 
     const newHints = {...hints};
@@ -73,6 +75,10 @@ function Wordle() {
   const submitAttempt = useCallback(() => {
     if (!ValidWords.includes(attempt)) {
       // Give some feedback
+      rowRefs.current[attempts.length].style.animation = "shake 750ms cubic-bezier(.36,.07,.19,.97) both";
+
+      // (needed to be able to animate multiple times on the same row)
+      setTimeout(() => rowRefs.current[attempts.length].style.animation = null, 750);
       return;
     }
 
@@ -185,7 +191,12 @@ function Wordle() {
       <Grid>
         {
           rows.map((value, idx) =>
-            <WordleRow key={idx}>
+            <WordleRow
+              key={idx} 
+              ref={el => {
+                rowRefs.current[idx] = el;
+              }}
+            >
               {([...value]).map((c, idx) =>
                 <WordleTile
                   char={c}
