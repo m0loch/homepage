@@ -75,7 +75,7 @@ const WordleTileInternal = styled(Card)(
     })
 );
 
-function WordleTile(props) { // -> mi sa che dev'essere styled div, passando props
+function WordleTile(props) {
     const style = {};
 
     const theme = useTheme();
