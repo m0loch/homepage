@@ -10,7 +10,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import { ReactComponent as ItchIoIcon } from '../images/itchio-logo-textless-white.svg';
 
 const StyledContainer = styled('div')(
-    ({ theme }) => ({
+    () => ({
         display: "flex",
         flexDirection: "column",
         gap: "10px",

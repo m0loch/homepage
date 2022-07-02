@@ -27,7 +27,10 @@ const StyledCard = styled(Card)(
 
 function Square(props) {
     return (
-        <StyledCard className="square" id={props.id}>
+        <StyledCard
+            id={props.id}
+            onClick={props.onClick}
+        >
             <CardContent style={{ flexGrow: 1 }}>
                 <h2 style={{ marginTop: "30px" }}>{props.title}</h2>
                 <p style={{ margin: "30px" }}>{props.content}</p>

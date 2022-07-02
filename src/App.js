@@ -15,7 +15,7 @@ import posts from './data/posts';
 import NavBar from './components/navbar';
 import Main from './components/main';
 import About from './components/about';
-import Square from './components/square';
+import ProjectsSection from './components/projectsSection';
 import FollowUps from './components/projects/followUps';
 import Fifteen from './components/projects/fifteen/fifteen';
 import Mosaic from './components/projects/mosaic/mosaic';
@@ -47,16 +47,7 @@ function App() {
 
         {/* Main sections  */}
         <Route path="/about" element={<About/>} />
-        <Route path="/projects" element={
-          <section style={{display: "flex", flexWrap: "wrap"}}>
-            {
-              games.map(item =>
-                <Square
-                  {...item}
-                />
-            )}
-          </section>
-          } />
+        <Route path="/projects" element={<ProjectsSection games={games} />} />
         <Route path="/" element={<Main posts={posts}/>} />
 
       </Routes>

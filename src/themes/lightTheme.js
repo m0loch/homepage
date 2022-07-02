@@ -6,6 +6,7 @@ const lightTheme = baseTheme({
         background: {
             main: "#F0F0F0",
             card: "#FFFFFF",
+            opaque: "#303030C0",
         },
         link: "#028666",
         primary: {

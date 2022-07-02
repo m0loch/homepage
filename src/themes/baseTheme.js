@@ -22,9 +22,12 @@ const baseTheme = (theme) => {
                         fontSize: "40px",
                         lineHeight: "40px",
                         fontWeight: 300,
-                        margin: "50px 0 10px 0",
                     },
-                    "p, legend, ul li": {
+                    p: {
+                        fontSize: "20px",
+                        margin: 0,
+                    },
+                    "legend, ul li": {
                         fontSize: "20px",
                         margin: 0,
                     },
@@ -47,7 +50,10 @@ const baseTheme = (theme) => {
                         h2: {
                             fontSize: "6vmin",
                         },
-                        "a, p, legend, li": {
+                        p: {
+                            fontSize: "5vmin",
+                        },
+                        "a, legend, li": {
                             fontSize: "5vmin",
                         },
                     }

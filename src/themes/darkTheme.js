@@ -6,6 +6,7 @@ const darkTheme = baseTheme({
         background: {
             main: "#393939",
             card: "#465E85",
+            opaque: "#202020C0",
         },
         link: "#FFFF00",
         primary: {
