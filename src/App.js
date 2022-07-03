@@ -16,7 +16,6 @@ import NavBar from './components/navbar';
 import Main from './components/main';
 import About from './components/about';
 import ProjectsSection from './components/projectsSection';
-import FollowUps from './components/projects/followUps';
 import Fifteen from './components/projects/fifteen/fifteen';
 import Mosaic from './components/projects/mosaic/mosaic';
 import Wordle from './components/projects/wordle/wordle';
@@ -43,7 +42,6 @@ function App() {
         <Route path="/projects/fifteen" element={<Fifteen/>} />
         <Route path="/projects/mosaic" element={<Mosaic img='/assets/mosaic/ff7remake.jpg' rows={5} cols={10}/>} />
         <Route path="/projects/wordle" element={<Wordle/>} />
-        <Route path="/projects/next" element={<FollowUps/>} />
 
         {/* Main sections  */}
         <Route path="/about" element={<About/>} />

@@ -1,3 +1,5 @@
+import FuturePlans from '../components/projectsSection/futurePlans';
+
 const games = [{
     key: 0,
     title: "Magic 15",
@@ -19,8 +21,10 @@ const games = [{
 {
     key: 100,
     title: "Possible followups",
-    content: "What will the future bring upon us?",
-    url: "next",
+    content: `Just a list of the things I'd like to add to this site in the future.
+
+    No deadlines though!`,
+    fullContent: (<FuturePlans/>),
 }];
 
 export default games;

@@ -1,5 +1,5 @@
-import Square from './square';
-import PopupSquare from './popupSquare';
+import Square from './projectsSection/square';
+import PopupSquare from './projectsSection/popup';
 import { styled } from '@mui/system';
 import { useState } from 'react';
 
