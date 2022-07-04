@@ -6,6 +6,7 @@ const baseTheme = (theme) => {
         },
         components: {
             logoWidth: "clamp(10px, 10vw, 100px)",
+            logoWidthMobile: "6vmin",
             MuiCssBaseline: {
                 styleOverrides: {
                     body: {

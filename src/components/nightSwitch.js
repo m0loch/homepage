@@ -5,8 +5,8 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const StyledSwitch = styled('div')(
     ({ theme }) => ({
-        width: theme.components.logoWidth,
-        height: theme.components.logoWidth,
+        width: theme.components.logoWidthMobile,
+        height: theme.components.logoWidthMobile,
         borderRadius: "50%",
         backgroundColor: theme.palette.primary.dark,
         position: "relative",
@@ -49,12 +49,14 @@ const StyledSun = styled(LightModeIcon, {
     shouldForwardProp: (prop) => prop !== 'dark' 
 })(
     ({ theme, dark }) => ({
+        width: theme.components.logoWidth,
+        height: theme.components.logoWidth,
         visibility: "hidden",
         color: theme.palette.primary.contrast,
 
         [theme.breakpoints.down('md')]: {
-            width: theme.components.logoWidth,
-            height: theme.components.logoWidth,    
+            width: theme.components.logoWidthMobile,
+            height: theme.components.logoWidthMobile,
             position: "absolute",
             visibility: dark ? "inherit" : "hidden",
         }
@@ -65,8 +67,8 @@ const StyledMoon = styled(DarkModeIcon, {
     shouldForwardProp: (prop) => prop !== 'dark'
 })(
     ({ theme, dark }) => ({
-        width: theme.components.logoWidth,
-        height: theme.components.logoWidth,
+        width: theme.components.logoWidthMobile,
+        height: theme.components.logoWidthMobile,
         transform: "scaleX(-1)",
         position: "absolute",
         color: "#FFFFFF",

@@ -8,7 +8,10 @@ const StyledLogo = styled(Link)(
     ({ theme }) => ({
         display: "flex",
         position: "relative",
-        width: theme.components.logoWidth,
+        width: theme.components.logoWidthMobile,
+        [theme.breakpoints.up('md')]: {
+            width: theme.components.logoWidth,
+        }
     })
 );
 
