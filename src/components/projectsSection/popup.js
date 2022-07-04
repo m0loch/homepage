@@ -35,6 +35,8 @@ const StyledPopup = styled(Card)(
         display: "flex",
         flexDirection: "column",
 
+        backgroundColor: theme.palette.background.card,
+
         [theme.breakpoints.down('md')]: {
             minWidth: "80vw",
             width: "95vw",
@@ -60,7 +62,7 @@ const StyledPopupContent = styled(CardContent)(
         flexGrow: 1,
         overflowY: "auto",
 
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: theme.palette.background.card,
         fontSize: theme.components.MuiCssBaseline.styleOverrides.p.fontSize,
     })
 );
@@ -69,7 +71,7 @@ const StyledPopupFooter = styled(CardActions)(
     ({ theme }) => ({
         display: "flex",
         justifyContent: "center",
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: theme.palette.background.card,
         flexGrow: 0,
     })
 );
