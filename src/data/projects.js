@@ -1,9 +1,11 @@
+import FifteenPreview from '../components/projects/fifteen/fifteenPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 
 const games = [{
     key: 0,
     title: "Magic 15",
     content: "An old school puzzle",
+    fullContent: (FifteenPreview),
     url: "fifteen",
 },
 {
@@ -24,7 +26,7 @@ const games = [{
     content: `Just a list of the things I'd like to add to this site in the future.
 
     No deadlines though!`,
-    fullContent: (<FuturePlans/>),
+    fullContent: (FuturePlans),
 }];
 
 export default games;

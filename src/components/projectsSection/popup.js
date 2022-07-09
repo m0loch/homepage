@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { Card, CardActions, CardContent } from "@mui/material";
 import { styled } from '@mui/system';
-import React from "react";
+import React, { useState } from "react";
 
 import { splitText } from "../common/textFunctions";
 
-const StyledContainer = styled('div', {
+const PopupBackground = styled('div', {
     shouldForwardProp: (props) => props !== 'selection'
 })(
     ({ theme, selection }) => {
@@ -23,25 +23,30 @@ const StyledContainer = styled('div', {
     }
 );
 
-const StyledPopup = styled(Card)(
-    ({ theme }) => ({
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        transform: "translate(-50%, -50%)",
-        minHeight: "30%",
-        maxHeight: "80vh",
-        minWidth: "30%",
-        display: "flex",
-        flexDirection: "column",
+const StyledPopup = styled(Card, {
+    shouldForwardProp: (props) => props !== 'selection'
+})(
+    ({ theme, selection }) => {
+        const isHidden = !selection;
+        return {
+            position: "absolute",
+            visibility: isHidden ? "hidden" : "visible",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            minHeight: "30%",
+            maxHeight: "80vh",
+            width: "50%",
+            display: "flex",
+            flexDirection: "column",
 
-        backgroundColor: theme.palette.background.card,
+            backgroundColor: theme.palette.background.card,
 
-        [theme.breakpoints.down('md')]: {
-            minWidth: "80vw",
-            width: "95vw",
+            [theme.breakpoints.down('md')]: {
+                width: "85vw",
+            }
         }
-    })
+    }
 );
 
 const StyledPopupHeader = styled(CardContent)(
@@ -58,7 +63,7 @@ const StyledPopupContent = styled(CardContent)(
     ({ theme }) => ({
         display: "flex",
         flexDirection: "column",
-        margin: "0 auto",
+        margin: "0",
         flexGrow: 1,
         overflowY: "auto",
 
@@ -76,23 +81,43 @@ const StyledPopupFooter = styled(CardActions)(
     })
 );
 
+const StyledLink = styled(Link)(
+    ({ theme }) => ({
+        fontSize: "30px",
+        fontWeight: "400",
+
+        "&:hover": {
+            color: theme.palette.primary.contrastText,
+        },
+    })
+);
+
 function PopupSquare(props) {
+    const [settings, SetSettings] = useState(null);
+    const FunctionalContent = props.selection?.fullContent;
+
     return (
-        <StyledContainer {...props}>
-            <StyledPopup variant="outlined">
+        <>
+            <PopupBackground {...props} />
+            <StyledPopup
+                variant="outlined"
+                selection={props.selection}
+            >
                 <StyledPopupHeader>
                     {props.selection?.title}
                 </StyledPopupHeader>
                 <StyledPopupContent>
-                    {props.selection?.fullContent ?? splitText(props.selection?.content)}
+                    { FunctionalContent ?
+                        <FunctionalContent settings={settings} onChange={value => SetSettings(value)} />
+                        : splitText(props.selection?.content)}
                 </StyledPopupContent>
                 {props.selection?.url ? (
                     <StyledPopupFooter>
-                        <Link to={`/projects/${props.selection.url}`}>Check it out</Link>
+                        <StyledLink to={`/projects/${props.selection.url}`}>Play</StyledLink>
                     </StyledPopupFooter>
                 ) : null}
             </StyledPopup>
-        </StyledContainer>
+        </>
     );
 }
 

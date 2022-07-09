@@ -44,6 +44,14 @@ const baseTheme = (theme) => {
                     ul: {
                         listStyleType: "circle",
                     },
+                    // Radio
+                    "span.MuiFormControlLabel-label": {
+                        fontSize: "20px",
+                    },
+                    "span.MuiRadio-root.Mui-checked": {
+                        color: theme.palette.primary.contrast,
+                    },
+                    // /Radio
                     "@media only screen and (max-width: 899px)": {
                         h1: {
                             fontSize: "8vmin",
@@ -55,6 +63,9 @@ const baseTheme = (theme) => {
                             fontSize: "5vmin",
                         },
                         "a, legend, li": {
+                            fontSize: "5vmin",
+                        },
+                        "span.MuiFormControlLabel-label": {
                             fontSize: "5vmin",
                         },
                     }
