@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardActions, CardContent } from "@mui/material";
 import { styled } from '@mui/system';
@@ -93,7 +93,6 @@ const StyledLink = styled(Link)(
 );
 
 function PopupSquare(props) {
-    const [settings, SetSettings] = useState(null);
     const FunctionalContent = props.selection?.fullContent;
 
     return (
@@ -108,7 +107,7 @@ function PopupSquare(props) {
                 </StyledPopupHeader>
                 <StyledPopupContent>
                     { FunctionalContent ?
-                        <FunctionalContent settings={settings} onChange={value => SetSettings(value)} />
+                        <FunctionalContent />
                         : splitText(props.selection?.content)}
                 </StyledPopupContent>
                 {props.selection?.url ? (

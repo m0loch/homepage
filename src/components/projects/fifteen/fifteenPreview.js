@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux';
+import { fifteenSetSize } from '../../../redux/actions';
+
 import { Collapse, RadioGroup, Radio, FormControlLabel } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
 
-export default function FifteenPreview(props) {
+function FifteenPreview(props) {
+
     const [open, setOpen] = useState([true, false, true]);
 
     const handleStateChange = (idx) => {
@@ -45,9 +49,9 @@ export default function FifteenPreview(props) {
             />
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
                 <RadioGroup
-                    defaultValue="4"
+                    value={props.size}
                     name="mode-select"
-                    onChange={ev => props.onChange(ev.target.value)}
+                    onChange={ev => props.fifteenSetSize(ev.target.value)}
                 >
                     <FormControlLabel value="3" control={<Radio color="primary" />} label="9 tiles" />
                     <FormControlLabel value="4" control={<Radio color="secondary" />} label="16 tiles" />
@@ -56,3 +60,13 @@ export default function FifteenPreview(props) {
         </div>
     );
 }
+
+function mapStateToProps(state) {
+    return { ...state.fifteen };
+  }
+  
+  const mapDispatchToProps = {
+    fifteenSetSize,
+  };
+
+export default connect(mapStateToProps, mapDispatchToProps)(FifteenPreview);

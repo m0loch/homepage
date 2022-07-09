@@ -3,6 +3,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { connect } from 'react-redux';
 
 import { CssBaseline } from '@mui/material';
 
@@ -22,7 +23,7 @@ import Wordle from './components/projects/wordle/wordle';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-function App() {
+function App(props) {
   const [darkMode, setDarkMode] = useState(false);
 
   const theme = createTheme(darkMode ? darkTheme : lightTheme);
@@ -39,8 +40,8 @@ function App() {
       <Routes>
 
         {/* Projects */}
-        <Route path="/projects/fifteen" element={<Fifteen/>} />
-        <Route path="/projects/mosaic" element={<Mosaic img='/assets/mosaic/ff7remake.jpg' rows={5} cols={10}/>} />
+        <Route path="/projects/fifteen" element={<Fifteen {...props.fifteen} />} />
+        <Route path="/projects/mosaic" element={<Mosaic {...props.mosaic} />} />
         <Route path="/projects/wordle" element={<Wordle/>} />
 
         {/* Main sections  */}
@@ -53,4 +54,8 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return { ...state };
+}
+
+export default connect(mapStateToProps)(App);
