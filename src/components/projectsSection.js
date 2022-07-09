@@ -1,3 +1,4 @@
+import React from 'react';
 import Square from './projectsSection/square';
 import PopupSquare from './projectsSection/popup';
 import { styled } from '@mui/system';

@@ -1,3 +1,4 @@
+import React from 'react';
 import Separator from './separator';
 
 import { splitText, splitSignature } from '../common/textFunctions';

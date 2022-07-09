@@ -1,3 +1,4 @@
+import React from 'react';
 import TextSection from './common/textSection';
 import MainText from './common/mainText';
 import Post from './posts/post';

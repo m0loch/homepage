@@ -1,3 +1,4 @@
+import React from 'react';
 export function splitText(text) {
     return text?.split("\n")?.map((str, idx) => str.length === 0 ?
         <br key={idx} /> :

@@ -1,3 +1,4 @@
+import React from 'react';
 import charmeo from '../images/meo.gif';
 import { Link } from "react-router-dom";
 

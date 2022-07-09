@@ -1,3 +1,4 @@
+import React from 'react';
 import { styled, keyframes } from '@mui/system';
 
 const appearAnimation = keyframes`
