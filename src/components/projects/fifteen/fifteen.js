@@ -15,9 +15,9 @@ let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
 
-function getInitialConfiguration() {
+function getInitialConfiguration(size) {
   const shuffleBag = [];
-  for (let i = 1; i <= 15; i++) {
+  for (let i = 1; i <= (size * size) - 1; i++) {
     shuffleBag.push(i);
   }
 
@@ -54,8 +54,9 @@ function getInitialConfiguration() {
   return result;
 }
 
-function Fifteen() {
-  const [tiles, setTiles] = useState(getInitialConfiguration());
+function Fifteen(props) {
+
+  const [tiles, setTiles] = useState(getInitialConfiguration(props.size));
   const [victory, setVictory] = useState(false);
   const [transition, setTransition] = useState(null);
 
@@ -63,24 +64,25 @@ function Fifteen() {
 
   const newGame = () => {
     setTransition(null);
-    setTiles(getInitialConfiguration());
+    setTiles(getInitialConfiguration(props.size));
     setVictory(false);
   }
 
   const checkVictory = (tiles) => {
-    return tiles.findIndex((el, idx) => (idx + 1) % 16 !== el) === -1;
+    return tiles.findIndex((el, idx) => (idx + 1) % (props.size * props.size) !== el) === -1;
   }
 
-  const performMove = useCallback((callback, payload) => {
+  const performMove = useCallback((callback) => {
+
     if (!victory) {
-      const move = callback(tiles, payload);
+      const move = callback(tiles, props.size);
       setTiles(move.tiles);
       setTransition({
         dir: move.dir,
         idx: move.idx,
       });
     }
-  }, [tiles, victory]);
+  }, [tiles, victory, props.size]);
 
   //////////////////////
   // Keyboard detection
@@ -189,7 +191,7 @@ function Fifteen() {
 
   return (
     <Container style={{ display: "flex" }}>
-      <StyledField container ref={swiperRef}>
+      <StyledField container ref={swiperRef} size={props.size}>
         {victory ? <WinScreen onClick={newGame}></WinScreen> : null}
         {tiles.map((el, idx) => (
           <StyledTile
@@ -197,7 +199,8 @@ function Fifteen() {
             idx={idx}
             transition={transition}
             value={el}
-            onClick={() => performMove(moveTile, idx)}
+            tilesPerSide={props.size}
+            onClick={() => performMove(moveTile, idx, props.size)}
           />
         )
         )}

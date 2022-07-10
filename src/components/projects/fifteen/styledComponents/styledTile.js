@@ -75,7 +75,7 @@ function StyledTile(props) {
     return (
         <Grid item
             key={props.value}
-            xs={3}
+            xs={12 / props.tilesPerSide} // ensures the proper amount of tiles / line
             style={style}
             onClick={props.onClick}
         >

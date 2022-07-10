@@ -1,17 +1,18 @@
-import React from 'react';
 import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
-const StyledField = styled(Grid)(
-    ({ theme }) => ({
+const StyledField = styled(Grid, {
+    shouldForwardProp: (props) => props !== 'size'
+})(
+    ({ theme, size }) => ({
         margin: "8px auto",
         borderRadius: "5px",
         backgroundColor: theme.palette.primary.main,
         touchAction: "pan-down",
-        width: "40vw",
+        width: `${size * 10}vw`,
 
         [theme.breakpoints.down('md')]: {
-            width: "80vw",
+            width: `${size * 20}vw`,
         }
     })
 );
