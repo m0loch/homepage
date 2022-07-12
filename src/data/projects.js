@@ -1,4 +1,5 @@
 import FifteenPreview from '../components/projects/fifteen/fifteenPreview';
+import MosaicPreview from '../components/projects/mosaic/mosaicPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 
 const games = [{
@@ -12,6 +13,7 @@ const games = [{
     key: 1,
     title: "Mosaic",
     content: "A picture has been shattered! Glue it back together before mom finds out!",
+    fullContent: (MosaicPreview),
     url: "mosaic",
 },
 {

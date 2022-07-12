@@ -12,7 +12,7 @@ import CalculateTileTexture from './utils/calculateTileTexture';
 const isDebug = false;
 
 const FullBody = styled('div')(
-    ({ theme }) => ({
+    () => ({
         alignSelf: "center",
         display: "flex",
         flex: "1 1 auto",
@@ -22,7 +22,7 @@ const FullBody = styled('div')(
 );
 
 const PixiContainer = styled('div')(
-    ({ theme }) => ({
+    () => ({
         position: "relative",
         margin: "auto",
         width: "100%",
