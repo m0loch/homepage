@@ -14,9 +14,11 @@ export function fifteenSetSize(value) {
 
 // Mosaic
 export function mosaicSetImage(value) {
+    const tokz = value.split('/');
     return {
         type: 'MOSAIC_SET_IMAGE',
         img: value,
+        imgName: tokz[tokz.length - 1].split('.')[0],
     }
 }
 

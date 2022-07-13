@@ -14,7 +14,7 @@ function Board(props) {
         if (mainRef && mainRef.current) {
             app.renderer.resize(app.view.parentNode.clientWidth, app.view.parentNode.clientHeight);
 
-            const calc = CalculateScale(app.renderer, PIXI.utils.TextureCache['img']);
+            const calc = CalculateScale(app.renderer, PIXI.utils.TextureCache[props.imgName]);
             mainRef.current.x = calc.x;
             mainRef.current.y = calc.y;
             mainRef.current.scale = {
@@ -22,7 +22,7 @@ function Board(props) {
                 y: calc.scale,
             };
         }
-    }, [app.renderer, app.view.parentNode]);
+    }, [app.renderer, app.view.parentNode, props.imgName]);
 
     useEffect(() => {
 
@@ -105,7 +105,7 @@ function Board(props) {
         <Container sortableChildren={true} ref={mainRef}>
             { props.victory ? (
                     <Sprite
-                        texture={PIXI.utils.TextureCache['img']}
+                        texture={PIXI.utils.TextureCache[props.imgName]}
                     />
                 ) : props.sprites?.map((sprite) => {
                     return (

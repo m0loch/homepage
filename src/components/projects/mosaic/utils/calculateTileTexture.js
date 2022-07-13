@@ -1,7 +1,7 @@
 import * as PIXI from 'pixi.js';
 
 function CalculateTileTexture(index, props, tileHeight, tileWidth) {
-    const texture = PIXI.utils.TextureCache['img'];
+    const texture = PIXI.utils.TextureCache[props.imgName];
 
     let x = (index % props.cols) * tileWidth;
     let y = Math.floor(index / props.cols) * tileHeight;

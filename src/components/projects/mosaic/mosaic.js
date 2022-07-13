@@ -47,7 +47,7 @@ function Mosaic(props) {
     const newGame = useCallback(() => {
         const cfg = RandomizeTiles(props.rows * props.cols, isDebug);
 
-        const texture = PIXI.utils.TextureCache['img'];
+        const texture = PIXI.utils.TextureCache[props.imgName];
         const tileHeight = (texture.height / props.rows);
         const tileWidth = (texture.width / props.cols);
     
@@ -76,9 +76,9 @@ function Mosaic(props) {
     useEffect(() => {
         const loader = PIXI.Loader.shared;
 
-        if (!PIXI.utils.TextureCache['img']) {
+        if (!PIXI.utils.TextureCache[props.imgName]) {
             loader
-                .add('img', process.env.PUBLIC_URL + props.img)
+                .add(props.imgName, process.env.PUBLIC_URL + props.img)
                 .load(() => {
                     setLoaded(true);
                     newGame();
@@ -88,7 +88,7 @@ function Mosaic(props) {
             newGame();
         }
 
-    }, [newGame, props.img])
+    }, [newGame, props.img, props.imgName])
 
     return (
         <FullBody>
@@ -96,9 +96,7 @@ function Mosaic(props) {
             {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
                 <Stage style={{margin:"auto"}}>
                     <Board
-                        image={props.img}
-                        rows={props.rows}
-                        cols={props.cols}
+                        {...props}
                         sprites={sprites}
                         loaded={loaded}
                         onVictory={onVictory}
