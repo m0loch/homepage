@@ -1,7 +1,5 @@
 const clamp = (value, min, max) => { 
-    const res = Math.min(Math.max(value, min), max);
-//    console.log(res);
-    return res;
+    return Math.min(Math.max(value, min), max);
 };
 
 // Fifteen
@@ -33,5 +31,13 @@ export function mosaicSetCols(value) {
     return {
         type: 'MOSAIC_SET_COLS',
         cols: clamp(parseInt(value), 3, 15),
+    }
+}
+
+// Wordle
+export function wordleSetDifficulty(value) {
+    return {
+        type: 'WORDLE_SET_DIFFICULTY',
+        difficulty: parseInt(value),
     }
 }

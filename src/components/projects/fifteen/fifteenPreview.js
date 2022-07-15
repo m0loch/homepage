@@ -53,8 +53,8 @@ function FifteenPreview(props) {
                     name="mode-select"
                     onChange={ev => props.fifteenSetSize(ev.target.value)}
                 >
-                    <FormControlLabel value="3" control={<Radio color="primary" />} label="9 tiles" />
-                    <FormControlLabel value="4" control={<Radio color="secondary" />} label="16 tiles" />
+                    <FormControlLabel value="3" control={<Radio />} label="9 tiles" />
+                    <FormControlLabel value="4" control={<Radio />} label="16 tiles" />
                 </RadioGroup>
             </Collapse>
         </div>

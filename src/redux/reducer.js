@@ -11,6 +11,8 @@ const SettingsReducer = (state = InitialState, action) => {
             return {...state, mosaic: {...state.mosaic, rows: action.rows}};
         case 'MOSAIC_SET_COLS':
             return {...state, mosaic: {...state.mosaic, cols: action.cols}};
+        case 'WORDLE_SET_DIFFICULTY':
+            return {...state, wordle: {...state.wordle, difficulty: action.difficulty}};
         default:
             return state;
         }
