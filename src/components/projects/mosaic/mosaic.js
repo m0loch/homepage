@@ -88,6 +88,7 @@ function Mosaic(props) {
             newGame();
         }
 
+        return () => PIXI.Loader.shared.reset();
     }, [newGame, props.img, props.imgName])
 
     return (
