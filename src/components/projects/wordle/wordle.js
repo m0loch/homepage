@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Grid } from "@mui/material";
+import { ordinal } from '../../common/grammar';
 import WordleContainer from './styledComponents/wordleContainer';
 import WordleRow from './styledComponents/wordleRow';
 import WordleTile from './styledComponents/wordleTile';
@@ -7,6 +8,7 @@ import Keyboard from './keyboard';
 import ValidWords from './data/dictionary';
 import Status from './status';
 import WinScreen from '../common/winScreen';
+import WordleErrorMessage from './styledComponents/wordleErrorMessage';
 
 const isDebug = false;
 
@@ -35,9 +37,9 @@ function NormalizeAttempt(value, result) {
     } else {
       retVal.push({
         value: letter,
-        correct: result[index] === index ? Status.Correct
-          : result[index] >= 0 ? Status.Misplaced
-            : Status.Wrong,
+        correct: result[index] === index ? { status: Status.Correct, index }
+          : result[index] >= 0 ? { status: Status.Misplaced }
+            : { status: Status.Wrong },
       })
     }
   });
@@ -45,12 +47,13 @@ function NormalizeAttempt(value, result) {
   return retVal;
 }
 
-function Wordle() {
+function Wordle(props) {
   const [solution, setSolution] = useState("");
   const [attempt, setAttempt] = useState("");
   const [attempts, setAttempts] = useState([]);
   const [hints, setHints] = useState({});
   const [gameEnded, setGameEnded] = useState(false);
+  const [error, setError] = useState("");
 
   const rowRefs = useRef([]);
 
@@ -60,11 +63,11 @@ function Wordle() {
 
     result.forEach((value, index) => {
       if (value === -1 && !(attempt[index] in newHints)) {
-        newHints[attempt[index]] = Status.Wrong;
+        newHints[attempt[index]] = { status: Status.Wrong };
       } else if (value === index) {
-        newHints[attempt[index]] = Status.Correct;
+        newHints[attempt[index]] = { status: Status.Correct, index };
       } else if (!(attempt[index] in newHints)) {
-        newHints[attempt[index]] = Status.Misplaced;
+        newHints[attempt[index]] = { status: Status.Misplaced };
       }
     });
 
@@ -72,8 +75,48 @@ function Wordle() {
 
   }, [attempt, hints, setHints]);
 
+  const CheckHardAttempt = useCallback((attempt) => {
+
+    let errMsg = null;
+
+    Object.entries(hints).forEach(
+      ([key, value]) => {
+
+        if (!errMsg) {
+          if ((value.status === Status.Misplaced) && (!attempt.includes(key))) {
+            errMsg = `Guess must contain ${key}`;
+          }
+
+          if ((value.status === Status.Correct) && (attempt[value.index] !== key)) {
+            errMsg = `${ordinal(value.index + 1)} letter must be ${key}`;
+          }
+        }
+      }
+    );
+
+    return errMsg;
+
+  }, [hints]);
+
   const submitAttempt = useCallback(() => {
-    if (!ValidWords.includes(attempt)) {
+
+    let errMsg = null;
+
+    if (props.difficulty > 0) {
+      errMsg = ValidWords.includes(attempt) ? null : 'Not in word list';
+
+      if (!errMsg && props.difficulty === 2) {
+        errMsg = CheckHardAttempt(attempt);
+      }
+    }
+
+    // If we've detected an error, notice the user and quit function
+    if (errMsg) {
+      setError(errMsg);
+
+      // Timed reset after the dialog disappearance, in order to be able to show a different message
+      setTimeout(() => setError(""), 1500);
+
       // Give some feedback
       rowRefs.current[attempts.length].style.animation = "shake 750ms cubic-bezier(.36,.07,.19,.97) both";
 
@@ -121,7 +164,7 @@ function Wordle() {
     }
 
     setAttempt("");
-  }, [attempt, attempts, solution, updateHints]);
+  }, [props.difficulty, attempt, attempts, solution, updateHints, CheckHardAttempt, setError]);
 
   const handleInput = useCallback((keypressed) => {
     if (gameEnded) {
@@ -187,7 +230,8 @@ function Wordle() {
 
   return (
     <WordleContainer>
-      {gameEnded ? <WinScreen msg={gameEnded.win ? null : `The solution was '${solution}'`} onClick={newGame}></WinScreen> : null}
+      {gameEnded ? <WinScreen msg={gameEnded.win ? null : `The solution was '${solution}'`} onClick={newGame} /> : null}
+      {error ? <WordleErrorMessage value={error} /> : null}
       <Grid>
         {
           rows.map((value, idx) =>

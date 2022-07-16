@@ -85,18 +85,20 @@ function WordleTile(props) {
 
         style.animation = `flip${props.idx} 1.5s ease-in-out`;
 
-        switch (props.char.correct) {
+        if (props.char.correct) {
+        switch (props.char.correct.status) {
 
-            case Status.Correct:
-                style.backgroundColor = theme.palette.wordle.correct;
-                break;
+                case Status.Correct:
+                    style.backgroundColor = theme.palette.wordle.correct;
+                    break;
 
-            case Status.Misplaced:
-                style.backgroundColor = theme.palette.wordle.misplaced;
-                break;
+                case Status.Misplaced:
+                    style.backgroundColor = theme.palette.wordle.misplaced;
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
     }
 

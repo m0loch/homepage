@@ -31,22 +31,24 @@ function WordleTile(props) {
 
     const theme = useTheme();
 
-    switch (props.keyStyle) {
+    if (props.keyStyle) {
+    switch (props.keyStyle.status) {
 
-        case Status.Correct:
-            style.backgroundColor = theme.palette.wordle.correct;
-            break;
+            case Status.Correct:
+                style.backgroundColor = theme.palette.wordle.correct;
+                break;
 
-        case Status.Misplaced:
-            style.backgroundColor = theme.palette.wordle.misplaced;
-            break;
+            case Status.Misplaced:
+                style.backgroundColor = theme.palette.wordle.misplaced;
+                break;
 
-        case Status.Wrong:
-            style.backgroundColor = theme.palette.wordle.wrong;
-            break;
+            case Status.Wrong:
+                style.backgroundColor = theme.palette.wordle.wrong;
+                break;
 
-        default:
-            break;
+            default:
+                break;
+        }
     }
 
     return (
