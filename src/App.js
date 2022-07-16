@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Routes,
   Route
 } from "react-router-dom";
 import { connect } from 'react-redux';
+import { mainSetDarkMode } from './redux/actions';
 
 import { CssBaseline } from '@mui/material';
 
@@ -24,18 +25,16 @@ import Wordle from './components/projects/wordle/wordle';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 function App(props) {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const theme = createTheme(darkMode ? darkTheme : lightTheme);
+  const theme = createTheme(props.darkMode ? darkTheme : lightTheme);
 
   const switchDarkMode = () => {
-    setDarkMode(!darkMode);
+    props.mainSetDarkMode(!props.darkMode);
   };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme/>
-      <NavBar dark={darkMode} onDarkModeSwitch={switchDarkMode} />
+      <NavBar dark={props.darkMode} onDarkModeSwitch={switchDarkMode} />
 
       <Routes>
 
@@ -58,4 +57,8 @@ function mapStateToProps(state) {
   return { ...state };
 }
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = {
+  mainSetDarkMode,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

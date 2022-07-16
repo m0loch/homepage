@@ -2,6 +2,14 @@ const clamp = (value, min, max) => {
     return Math.min(Math.max(value, min), max);
 };
 
+// Common
+export function mainSetDarkMode(value) {
+    return {
+        type: 'MAIN_SET_DARK_MODE',
+        value: value,
+    }
+}
+
 // Fifteen
 export function fifteenSetSize(value) {
     return {

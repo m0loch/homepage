@@ -3,6 +3,8 @@ import InitialState from "./initialState";
 const SettingsReducer = (state = InitialState, action) => {
 
     switch (action.type) {
+        case 'MAIN_SET_DARK_MODE':
+            return {...state, darkMode: action.value};
         case 'FIFTEEN_SET_SIZE':
             return {...state, fifteen: {...state.fifteen, size: action.size}};
         case 'MOSAIC_SET_IMAGE':

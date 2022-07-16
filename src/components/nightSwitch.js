@@ -90,7 +90,6 @@ function NightSwitch(props) {
     return (
         <StyledSwitch onClick={() => {
                 props.onDarkModeSwitch();
-                document.body.classList.toggle('dark');
             }
             }>
             <StyledFlicker dark={props.dark} />
