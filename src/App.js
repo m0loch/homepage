@@ -42,7 +42,7 @@ function App(props) {
         {/* Projects */}
         <Route path="/projects/fifteen" element={<Fifteen {...props.fifteen} />} />
         <Route path="/projects/mosaic" element={<Mosaic {...props.mosaic} />} />
-        <Route path="/projects/wordle" element={<Wordle/>} />
+        <Route path="/projects/wordle" element={<Wordle {...props.wordle} />} />
 
         {/* Main sections  */}
         <Route path="/about" element={<About/>} />

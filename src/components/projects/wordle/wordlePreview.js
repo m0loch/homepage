@@ -54,9 +54,9 @@ function WordlePreview(props) {
                     name="mode-select"
                     onChange={ev => props.wordleSetDifficulty(ev.target.value)}
                 >
-                    <FormControlLabel value="0" control={<Radio />} label="Easy" />
+                    <FormControlLabel value="0" control={<Radio />} label="Easy (any attempt is considered valid)" />
                     <FormControlLabel value="1" control={<Radio />} label="Normal" />
-                    <FormControlLabel value="2" control={<Radio  />} label="Hard" />
+                    <FormControlLabel value="2" control={<Radio  />} label="Hard (attempts must contain known letters)" />
                 </RadioGroup>
             </Collapse>
         </div>
