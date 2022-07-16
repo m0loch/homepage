@@ -185,6 +185,20 @@ const posts = [{
     signature: `Rant over
     Romeo`
 },
+{
+    key: 12,
+    title: "Settings (2)",
+    date: new Date("2022-07-16"),
+    content: `
+    Update on the previous post:
+    I've added Redux to the website and simple settings for each project.
+
+    The implementation, though, is very simple and lacks persistence, so be aware of when you refresh the page.
+
+    I now need to decide as to whether add such persistence (I think that leaving everything as it is lacks polish) or just go on with a new minigame - which was the main idea of this site all along, but I never spend any time actually coding those.
+    `,
+    signature: `Romeo`
+},
 ];
 
 export default posts;
