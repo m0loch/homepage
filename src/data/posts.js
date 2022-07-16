@@ -193,9 +193,11 @@ const posts = [{
     Update on the previous post:
     I've added Redux to the website and simple settings for each project.
 
-    The implementation, though, is very simple and lacks persistence, so be aware of when you refresh the page.
+    Now you should be able to change settings around (and the dark mode) and refresh the page without losing any edit (hooray...?).
 
-    I now need to decide as to whether add such persistence (I think that leaving everything as it is lacks polish) or just go on with a new minigame - which was the main idea of this site all along, but I never spend any time actually coding those.
+    The next step is deciding what game I should develop now.
+
+    Time to add some content!
     `,
     signature: `Romeo`
 },
