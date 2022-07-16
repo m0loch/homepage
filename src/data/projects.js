@@ -1,6 +1,7 @@
 import FifteenPreview from '../components/projects/fifteen/fifteenPreview';
 import MosaicPreview from '../components/projects/mosaic/mosaicPreview';
 import WordlePreview from '../components/projects/wordle/wordlePreview';
+import RunnerPreview from '../components/projects/runner/runnerPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 
 const games = [{
@@ -23,6 +24,13 @@ const games = [{
     content: "Just somebody else's successful idea",
     fullContent: WordlePreview,
     url: "wordle",
+},
+{
+    key: 3,
+    title: "Endless runner",
+    content: "A game that you could play by just turning your wifi off",
+    fullContent: RunnerPreview,
+    url: "runner",
 },
 {
     key: 100,
