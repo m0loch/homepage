@@ -91,7 +91,7 @@ function PlayArea(props) {
         charFrameAccumulator = (charFrameAccumulator + dt) % 60;
 
         // Compute gravity
-        char.AddVerticalVelocity(0.5);
+        char.AddVerticalVelocity(0.25);
         if (char.CheckCollisions(fieldMap)) {
             stop = true;
         }

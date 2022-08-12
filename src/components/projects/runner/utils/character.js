@@ -44,7 +44,6 @@ const CharState = {
 
 class Character {
     constructor() {
-        this.x = 16;
         this.y = 160;
         this.frame = 0;
         this.vVel = 0;
@@ -58,7 +57,7 @@ class Character {
 
     GetValue() {
         return {
-            x: this.x,
+            x: 16,
             y: this.y,
             frame: this.frame,
             vVel: this.vVel,
@@ -72,8 +71,12 @@ class Character {
 
     // CHARACTER INPUTS
     Jump() {
-        if (this.state === CharState.Running) {
-            this.vVel -= 8;
+        // COYOTE TIME
+        if (
+            (this.state === CharState.Running)
+            || (this.state === CharState.Falling && this.vVel < 0.5) // 1 extra frame
+        ) {
+            this.vVel -= 5;
         }
     }
 
@@ -95,22 +98,25 @@ class Character {
 
         this.y = this.y + this.vVel;
 
-        const baseX = Math.floor(this.x / 16);
         const baseY = Math.floor(this.y / 16);
 
         // Pitfall
         if (baseY >= 11) {
-            this.hit = true;
+            this.y = 11 * 16;
+            this.Land();
         }
 
         // Vertical check
-        if ((objectsMap[baseX][baseY+1] != null) || (objectsMap[baseX+1][baseY+1] != null)) {
+        if (
+            (objectsMap[1][baseY + 1] != null)
+            || (objectsMap[2][baseY + 1] != null)
+        ) {
             this.y = baseY * 16;
             this.Land();
         }
 
         // Obstacles collision
-        if (objectsMap[baseX+1][baseY] != null) {
+        if (objectsMap[2][baseY] != null) {
             this.hit = true;
         }
 

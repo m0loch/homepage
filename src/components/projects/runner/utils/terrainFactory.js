@@ -4,10 +4,11 @@ const SectionsDefinitions = {
     ],
     step: [
         [],
-        [10, null],
         [],
+        [10, null],
     ],
     platform: [
+        [],
         [],
         [3, null],
         [4, null],
@@ -23,12 +24,21 @@ const SectionsDefinitions = {
     ],
     crate: [
         [],
-        [0],
-        [49, 1],
+        [],
+        [49, 0],
+        [1],
         [1],
         [2],
     ],
     tree: [
+        [],
+        [],
+        [0],
+        [22, 37, 1],
+        [2],
+    ],
+    tallTree: [
+        [],
         [0],
         [1],
         [1],
@@ -45,6 +55,7 @@ function Normalize(baseVal) {
 class TerrainFactory {
     constructor() {
         this.depot = [];
+        this.lastSection = null;
         this.sections = Object.values(SectionsDefinitions);
     }
 
@@ -57,7 +68,12 @@ class TerrainFactory {
     GetNext() {
         // Randomizes next section
         if (this.depot.length === 0) {
-            const nextSection = this.sections[Math.floor((Math.random() * this.sections.length))];
+            let nextSection = null;
+
+            do {
+                nextSection = this.sections[Math.floor((Math.random() * this.sections.length))];
+            } while (nextSection === this.lastSection);
+
             this.depot = [...nextSection];
         }
 
