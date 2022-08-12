@@ -46,14 +46,14 @@ function RunnerPreview(props) {
                 `)}
 
             </Collapse>
-            <CollapseHeader
+            {/* <CollapseHeader
                 caption={"Settings"}
                 open={open[2]}
                 onClick={() => handleStateChange(2)}
             />
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
                 <p><i>Placeholder for settings</i></p>
-            </Collapse>
+            </Collapse> */}
             <CollapseHeader
                 caption={"Credits"}
                 open={open[3]}
