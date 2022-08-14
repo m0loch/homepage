@@ -59,12 +59,17 @@ const StyledTile = styled('div', {
     shouldForwardProp: (prop) => prop !== 'color'
 })(
     ({ theme, color }) => ({
-        height: theme.components.tetris.cellSize,
-        width: theme.components.tetris.cellSize,
-
         backgroundColor: color.tileColor,
         boxShadow: `inset -3px -3px ${color.darkShadow},
             inset 3px 3px ${color.shadow}`,
+
+        height: theme.components.tetris.cellSize,
+        width: theme.components.tetris.cellSize,
+
+        [theme.breakpoints.down('md')]: {
+            height: theme.components.tetris.cellSizeMobile,
+            width: theme.components.tetris.cellSizeMobile,
+        }
     })
 );
 

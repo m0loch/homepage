@@ -14,19 +14,8 @@ import LevelSection from './components/levelSection';
 import PreviewSection from './components/previewSection';
 import LegendSection from './components/legendSection';
 import Cell from './components/cell';
+import GameContainer from './components/gameContainer';
 
-
-/* TEMP: Mobile only *
-@media only screen and (max-width: 969px) {
-    .preview {
-        height: calc(var(--cell-size) / 2);
-    }
-
-    .preview .tile {
-        height: calc(var(--cell-size) / 2);
-        width: calc(var(--cell-size) / 2);
-    }
-}/**/
 
 class Tetris extends Component {
     constructor(props) {
@@ -60,11 +49,7 @@ class Tetris extends Component {
 
         return (
             <Box style={{ paddingTop: "20px" }}>
-                <Grid
-                    container
-                    spacing={2}
-                    style={{ maxWidth: "60%", margin: "auto" }}
-                >
+                <GameContainer>
                     {/* Left column */}
                     <Grid item xs={3}>
                         <ScoreSection>
@@ -91,7 +76,7 @@ class Tetris extends Component {
                         </PreviewSection>
                         <LegendSection />
                     </Grid>
-                </Grid>
+                </GameContainer>
             </Box>
         )
     }

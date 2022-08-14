@@ -20,19 +20,28 @@ const StyledPanel = styled('div')(
     })
 );
 
+const PanelTitle = styled('h1')(
+    ({ theme }) => ({
+        [theme.breakpoints.down('md')]: {
+            fontSize: "5vmin",
+        }
+    })
+);
 
 const DesktopText = styled('p')(
     ({ theme }) => ({
         [theme.breakpoints.down('md')]: {
-            visibility: "hidden",
+            display: "none",
         }
     })
 );
 
 const MobileText = styled('p')(
     ({ theme }) => ({
+        fontSize: "3vmin",
+
         [theme.breakpoints.up('md')]: {
-            visibility: "hidden",
+            display: "none",
         }
     })
 );
@@ -45,15 +54,15 @@ function PausePanel(props) {
         <StyledPanel>
             {!props.started &&
                 <div>
-                    <h1>TETRIS</h1>
+                    <PanelTitle>TETRIS</PanelTitle>
                     <DesktopText>Press <kbd>Space</kbd> to start</DesktopText>
                     <MobileText>Tap to start</MobileText>
                 </div>}
-            {props.paused && <h1>PAUSE</h1>}
+            {props.paused && <PanelTitle>PAUSE</PanelTitle>}
 
             {props.gameOver &&
                 <div>
-                    <h1>GAME OVER :(</h1>
+                    <PanelTitle>GAME OVER :(</PanelTitle>
                     <DesktopText>Press <kbd>Space</kbd> to try again</DesktopText>
                     <MobileText>Tap to try again</MobileText>
                 </div>}

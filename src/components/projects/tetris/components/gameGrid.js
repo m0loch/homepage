@@ -8,10 +8,16 @@ const StyledGrid = styled('div')(
         flexWrap: "wrap",
         position: "relative",
 
-        height: `calc((22 * ${theme.components.tetris.cellSize}) + 6px)`,
-        width: `calc(10 * ${theme.components.tetris.cellSize} + 6px)`,
         borderRadius: "5px",
         border: `solid ${theme.palette.primary.contrast}`,
+
+        height: `calc((22 * ${theme.components.tetris.cellSize}) + 6px)`,
+        width: `calc(10 * ${theme.components.tetris.cellSize} + 6px)`,
+
+        [theme.breakpoints.down('md')]: {
+            height: `calc((22 * ${theme.components.tetris.cellSizeMobile}) + 6px)`,
+            width: `calc((10 * ${theme.components.tetris.cellSizeMobile}) + 6px)`,
+        }
     })
 );
 
