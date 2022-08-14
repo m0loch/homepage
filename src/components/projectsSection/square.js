@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Card, CardActions, CardContent } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
 import { styled } from '@mui/system';
 
 import { splitText } from '../common/textFunctions';
@@ -46,9 +45,6 @@ function Square(props) {
                 <h2 style={{ marginTop: "30px" }}>{props.title}</h2>
                 {content}
             </StyledCardContent>
-            <CardActions style={{ justifyContent: "space-around", margin: "1vmin" }}>
-                <Link to={`/projects/${props.url}`} style={{display: props.url ? "block" : "none"}}>Check it out</Link>
-            </CardActions>
         </StyledCard>
     );
 }
