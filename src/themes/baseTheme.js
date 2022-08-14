@@ -71,6 +71,12 @@ const baseTheme = (theme) => {
                     }
                 }
             },
+            tetris: {
+                cellSize: "30px",
+                "@media only screen and (max-width: 899px)": {
+                    cellSize: "4vw",
+                }
+            },
         },
     }
 };

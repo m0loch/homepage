@@ -7,7 +7,6 @@ export default function FuturePlans() {
             <ul>
                 <li>Tyles</li>
                 <li>Minesweeper</li>
-                <li>Tetris</li>
                 <li>Card solitaire</li>
             </ul>
 

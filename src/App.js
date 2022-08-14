@@ -21,9 +21,10 @@ import ProjectsSection from './components/projectsSection';
 import Fifteen from './components/projects/fifteen/fifteen';
 import Mosaic from './components/projects/mosaic/mosaic';
 import Wordle from './components/projects/wordle/wordle';
+import Runner from './components/projects/runner/runner';
+import Tetris from './components/projects/tetris/tetris';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Runner from './components/projects/runner/runner';
 
 function App(props) {
   const theme = createTheme(props.darkMode ? darkTheme : lightTheme);
@@ -44,7 +45,7 @@ function App(props) {
         <Route path="/projects/mosaic" element={<Mosaic {...props.mosaic} />} />
         <Route path="/projects/wordle" element={<Wordle {...props.wordle} />} />
         <Route path="/projects/runner" element={<Runner assetsFolder={`${process.env.PUBLIC_URL}/assets/runner`}/>} />
-
+        <Route path="/projects/tetris" element={<Tetris {...props.tetris} />} />
 
         {/* Main sections  */}
         <Route path="/about" element={<About/>} />

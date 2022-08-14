@@ -17,6 +17,10 @@ const lightTheme = baseTheme({
         secondary: {
             main: "#BFBCC0",
         },
+        progress: {
+            main: "#028666",
+            dark: "#C0C0C0",
+        },
         wordle: {
             text: "#028666",
             correct: "#04FBBB",

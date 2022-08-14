@@ -16,6 +16,10 @@ const darkTheme = baseTheme({
         secondary: {
             main: "#6f6f6f",
         },
+        progress: {
+            main: "#FFFF00",
+            dark: "#465E85",
+        },
         wordle: {
             text: "#FFFFFF",
             correct: "#04844A",
