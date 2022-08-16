@@ -102,6 +102,7 @@ class Character {
 
         // Pitfall
         if (baseY >= 11) {
+            this.hit = true;
             this.y = 11 * 16;
             this.Land();
         }
