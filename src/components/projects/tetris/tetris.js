@@ -48,7 +48,7 @@ class Tetris extends Component {
         });
 
         return (
-            <Box style={{ paddingTop: "20px" }}>
+            <Box style={{ paddingTop: "21px" }}>
                 <GameContainer>
                     {/* Left column */}
                     <Grid item xs={3}>

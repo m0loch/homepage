@@ -15,7 +15,7 @@ const StyledGrid = styled(Grid)(
 
 function GameContainer(props) {
     return (
-        <StyledGrid container spacing={2} >
+        <StyledGrid container>
             {props.children}
         </StyledGrid>
     );

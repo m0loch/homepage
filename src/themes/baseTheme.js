@@ -86,7 +86,7 @@ const baseTheme = (theme) => {
             },
             tetris: {
                 cellSize: "30px",
-                cellSizeMobile: "2vw",
+                cellSizeMobile: "4vw",
             },
         },
     }
