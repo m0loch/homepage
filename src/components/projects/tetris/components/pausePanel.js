@@ -66,8 +66,14 @@ function PausePanel(props) {
                     <PanelTitle>TETRIS</PanelTitle>
                     <DesktopText>Press <kbd>Space</kbd> to start</DesktopText>
                     <MobileText>Tap to start</MobileText>
-                </StyledTextBlock>}
-            {props.paused && <PanelTitle>PAUSE</PanelTitle>}
+                </StyledTextBlock>
+            }
+
+            {props.paused &&
+                <StyledTextBlock>
+                    <PanelTitle>PAUSE</PanelTitle>
+                </StyledTextBlock>
+            }
 
             {props.gameOver &&
                 <StyledTextBlock>
