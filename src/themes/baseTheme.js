@@ -14,8 +14,8 @@ const baseTheme = (theme) => {
                         backgroundColor: theme.palette.background.main,
                     },
                     h1: {
-                        fontSize: "60px",
-                        lineHeight: "70px",
+                        fontSize: "55px",
+                        lineHeight: "60px",
                         fontWeight: 300,
                         margin: "10px 0",
                     },
