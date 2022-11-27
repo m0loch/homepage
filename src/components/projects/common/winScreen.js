@@ -15,6 +15,8 @@ const StyledPanel = styled('div')(
         height: "30%",
         width: "30%",
         backgroundColor: theme.palette.primary.main,
+        border: "5px ridge",
+        borderColor: theme.palette.primary.light,
         borderRadius: "5px",
 
         display: "flex",
