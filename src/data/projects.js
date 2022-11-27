@@ -39,6 +39,7 @@ const games = [{
     content: "A game of four",
     fullContent: TetrisPreview,
     url: "tetris",
+    disableOnMobile: true,
 },
 {
     key: 100,

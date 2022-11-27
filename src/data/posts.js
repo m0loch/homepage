@@ -298,6 +298,7 @@ const posts = [{
             <p>I also want to point out that the last two weeks have been crazy, one being on full vacation with my friends and the other seing me ill once again (I had high fever like three times in the last three months, my health's usually quite good) which really says something about my late level of stress.</p>
             <br />
             <p>While recovering I've started playing God of War (the 2018 one) but it's really not my favourite kind of game, but I needed something to do between earning my platinum on <a href="https://ffvii-remake-intergrade.square-enix-games.com/">FF7 Remake: Intergrade</a> and <a href="https://store.playstation.com/it-it/concept/10004142">the upcoming FF7 Crisis Core remake</a>.</p>
+            <br />
             <YouTubeVideo videoId={"AiL7huRoyxM"} />
             <br />
             <p><b>PS:</b> I've stopped working on Tetris for the moment, I really lack the energy for it and rewriting from scratch something you've already programmed once is REALLY boring :p</p>

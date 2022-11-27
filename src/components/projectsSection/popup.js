@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardActions, CardContent } from "@mui/material";
 import { styled } from '@mui/system';
+import isMobile from 'ismobilejs';
 
 import { splitText } from "../common/textFunctions";
 
@@ -95,6 +96,9 @@ const StyledLink = styled(Link)(
 function PopupSquare(props) {
     const FunctionalContent = props.selection?.fullContent;
 
+    const disableMobile = props.selection?.disableOnMobile;
+    const isMobileProject = isMobile(window.navigator).any;
+
     return (
         <>
             <PopupBackground {...props} />
@@ -106,13 +110,18 @@ function PopupSquare(props) {
                     {props.selection?.title}
                 </StyledPopupHeader>
                 <StyledPopupContent>
-                    { FunctionalContent ?
+                    {FunctionalContent ?
                         <FunctionalContent />
                         : splitText(props.selection?.content)}
                 </StyledPopupContent>
                 {props.selection?.url ? (
                     <StyledPopupFooter>
-                        <StyledLink to={`/projects/${props.selection.url}`}>Play</StyledLink>
+                        {disableMobile && isMobileProject ? <p>Can't play on mobile</p> :
+                            <StyledLink
+                                to={`/projects/${props.selection.url}`}
+
+                            >Play</StyledLink>
+                        }
                     </StyledPopupFooter>
                 ) : null}
             </StyledPopup>
