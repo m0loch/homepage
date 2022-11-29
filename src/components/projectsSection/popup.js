@@ -43,6 +43,10 @@ const StyledPopup = styled(Card, {
 
             backgroundColor: theme.palette.background.card,
 
+            border: "5px ridge",
+            borderColor: theme.palette.primary.light,
+    
+
             [theme.breakpoints.down('md')]: {
                 width: "85vw",
             }

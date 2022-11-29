@@ -306,6 +306,19 @@ const posts = [{
     ),
     signature: `Romeo`
 },
+
+// {
+//     key: 19,
+//     title: "test",
+//     date: new Date("2022-11-26"),
+//     smartContent: (
+//         <>
+
+//             <iframe src="https://www.ivemind.com" width={"80%"} height={500}></iframe>
+//         </>
+//     ),
+//     signature: `Romeo`
+// },
 ];
 
 export default posts;
