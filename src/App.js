@@ -23,6 +23,7 @@ import Mosaic from './components/projects/mosaic/mosaic';
 import Wordle from './components/projects/wordle/wordle';
 import Runner from './components/projects/runner/runner';
 import Tetris from './components/projects/tetris/tetris';
+import Talks from './components/projects/talks/talks';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -46,6 +47,7 @@ function App(props) {
         <Route path="/projects/wordle" element={<Wordle {...props.wordle} />} />
         <Route path="/projects/runner" element={<Runner assetsFolder={`${process.env.PUBLIC_URL}/assets/runner`}/>} />
         <Route path="/projects/tetris" element={<Tetris {...props.tetris} />} />
+        <Route path="/projects/talks" element={<Talks/>} />
 
         {/* Main sections  */}
         <Route path="/about" element={<About/>} />

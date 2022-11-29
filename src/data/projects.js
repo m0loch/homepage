@@ -4,6 +4,8 @@ import WordlePreview from '../components/projects/wordle/wordlePreview';
 import RunnerPreview from '../components/projects/runner/runnerPreview';
 import TetrisPreview from '../components/projects/tetris/tetrisPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
+import { splitText } from '../components/common/textFunctions';
+import TalksPreview from '../components/projects/talks/talksPreview';
 
 const games = [{
     key: 0,
@@ -40,6 +42,13 @@ const games = [{
     fullContent: TetrisPreview,
     url: "tetris",
     disableOnMobile: true,
+},
+{
+    key: 5,
+    title: "Talks",
+    content: "A quick take on text-based adventures",
+    fullContent: TalksPreview,
+    url: "talks",
 },
 {
     key: 100,

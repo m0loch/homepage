@@ -3,6 +3,7 @@ import charmeo from '../images/meo.gif';
 import profanities from '../images/profanities.jpeg';
 import { Link } from "react-router-dom";
 import YouTubeVideo from '../components/posts/youtubeVideo';
+import { splitText } from '../components/common/textFunctions';
 
 const posts = [{
     key: 0,
@@ -149,7 +150,7 @@ const posts = [{
     date: new Date("2022-06-23"),
     smartContent: (
         <>
-            <p> After the release of https://ddrop.it/ and the relative crunch, I've finally been able to take some time off work and come to <a href="https://en.wikipedia.org/wiki/Genoa" target="_blank" rel="noreferrer">Genoa</a> and meet my friends.</p>
+            <p> After the release of <a href="https://ddrop.it/">ddrop.it</a> and the relative crunch, I've finally been able to take some time off work and come to <a href="https://en.wikipedia.org/wiki/Genoa" target="_blank" rel="noreferrer">Genoa</a> and meet my friends.</p>
             <br />
             <p>We're planning to work a little on BugFormer in the next days but also to spend some time at the beach -which is something I don't get to do very often while living on the alps.</p>
             <br />
@@ -306,19 +307,24 @@ const posts = [{
     ),
     signature: `Romeo`
 },
+{
+    key: 19,
+    title: "A quick... something",
+    date: new Date("2022-11-29"),
+    smartContent: (
+        <>
+            {splitText(`
+            I'm quite tired lately - I'm still recovering from my recent illness - and I'm really BORED.
+            I don't feel like playing God of War, I tried playing Transistor and Across the Obelisk but I just don't seem to be able to fall in love with anything at the moment.
 
-// {
-//     key: 19,
-//     title: "test",
-//     date: new Date("2022-11-26"),
-//     smartContent: (
-//         <>
+            I remembered, though, how I liked <a href="https://www.choiceofgames.com/dragon">Choice of the Dragon</a> when I played it some 5-ish years ago, and wondered how difficult would it be to build a system for writing something like that of my own.
 
-//             <iframe src="https://www.ivemind.com" width={"80%"} height={500}></iframe>
-//         </>
-//     ),
-//     signature: `Romeo`
-// },
+            Too bad I don't have the kind of inspiration of writing a story of my own at the moment, but under the Projects section you can find "Talks", a minimal effort at emulating that system.
+            `)}
+        </>
+    ),
+    signature: `Romeo`
+},
 ];
 
 export default posts;
