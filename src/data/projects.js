@@ -4,7 +4,6 @@ import WordlePreview from '../components/projects/wordle/wordlePreview';
 import RunnerPreview from '../components/projects/runner/runnerPreview';
 import TetrisPreview from '../components/projects/tetris/tetrisPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
-import { splitText } from '../components/common/textFunctions';
 import TalksPreview from '../components/projects/talks/talksPreview';
 
 const games = [{
