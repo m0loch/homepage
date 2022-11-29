@@ -1,6 +1,6 @@
 import React from 'react';
 export function splitText(text) {
-    return text?.split("\n")?.map((str, idx) => str.length === 0 ?
+    return text?.split("\n")?.map((str, idx) => str.trim().length === 0 ?
         (idx > 0 ? <br key={idx} /> : null) :
         <p key={idx} dangerouslySetInnerHTML={{ __html: str.replaceAll('"', '') }} />);
 }
