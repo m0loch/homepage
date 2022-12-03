@@ -43,14 +43,14 @@ function Mosaic(props) {
     const onVictory = () => {
         setVictory(true);
     }
-    
+
     const newGame = useCallback(() => {
         const cfg = RandomizeTiles(props.rows * props.cols, isDebug);
 
         const texture = PIXI.utils.TextureCache[props.imgName];
         const tileHeight = (texture.height / props.rows);
         const tileWidth = (texture.width / props.cols);
-    
+
         const tiles = [];
         for (let i = 0; i < (props.rows * props.cols); i++) {
 
@@ -94,8 +94,11 @@ function Mosaic(props) {
     return (
         <FullBody>
             <PixiContainer>
-            {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
-                <Stage style={{margin:"auto"}}>
+                {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
+                <Stage
+                    style={{ margin: "auto" }}
+                    options={{ backgroundAlpha: 0 }}
+                >
                     <Board
                         {...props}
                         sprites={sprites}
@@ -105,7 +108,7 @@ function Mosaic(props) {
                     />
                 </Stage>
             </PixiContainer>
-        </FullBody>
+        </FullBody >
     );
 }
 
