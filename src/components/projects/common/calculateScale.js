@@ -1,18 +1,23 @@
-export function CalculateScale(baseWidth, baseHeight) {
-    const horizontalFit = baseWidth / 16;
-    const verticalFit = baseHeight / 12;
+export function CalculateScaleWithTiles(
+    baseWidth,
+    baseHeight,
+    horizontalTiles,
+    verticalTiles,
+) {
+    const horizontalFit = baseWidth / horizontalTiles;
+    const verticalFit = baseHeight / verticalTiles;
 
     if (horizontalFit < verticalFit) {
         return {
             width: baseWidth,
-            height: baseWidth * 0.75,
-            scale: horizontalFit / 16,
+            height: baseWidth * (verticalTiles / horizontalTiles),
+            scale: horizontalFit / horizontalTiles,
         }
     } else {
         return {
-            width: baseHeight * (4 / 3),
+            width: baseHeight * (horizontalTiles / verticalTiles),
             height: baseHeight,
-            scale: verticalFit / 16,
+            scale: verticalFit / horizontalTiles,
         }
     }
 }

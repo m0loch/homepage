@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Container, Sprite, useApp, useTick } from '@inlet/react-pixi';
 import * as PIXI from 'pixi.js';
-import { CalculateScale } from '../common/calculateScale';
+import { CalculateScaleWithTiles } from '../common/calculateScale';
 import TerrainFactory from './utils/terrainFactory';
 import Character from './utils/character';
 import BackgroundFactory from './utils/backgroundFactory';
@@ -115,7 +115,12 @@ function PlayArea(props) {
     const resize = useCallback((containerRef) => {
 
         if (containerRef) {
-            const fit = CalculateScale(app.view.parentNode.clientWidth, app.view.parentNode.clientHeight);
+            const fit = CalculateScaleWithTiles(
+                app.view.parentNode.clientWidth,
+                app.view.parentNode.clientHeight,
+                16,
+                12,
+            );
 
             app.renderer.resize(fit.width, fit.height);
 
