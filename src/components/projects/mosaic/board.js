@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import { Container, Sprite, useApp } from '@inlet/react-pixi';
 import * as PIXI from 'pixi.js';
-import CalculateScale from './utils/calculateScale';
+import { CalculateFullscreenScale } from '../common/calculateScale';
 
 function Board(props) {
 
@@ -14,7 +14,7 @@ function Board(props) {
         if (mainRef && mainRef.current) {
             app.renderer.resize(app.view.parentNode.clientWidth, app.view.parentNode.clientHeight);
 
-            const calc = CalculateScale(app.renderer, PIXI.utils.TextureCache[props.imgName]);
+            const calc = CalculateFullscreenScale(app.renderer, PIXI.utils.TextureCache[props.imgName]);
             mainRef.current.x = calc.x;
             mainRef.current.y = calc.y;
             mainRef.current.scale = {
@@ -33,7 +33,7 @@ function Board(props) {
     }, [resize]);
 
     if (!props.loaded) {
-        return(null);
+        return null;
     }
 
     const handleBeginTouch = (sprite, event) => {

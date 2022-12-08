@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Container, Sprite, useApp, useTick } from '@inlet/react-pixi';
 import * as PIXI from 'pixi.js';
-import CalculateScale from './utils/calculateScale';
+import { CalculateScale } from '../common/calculateScale';
 import TerrainFactory from './utils/terrainFactory';
 import Character from './utils/character';
 import BackgroundFactory from './utils/backgroundFactory';
