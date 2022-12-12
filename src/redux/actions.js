@@ -49,3 +49,11 @@ export function wordleSetDifficulty(value) {
         difficulty: parseInt(value),
     }
 }
+
+// Mastermind
+export function mastermindSetDifficulty(value) {
+    return {
+        type: 'MASTERMIND_SET_DIFFICULTY',
+        difficulty: parseInt(value),
+    }
+}

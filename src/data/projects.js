@@ -5,6 +5,7 @@ import RunnerPreview from '../components/projects/runner/runnerPreview';
 import TetrisPreview from '../components/projects/tetris/tetrisPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 import TalksPreview from '../components/projects/talks/talksPreview';
+import MastermindPreview from '../components/projects/mastermind/mastermindPreview';
 
 const games = [{
     key: 0,
@@ -48,6 +49,13 @@ const games = [{
     content: "A quick take on text-based adventures",
     fullContent: TalksPreview,
     url: "talks",
+},
+{
+    key: 6,
+    title: "Master Mind",
+    content: "A colour-based code breaking game",
+    fullContent: MastermindPreview,
+    url: "mastermind",
 },
 {
     key: 100,
