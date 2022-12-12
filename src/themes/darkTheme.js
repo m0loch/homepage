@@ -11,6 +11,7 @@ const darkTheme = baseTheme({
         link: "#FFFF00",
         primary: {
             main: "#4A3A84",
+            light: "#6E619C",
             contrast: "#FFFF00",
         },
         secondary: {
@@ -25,6 +26,9 @@ const darkTheme = baseTheme({
             correct: "#04844A",
             misplaced: "#848400",
             wrong: "#232B42",
+        },
+        masterMind: {
+            selected: "#6E619C",
         }
     },
 });

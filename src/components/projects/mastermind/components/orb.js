@@ -30,7 +30,7 @@ const Orb = styled('div',
             boxShadow:
                 `inset 4px 4px 4px ${valueColor.shadowCorrection ?? valueColor.main}, inset -4px -4px 4px ${valueColor.shadow}`,
             zIndex: 1,
-            margin: "5px 2px",
+            margin: "2px",
             [theme.breakpoints.down('md')]: {
                 width: "30px",
                 height: "30px",

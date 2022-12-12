@@ -26,6 +26,9 @@ const lightTheme = baseTheme({
             correct: "#04FBBB",
             misplaced: "#FFFF00",
             wrong: "#C0C0C0",
+        },
+        masterMind: {
+            selected: "#02866680",
         }
     },
 });
