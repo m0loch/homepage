@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Container } from "@mui/material";
 import Board from './components/board';
 import Row from './components/row';
-import Orb from './components/orb';
 import { GenerateCode } from './utils/utils';
 import WinScreen from '../common/winScreen';
 
@@ -34,32 +33,27 @@ function MasterMind(props) {
     // TMP
     console.log(gameState);
 
-    const onOrbClicked = (arg) => {
-        console.log(arg);
+    const onOrbClicked = ({ screenX, screenY }, idx) => {
+        console.log(`${screenX} x ${screenY}`);
+        console.log(idx);
+
+
+        // setGameState({ ...gameState, victory: true });
     }
 
     return (
         <Container style={{ width: "fit-content" }}>
             <Board container>
 
-                {gameState.victory ? <WinScreen onClick={() => NewGame(settings)} /> : null}
-                {gameState.rows.map((row, x) => (
+                {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(settings))} /> : null}
+                {gameState.rows.map((row, x) =>
                     <Row
                         key={x}
+                        idx={x}
                         selected={x === gameState.currentTry}
-                    >
-                        {
-                            // TMP: override the first row for debugging purposes
-                            (x === 0 && gameState.code ? gameState.code : row).map((tile, y) =>
-                                <Orb
-                                    key={y}
-                                    value={tile}
-                                    onClick={() => onOrbClicked(x * 10 + y)}
-                                />
-                            )
-                        }
-                    </Row>
-                )
+                        value={x === 0 ? gameState.code : row} // TMP: override the first row for debugging purposes
+                        onOrbClicked={onOrbClicked}
+                    />
                 )}
             </Board>
         </Container>
