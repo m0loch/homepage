@@ -11,7 +11,7 @@ const StyledPanel = styled('div')(
         position: "fixed",
         top: "35%",
         left: "35%",
-        zIndex: 1,
+        zIndex: 10,
         height: "30%",
         width: "30%",
         backgroundColor: theme.palette.primary.main,
