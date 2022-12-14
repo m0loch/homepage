@@ -5,6 +5,7 @@ import Board from './components/board';
 import Row from './components/row';
 import { GenerateCode } from './utils/utils';
 import WinScreen from '../common/winScreen';
+import SelectionDlg from './components/selectionDlg';
 
 const Settings = [
     { tries: 9, colors: 6, digits: 4 },
@@ -16,8 +17,10 @@ const NewGame = (settings) => {
         rows: Array.apply(0, { length: settings.tries })
             .map(() => GenerateEmptyRow(settings.digits)),
         currentTry: 0,
+        editingDigit: undefined,
         code: GenerateCode(settings.digits, settings.colors),
         victory: false,
+        dialogOpen: false,
     };
 }
 
@@ -30,28 +33,46 @@ function MasterMind(props) {
     const settings = Settings[props.difficulty];
     const [gameState, setGameState] = useState(NewGame(settings));
 
-    // TMP
-    console.log(gameState);
-
     const onOrbClicked = ({ screenX, screenY }, idx) => {
-        console.log(`${screenX} x ${screenY}`);
-        console.log(idx);
+        setGameState({
+            ...gameState,
+            dialogOpen: {x: screenX, y: screenY},
+            editingDigit: idx,
+         });
+    }
 
+    const onDlgSelect = (value) => {
+        const rows = gameState.rows;
+        rows[gameState.currentTry][gameState.editingDigit] = value;
 
-        // setGameState({ ...gameState, victory: true });
+        setGameState({
+            ...gameState,
+            dialogOpen: false,
+            editingDigit: undefined,
+        })
+    }
+
+    const onDlgCancel = () => {
+        setGameState({ ...gameState, dialogOpen: false });
     }
 
     return (
         <Container style={{ width: "fit-content" }}>
             <Board container>
-
+                <SelectionDlg
+                    open={gameState.dialogOpen !== false}
+                    optionsNumber={settings.colors}
+                    onSelect={onDlgSelect}
+                    onClose={onDlgCancel}
+                    position={gameState.dialogOpen}
+                />
                 {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(settings))} /> : null}
                 {gameState.rows.map((row, x) =>
                     <Row
                         key={x}
                         idx={x}
                         selected={x === gameState.currentTry}
-                        value={x === 0 ? gameState.code : row} // TMP: override the first row for debugging purposes
+                        value={row}
                         onOrbClicked={onOrbClicked}
                     />
                 )}
