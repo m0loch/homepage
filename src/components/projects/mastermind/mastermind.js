@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Container } from "@mui/material";
 import Board from './components/board';
 import Row from './components/row';
-import { GenerateCode } from './utils/utils';
+import { GenerateCode, CheckCode } from './utils/utils';
 import WinScreen from '../common/winScreen';
 import SelectionDlg from './components/selectionDlg';
 
@@ -16,10 +16,12 @@ const NewGame = (settings) => {
     return {
         rows: Array.apply(0, { length: settings.tries })
             .map(() => GenerateEmptyRow(settings.digits)),
+        hints: [],
         currentTry: 0,
         editingDigit: undefined,
-        code: GenerateCode(settings.digits, settings.colors),
+        solution: GenerateCode(settings.digits, settings.colors),
         victory: false,
+        failure: false,
         dialogOpen: false,
     };
 }
@@ -57,7 +59,15 @@ function MasterMind(props) {
     }
 
     const SubmitTry = (code) => {
-        console.log(code);
+        const res = CheckCode(code, gameState.solution);
+
+        setGameState({
+            ...gameState,
+            hints: [...gameState.hints, res],
+            currentTry: gameState.currentTry + 1,
+            victory: res.correct === settings.digits,
+            failure: gameState.currentTry === settings.tries && res.correct < settings.digits,
+        })
     }
 
     return (
@@ -77,6 +87,7 @@ function MasterMind(props) {
                         idx={x}
                         selected={x === gameState.currentTry}
                         value={row}
+                        hint={gameState.hints[x]}
                         onOrbClicked={onOrbClicked}
                         onSubmit={SubmitTry}
                     />

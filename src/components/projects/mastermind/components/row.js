@@ -16,6 +16,11 @@ const StyledDiv = styled('div', {
 
 function Row(props) {
     const disabled = props.value.findIndex(item => item === undefined) > -1;
+
+    if (props.hint) {
+        console.log(props.hint);
+    }
+
     return (
         <StyledDiv selected={props.selected}>
             {props.value.map((tile, y) =>
@@ -26,9 +31,9 @@ function Row(props) {
                 />
             )}
             <div style={{ width: "20px" }} />
-            {props.selected ?
-                <InputBtn disabled={disabled} onClick={() => props.onSubmit(props.value)} />
-                : null}
+            {props.selected ? <InputBtn disabled={disabled} onClick={() => props.onSubmit(props.value)} />
+                : props.hint ? <p>{props.hint.toString()}</p>
+                    : null}
         </StyledDiv>
     )
 }
