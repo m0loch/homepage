@@ -56,6 +56,10 @@ function MasterMind(props) {
         setGameState({ ...gameState, dialogOpen: false });
     }
 
+    const SubmitTry = (code) => {
+        console.log(code);
+    }
+
     return (
         <Container style={{ width: "fit-content" }}>
             <Board container>
@@ -74,6 +78,7 @@ function MasterMind(props) {
                         selected={x === gameState.currentTry}
                         value={row}
                         onOrbClicked={onOrbClicked}
+                        onSubmit={SubmitTry}
                     />
                 )}
             </Board>

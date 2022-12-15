@@ -1,4 +1,5 @@
 import { styled } from '@mui/system';
+import InputBtn from './inputBtn';
 import Orb from './orb';
 
 const StyledDiv = styled('div', {
@@ -14,6 +15,7 @@ const StyledDiv = styled('div', {
 );
 
 function Row(props) {
+    const disabled = props.value.findIndex(item => item === undefined) > -1;
     return (
         <StyledDiv selected={props.selected}>
             {props.value.map((tile, y) =>
@@ -23,6 +25,10 @@ function Row(props) {
                     onClick={props.selected ? ev => props.onOrbClicked(ev, y) : null}
                 />
             )}
+            <div style={{ width: "20px" }} />
+            {props.selected ?
+                <InputBtn disabled={disabled} onClick={() => props.onSubmit(props.value)} />
+                : null}
         </StyledDiv>
     )
 }
