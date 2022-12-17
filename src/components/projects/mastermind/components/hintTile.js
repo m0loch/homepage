@@ -14,12 +14,15 @@ const StyledDiv = styled('div',
             justifyItems: "center",
             alignItems: "center",
 
-            width: "50px",
+            width: "60px",
             height: "50px",
             margin: "auto",
+            padding: "0 5px",
+
             [theme.breakpoints.down('md')]: {
-                width: "25px",
+                width: "30px",
                 height: "25px",
+                padding: "0 2.5px",
             }
         })
     }
