@@ -61,11 +61,13 @@ function MasterMind(props) {
     const SubmitTry = (code) => {
         const res = CheckCode(code, gameState.solution);
 
+        const isVictory = res.correct === settings.digits;
+
         setGameState({
             ...gameState,
             hints: [...gameState.hints, res],
-            currentTry: gameState.currentTry + 1,
-            victory: res.correct === settings.digits,
+            currentTry: isVictory ? -1 : gameState.currentTry + 1,
+            victory: isVictory,
             failure: gameState.currentTry === settings.tries && res.correct < settings.digits,
         })
     }
