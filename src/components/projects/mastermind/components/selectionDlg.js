@@ -20,39 +20,41 @@ const StyledBG = styled('div')(
 );
 
 const StyledPanel = styled('div',
-    { shouldForwardProp: (prop) => prop !== 'position' })(
-        ({ theme, position }) => ({
-            position: "fixed",
-            top: position?.y,
-            left: position?.x,
-            zIndex: 1500,
-            backgroundColor: theme.palette.primary.main,
-            border: "5px ridge",
-            borderColor: theme.palette.primary.light,
-            borderRadius: "5px",
+    { shouldForwardProp: (prop) => prop !== 'position' },
+    { shouldForwardProp: (prop) => prop !== 'columns' },
+)(
+    ({ theme, position, columns }) => ({
+        position: "fixed",
+        top: position?.y,
+        left: position?.x,
+        zIndex: 1500,
+        backgroundColor: theme.palette.primary.main,
+        border: "5px ridge",
+        borderColor: theme.palette.primary.light,
+        borderRadius: "5px",
 
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            width: "calc(60px * 4.5)",
-            alignItems: "center",
-            justifyContent: "center",
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        width: `calc(60px * ${columns}.5)`,
+        alignItems: "center",
+        justifyContent: "center",
 
-            opacity: 0,
-            animation: `${appearAnimation} .1s ease-in .1s 1 normal forwards`,
+        opacity: 0,
+        animation: `${appearAnimation} .1s ease-in .1s 1 normal forwards`,
 
-            [theme.breakpoints.down('md')]: {
-                width: "calc(30px * 5)",
-            }
-        })
-    );
+        [theme.breakpoints.down('md')]: {
+            width: "calc(30px * 5)",
+        }
+    })
+);
 
 function SelectionDlg(props) {
     const options = Array.apply(0, { length: props.optionsNumber });
 
     return (props.open ? <>
         <StyledBG onClick={props.onClose} />
-        <StyledPanel position={props.position}>
+        <StyledPanel position={props.position} columns={props.optionsNumber / 2}>
             {options.map((value, idx) =>
                 <Orb
                     key={idx}
