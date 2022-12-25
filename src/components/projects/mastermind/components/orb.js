@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import { styled, keyframes } from '@mui/system';
 
 const colors = [
     { main: "#FF0000", shadow: "#2E2E68E6" },
@@ -12,11 +12,17 @@ const colors = [
 ]
 const empty = { main: "#FFFFFF33", shadow: "#CECECE4D", shadowCorrection: "#00000000" }
 
+const appearAnimation = keyframes`
+    0%   { opacity: 0 },
+    100% { opacity: 1 },
+`;
+
 const Orb = styled('div',
     { shouldForwardProp: (prop) => prop !== 'value' },
-    { shouldForwardProp: (prop) => prop !== 'hint' }
+    { shouldForwardProp: (prop) => prop !== 'hint' },
+    { shouldForwardProp: (props) => props !== 'appearanceDelay' },
 )(
-    ({ theme, value, hint }) => {
+    ({ theme, value, hint, appearanceDelay }) => {
         let valueColor;
         if (value === undefined) {
             valueColor = empty;
@@ -24,6 +30,9 @@ const Orb = styled('div',
             valueColor = colors[value];
         }
         return ({
+            opacity: appearanceDelay ? 0 : 1,
+            animation: `${appearAnimation} .5s ease-in ${appearanceDelay}s 1 normal forwards`,
+
             width: hint ? "12px" : "60px",
             height: hint ? "12px" :  "60px",
             borderRadius: "50%",

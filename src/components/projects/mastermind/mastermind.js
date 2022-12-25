@@ -5,6 +5,7 @@ import Board from './components/board';
 import Row from './components/row';
 import { GenerateCode, CheckCode } from './utils/utils';
 import WinScreen from '../common/winScreen';
+import LoseScreen from './components/loseScreen';
 import SelectionDlg from './components/selectionDlg';
 
 const Settings = [
@@ -61,14 +62,20 @@ function MasterMind(props) {
     const SubmitTry = (code) => {
         const res = CheckCode(code, gameState.solution);
 
+        const nextTry = gameState.currentTry + 1;
         const isVictory = res.correct === settings.digits;
+
+        if (!isVictory && (nextTry < settings.tries)) {
+            const rows = gameState.rows;
+            rows[nextTry] = [...rows[gameState.currentTry]];
+        }
 
         setGameState({
             ...gameState,
             hints: [...gameState.hints, res],
-            currentTry: isVictory ? -1 : gameState.currentTry + 1,
+            currentTry: isVictory ? -1 : nextTry,
             victory: isVictory,
-            failure: gameState.currentTry === settings.tries && res.correct < settings.digits,
+            failure: nextTry >= settings.tries && res.correct < settings.digits,
         })
     }
 
@@ -83,6 +90,10 @@ function MasterMind(props) {
                     position={gameState.dialogOpen}
                 />
                 {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(settings))} /> : null}
+                {gameState.failure ? <LoseScreen
+                    onClick={() => setGameState(NewGame(settings))}
+                    solution={gameState.solution}
+                /> : null}
                 {gameState.rows.map((row, x) =>
                     <Row
                         key={x}
