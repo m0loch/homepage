@@ -36,10 +36,10 @@ function MasterMind(props) {
     const settings = Settings[props.difficulty];
     const [gameState, setGameState] = useState(NewGame(settings));
 
-    const onOrbClicked = ({ screenX, screenY }, idx) => {
+    const onOrbClicked = ({ clientX, clientY }, idx) => {
         setGameState({
             ...gameState,
-            dialogOpen: {x: screenX, y: screenY},
+            dialogOpen: {x: clientX, y: clientY},
             editingDigit: idx,
          });
     }
@@ -80,7 +80,7 @@ function MasterMind(props) {
     }
 
     return (
-        <Container style={{ width: "fit-content" }}>
+        <Container style={{ width: "fit-content", paddingBottom: "100px" }}>
             <Board container>
                 <SelectionDlg
                     open={gameState.dialogOpen !== false}
@@ -92,6 +92,7 @@ function MasterMind(props) {
                 {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(settings))} /> : null}
                 {gameState.failure ? <LoseScreen
                     onClick={() => setGameState(NewGame(settings))}
+                    optionsNumber={settings.colors}
                     solution={gameState.solution}
                 /> : null}
                 {gameState.rows.map((row, x) =>

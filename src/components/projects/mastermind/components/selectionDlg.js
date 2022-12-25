@@ -43,8 +43,10 @@ const StyledPanel = styled('div',
         opacity: 0,
         animation: `${appearAnimation} .1s ease-in .1s 1 normal forwards`,
 
+        transform: "translateX(-50%)",
+
         [theme.breakpoints.down('md')]: {
-            width: "calc(30px * 5)",
+            width: `calc(30px * (${columns} + 1))`,
         }
     })
 );

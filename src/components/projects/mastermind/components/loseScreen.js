@@ -34,20 +34,25 @@ const StyledPanel = styled('div')(
 
         [theme.breakpoints.down('md')]: {
             width: "80%",
-            height: "16%",
-            top: "42%",
+            minHeight: "16%",
+            top: "32%",
             left: "10%",
         }
     })
 );
 
-const StyledOk = styled('h3')(
-    ({ theme }) => ({
-        maxWidth: "80%",
-        textAlign: "center",
-        opacity: 0,
-        animation: delayedAppear(3.5),
-    })
+const StyledOk = styled('h3',
+    { shouldForwardProp: (prop) => prop !== 'columns' },
+)(
+    ({ theme, columns }) => {
+        const delay = 1.5 + (columns * 0.5);
+        return ({
+            maxWidth: "80%",
+            textAlign: "center",
+            opacity: 0,
+            animation: delayedAppear(delay),
+        })
+    }
 );
 
 export default function LoseScreen(props) {
@@ -65,6 +70,7 @@ export default function LoseScreen(props) {
             </div>
             <StyledOk
                 onClick={props.onClick}
+                columns={props.optionsNumber}
             >
                 {"Play again?"}
             </StyledOk>
