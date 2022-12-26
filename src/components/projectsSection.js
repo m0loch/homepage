@@ -14,11 +14,19 @@ const StyledSection = styled('div')(
 );
 
 const StyledSquares = styled('section')(
-    () => ({
+    ({ theme }) => ({
         display: "flex",
         flexWrap: "wrap",
         alignContent: "flex-start",
         margin: "auto",
+        "&>*:nth-last-child(1)": {
+            backgroundColor: theme.palette.primary.main,
+        },
+        "&>*:nth-last-child(1):nth-child(odd)": {
+            [theme.breakpoints.up('md')]: {
+                width: "100%",
+            }
+        }
     })
 );
 
