@@ -19,10 +19,10 @@ const StyledSquares = styled('section')(
         flexWrap: "wrap",
         alignContent: "flex-start",
         margin: "auto",
-        "&>*:nth-last-child(1)": {
+        "&>*:nth-last-of-type(1)": {
             backgroundColor: theme.palette.primary.main,
         },
-        "&>*:nth-last-child(1):nth-child(odd)": {
+        "&>*:nth-last-of-type(1):nth-of-type(odd)": {
             [theme.breakpoints.up('md')]: {
                 width: "100%",
             }
