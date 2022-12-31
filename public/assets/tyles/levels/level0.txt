@@ -1,0 +1,24 @@
+isResolved:
+1
+
+minNumberOfMoves:
+2
+
+moves:
+
+0 1
+0 0
+1 0
+
+
+1 0
+0 0
+0 1
+
+level:
+
+0. 0.
+0. 0.
+0. 0.
+
+end
