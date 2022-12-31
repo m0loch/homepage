@@ -30,7 +30,7 @@ const StyledPopup = styled(Card, {
     ({ theme, selection }) => {
         const isHidden = !selection;
         return {
-            position: "absolute",
+            position: "fixed",
             visibility: isHidden ? "hidden" : "visible",
             left: "50%",
             top: "45vh",
