@@ -33,7 +33,7 @@ const StyledPopup = styled(Card, {
             position: "fixed",
             visibility: isHidden ? "hidden" : "visible",
             left: "50%",
-            top: "45vh",
+            top: "50%",
             transform: "translate(-50%, -50%)",
             minHeight: "30%",
             maxHeight: "80vh",
