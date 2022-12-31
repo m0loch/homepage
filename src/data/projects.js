@@ -6,6 +6,7 @@ import TetrisPreview from '../components/projects/tetris/tetrisPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 import TalksPreview from '../components/projects/talks/talksPreview';
 import MastermindPreview from '../components/projects/mastermind/mastermindPreview';
+import TylesPreview from '../components/projects/tyles/tylesPreview';
 
 const games = [{
     key: 0,
@@ -56,6 +57,13 @@ const games = [{
     content: "A colour-based code breaking game",
     fullContent: MastermindPreview,
     url: "mastermind",
+},
+{
+    key: 7,
+    title: "Tyles!",
+    content: "My first commercial success!",
+    fullContent: TylesPreview,
+    url: "tyles",
 },
 {
     key: 100,

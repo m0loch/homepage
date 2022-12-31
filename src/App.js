@@ -25,6 +25,7 @@ import Runner from './components/projects/runner/runner';
 import Tetris from './components/projects/tetris/tetris';
 import Talks from './components/projects/talks/talks';
 import MasterMind from './components/projects/mastermind/mastermind';
+import Tyles from './components/projects/tyles/tyles';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -37,7 +38,7 @@ function App(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline enableColorScheme/>
+      <CssBaseline enableColorScheme />
       <NavBar dark={props.darkMode} onDarkModeSwitch={switchDarkMode} />
 
       <Routes>
@@ -46,15 +47,16 @@ function App(props) {
         <Route path="/projects/fifteen" element={<Fifteen {...props.fifteen} />} />
         <Route path="/projects/mosaic" element={<Mosaic {...props.mosaic} />} />
         <Route path="/projects/wordle" element={<Wordle {...props.wordle} />} />
-        <Route path="/projects/runner" element={<Runner assetsFolder={`${process.env.PUBLIC_URL}/assets/runner`}/>} />
+        <Route path="/projects/runner" element={<Runner assetsFolder={`${process.env.PUBLIC_URL}/assets/runner`} />} />
         <Route path="/projects/tetris" element={<Tetris {...props.tetris} />} />
-        <Route path="/projects/talks" element={<Talks/>} />
+        <Route path="/projects/talks" element={<Talks />} />
         <Route path="/projects/mastermind" element={<MasterMind {...props.mastermind} />} />
+        <Route path="/projects/tyles" element={<Tyles levelsFolder={`${process.env.PUBLIC_URL}/assets/tyles/levels`} {...props.tyles} />} />
 
         {/* Main sections  */}
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
         <Route path="/projects" element={<ProjectsSection games={games} />} />
-        <Route path="/" element={<Main posts={posts}/>} />
+        <Route path="/" element={<Main posts={posts} />} />
 
       </Routes>
     </ThemeProvider>
