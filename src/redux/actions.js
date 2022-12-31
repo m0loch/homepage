@@ -57,3 +57,19 @@ export function mastermindSetDifficulty(value) {
         difficulty: parseInt(value),
     }
 }
+
+// Tyles
+export function tylesSetLevel(value) {
+    return {
+        type: 'TYLES_SET_LEVEL',
+        level: parseInt(value),
+    }
+}
+
+export function tylesSetLevelBestScore(levelIdx, value) {
+    return {
+        type: 'TYLES_SET_LEVEL_BEST_SCORE',
+        level: levelIdx,
+        score: parseInt(value),
+    }
+}

@@ -17,6 +17,11 @@ const SettingsReducer = (state = InitialState, action) => {
             return {...state, wordle: {...state.wordle, difficulty: action.difficulty}};
         case 'MASTERMIND_SET_DIFFICULTY':
             return {...state, mastermind: {...state.mastermind, difficulty: action.difficulty}};
+        case 'TYLES_SET_LEVEL':
+            return {...state, tyles: {...state.tyles, level: action.level}};
+        case 'TYLES_SET_LEVEL_BEST_SCORE':
+            state.tyles.scores[action.level] = action.score;
+            break;
         default:
             return state;
         }
