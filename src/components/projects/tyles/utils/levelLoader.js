@@ -36,7 +36,7 @@ function readLevel(data, levelSetter) {
     const tiles = interpretField(data.match(fieldRegEx)[1]);
 
     // return callback
-    levelSetter({ minMoves, solutions, tiles, rows: tiles.length, columns: tiles[0].length });
+    levelSetter({ moves: 0, minMoves, solutions, tiles, rows: tiles.length, columns: tiles[0].length });
 }
 
 function LevelLoader(folder, levelIndex, levelSetter) {

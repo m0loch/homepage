@@ -5,17 +5,21 @@ import { tylesSetLevel } from '../../../redux/actions';
 import { Container } from "@mui/material";
 import TylesField from './components/tylesField';
 import Tyle from './components/tyle';
-import WinScreen from '../common/winScreen';
+import TylesWinScreen from './components/tylesWinScreen';
 import LevelLoader from './utils/levelLoader';
 import PerformMove from './utils/movesHandler';
 
 
 function Tyles(props) {
 
-    const [level, setLevel] = useState({ victory: false, tiles: [] });
+    const [level, setLevel] = useState({ moves: 0, victory: false, tiles: [] });
 
-    const newGame = () => {
+    const nextLevel = () => {
         props.tylesSetLevel(props.level + 1);
+    }
+
+    const startOver = () => {
+        LevelLoader(props.levelsFolder, props.level, setLevel);
     }
 
     const checkVictory = (tiles) => {
@@ -36,15 +40,24 @@ function Tyles(props) {
 
         setLevel({
             ...level,
+            moves: level.moves + 1,
             tiles,
             victory: checkVictory(tiles),
-         });
+        });
     }
 
     return (
         <Container style={{ display: "flex" }}>
             <TylesField container size={level.columns}>
-                {level.victory ? <WinScreen onClick={newGame}></WinScreen> : null}
+                {level.victory ?
+                    <TylesWinScreen
+                        onReplay={startOver}
+                        onNext={nextLevel}
+                        minMoves={level.minMoves}
+                        moves={level.moves}
+                    />
+                    : null}
+
                 {level.tiles.map(
                     (row, y) => (
                         row.map(
