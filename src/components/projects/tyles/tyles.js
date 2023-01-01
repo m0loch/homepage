@@ -3,62 +3,64 @@ import { connect } from 'react-redux';
 import { tylesSetLevel } from '../../../redux/actions';
 
 import { Container } from "@mui/material";
-import StyledField from './components/styledField';
-import StyledTile from './components/styledTile';
+import TylesField from './components/tylesField';
+import Tyle from './components/tyle';
 import WinScreen from '../common/winScreen';
 import LevelLoader from './utils/levelLoader';
+import PerformMove from './utils/movesHandler';
 
 
 function Tyles(props) {
 
-    const [level, setLevel] = useState({ tiles: [] });
-    const [victory, setVictory] = useState(false);
-
-    const reader = new FileReader();
-    reader.onload = async () => {
-        console.log(reader.result);
-    }
+    const [level, setLevel] = useState({ victory: false, tiles: [] });
 
     const newGame = () => {
         props.tylesSetLevel(props.level + 1);
-        setVictory(false);
     }
 
     const checkVictory = (tiles) => {
-        return false;
+        // reinterprest structure as string
+        const depot = JSON.stringify(tiles);
+
+        // searches (linearly) for a tyle set as off
+        return !depot.includes('0');
     }
 
     useEffect(() => {
         LevelLoader(props.levelsFolder, props.level, setLevel);
     }, [props.levelsFolder, props.level]);
 
-    ////////////////////////
-    // Check for game's end
-    ////////////////////////
-    if (!victory && checkVictory(level.tiles)) {
-        setVictory(true);
+    const handleClick = (x, y, value, modifier) => {
+
+        const tiles = PerformMove(level.tiles, x, y, value, modifier);
+
+        setLevel({
+            ...level,
+            tiles,
+            victory: checkVictory(tiles),
+         });
     }
 
     return (
         <Container style={{ display: "flex" }}>
-            <StyledField container size={level.columns}>
-                {victory ? <WinScreen onClick={newGame}></WinScreen> : null}
+            <TylesField container size={level.columns}>
+                {level.victory ? <WinScreen onClick={newGame}></WinScreen> : null}
                 {level.tiles.map(
                     (row, y) => (
                         row.map(
                             (el, x) => (
-                                <StyledTile
+                                <Tyle
                                     key={x}
                                     idx={x}
                                     value={el}
-                                    tilesPerSide={level.columns}
-                                    onClick={() => alert(y * level.columns + x)}
+                                    columns={level.columns}
+                                    onClick={() => handleClick(x, y, el[0], el[1])}
                                 />
                             )
                         )
                     )
                 )}
-            </StyledField>
+            </TylesField>
         </Container>
     );
 }

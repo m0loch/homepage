@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
-const StyledField = styled(Grid, {
+const TylesField = styled(Grid, {
     shouldForwardProp: (props) => props !== 'size'
 })(
     ({ theme, size }) => ({
@@ -17,4 +17,4 @@ const StyledField = styled(Grid, {
     })
 );
 
-export default StyledField;
+export default TylesField;

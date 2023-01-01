@@ -7,30 +7,21 @@ function interpretSolutions(rawSolutions) {
         .map(solution =>
             solution.split('\n') // splits to rows
                 .filter(row => row.length > 0) // empty lines removal
-                .map(row => row.split(' ').map(elem => parseInt(elem)))
+                .map(row => row
+                    .split(' ')
+                    .filter(item => item.length > 0)
+                    .map(elem => parseInt(elem))
+                )
         );
 
     return possibleSolutions;
 }
 
 function interpretField(rawField) {
-    /* MODIFIERS:
-    !   hole (no tile should be painted)
-    0   tile is off
-    1   tile is on
-
-    .   standard tile   (flips adjacent ones)
-    *   power tile      (flips also diagonal ones)
-    $   diagonal tile   (flips ALSO diagonally adjacent tiles)
-    +   rook tile       (flips every tile on the same line and column)
-
-    X   frozen tile     (can't be clicked)
-    */
-
     return rawField
         .split('\n')
         .filter(row => row.length > 0)
-        .map(row => row.split(' '));
+        .map(row => row.split(' ').filter(item => item.length > 0));
 }
 
 function readLevel(data, levelSetter) {
