@@ -192,7 +192,7 @@ function Fifteen(props) {
   return (
     <Container style={{ display: "flex" }}>
       <StyledField container ref={swiperRef} size={props.size}>
-        {victory ? <WinScreen onClick={newGame}></WinScreen> : null}
+        {victory ? <WinScreen onClick={newGame} /> : null}
         {tiles.map((el, idx) => (
           <StyledTile
             key={idx}

@@ -94,7 +94,7 @@ function Mosaic(props) {
     return (
         <FullBody>
             <PixiContainer>
-                {(victory) ? <WinScreen onClick={newGame}></WinScreen> : null}
+                {(victory) ? <WinScreen onClick={newGame} /> : null}
                 <Stage
                     style={{ margin: "auto" }}
                     options={{ backgroundAlpha: 0 }}
