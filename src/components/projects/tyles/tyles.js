@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { tylesSetLevel } from '../../../redux/actions';
+import { tylesSetLevel, tylesSetLevelBestScore } from '../../../redux/actions';
 
 import { Container } from "@mui/material";
 import TylesField from './components/tylesField';
@@ -22,12 +22,24 @@ function Tyles(props) {
         LevelLoader(props.levelsFolder, props.level, setLevel);
     }
 
-    const checkVictory = (tiles) => {
+    const checkVictory = (tiles, movesCount) => {
         // reinterprest structure as string
         const depot = JSON.stringify(tiles);
 
         // searches (linearly) for a tyle set as off
-        return !depot.includes('0');
+        const victory = !depot.includes('0');
+
+        if (victory) { 
+            const bestScore = props.scores[props.level].bestScore;
+            if (!bestScore || movesCount < bestScore) {
+                props.tylesSetLevelBestScore(
+                    props.level,
+                    { bestScore: movesCount, isBest: movesCount === level.minMoves }
+                )
+            }
+        }
+
+        return victory;
     }
 
     useEffect(() => {
@@ -42,7 +54,7 @@ function Tyles(props) {
             ...level,
             moves: level.moves + 1,
             tiles,
-            victory: checkVictory(tiles),
+            victory: checkVictory(tiles, level.moves + 1),
         });
     }
 
@@ -85,6 +97,7 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
     tylesSetLevel,
+    tylesSetLevelBestScore,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tyles);

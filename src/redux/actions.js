@@ -70,6 +70,6 @@ export function tylesSetLevelBestScore(levelIdx, value) {
     return {
         type: 'TYLES_SET_LEVEL_BEST_SCORE',
         level: levelIdx,
-        score: parseInt(value),
+        score: value,
     }
 }

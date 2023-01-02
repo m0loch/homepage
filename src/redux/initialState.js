@@ -5,7 +5,7 @@ const InitialState = {
     wordle: { difficulty: 1 },
     tetris: { },
     mastermind: { difficulty: 0 },
-    tyles: { level: 0, scores: Array.apply(0, { length: 120 }).map(() => 0) }
+    tyles: { level: 0, scores: Array.apply(0, { length: 120 }).map(() => { return { bestScore: 0, isBest: false }}) }
 };
 
 export default InitialState;

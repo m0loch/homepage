@@ -27,7 +27,7 @@ function interpretField(rawField) {
 function readLevel(data, levelSetter) {
 
     /* LOAD MIN NUMBER OF MOVES */
-    const minMoves = data.match(minMovesRegEx)[1];
+    const minMoves = parseInt(data.match(minMovesRegEx)[1]);
 
     /* LOAD POSSIBLE SOLUTIONS */
     const solutions = interpretSolutions(data.match(solutionsRegEx)[1]);
