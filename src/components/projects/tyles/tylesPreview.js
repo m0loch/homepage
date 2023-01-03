@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { connect } from 'react-redux';
-import { tylesSetLevel } from '../../../redux/actions';
 
-import { Collapse /*, RadioGroup, Radio, FormControlLabel*/ } from "@mui/material";
+import { Collapse } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
 import { splitText } from "../../common/textFunctions";
+import LevelSelect from "./components/levelSelect";
 
 function TylesPreview(props) {
 
@@ -47,20 +47,12 @@ function TylesPreview(props) {
             </Collapse>
 
             <CollapseHeader
-                caption={"Settings"}
+                caption={"Level Selection"}
                 open={open[2]}
                 onClick={() => handleStateChange(2)}
             />
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
-                <span>TODO: add level selector</span>
-                {/* <RadioGroup
-                    value={props.size}
-                    name="mode-select"
-                    onChange={ev => props.fifteenSetSize(ev.target.value)}
-                >
-                    <FormControlLabel value="3" control={<Radio />} label="9 tiles" />
-                    <FormControlLabel value="4" control={<Radio />} label="16 tiles" />
-                </RadioGroup> */}
+                <LevelSelect />
             </Collapse>
         </div>
     );
@@ -70,8 +62,6 @@ function mapStateToProps(state) {
     return { ...state.tyles };
 }
 
-const mapDispatchToProps = {
-    tylesSetLevel,
-};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(TylesPreview);

@@ -84,6 +84,15 @@ const baseTheme = (theme) => {
                     }
                 }
             },
+            MuiTab: {
+                styleOverrides: {
+                    root: {
+                        "&.Mui-selected": {
+                            color: theme.palette.primary.light,
+                        }
+                    }
+                }
+            },
             tetris: {
                 cellSize: "30px",
                 cellSizeMobile: "4vw",
