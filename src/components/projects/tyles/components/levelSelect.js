@@ -21,27 +21,24 @@ const StyledBox = styled(Box)(
 const StyledTabs = styled(Tabs)(
     () => ({
         minWidth: '105.78px',
-        // TODO: mobile
     })
 );
 
 const StyledLevel = styled(Button)(
-    ({ theme, selected }) => {
-        console.log(theme);
-        return ({
-            width: "20%",
-            color: selected ? "yellow" : "white"
-        })
-    }
+    ({ theme, selected }) => ({
+        width: "20%",
+        color: selected ? theme.palette.primary.contrast : "white"
+    })
 );
 
 function LevelSelect(props) {
-
-    const [selectedTab, setSelectedTab] = useState(0);
+    const [selectedTab, setSelectedTab] = useState(Math.floor(props.level * CHAPTERS / props.scores.length));
 
     const handleChapterChange = (ev, idx) => {
         setSelectedTab(idx);
     }
+
+    const GetLevelIdx = idx => selectedTab * props.scores.length / CHAPTERS + idx;
 
     const filteredScores = props.scores.filter((item, idx) => Math.floor(idx * CHAPTERS / props.scores.length) === selectedTab);
 
@@ -71,18 +68,19 @@ function LevelSelect(props) {
                         <StyledLevel
                             key={idx}
                             variant="outlined"
+                            selected={GetLevelIdx(idx) === props.level}
+                            onClick={() => props.tylesSetLevel(GetLevelIdx(idx))}
                             startIcon={
                                 level.isBest ? <StarIcon />
                                     : level.bestScore > 0 ? <StarBorderIcon />
                                         : <MinimizeOutlinedIcon />}
                         >
-                            {`${selectedTab * props.scores.length / CHAPTERS + idx}`}
+                            {`${GetLevelIdx(idx)}`}
                         </StyledLevel>
                     )
                 }
             </StyledBox>
         </StyledBox>
-
     )
 }
 
