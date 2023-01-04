@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from 'react-redux';
+import { tylesSetLevel } from "../../../redux/actions";
 
 import { Collapse } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
@@ -52,7 +53,11 @@ function TylesPreview(props) {
                 onClick={() => handleStateChange(2)}
             />
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
-                <LevelSelect />
+                <LevelSelect
+                    level={props.level}
+                    scores={props.scores}
+                    onSelect={idx => props.tylesSetLevel(idx)}
+                />
             </Collapse>
         </div>
     );
@@ -62,6 +67,8 @@ function mapStateToProps(state) {
     return { ...state.tyles };
 }
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+    tylesSetLevel,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(TylesPreview);

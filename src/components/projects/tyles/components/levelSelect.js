@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { connect } from 'react-redux';
 import { styled } from '@mui/system';
-import { tylesSetLevel } from "../../../../redux/actions";
 
 import { Box, Button, Tab, Tabs } from "@mui/material";
 import StarIcon from '@mui/icons-material/Star';
@@ -69,7 +67,7 @@ function LevelSelect(props) {
                             key={idx}
                             variant="outlined"
                             selected={GetLevelIdx(idx) === props.level}
-                            onClick={() => props.tylesSetLevel(GetLevelIdx(idx))}
+                            onClick={() => props.onSelect(GetLevelIdx(idx))}
                             startIcon={
                                 level.isBest ? <StarIcon />
                                     : level.bestScore > 0 ? <StarBorderIcon />
@@ -84,12 +82,4 @@ function LevelSelect(props) {
     )
 }
 
-function mapStateToProps(state) {
-    return { ...state.tyles };
-}
-
-const mapDispatchToProps = {
-    tylesSetLevel,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LevelSelect);
+export default LevelSelect;
