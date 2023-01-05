@@ -7,23 +7,33 @@ import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 
 const StyledTileInternal = styled(Card)(
-    ({ theme }) => {
+    ({ theme, columns }) => {
         return ({
             display: "flex",
             backgroundColor: theme.palette.background.card,
             color: theme.palette.link,
             alignContent: "center",
             justifyContent: "center",
-            height: "8vw",
-            width: "8vw",
-            margin: "auto",
+            width: `${Math.floor((columns > 2 ? 40 : 24) / columns) - 2}vw`,
+            height: `${Math.floor((columns > 2 ? 40 : 24) / columns) - 2}vw`,
 
             [theme.breakpoints.down('md')]: {
-                width: "16vw",
-                height: "16vw",
+                width: `${Math.floor(80 / (columns)) - 4}vw`,
+                height: `${Math.floor(80 / (columns)) - 4}vw`,
             },
         })
     }
+);
+
+const GridInternal = styled(Grid)(
+    ({theme, value }) => ({
+        padding: "1vw",
+        opacity: value === '!' ? 0 : 1,
+        filter: `brightness(${value === "0" ? "50%" : "100%"})`,
+        [theme.breakpoints.down('md')]: {
+            padding: "2vw",
+        },
+    })
 );
 
 /* MODIFIERS:
@@ -69,23 +79,21 @@ function StyledTile(props) {
         default:
     }
 
-    const style = {
-        padding: "1vw",
-        opacity: value === '!' ? 0 : 1,
-        filter: `brightness(${value === "0" ? "50%" : "100%"})`
-    };
-
     return (
-        <Grid item
+        <GridInternal item
             key={props.value}
             xs={12 / props.columns} // ensures the proper amount of tyles / line
-            style={style}
             onClick={props.onClick}
+            value={value}
         >
-            <StyledTileInternal>
+            <StyledTileInternal className={
+                `${props.transition?.idx === props.idx ? `transition${props.transition.dir}` : ""}`
+            }
+            columns={props.columns}
+            >
                 {icon}
             </StyledTileInternal>
-        </Grid>
+        </GridInternal>
     )
 }
 
