@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { tylesSetLevel, tylesSetLevelBestScore } from '../../../redux/actions';
 
 import { Container } from "@mui/material";
+
+import ControlBar from './components/controlBar';
 import TylesField from './components/tylesField';
 import Tyle from './components/tyle';
 import TylesWinScreen from './components/tylesWinScreen';
@@ -14,13 +16,19 @@ function Tyles(props) {
 
     const [level, setLevel] = useState({ moves: 0, victory: false, tiles: [] });
 
+    // Only accessible through winScreen
     const nextLevel = () => {
         props.tylesSetLevel(props.level + 1);
     }
 
+    // ControlBar events
     const startOver = () => {
         LevelLoader(props.levelsFolder, props.level, setLevel);
     }
+
+    const showInfo = () => { alert('showInfo') }
+    const showHelp = () => { alert('showHelp') }
+    const selectLevel = () => { alert('selectLevel') }
 
     const checkVictory = (tiles, movesCount) => {
         // reinterprest structure as string
@@ -59,7 +67,13 @@ function Tyles(props) {
     }
 
     return (
-        <Container style={{ display: "flex" }}>
+        <Container style={{ display: "flex", flexDirection: "column" }}>
+            <ControlBar
+                newGame={startOver}
+                showInfo={showInfo}
+                showHelp={showHelp}
+                selectLevel={selectLevel}
+            />
             <TylesField container size={level.columns}>
                 {level.victory ?
                     <TylesWinScreen
