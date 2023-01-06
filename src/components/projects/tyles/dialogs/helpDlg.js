@@ -6,7 +6,7 @@ export default function HelpDlg(props) {
     return (
         <>
             <DlgBackground onClick={props.onOK} />
-            <BaseDlgPanel animationSpeed={.1}>
+            <BaseDlgPanel animationspeed={.1}>
                 <DlgContent>
                     <p>The objective of the game is to turn all the tiles on.</p>
                     <br />

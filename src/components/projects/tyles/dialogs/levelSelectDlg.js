@@ -6,7 +6,7 @@ export default function LevelSelectDlg(props) {
     return (
         <>
             <DlgBackground onClick={props.onOK} />
-            <BaseDlgPanel animationSpeed={.1}>
+            <BaseDlgPanel animationspeed={.1}>
                 <LevelSelect {...props} />
                 <DlgActions>
                     <ActionButton onClick={props.onOK}>Ok</ActionButton>

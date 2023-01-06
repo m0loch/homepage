@@ -7,7 +7,7 @@ const appearAnimation = keyframes`
 `;
 
 export const BaseDlgPanel = styled(Card)(
-    ({ theme, animationSpeed = .5 }) => ({
+    ({ theme, animationspeed = .5 }) => ({
         position: "fixed",
         top: "25%",
         left: "30%",
@@ -25,12 +25,12 @@ export const BaseDlgPanel = styled(Card)(
         justifyContent: "space-around",
 
         opacity: 0,
-        animation: `${appearAnimation} ${animationSpeed}s ease-in ${animationSpeed}s 1 normal forwards`,
+        animation: `${appearAnimation} ${animationspeed}s ease-in ${animationspeed}s 1 normal forwards`,
 
         [theme.breakpoints.down('md')]: {
             width: "80%",
-            height: "16%",
-            top: "42%",
+            height: "70%",
+            top: "15%",
             left: "10%",
         }
     })
@@ -60,10 +60,14 @@ export const DlgContent = styled(CardContent)(
 )
 
 export const DlgActions = styled('div')(
-    () => ({
+    ({ theme }) => ({
         display: "flex",
         width: "80%",
         justifyContent: "space-around",
+        [theme.breakpoints.down('md')]: {
+            margin: "0 5px",
+            width: "100%",
+        }
     })
 );
 
@@ -71,6 +75,7 @@ export const ActionButton = styled(Button)(
     ({ theme }) => ({
         backgroundColor: theme.palette.background.card,
         color: theme.palette.primary.contrast,
+        margin: "0 5px",
         '&:hover': {
             backgroundColor: theme.palette.background.opaque,
         }
