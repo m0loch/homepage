@@ -97,7 +97,6 @@ function Tyles(props) {
                         moves={level.moves}
                     />
                     : null}
-
                 {level.tiles.map(
                     (row, y) => (
                         row.map(
