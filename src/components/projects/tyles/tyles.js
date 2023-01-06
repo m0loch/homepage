@@ -7,10 +7,12 @@ import { Container } from "@mui/material";
 import ControlBar from './components/controlBar';
 import TylesField from './components/tylesField';
 import Tyle from './components/tyle';
-import TylesWinScreen from './components/tylesWinScreen';
+import TylesWinScreen from './dialogs/tylesWinScreen';
 import LevelLoader from './utils/levelLoader';
 import PerformMove from './utils/movesHandler';
-import LevelSelectDlg from './components/levelSelectDlg';
+import LevelSelectDlg from './dialogs/levelSelectDlg';
+import InfoDlg from './dialogs/infoDlg';
+import HelpDlg from './dialogs/helpDlg';
 
 
 function Tyles(props) {
@@ -28,9 +30,9 @@ function Tyles(props) {
         LevelLoader(props.levelsFolder, props.level, setLevel);
     }
 
-    const showInfo = () => { alert('showInfo') }
-    const showHelp = () => { alert('showHelp') }
-    const selectLevel = () => setDlgOpen(3);
+    const showInfo = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(1) } }
+    const showHelp = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(2) } }
+    const selectLevel = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(3) } }
     const onDlgClose = () => setDlgOpen(0);
 
     const checkVictory = (tiles, movesCount) => {
@@ -80,9 +82,9 @@ function Tyles(props) {
             <TylesField container size={level.columns}>
                 {
                     dlgOpen === 1 ?
-                    null
+                    <InfoDlg onOK={onDlgClose} />
                     : dlgOpen === 2 ?
-                    null
+                    <HelpDlg onOK={onDlgClose} />
                     : dlgOpen === 3 ?
                     <LevelSelectDlg
                         level={props.level}

@@ -1,15 +1,13 @@
-import React from 'react';
 import { styled, keyframes } from '@mui/system';
 import { Button } from "@mui/material";
-import LevelSelect from './levelSelect';
 
 const appearAnimation = keyframes`
     0%   { opacity: 0 },
     100% { opacity: 1 },
 `;
 
-const StyledPanel = styled('div')(
-    ({ theme }) => ({
+export const BaseDlgPanel = styled('div')(
+    ({ theme, animationSpeed = .5 }) => ({
         position: "fixed",
         top: "25%",
         left: "30%",
@@ -27,7 +25,7 @@ const StyledPanel = styled('div')(
         justifyContent: "space-around",
 
         opacity: 0,
-        animation: `${appearAnimation} .5s ease-in .5s 1 normal forwards`,
+        animation: `${appearAnimation} ${animationSpeed}s ease-in ${animationSpeed}s 1 normal forwards`,
 
         [theme.breakpoints.down('md')]: {
             width: "80%",
@@ -38,15 +36,28 @@ const StyledPanel = styled('div')(
     })
 );
 
-const ReportActions = styled('div')(
+export const DlgBackground = styled('div')(
     ({ theme }) => ({
+        position: "fixed",
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        zIndex: 9,
+        overflow: "hidden",
+        backgroundColor: theme.palette.background.opaque,
+    })
+);
+
+export const DlgActions = styled('div')(
+    () => ({
         display: "flex",
         width: "80%",
         justifyContent: "space-around",
     })
 );
 
-const ActionButton = styled(Button)(
+export const ActionButton = styled(Button)(
     ({ theme }) => ({
         backgroundColor: theme.palette.background.card,
         color: theme.palette.primary.contrast,
@@ -55,15 +66,3 @@ const ActionButton = styled(Button)(
         }
     })
 );
-
-export default function LevelSelectDlg(props) {
-
-    return (
-        <StyledPanel>
-            <LevelSelect {...props} />
-            <ReportActions>
-                <ActionButton onClick={props.onOK}>Ok</ActionButton>
-            </ReportActions>
-        </StyledPanel>
-    );
-}
