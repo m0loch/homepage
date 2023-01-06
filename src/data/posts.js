@@ -345,7 +345,7 @@ const posts = [{
             But... enough with that!
             `)}
             <p>I've got a gift for you: I've programmed and published my own version of Master Mind, you can find it under the <Link to="/projects">projects section</Link>.</p>
-            
+
         </>
     ),
     signature: `HO HO HO
@@ -367,11 +367,30 @@ const posts = [{
             <br />
             <p>Keep yourselves entertained with my Top songs from 2022 according to Spotify:</p>
             <br />
-            <iframe title="2022 in a nutshell" style={{ borderRadius: "20px" }} src="https://open.spotify.com/embed/playlist/4FFADuQuY0R6ufPfvEpYBp?utm_source=generator" width="100%" height="380" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="2022 in a nutshell" style={{ borderRadius: "20px" }} src="https://open.spotify.com/embed/playlist/4FFADuQuY0R6ufPfvEpYBp?utm_source=generator" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </>
     ),
     signature: `Romeo`
 },
+{
+    key: 22,
+    title: "Tyles!",
+    date: new Date("2023-01-06"),
+    smartContent: (
+        <>
+            {splitText(`
+            As promised, Tyles is up!
+            I don't really know what I'll put together for the next updates as I'm kind of overwhelmed by both having to crunch through my last days at my current job, setting up my move to Milan and starting with my new experience on the next monday.
+            I'm pretty excited but also very stressed and I managed to injure my left foot while visiting potential new homes.
+
+            I guess that I'll probably try to polish some of the old projects as I feel that what I considered being "a little rough around the edges" and "good enough for now" deserves some more attentions.
+            BUT THAT'S BOOOOOORING.
+
+            Well, we'll see.
+            `)}
+        </>
+    ),
+    signature: `Romeo`
 ];
 
 export default posts;
