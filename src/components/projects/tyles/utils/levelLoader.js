@@ -1,11 +1,11 @@
-const minMovesRegEx = /minNumberOfMoves:\n([0-9+])/;
+const minMovesRegEx = /minNumberOfMoves:\s*([0-9+])/;
 const solutionsRegEx = /moves:([0-9\s\n]*)/;
 const fieldRegEx = /level:([.X+$!*\d\s\n]*)/;
 
 function interpretSolutions(rawSolutions) {
     const possibleSolutions = rawSolutions.split('\n\n\n') // splits different solutions
         .map(solution =>
-            solution.split('\n') // splits to rows
+            solution.split('\r\n') // splits to rows
                 .filter(row => row.length > 0) // empty lines removal
                 .map(row => row
                     .split(' ')
@@ -19,18 +19,18 @@ function interpretSolutions(rawSolutions) {
 
 function interpretField(rawField) {
     return rawField
-        .split('\n')
+        .split('\r\n')
         .filter(row => row.length > 0)
         .map(row => row.split(' ').filter(item => item.length > 0));
 }
 
 function readLevel(data, levelSetter) {
-
     /* LOAD MIN NUMBER OF MOVES */
     const minMoves = parseInt(data.match(minMovesRegEx)[1]);
 
     /* LOAD POSSIBLE SOLUTIONS */
     const solutions = interpretSolutions(data.match(solutionsRegEx)[1]);
+    console.log(solutions);
 
     /* LOAD INITIAL CONFIG */
     const field = data.match(fieldRegEx)[1];
