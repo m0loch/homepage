@@ -6,30 +6,29 @@ import OpenWithIcon from '@mui/icons-material/OpenWith';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 
-const StyledTileInternal = styled(Card)(
-    ({ theme, columns }) => {
-        return ({
-            display: "flex",
-            backgroundColor: theme.palette.background.card,
-            color: theme.palette.link,
-            alignContent: "center",
-            justifyContent: "center",
-            width: `${Math.floor((columns > 2 ? 40 : 24) / columns) - 2}vw`,
-            height: `${Math.floor((columns > 2 ? 40 : 24) / columns) - 2}vw`,
+const StyledIconInternal = styled(Card)(
+    ({ theme, columns }) => ({
+        display: "flex",
+        backgroundColor: theme.palette.background.card,
+        color: theme.palette.link,
+        alignContent: "center",
+        justifyContent: "center",
+        width: `${Math.floor((columns > 2 ? 40 : 24) / columns) - 2}vw`,
+        height: `${Math.floor((columns > 2 ? 40 : 24) / columns) - 2}vw`,
 
-            [theme.breakpoints.down('md')]: {
-                width: `${Math.floor(80 / (columns)) - 4}vw`,
-                height: `${Math.floor(80 / (columns)) - 4}vw`,
-            },
-        })
-    }
+        [theme.breakpoints.down('md')]: {
+            width: `${Math.floor(80 / (columns)) - 4}vw`,
+            height: `${Math.floor(80 / (columns)) - 4}vw`,
+        },
+    })
 );
 
-const GridInternal = styled(Grid)(
-    ({theme, value }) => ({
+const TyleInternal = styled(Grid)(
+    ({ theme, value }) => ({
         padding: "1vw",
         opacity: value === '!' ? 0 : 1,
         filter: `brightness(${value === "0" ? "50%" : "100%"})`,
+
         [theme.breakpoints.down('md')]: {
             padding: "2vw",
         },
@@ -80,20 +79,16 @@ function StyledTile(props) {
     }
 
     return (
-        <GridInternal item
+        <TyleInternal item
             key={props.value}
             xs={12 / props.columns} // ensures the proper amount of tyles / line
             onClick={props.onClick}
             value={value}
         >
-            <StyledTileInternal className={
-                `${props.transition?.idx === props.idx ? `transition${props.transition.dir}` : ""}`
-            }
-            columns={props.columns}
-            >
+            <StyledIconInternal columns={props.columns}>
                 {icon}
-            </StyledTileInternal>
-        </GridInternal>
+            </StyledIconInternal>
+        </TyleInternal>
     )
 }
 
