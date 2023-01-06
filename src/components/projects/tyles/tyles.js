@@ -11,7 +11,6 @@ import TylesWinScreen from './dialogs/tylesWinScreen';
 import LevelLoader from './utils/levelLoader';
 import PerformMove from './utils/movesHandler';
 import LevelSelectDlg from './dialogs/levelSelectDlg';
-import InfoDlg from './dialogs/infoDlg';
 import HelpDlg from './dialogs/helpDlg';
 
 
@@ -30,9 +29,8 @@ function Tyles(props) {
         LevelLoader(props.levelsFolder, props.level, setLevel);
     }
 
-    const showInfo = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(1) } }
-    const showHelp = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(2) } }
-    const selectLevel = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(3) } }
+    const showHelp = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(1) } }
+    const selectLevel = () => { if (dlgOpen === 0 && !level.victory) { setDlgOpen(2) } }
     const onDlgClose = () => setDlgOpen(0);
 
     const checkVictory = (tiles, movesCount) => {
@@ -75,17 +73,14 @@ function Tyles(props) {
         <Container style={{ display: "flex", flexDirection: "column" }}>
             <ControlBar
                 newGame={startOver}
-                showInfo={showInfo}
                 showHelp={showHelp}
                 selectLevel={selectLevel}
             />
             <TylesField container size={level.columns}>
                 {
                     dlgOpen === 1 ?
-                    <InfoDlg onOK={onDlgClose} />
-                    : dlgOpen === 2 ?
                     <HelpDlg onOK={onDlgClose} />
-                    : dlgOpen === 3 ?
+                    : dlgOpen === 2 ?
                     <LevelSelectDlg
                         level={props.level}
                         scores={props.scores}

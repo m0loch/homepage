@@ -1,12 +1,12 @@
 import { styled, keyframes } from '@mui/system';
-import { Button } from "@mui/material";
+import { Button, Card, CardContent } from "@mui/material";
 
 const appearAnimation = keyframes`
     0%   { opacity: 0 },
     100% { opacity: 1 },
 `;
 
-export const BaseDlgPanel = styled('div')(
+export const BaseDlgPanel = styled(Card)(
     ({ theme, animationSpeed = .5 }) => ({
         position: "fixed",
         top: "25%",
@@ -48,6 +48,16 @@ export const DlgBackground = styled('div')(
         backgroundColor: theme.palette.background.opaque,
     })
 );
+
+export const DlgContent = styled(CardContent)(
+    () => ({
+        display: "flex",
+        flexDirection: "column",
+        margin: "0",
+        flexGrow: 1,
+        overflowY: "auto",
+    })
+)
 
 export const DlgActions = styled('div')(
     () => ({
