@@ -18,6 +18,7 @@ function Tyles(props) {
 
     const [dlgOpen, setDlgOpen] = useState(0);
     const [level, setLevel] = useState({ moves: 0, victory: false, tiles: [] });
+    const bestScore = props.scores[props.level].bestScore;
 
     // Only accessible through winScreen
     const nextLevel = () => {
@@ -41,7 +42,6 @@ function Tyles(props) {
         const victory = !depot.includes('0');
 
         if (victory) {
-            const bestScore = props.scores[props.level].bestScore;
             if (!bestScore || movesCount < bestScore) {
                 props.tylesSetLevelBestScore(
                     props.level,
@@ -75,6 +75,9 @@ function Tyles(props) {
                 newGame={startOver}
                 showHelp={showHelp}
                 selectLevel={selectLevel}
+                currentScore={level.moves}
+                bestScore={bestScore}
+                targetScore={level.minMoves}
             />
             <TylesField container size={level.columns}>
                 {

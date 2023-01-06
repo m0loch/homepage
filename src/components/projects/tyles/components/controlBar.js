@@ -1,7 +1,6 @@
-import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
-import { Button } from "@mui/material";
+import { Button, Card, Grid } from "@mui/material";
 import LoopIcon from '@mui/icons-material/Loop';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ListAltIcon from '@mui/icons-material/ListAlt';
@@ -32,6 +31,22 @@ const ButtonInternal = styled(Button)(
     })
 );
 
+const ScoreSection = styled(Card)(
+    ({ theme }) => ({
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: theme.palette.background.card,
+        height: "4vw",
+        width: "4vw",
+
+        [theme.breakpoints.down('md')]: {
+            width: "16vw",
+            height: "16vw",
+        },
+    })
+)
+
 const ControlBar = (props) => {
     return (
         <ControlBarInternal>
@@ -45,14 +60,21 @@ const ControlBar = (props) => {
                 variant="contained"
                 onClick={props.showHelp}
             >
-                    <HelpOutlineIcon />
+                <HelpOutlineIcon />
             </ButtonInternal>
             <ButtonInternal
                 variant="contained"
                 onClick={props.selectLevel}
             >
-                    <ListAltIcon />
+                <ListAltIcon />
             </ButtonInternal>
+            {
+                props.bestScore ?
+                    <ScoreSection>
+                        <p>{props.currentScore} / {props.targetScore}</p>
+                    </ScoreSection>
+                    : null
+            }
         </ControlBarInternal>
     )
 }
