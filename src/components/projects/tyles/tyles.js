@@ -10,10 +10,12 @@ import Tyle from './components/tyle';
 import TylesWinScreen from './components/tylesWinScreen';
 import LevelLoader from './utils/levelLoader';
 import PerformMove from './utils/movesHandler';
+import LevelSelectDlg from './components/levelSelectDlg';
 
 
 function Tyles(props) {
 
+    const [dlgOpen, setDlgOpen] = useState(0);
     const [level, setLevel] = useState({ moves: 0, victory: false, tiles: [] });
 
     // Only accessible through winScreen
@@ -28,7 +30,8 @@ function Tyles(props) {
 
     const showInfo = () => { alert('showInfo') }
     const showHelp = () => { alert('showHelp') }
-    const selectLevel = () => { alert('selectLevel') }
+    const selectLevel = () => setDlgOpen(3);
+    const onDlgClose = () => setDlgOpen(0);
 
     const checkVictory = (tiles, movesCount) => {
         // reinterprest structure as string
@@ -37,7 +40,7 @@ function Tyles(props) {
         // searches (linearly) for a tyle set as off
         const victory = !depot.includes('0');
 
-        if (victory) { 
+        if (victory) {
             const bestScore = props.scores[props.level].bestScore;
             if (!bestScore || movesCount < bestScore) {
                 props.tylesSetLevelBestScore(
@@ -75,6 +78,20 @@ function Tyles(props) {
                 selectLevel={selectLevel}
             />
             <TylesField container size={level.columns}>
+                {
+                    dlgOpen === 1 ?
+                    null
+                    : dlgOpen === 2 ?
+                    null
+                    : dlgOpen === 3 ?
+                    <LevelSelectDlg
+                        level={props.level}
+                        scores={props.scores}
+                        onSelect={idx => props.tylesSetLevel(idx)}
+                        onOK={onDlgClose}
+                    />
+                    : null
+                }
                 {level.victory ?
                     <TylesWinScreen
                         onReplay={startOver}
