@@ -79,7 +79,7 @@ function Tyles(props) {
             <TylesField container size={level.columns}>
                 {
                     dlgOpen === 1 ?
-                    <HelpDlg onOK={onDlgClose} />
+                    <HelpDlg types={level.types} onOK={onDlgClose} />
                     : dlgOpen === 2 ?
                     <LevelSelectDlg
                         level={props.level}

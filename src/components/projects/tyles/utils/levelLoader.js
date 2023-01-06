@@ -33,10 +33,23 @@ function readLevel(data, levelSetter) {
     const solutions = interpretSolutions(data.match(solutionsRegEx)[1]);
 
     /* LOAD INITIAL CONFIG */
-    const tiles = interpretField(data.match(fieldRegEx)[1]);
+    const field = data.match(fieldRegEx)[1];
+    const tiles = interpretField(field);
+
+    /* LOAD TYPES OF TYLES FOR CURRENT LEVEL */
+    const types = [];
+    [...'*$+X'].forEach(char => { if (field.indexOf(char) > -1) types.push(char) });
 
     // return callback
-    levelSetter({ moves: 0, minMoves, solutions, tiles, rows: tiles.length, columns: tiles[0].length });
+    levelSetter({
+        moves: 0,
+        minMoves,
+        solutions,
+        tiles,
+        rows: tiles.length,
+        columns: tiles[0].length,
+        types
+    });
 }
 
 function LevelLoader(folder, levelIndex, levelSetter) {
