@@ -391,6 +391,7 @@ const posts = [{
         </>
     ),
     signature: `Romeo`
+}
 ];
 
 export default posts;
