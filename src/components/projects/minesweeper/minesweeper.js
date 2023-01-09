@@ -6,6 +6,7 @@ import ControlBar from './components/controlBar';
 import Field from './components/field';
 import Cell from './components/cell';
 import WinScreen from '../common/winScreen';
+import Randomizer from './utils/randomizer';
 
 const isDebug = true;
 
@@ -19,11 +20,6 @@ function Minesweeper(props) {
 
     const settings = Settings[props.difficulty];
 
-    if (isDebug) {
-        console.log(props.difficulty);
-        console.log(settings);
-    }
-
     const getEmptyGameState = () => {
         return {
             moves: 0,
@@ -31,14 +27,17 @@ function Minesweeper(props) {
             victory: false,
             field: Array.apply(0, { length: settings.rows })
                 .map(() => Array.apply(0, { length: settings.cols })
-                    .map(() => '0.')),
+                    .map(() => [0, '.'])),
         }
     }
-    
 
     const [level, setLevel] = useState(getEmptyGameState());
 
-    console.log(level);
+    if (isDebug) {
+        console.log(props.difficulty);
+        console.log(settings);
+        console.log(level);
+    }
 
     const newGame = () => {
         setLevel(getEmptyGameState());
@@ -46,11 +45,15 @@ function Minesweeper(props) {
 
     const handleClick = (x, y, value, modifier) => {
 
-        alert('move detected');
+        if (modifier === ''         // cell already discovered
+            || modifier === '!') {  // flag set
+            return;
+        }
+
         const newState = { ...level };
 
         if (level.moves === 0) {
-            // mines placement
+            Randomizer(x, y, settings, newState.field);
         }
 
         newState.moves++;
@@ -62,6 +65,8 @@ function Minesweeper(props) {
         // } else if (checkvictory) {
         //    newState.victory = true;
         // }
+
+        setLevel(newState);
     }
 
     return (
