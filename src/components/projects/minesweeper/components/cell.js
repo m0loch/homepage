@@ -5,18 +5,6 @@ import { styled } from '@mui/system';
 import FlagIcon from '@mui/icons-material/Flag';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
-const StyledIconInternal = styled('div')(
-    ({ theme, covered }) => ({
-        display: "flex",
-        backgroundColor: covered ? theme.palette.primary.main :  theme.palette.background.card,
-        color: theme.palette.link,
-        alignContent: "center",
-        justifyContent: "center",
-        width: "100%",
-        height: "100%",
-    })
-);
-
 const CellInternal = styled(Grid)(
     ({ theme, columns }) => ({
         boxSizing: "border-box",
@@ -24,6 +12,22 @@ const CellInternal = styled(Grid)(
         borderColor: theme.palette.primary.main,
         width: `${80 / columns}vw`,
         height: `${80 / columns}vw`
+    })
+);
+
+const StyledIconInternal = styled('div')(
+    ({ theme, covered }) => ({
+        display: "flex",
+        backgroundColor: covered ? theme.palette.primary.main : theme.palette.background.card,
+        color: theme.palette.link,
+        alignContent: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100%",
+
+        "&:hover": {
+            backgroundColor: covered ? theme.palette.primary.light : theme.palette.background.card
+        }
     })
 );
 
