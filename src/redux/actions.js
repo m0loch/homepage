@@ -73,3 +73,11 @@ export function tylesSetLevelBestScore(levelIdx, value) {
         score: value,
     }
 }
+
+// Minesweeper
+export function minesweeperSetDifficulty(value) {
+    return {
+        type: 'MINESWEEPER_SET_DIFFICULTY',
+        difficulty: parseInt(value),
+    }
+}
