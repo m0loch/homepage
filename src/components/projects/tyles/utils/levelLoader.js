@@ -1,59 +1,25 @@
-const minMovesRegEx = /minNumberOfMoves:\s*([0-9+])/;
-const solutionsRegEx = /moves:([0-9\s\n]*)/;
-const fieldRegEx = /level:([.X+$!*\d\s\n]*)/;
-
-function interpretSolutions(rawSolutions) {
-    const possibleSolutions = rawSolutions.split('\n\n\n') // splits different solutions
-        .map(solution =>
-            solution.split('\r\n') // splits to rows
-                .filter(row => row.length > 0) // empty lines removal
-                .map(row => row
-                    .split(' ')
-                    .filter(item => item.length > 0)
-                    .map(elem => parseInt(elem))
-                )
-        );
-
-    return possibleSolutions;
-}
-
-function interpretField(rawField) {
-    return rawField
-        .split('\r\n')
-        .filter(row => row.length > 0)
-        .map(row => row.split(' ').filter(item => item.length > 0));
-}
-
 function readLevel(data, levelSetter) {
-    /* LOAD MIN NUMBER OF MOVES */
-    const minMoves = parseInt(data.match(minMovesRegEx)[1]);
+    const lvl = JSON.parse(data);
 
-    /* LOAD POSSIBLE SOLUTIONS */
-    const solutions = interpretSolutions(data.match(solutionsRegEx)[1]);
-    console.log(solutions);
-
-    /* LOAD INITIAL CONFIG */
-    const field = data.match(fieldRegEx)[1];
-    const tiles = interpretField(field);
-
-    /* LOAD TYPES OF TYLES FOR CURRENT LEVEL */
+    // LOAD TYPES OF TYLES FOR CURRENT LEVEL
+    const field = JSON.stringify(lvl.level);
     const types = [];
     [...'*$+X'].forEach(char => { if (field.indexOf(char) > -1) types.push(char) });
 
     // return callback
     levelSetter({
         moves: 0,
-        minMoves,
-        solutions,
-        tiles,
-        rows: tiles.length,
-        columns: tiles[0].length,
+        minMoves: lvl.minNumberOfMoves,
+        solutions: lvl.moves,
+        tiles: lvl.level,
+        rows: lvl.level.length,
+        columns: lvl.level[0].length,
         types
     });
 }
 
 function LevelLoader(folder, levelIndex, levelSetter) {
-    fetch(`${folder}/level${levelIndex}.txt`)
+    fetch(`${folder}/level${levelIndex}.json`)
         .then(response => response.text())
         .then(text => readLevel(text, levelSetter));
 }
