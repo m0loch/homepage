@@ -1,3 +1,4 @@
+import React from 'react';
 import { styled } from '@mui/system';
 
 import { Button, Card, Grid } from "@mui/material";
@@ -22,15 +23,23 @@ const ControlBarInternal = styled(Grid)(
 );
 
 const ButtonInternal = styled(Button)(
-    ({ theme }) => ({
-        height: "4vw",
-        width: "4vw",
+    ({ theme, highlight }) => {
 
-        [theme.breakpoints.down('md')]: {
-            width: "16vw",
-            height: "16vw",
-        },
-    })
+        const hl = highlight ? {
+            border: `2px outset ${theme.palette.primary.contrast}`,
+        } : null;
+
+        return ({
+            ...hl,
+            height: "4vw",
+            width: "4vw",
+
+            [theme.breakpoints.down('md')]: {
+                width: "16vw",
+                height: "16vw",
+            },
+        })
+    }
 );
 
 const ScoreSection = styled(Card)(
@@ -50,6 +59,12 @@ const ScoreSection = styled(Card)(
 )
 
 const ControlBar = (props) => {
+    const selectors = [
+        <LocationSearchingIcon />,
+        <FlagIcon />,
+        <QuestionMarkIcon />,
+    ];
+
     return (
         <ControlBarInternal>
             <ButtonInternal
@@ -58,23 +73,21 @@ const ControlBar = (props) => {
             >
                 <LoopIcon />
             </ButtonInternal>
+
+            {/* Mode selector */}
             <div>
-            <ButtonInternal
-                variant="contained"
-            >
-                <LocationSearchingIcon />
-            </ButtonInternal>
-            <ButtonInternal
-                variant="contained"
-            >
-                <FlagIcon />
-            </ButtonInternal>
-            <ButtonInternal
-                variant="contained"
-            >
-                <QuestionMarkIcon />
-            </ButtonInternal>
+                {selectors.map((item, idx) =>
+                    <ButtonInternal
+                        key={idx}
+                        highlight={idx === props.mode ? 1 : 0}
+                        variant="contained"
+                        onClick={() => props.onModeChange(idx)}
+                    >
+                        {item}
+                    </ButtonInternal>
+                )}
             </div>
+
             <ScoreSection>
                 <p>{props.minesLeft} to go</p>
             </ScoreSection>

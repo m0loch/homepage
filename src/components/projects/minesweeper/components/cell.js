@@ -30,6 +30,7 @@ const CellInternal = styled(Grid)(
             display: "flex",
             alignContent: "center",
             justifyContent: "center",
+            alignItems: "center",
 
             boxSizing: "border-box",
             width: `${80 / columns}vw`,
@@ -55,24 +56,33 @@ const iconStyle = { display: "block", width: "60%", height: "60%", margin: "auto
 // ?   -> question mark set by user
 
 function Cell(props) {
+
+    const isCovered = props.value[1] === '' ? 0 : 1;
     let icon;
-    switch (props.value[1]) {
-        case '!':
-            icon = <FlagIcon style={iconStyle} />
-            break;
 
-        case '?':
-            icon = <QuestionMarkIcon style={iconStyle} />
-            break;
+    if (isCovered) {
 
-        default:
+        switch (props.value[1]) {
+            case '!':
+                icon = <FlagIcon style={iconStyle} />
+                break;
+
+            case '?':
+                icon = <QuestionMarkIcon style={iconStyle} />
+                break;
+
+            default:
+        }
+
+    } else if (props.value[0]) {
+        icon = props.value[0];
     }
 
     return (
         <CellInternal item
             onClick={props.onClick}
             columns={props.columns}
-            covered={props.value[1] !== '' ? 1 : 0}
+            covered={isCovered}
         >
             {icon}
         </CellInternal>

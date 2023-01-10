@@ -32,6 +32,7 @@ function Minesweeper(props) {
     }
 
     const [level, setLevel] = useState(getEmptyGameState());
+    const [mode, setMode] = useState(0);
 
     if (isDebug) {
         console.log(props.difficulty);
@@ -52,22 +53,29 @@ function Minesweeper(props) {
 
         const newState = { ...level };
 
-        if (level.moves === 0) {
-            Randomizer(x, y, settings, newState.field);
+        if (mode === 0) {
+
+            if (level.moves === 0) {
+                Randomizer(x, y, settings, newState.field);
+            }
+
+            newState.moves++;
+
+            // Discover cell
+            newState.field[y][x][1] = '';
+
+            // if (digmine) {}
+            //  -> set loss
+            //  -> animate exploding mine...?
+            // } else if (checkvictory) {
+            //    newState.victory = true;
+            // }
+        } else {
+
+            // Set flag / question mark
+            newState.field[y][x][1] = mode === 1 ? '!' : '?';
+
         }
-
-        newState.moves++;
-
-        // Discover cell
-        newState.field[y][x][1] = '';
-
-        // if (digmine) {}
-        //  -> set loss
-        //  -> show mines placement
-        //  -> animate exploding mine...?
-        // } else if (checkvictory) {
-        //    newState.victory = true;
-        // }
 
         setLevel(newState);
     }
@@ -77,6 +85,8 @@ function Minesweeper(props) {
             <ControlBar
                 newGame={newGame}
                 minesLeft={settings.mines - level.flags}
+                mode={mode}
+                onModeChange={setMode}
             />
             <Field container>
                 {level.victory ? <WinScreen onClick={newGame} /> : null}
