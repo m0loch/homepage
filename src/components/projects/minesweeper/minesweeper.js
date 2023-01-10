@@ -58,6 +58,9 @@ function Minesweeper(props) {
 
         newState.moves++;
 
+        // Discover cell
+        newState.field[y][x][1] = '';
+
         // if (digmine) {}
         //  -> set loss
         //  -> show mines placement
