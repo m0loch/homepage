@@ -8,8 +8,6 @@ import Cell from './components/cell';
 import WinScreen from '../common/winScreen';
 import Randomizer from './utils/randomizer';
 
-const isDebug = true;
-
 const Settings = [
     { rows: 9, cols: 9, mines: 10 },
     { rows: 16, cols: 16, mines: 40 },
@@ -22,9 +20,10 @@ function Minesweeper(props) {
 
     const getEmptyGameState = () => {
         return {
-            moves: 0,
+            inited: false,
             flags: 0,
             victory: false,
+            failure: false,
             field: Array.apply(0, { length: settings.rows })
                 .map(() => Array.apply(0, { length: settings.cols })
                     .map(() => [0, '.'])),
@@ -34,46 +33,56 @@ function Minesweeper(props) {
     const [level, setLevel] = useState(getEmptyGameState());
     const [mode, setMode] = useState(0);
 
-    if (isDebug) {
-        console.log(props.difficulty);
-        console.log(settings);
-        console.log(level);
-    }
-
     const newGame = () => {
         setLevel(getEmptyGameState());
     }
 
     const handleClick = (x, y, value, modifier) => {
 
-        if (modifier === ''         // cell already discovered
-            || modifier === '!') {  // flag set
+        // If the game is ended, exit
+        if (level.victory || level.failure) {
             return;
         }
 
         const newState = { ...level };
 
         if (mode === 0) {
-
-            if (level.moves === 0) {
-                Randomizer(x, y, settings, newState.field);
+            if (modifier === ''         // cell already discovered
+                || modifier === '!') {  // flag set
+                return;
             }
 
-            newState.moves++;
+            if (!level.inited) {
+                Randomizer(x, y, settings, newState.field);
+                newState.inited = true;
+            }
+
+            // TODO: discover cell function that, if value === 0, recursively discovers adjacent cells
 
             // Discover cell
             newState.field[y][x][1] = '';
 
-            // if (digmine) {}
-            //  -> set loss
-            //  -> animate exploding mine...?
-            // } else if (checkvictory) {
-            //    newState.victory = true;
-            // }
-        } else {
+            if (value === 'X') {
+                // animate exploding mine...?
+                newState.failure = true;
+            }
 
-            // Set flag / question mark
-            newState.field[y][x][1] = mode === 1 ? '!' : '?';
+            // TODO: add victory control
+            // newState.victory = true;
+
+        } else if (mode === 1) {
+
+            if (level.flags < settings.mines) {
+                newState.flags++;
+
+                // Set flag / question mark
+                newState.field[y][x][1] = mode === 1 ? '!' : '?';
+            }
+
+        } else if (mode === 2) {
+
+            // Set question mark - no further action required
+            newState.field[y][x][1] = '?';
 
         }
 
