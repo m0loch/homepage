@@ -35,6 +35,8 @@ const CellInternal = styled(Grid)(
             boxSizing: "border-box",
             width: `${80 / columns}vw`,
             height: `${80 / columns}vw`,
+            maxWidth: `${1200 / columns}px`,
+            maxHeight: `${1200 / columns}px`,
             color: theme.palette.link,
         })
     }
