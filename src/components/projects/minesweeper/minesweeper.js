@@ -14,6 +14,29 @@ const Settings = [
     { rows: 16, cols: 30, mines: 90 },
 ];
 
+function DiscoverTile(field, x, y, settings) {
+
+    if (field[y][x][1] === ''        // cell already discovered
+        || field[y][x][1] === '!') { // flag set
+        return;
+    }
+
+    // Discover cell
+    field[y][x][1] = '';
+
+    if (field[y][x][0] !== 0) { return; }
+
+    // If the revea,
+    if (x > 0 && y > 0) { DiscoverTile(field, x-1, y-1, settings); }
+    if (y > 0) { DiscoverTile(field, x, y-1, settings); }
+    if (x < settings.cols - 1 && y > 0) { DiscoverTile(field, x+1, y-1, settings); }
+    if (x > 0) { DiscoverTile(field, x-1, y, settings); }
+    if (x < settings.cols - 1) { DiscoverTile(field, x+1, y, settings); }
+    if (x > 0 && y < settings.rows - 1) { DiscoverTile(field, x-1, y+1, settings); }
+    if (y < settings.rows) { DiscoverTile(field, x, y+1, settings); }
+    if (x < settings.cols - 1 && y < settings.rows -1) { DiscoverTile(field, x+1, y+1, settings); }
+}
+
 function Minesweeper(props) {
 
     const settings = Settings[props.difficulty];
@@ -37,7 +60,7 @@ function Minesweeper(props) {
         setLevel(getEmptyGameState());
     }
 
-    const handleClick = (x, y, value, modifier) => {
+    const handleClick = (x, y, value) => {
 
         // If the game is ended, exit
         if (level.victory || level.failure) {
@@ -47,42 +70,49 @@ function Minesweeper(props) {
         const newState = { ...level };
 
         if (mode === 0) {
-            if (modifier === ''         // cell already discovered
-                || modifier === '!') {  // flag set
-                return;
-            }
 
             if (!level.inited) {
                 Randomizer(x, y, settings, newState.field);
                 newState.inited = true;
             }
 
-            // TODO: discover cell function that, if value === 0, recursively discovers adjacent cells
-
-            // Discover cell
-            newState.field[y][x][1] = '';
+            DiscoverTile(newState.field, x, y, settings);
 
             if (value === 'X') {
                 // animate exploding mine...?
                 newState.failure = true;
             }
-
+        
             // TODO: add victory control
             // newState.victory = true;
 
         } else if (mode === 1) {
 
-            if (level.flags < settings.mines) {
-                newState.flags++;
+            if (newState.field[y][x][1] === '') { return; }
 
-                // Set flag / question mark
-                newState.field[y][x][1] = mode === 1 ? '!' : '?';
+            // Checks if there's already a flag set
+            if (newState.field[y][x][1] === '!') {
+
+                newState.field[y][x][1] = '.';
+                newState.flags--;
+
+            } else {
+
+                if (level.flags < settings.mines) {
+
+                    // Set flag
+                    newState.field[y][x][1] = '!';
+                    newState.flags++;
+                }
+
             }
 
         } else if (mode === 2) {
 
+            if (newState.field[y][x][1] === '') { return; }
+
             // Set question mark - no further action required
-            newState.field[y][x][1] = '?';
+            newState.field[y][x][1] = newState.field[y][x][1] === '?' ? '.' : '?';
 
         }
 
@@ -107,7 +137,7 @@ function Minesweeper(props) {
                                 idx={x}
                                 value={el}
                                 columns={settings.cols}
-                                onClick={() => handleClick(x, y, el[0], el[1])}
+                                onClick={() => handleClick(x, y, el[0])}
                             />
                         ))
                     }</div>
