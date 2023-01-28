@@ -7,35 +7,13 @@ import Field from './components/field';
 import Cell from './components/cell';
 import WinScreen from '../common/winScreen';
 import Randomizer from './utils/randomizer';
+import { CheckVictory, DiscoverTile } from './utils/utils';
 
 const Settings = [
     { rows: 9, cols: 9, mines: 10 },
     { rows: 16, cols: 16, mines: 40 },
     { rows: 16, cols: 30, mines: 90 },
 ];
-
-function DiscoverTile(field, x, y, settings) {
-
-    if (field[y][x][1] === ''        // cell already discovered
-        || field[y][x][1] === '!') { // flag set
-        return;
-    }
-
-    // Discover cell
-    field[y][x][1] = '';
-
-    if (field[y][x][0] !== 0) { return; }
-
-    // If the revea,
-    if (x > 0 && y > 0) { DiscoverTile(field, x-1, y-1, settings); }
-    if (y > 0) { DiscoverTile(field, x, y-1, settings); }
-    if (x < settings.cols - 1 && y > 0) { DiscoverTile(field, x+1, y-1, settings); }
-    if (x > 0) { DiscoverTile(field, x-1, y, settings); }
-    if (x < settings.cols - 1) { DiscoverTile(field, x+1, y, settings); }
-    if (x > 0 && y < settings.rows - 1) { DiscoverTile(field, x-1, y+1, settings); }
-    if (y < settings.rows) { DiscoverTile(field, x, y+1, settings); }
-    if (x < settings.cols - 1 && y < settings.rows -1) { DiscoverTile(field, x+1, y+1, settings); }
-}
 
 function Minesweeper(props) {
 
@@ -83,8 +61,9 @@ function Minesweeper(props) {
                 newState.failure = true;
             }
         
-            // TODO: add victory control
-            // newState.victory = true;
+            if (CheckVictory(newState.field)) {
+                newState.victory = true;
+            }
 
         } else if (mode === 1) {
 
