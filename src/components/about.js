@@ -62,7 +62,7 @@ function About() {
                 <br/>
                 <StyledContainer>
                     <p>Hi, my name is Romeo Graifenberg,</p>
-                    <p>born near <a href="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=it&msa=0&ll=46.06286390189817%2C11.146944484837856&spn=0.02025%2C0.058193&z=12&om=0&mid=1KXpKOoOTpXmqH9Hhr7aah7l2CkI">Trento, Italy</a> {calcAge()} years ago, I'm currently a web developer working for <a href="https://ivemind.com/">Ivemind</a> with a penchant for game development.</p>
+                    <p>born near <a href="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=it&msa=0&ll=46.06286390189817%2C11.146944484837856&spn=0.02025%2C0.058193&z=12&om=0&mid=1KXpKOoOTpXmqH9Hhr7aah7l2CkI">Trento, Italy</a> {calcAge()} years ago, I'm currently a Unity developer working for <a href="https://www.sisal.it/">Sisal</a>.</p>
 
                     <h2>Hobbies</h2>
                     <ul>
