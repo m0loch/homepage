@@ -108,6 +108,7 @@ function Minesweeper(props) {
             />
             <Field container>
                 {level.victory ? <WinScreen onClick={newGame} /> : null}
+                {level.failure ? <WinScreen onClick={newGame} msg={<div><h1>NOOOO</h1><br/><p>Click to play again    :(</p></div>} /> : null}
                 {level.field.map((row, y) => (
                     <div key={y} style={{ display: "flex", flexDirection: "row" }}>{
                         row.map((el, x) => (

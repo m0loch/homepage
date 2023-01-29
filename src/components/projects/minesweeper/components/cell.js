@@ -56,10 +56,10 @@ const iconStyle = { display: "block", width: "60%", height: "60%", margin: "auto
 // 
 // Second item
 //
-// .   -> covered
 // ''  -> no modifier
-// !   -> flag set by user
-// ?   -> question mark set by user
+// '.' -> covered
+// '!' -> flag set by user
+// '?' -> question mark set by user
 
 function Cell(props) {
 
