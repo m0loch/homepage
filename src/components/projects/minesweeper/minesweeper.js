@@ -115,6 +115,7 @@ function Minesweeper(props) {
                                 key={x}
                                 idx={x}
                                 value={el}
+                                hasEnded={level.victory || level.failure}
                                 columns={settings.cols}
                                 onClick={() => handleClick(x, y, el[0])}
                             />

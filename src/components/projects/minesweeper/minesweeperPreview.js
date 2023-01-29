@@ -7,7 +7,7 @@ import CollapseHeader from '../common/collapseHeader';
 
 function MinesweeperPreview(props) {
 
-    const [open, setOpen] = useState([true, false, true]);
+    const [open, setOpen] = useState([true, false, true, false]);
 
     const handleStateChange = (idx) => {
         const newState = [...open];
@@ -61,6 +61,21 @@ function MinesweeperPreview(props) {
                     <FormControlLabel value="1" control={<Radio />} label="Normal" />
                     <FormControlLabel value="2" control={<Radio />} label="Hard" />
                 </RadioGroup>
+            </Collapse>
+            <CollapseHeader
+                caption={"Credits"}
+                open={open[3]}
+                onClick={() => handleStateChange(3)}
+            />
+            <Collapse in={open[3]} timeout="auto" unmountOnExit>
+                <p>Icons took from the <a href="https://mui.com/material-ui/material-icons/">Material UI library</a> where not differently specified.</p>
+                <br />
+                <p>Bomb icon taken from <a href="https://www.veryicon.com/icons/object/material-design-icons-1/bomb-15.html">VeryIcon.com</a>.</p>
+                <p>Defused bomb icon taken from <a href="https://www.veryicon.com/icons/object/material-design-icons-1/bomb-off.html">VeryIcon.com</a>.</p>
+                <p>Credits to their author <i>zuozuozuozuozuo</i></p>
+                <br />
+                <p>Explosion icon taken from <a href="https://www.veryicon.com/icons/miscellaneous/framework7/burst-2.html">VeryIcon.com</a> as well.</p>
+                <p>Credits to its author <i>tal007</i></p>
             </Collapse>
         </div>
     );

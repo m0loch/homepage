@@ -4,6 +4,9 @@ import { styled } from '@mui/system';
 
 import FlagIcon from '@mui/icons-material/Flag';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import { ReactComponent as Bomb } from '../svg/bomb.svg';
+import { ReactComponent as DefusedBomb } from '../svg/bomb-off.svg';
+import { ReactComponent as Explosion } from '../svg/explosion.svg';
 
 const CellInternal = styled(Grid)(
     ({ theme, columns, covered }) => {
@@ -38,6 +41,7 @@ const CellInternal = styled(Grid)(
             maxWidth: `${1200 / columns}px`,
             maxHeight: `${1200 / columns}px`,
             color: theme.palette.link,
+            fill: theme.palette.link,
         })
     }
 );
@@ -64,20 +68,30 @@ function Cell(props) {
 
     if (isCovered) {
 
-        switch (props.value[1]) {
-            case '!':
-                icon = <FlagIcon style={iconStyle} />
-                break;
+        if (props.hasEnded && props.value[0] === 'X') {
+            icon = props.value[1] === '!' ? <DefusedBomb style={iconStyle} /> : <Bomb style={iconStyle} />;
+        } else {
 
-            case '?':
-                icon = <QuestionMarkIcon style={iconStyle} />
-                break;
+            switch (props.value[1]) {
+                case '!':
+                    icon = <FlagIcon style={iconStyle} />
+                    break;
 
-            default:
+                case '?':
+                    icon = <QuestionMarkIcon style={iconStyle} />
+                    break;
+
+                default:
+            }
+
         }
 
     } else if (props.value[0]) {
-        icon = props.value[0];
+        if (props.value[0] === 'X') {
+            icon = <Explosion style={iconStyle} />;
+        } else {
+            icon = props.value[0];
+        }
     }
 
     return (
