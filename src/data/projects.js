@@ -7,6 +7,7 @@ import FuturePlans from '../components/projectsSection/futurePlans';
 import TalksPreview from '../components/projects/talks/talksPreview';
 import MastermindPreview from '../components/projects/mastermind/mastermindPreview';
 import TylesPreview from '../components/projects/tyles/tylesPreview';
+import MinesweeperPreview from '../components/projects/minesweeper/minesweeperPreview';
 
 const games = [{
     key: 0,
@@ -64,6 +65,13 @@ const games = [{
     content: "My first commercial success!",
     fullContent: TylesPreview,
     url: "tyles",
+},
+{
+    key: 8,
+    title: "Minesweeper",
+    content: "Yet another classic game to prevent you from working",
+    fullContent: MinesweeperPreview,
+    url: "minesweeper",
 },
 {
     key: 100,

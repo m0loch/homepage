@@ -26,6 +26,7 @@ import Tetris from './components/projects/tetris/tetris';
 import Talks from './components/projects/talks/talks';
 import MasterMind from './components/projects/mastermind/mastermind';
 import Tyles from './components/projects/tyles/tyles';
+import Minesweeper from './components/projects/minesweeper/minesweeper';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -52,6 +53,7 @@ function App(props) {
         <Route path="/projects/talks" element={<Talks />} />
         <Route path="/projects/mastermind" element={<MasterMind {...props.mastermind} />} />
         <Route path="/projects/tyles" element={<Tyles levelsFolder={`${process.env.PUBLIC_URL}/assets/tyles/levels`} {...props.tyles} />} />
+        <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />
 
         {/* Main sections  */}
         <Route path="/about" element={<About />} />
