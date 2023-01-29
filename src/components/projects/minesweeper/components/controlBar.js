@@ -42,6 +42,14 @@ const ButtonInternal = styled(Button)(
     }
 );
 
+const ModeSelector = styled('div')(
+    ({ theme }) => ({
+        [theme.breakpoints.up('md')]: {
+            display: "none",
+        },
+    })
+)
+
 const ScoreSection = styled(Card)(
     ({ theme }) => ({
         display: "flex",
@@ -74,8 +82,7 @@ const ControlBar = (props) => {
                 <LoopIcon />
             </ButtonInternal>
 
-            {/* Mode selector */}
-            <div>
+            <ModeSelector>
                 {selectors.map((item, idx) =>
                     <ButtonInternal
                         key={idx}
@@ -86,7 +93,7 @@ const ControlBar = (props) => {
                         {item}
                     </ButtonInternal>
                 )}
-            </div>
+            </ModeSelector>
 
             <ScoreSection>
                 <p>{props.minesLeft} to go</p>

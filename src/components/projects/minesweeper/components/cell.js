@@ -97,6 +97,7 @@ function Cell(props) {
     return (
         <CellInternal item
             onClick={props.onClick}
+            onContextMenu={props.onContextMenu}
             columns={props.columns}
             covered={isCovered}
         >

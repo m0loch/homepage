@@ -98,6 +98,44 @@ function Minesweeper(props) {
         setLevel(newState);
     }
 
+    const handleRightClick = (e, x, y, modifier) => {
+        e.preventDefault();
+
+        // If the game is ended or the cell is already revealed, exit
+        if (level.victory || level.failure || modifier === '') {
+            return;
+        }
+        
+        // Edit state for clicked cell
+        // Empty -> flag -> question mark -> empty
+        const newState = { ...level };
+
+        switch (modifier) {
+            case '!':
+                // Flag
+                newState.field[y][x][1] = '?';
+                newState.flags--;
+                break;
+
+            case '?':
+                // Question mark
+                newState.field[y][x][1] = '.';
+                break;
+    
+            default:
+                // Empty
+                if (newState.flags < settings.mines) {
+                    newState.field[y][x][1] = '!';
+                    newState.flags++;
+                } else {
+                    newState.field[y][x][1] = '?';
+                }
+                break;
+        }
+        
+        setLevel(newState);
+    }
+
     return (
         <Container style={{ display: "flex", flexDirection: "column" }}>
             <ControlBar
@@ -119,6 +157,7 @@ function Minesweeper(props) {
                                 hasEnded={level.victory || level.failure}
                                 columns={settings.cols}
                                 onClick={() => handleClick(x, y, el[0])}
+                                onContextMenu={e => handleRightClick(e, x, y, el[1])}
                             />
                         ))
                     }</div>
