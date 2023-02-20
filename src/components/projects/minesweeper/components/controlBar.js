@@ -35,8 +35,9 @@ const ButtonInternal = styled(Button)(
             width: "4vw",
 
             [theme.breakpoints.down('md')]: {
-                width: "16vw",
-                height: "16vw",
+                height: "8vw",
+                width: "8vw",
+                minWidth: "unset"
             },
         })
     }
@@ -60,8 +61,8 @@ const ScoreSection = styled(Card)(
         width: "8vw",
 
         [theme.breakpoints.down('md')]: {
-            width: "16vw",
-            height: "32vw",
+            height: "8vw",
+            width: "24vw",
         },
     })
 )
