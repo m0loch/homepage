@@ -36,10 +36,22 @@ function MasterMind(props) {
     const settings = Settings[props.difficulty];
     const [gameState, setGameState] = useState(NewGame(settings));
 
-    const onOrbClicked = ({ clientX, clientY }, idx) => {
+    const onOrbClicked = (e, idx) => {
+        // Increments color for clicked orb.
+        gameState.rows[gameState.currentTry][idx] =
+            gameState.rows[gameState.currentTry][idx] === undefined ? 0
+            : (gameState.rows[gameState.currentTry][idx] + 1) % settings.colors;
+
         setGameState({
             ...gameState,
-            dialogOpen: {x: clientX, y: clientY},
+         });
+    }
+
+    const onShowSelector = (e, idx) => {
+        e.preventDefault();
+        setGameState({
+            ...gameState,
+            dialogOpen: {x: e.clientX, y: e.clientY},
             editingDigit: idx,
          });
     }
@@ -103,6 +115,7 @@ function MasterMind(props) {
                         value={row}
                         hint={gameState.hints[x]}
                         onOrbClicked={onOrbClicked}
+                        onShowSelector={onShowSelector}
                         onSubmit={SubmitTry}
                     />
                 )}

@@ -24,7 +24,9 @@ function Row(props) {
                 <Orb
                     key={y}
                     value={tile}
-                    onClick={props.selected ? ev => props.onOrbClicked(ev, y) : null}
+                    onTap={props.selected ? ev => props.onOrbClicked(ev, y) : null}
+                    onLongTap={props.selected ? ev => props.onShowSelector(ev, y) : null}
+                    onContextMenu={props.selected ? ev => props.onShowSelector(ev, y) : null}
                 />
             )}
             <div style={{ width: "20px" }} />

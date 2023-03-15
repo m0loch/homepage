@@ -1,4 +1,5 @@
 import { styled, keyframes } from '@mui/system';
+import LongTappableBtn from './longTappableBtn';
 
 const colors = [
     { main: "#FF0000", shadow: "#2E2E68E6" },
@@ -17,7 +18,7 @@ const appearAnimation = keyframes`
     100% { opacity: 1 },
 `;
 
-const Orb = styled('div',
+const Orb = styled(LongTappableBtn,
     { shouldForwardProp: (prop) => prop !== 'value' },
     { shouldForwardProp: (prop) => prop !== 'hint' },
     { shouldForwardProp: (props) => props !== 'appearanceDelay' },
