@@ -5,7 +5,7 @@ import NextButton from './styledComponents/nextButton';
 import SceneTitle from './styledComponents/sceneTitle';
 import SceneContent from './styledComponents/sceneContent';
 
-import Adventure from './data/adventure';
+import Adventure from './adventure';
 import { splitText } from '../../common/textFunctions';
 
 function Talks(/*props*/) {
