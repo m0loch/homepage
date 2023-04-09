@@ -13,7 +13,6 @@ import PerformMove from './utils/movesHandler';
 import LevelSelectDlg from './dialogs/levelSelectDlg';
 import HelpDlg from './dialogs/helpDlg';
 
-
 function Tyles(props) {
 
     const [dlgOpen, setDlgOpen] = useState(0);
