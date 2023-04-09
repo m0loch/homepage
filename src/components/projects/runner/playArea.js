@@ -18,6 +18,10 @@ function PlayArea(props) {
     const bgSliderRef = useRef(null);
     const sliderRef = useRef(null);
 
+    // Jump support
+    const jumpTimerRef = useRef();
+    const jumpLevel = useRef();
+
     const char = useMemo(() => new Character(), []);
     const terrainFactory = useMemo(() => new TerrainFactory(), []);
     const backgroundFactory = useMemo(() => new BackgroundFactory(), []);
@@ -135,25 +139,57 @@ function PlayArea(props) {
         resize(containerRef);
     }, [resize]);
 
-    const handleUserKeyPress = useCallback((event) => {
-        if (event.key === " ") {
-            char.Jump();
-        }
-    }, [char]);
+    // Jump handling
 
-    const handleTap = useCallback(() => char.Jump(), [char]);
+    const startJump = useCallback(() => {
+        jumpLevel.current = 0;
+        jumpTimerRef.current = setTimeout(() => {
+            jumpLevel.current = 1;
+            char.Jump(jumpLevel.current);
+        }, 100)
+    }, [jumpLevel, jumpTimerRef, char]);
+
+    const endJump = useCallback(() => {
+        char.Jump(jumpLevel.current);
+
+        clearTimeout(jumpTimerRef.current);
+
+    }, [jumpTimerRef, char]);
+  
+    const handleKeyDown = useCallback((event) => {
+        if (event.key === " ") {
+            startJump();
+        }
+    }, [startJump]);
+
+    const handleKeyUp = useCallback((event) => {
+        if (event.key === " ") {
+            endJump();
+        }
+    }, [endJump]);
+
+    const handleTapBegin = useCallback(() => startJump(), [startJump]);
+
+    const handleTapEnd = useCallback(() => endJump(), [endJump]);
+
+    // /Jump handling
 
     useEffect(() => {
         window.addEventListener('resize', resize);
-        window.addEventListener('keydown', handleUserKeyPress);
-        window.addEventListener('pointerdown', handleTap);
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyUp);
+        window.addEventListener('pointerdown', handleTapBegin);
+        window.addEventListener('pointerup', handleTapEnd);
+
 
         return () => {
             window.removeEventListener('resize', resize);
-            window.removeEventListener('keydown', handleUserKeyPress);
-            window.removeEventListener('pointerdown', handleTap);
+            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keyup', handleKeyUp);
+            window.removeEventListener('pointerdown', handleTapBegin);
+            window.removeEventListener('pointerup', handleTapEnd);
         }
-    }, [resize, handleUserKeyPress, handleTap]);
+    }, [resize, handleKeyDown, handleKeyUp, handleTapBegin, handleTapEnd]);
 
     if (!props.loaded) {
         return null;

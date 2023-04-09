@@ -6,6 +6,8 @@ function Clamp(min, current, max) {
     return current;
 }
 
+const JumpPower = [4, 5.5];
+
 //////////
 // STUB:
 //////////
@@ -70,13 +72,14 @@ class Character {
     }
 
     // CHARACTER INPUTS
-    Jump() {
+    Jump(level) {
         // COYOTE TIME
         if (
             (this.state === CharState.Running)
             || (this.state === CharState.Falling && this.vVel < 0.5) // 1 extra frame
         ) {
-            this.vVel -= 5;
+            this.vVel -= JumpPower[level];
+            this.state = CharState.Jumping;
         }
     }
 
