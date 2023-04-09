@@ -8,8 +8,8 @@ function Main(props) {
         <TextSection>
             <MainText>
                 {props.posts
-                    .sort((a,b) => b.key - a.key) // newer posts are meant to be shown before the older ones
-                    .map((post, index) => <Post {...post} index={index}/>)}
+                    .sort((a,b) => b.date - a.date) // newer posts are meant to be shown before the older ones
+                    .map((post, index) => <Post {...post} index={index} key={index}/>)}
             </MainText>
         </TextSection>
     );
