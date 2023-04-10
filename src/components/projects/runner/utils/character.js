@@ -30,7 +30,7 @@ const JumpPower = [4, 5.5];
 // The character has collided with an obstacle and the game is over.
 
 const CharState = {
-    Idle: [0, 1, 2, 3],
+    Idle: [0, 0, 1, 1, 2, 3],
     Running: [4, 5, 6],
     Jumping: [7],
     Falling: [8],
@@ -51,6 +51,7 @@ class Character {
         this.vVel = 0;
         this.state = CharState.Idle;
         this.hit = false;
+        this.started = false;
     }
 
     GetTexture() {
@@ -73,10 +74,10 @@ class Character {
 
     // CHARACTER INPUTS
     Jump(level) {
-        // COYOTE TIME
         if (
             (this.state === CharState.Running)
-            || (this.state === CharState.Falling && this.vVel < 0.5) // 1 extra frame
+            || (this.state === CharState.Falling && this.vVel < 1 // Coyote time
+                && this.y > 140) // avoid a second jump at the pinnacle opf the first
         ) {
             this.vVel -= JumpPower[level];
             this.state = CharState.Jumping;
@@ -87,6 +88,10 @@ class Character {
         if (this.vVel > 0) {
             this.vVel = 0.0;
         }
+    }
+
+    Start() {
+        this.started = true;
     }
 
     // PHYSICS
@@ -125,7 +130,9 @@ class Character {
         }
 
         // Check state
-        if (this.hit) {
+        if (!this.started) {
+            this.state = CharState.Idle;
+        } else if (this.hit) {
             this.state = CharState.Hit;
         } else if (this.vVel === 0.0) {
             this.state = CharState.Running;

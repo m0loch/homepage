@@ -8,7 +8,8 @@ import BackgroundFactory from './utils/backgroundFactory';
 
 let charFrameAccumulator = 0, sliderFrame = 0, bgSliderFrame = 0;
 
-// TODO - game over screen
+// Note: being a "real time" game we don't handle these via React state
+let start = false;
 let stop = false;
 
 function PlayArea(props) {
@@ -20,7 +21,7 @@ function PlayArea(props) {
 
     // Jump support
     const jumpTimerRef = useRef();
-    const jumpLevel = useRef();
+    const jumpLevel = useRef(0);
 
     const char = useMemo(() => new Character(), []);
     const terrainFactory = useMemo(() => new TerrainFactory(), []);
@@ -88,8 +89,8 @@ function PlayArea(props) {
         sliderRef.current.x = -sliderFrame;
     }, [terrainFactory]);
 
-    const gameloop = useCallback((dt, force) => {
-        if (stop && !force) return;
+    const gameloop = useCallback((dt) => {
+        if (stop) return;
 
         // Character animation
         charFrameAccumulator = (charFrameAccumulator + dt) % 60;
@@ -103,6 +104,8 @@ function PlayArea(props) {
         char.UpdateFrame(charFrameAccumulator);
 
         setCharacter(char.GetValue());
+
+        if (!start) return;
 
         // Move background
         if (sliderRef && sliderRef.current) {
@@ -140,8 +143,13 @@ function PlayArea(props) {
     }, [resize]);
 
     // Jump handling
-
     const startJump = useCallback(() => {
+        if (!start) {
+            start = true;
+            char.Start();
+            return;
+        }
+
         jumpLevel.current = 0;
         jumpTimerRef.current = setTimeout(() => {
             jumpLevel.current = 1;
@@ -171,7 +179,6 @@ function PlayArea(props) {
     const handleTapBegin = useCallback(() => startJump(), [startJump]);
 
     const handleTapEnd = useCallback(() => endJump(), [endJump]);
-
     // /Jump handling
 
     useEffect(() => {
