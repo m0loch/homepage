@@ -88,3 +88,11 @@ export function minesweeperSetDifficulty(value) {
         difficulty: parseInt(value),
     }
 }
+
+// Talks
+export function talksSelectStory(value) {
+    return {
+        type: 'TALKS_SELECT_STORY',
+        selectedTalk: parseInt(value),
+    }
+}

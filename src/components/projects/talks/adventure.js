@@ -1,7 +1,15 @@
-// Reads all the .js files in the ./data subfolders as modules
-const chapterModules = require.context("./data", true, /\.js$/);
+function GetTalk(value) {
+    let chapterModules = [];
 
-// Retrieves the default export for each module
-const Adventure = chapterModules.keys().map(chapter => chapterModules(chapter).default);
+    // Reads all the .js files in the appropriate subfolders as modules
+    if (value === 0) {
+        chapterModules = require.context(`./data/dragon`, true, /\.js$/);
+    } else {
+        chapterModules = require.context(`./data/bugchars`, true, /\.js$/);
+    }
 
-export default Adventure;
+    // Retrieves the default export for each module
+    return chapterModules.keys().map(chapter => chapterModules(chapter).default);
+}
+
+export default GetTalk;

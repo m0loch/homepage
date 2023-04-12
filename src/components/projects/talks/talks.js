@@ -5,14 +5,15 @@ import NextButton from './styledComponents/nextButton';
 import SceneTitle from './styledComponents/sceneTitle';
 import SceneContent from './styledComponents/sceneContent';
 
-import Adventure from './adventure';
+import GetTalk from './adventure';
 import { splitText } from '../../common/textFunctions';
 
-function Talks(/*props*/) {
+function Talks(props) {
 
     const [gameState, setGameState] = useState({});
     const [selected, setSelected] = useState(0);
 
+    const Adventure = GetTalk(props.selectedTalk);
     const idx = Adventure.findIndex(item => item.key === gameState.event);
     const currEvent = Adventure[idx > 0 ? idx : 0];
 

@@ -50,7 +50,7 @@ function App(props) {
         <Route path="/projects/wordle" element={<Wordle {...props.wordle} />} />
         <Route path="/projects/runner" element={<Runner assetsFolder={`${process.env.PUBLIC_URL}/assets/runner`} />} />
         <Route path="/projects/tetris" element={<Tetris {...props.tetris} />} />
-        <Route path="/projects/talks" element={<Talks />} />
+        <Route path="/projects/talks" element={<Talks {...props.talks} />} />
         <Route path="/projects/mastermind" element={<MasterMind {...props.mastermind} />} />
         <Route path="/projects/tyles" element={<Tyles levelsFolder={`${process.env.PUBLIC_URL}/assets/tyles/levels`} {...props.tyles} />} />
         <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />

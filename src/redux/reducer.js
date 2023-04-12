@@ -27,6 +27,8 @@ const SettingsReducer = (state = InitialState, action) => {
             return {...state, minesweeper: {...state.minesweeper, sectionsState: action.sectionsState}};
         case 'MINESWEEPER_SET_DIFFICULTY':
             return {...state, minesweeper: {...state.minesweeper, difficulty: action.difficulty}};
+        case 'TALKS_SELECT_STORY':
+            return {...state, talks: {...state.talks, selectedTalk: action.selectedTalk}};
         default:
             return state;
         }

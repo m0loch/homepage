@@ -7,6 +7,7 @@ const InitialState = {
     mastermind: { difficulty: 0 },
     tyles: { level: 0, scores: Array.apply(0, { length: 120 }).map(() => { return { bestScore: 0, isBest: false }}) },
     minesweeper: { difficulty: 1, sectionsState: [true, false, true, false] },
+    talks: { selectedTalk: 0 },
 };
 
 export default InitialState;
