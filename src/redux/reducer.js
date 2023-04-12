@@ -23,6 +23,8 @@ const SettingsReducer = (state = InitialState, action) => {
             const newScores = [...state.tyles.scores];
             newScores[action.level] = action.score;
             return {...state, tyles: {...state.tyles, scores: [...newScores]} };
+        case 'MINESWEEPER_PV_SET_OPENED_SECTIONS':
+            return {...state, minesweeper: {...state.minesweeper, sectionsState: action.sectionsState}};
         case 'MINESWEEPER_SET_DIFFICULTY':
             return {...state, minesweeper: {...state.minesweeper, difficulty: action.difficulty}};
         default:

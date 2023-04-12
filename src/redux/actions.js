@@ -75,6 +75,13 @@ export function tylesSetLevelBestScore(levelIdx, value) {
 }
 
 // Minesweeper
+export function minesweeperPVSetOpenedSections(value) {
+    return {
+        type: 'MINESWEEPER_PV_SET_OPENED_SECTIONS',
+        sectionsState: value,
+    }
+}
+
 export function minesweeperSetDifficulty(value) {
     return {
         type: 'MINESWEEPER_SET_DIFFICULTY',

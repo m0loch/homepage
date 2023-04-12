@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from 'react-redux';
-import { minesweeperSetDifficulty } from '../../../redux/actions';
+import { minesweeperSetDifficulty, minesweeperPVSetOpenedSections } from '../../../redux/actions';
 
 import { Collapse, RadioGroup, Radio, FormControlLabel } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
 
 function MinesweeperPreview(props) {
 
-    const [open, setOpen] = useState([true, false, true, false]);
+    const open = props.sectionsState;
 
     const handleStateChange = (idx) => {
         const newState = [...open];
         newState[idx] = !open[idx];
-        setOpen(newState);
+        props.minesweeperPVSetOpenedSections(newState);
     }
 
     return (
@@ -87,7 +87,7 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
     minesweeperSetDifficulty,
+    minesweeperPVSetOpenedSections,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MinesweeperPreview
-);
+export default connect(mapStateToProps, mapDispatchToProps)(MinesweeperPreview);
