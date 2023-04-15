@@ -10,23 +10,28 @@ import { splitText } from '../../common/textFunctions';
 
 function Talks(props) {
 
-    const [gameState, setGameState] = useState({});
-    const [selected, setSelected] = useState(0);
+    const [gameState, setGameState] = useState({ selected: 0 });
 
     const Adventure = GetTalk(props.selectedTalk);
-    const idx = Adventure.findIndex(item => item.key === gameState.event);
-    const currEvent = Adventure[idx > 0 ? idx : 0];
+    const currEvent = Adventure[gameState.idx ?? 0];
 
-    const PerformNext = (idx) => {
+    const PerformNext = (sel) => {
         let outcome;
         if (currEvent.choices) {
-            outcome = currEvent.choices[idx].outcome;
+            outcome = currEvent.choices[sel].outcome;
         } else {
             outcome = currEvent.outcome;
         }
 
+        let idx;
+        if (outcome.next) {
+            idx = Adventure.findIndex(item => item.key === outcome.next);
+        } else {
+            idx = gameState.idx ? gameState.idx + 1 : 1;
+        }
+
         setGameState(prev => {
-            const retVal = {...prev, event: outcome.next};
+            const retVal = {...prev, idx, selected: 0};
 
             Object.entries(outcome).forEach(([key, value]) => {
                 if (key !== 'next') {
@@ -45,20 +50,20 @@ function Talks(props) {
     return (
         <>
             <GameArea>
-                <SceneTitle>{currEvent.title}</SceneTitle>
+                {currEvent.title ? <SceneTitle>{currEvent.title}</SceneTitle> : null}
 
                 <SceneContent>
                     {splitText(currEvent.content)}
                 </SceneContent>
                 {currEvent.choices ? (
-                    <ChoicesArea selected={selected} setSelected={setSelected}>
+                    <ChoicesArea selected={gameState.selected} setSelected={sel => setGameState({...gameState, selected: sel})}>
                         {currEvent.choices}
                     </ChoicesArea>
                 ) : null}
             </GameArea>
 
             {currEvent.choices || currEvent.outcome ? (
-                <NextButton variant="contained" onClick={() => PerformNext(selected)}>Next</NextButton>
+                <NextButton variant="contained" onClick={() => PerformNext(gameState.selected)}>Next</NextButton>
             ) : null}
         </>
     );
