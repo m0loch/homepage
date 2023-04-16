@@ -17,6 +17,6 @@ const ch001 = {
             { text: "He will pay for his insolence, I will tear his flesh apart with my very fangs and claws.", outcome: { strength: 10, next: 'introKilled' } },
             { text: "Disposing of him won't be a problem, I'll let my fiery breath do the talking.", outcome: { wisdom: 10, next: 'introKilled' } },
         ]
-};
+}
 
 export default ch001;

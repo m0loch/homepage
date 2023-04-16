@@ -47,13 +47,15 @@ function Talks(props) {
         });
     }
 
+    const content = typeof currEvent.content === "string" ? currEvent.content : currEvent.content(gameState);
+
     return (
         <>
             <GameArea>
                 {currEvent.title ? <SceneTitle>{currEvent.title}</SceneTitle> : null}
 
                 <SceneContent>
-                    {splitText(currEvent.content)}
+                    {splitText(content)}
                 </SceneContent>
                 {currEvent.choices ? (
                     <ChoicesArea selected={gameState.selected} setSelected={sel => setGameState({...gameState, selected: sel})}>

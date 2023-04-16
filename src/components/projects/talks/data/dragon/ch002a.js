@@ -13,6 +13,6 @@ const ch002a = {
     Life is good.
     `,
     outcome: { next: 'ending' }
-};
+}
 
 export default ch002a;

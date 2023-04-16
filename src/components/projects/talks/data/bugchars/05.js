@@ -10,6 +10,6 @@ const question = {
         { text: "", outcome: { fra: 10, next: 'profile' } },
         { text: "", outcome: { rob: 10, next: 'profile' } },
     ]
-};
+}
 
 export default Shuffler(question);

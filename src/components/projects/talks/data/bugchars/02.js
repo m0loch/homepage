@@ -13,6 +13,6 @@ const question = {
         { text: "Does alcohol count as \"comfort food\"?", outcome: { fra: 10 } },
         { text: "Time for Domino's, I guess.", outcome: { rob: 10 } },
     ]
-};
+}
 
 export default Shuffler(question);

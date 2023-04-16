@@ -16,6 +16,6 @@ const question = {
         { text: "I don't mind playing either AAA or indie titles, I just want them to be original and good looking. I want to be in awe.", outcome: { fra: 10 } },
         { text: "I can enjoy many genres of videogames, but they need to be challenging and skill-rewarding (no luck, please). Bonus points if they let me unleash said skill on unfortunate human opponents.", outcome: { rob: 10 } },
     ]
-};
+}
 
 export default Shuffler(question);

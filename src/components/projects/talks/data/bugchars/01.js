@@ -13,6 +13,6 @@ const question = {
         { text: "I work to live, not the other way around. If they want me to work overtime, they need to notice me beforehand.", outcome: { fra: 10 } },
         { text: "If it was any urgent, they would have just called me - I'll read this tomorrow", outcome: { rob: 10 } },
     ]
-};
+}
 
 export default Shuffler(question);
