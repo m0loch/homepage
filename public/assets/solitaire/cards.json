@@ -1,0 +1,436 @@
+{"frames": {
+
+"card_1_clover":
+{
+	"frame": {"x":0,"y":0,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_1_diamond":
+{
+	"frame": {"x":62,"y":0,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_1_heart":
+{
+	"frame": {"x":124,"y":0,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_1_spade":
+{
+	"frame": {"x":186,"y":0,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_2_clover":
+{
+	"frame": {"x":0,"y":84,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_2_diamond":
+{
+	"frame": {"x":62,"y":84,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_2_heart":
+{
+	"frame": {"x":124,"y":84,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_2_spade":
+{
+	"frame": {"x":186,"y":84,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_3_clover":
+{
+	"frame": {"x":0,"y":168,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_3_diamond":
+{
+	"frame": {"x":62,"y":168,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_3_heart":
+{
+	"frame": {"x":124,"y":168,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_3_spade":
+{
+	"frame": {"x":186,"y":168,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_4_clover":
+{
+	"frame": {"x":0,"y":252,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_4_diamond":
+{
+	"frame": {"x":62,"y":252,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_4_heart":
+{
+	"frame": {"x":124,"y":252,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_4_spade":
+{
+	"frame": {"x":186,"y":252,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_5_clover":
+{
+	"frame": {"x":0,"y":336,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_5_diamond":
+{
+	"frame": {"x":62,"y":336,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_5_heart":
+{
+	"frame": {"x":124,"y":336,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_5_spade":
+{
+	"frame": {"x":186,"y":336,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_6_clover":
+{
+	"frame": {"x":0,"y":420,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_6_diamond":
+{
+	"frame": {"x":62,"y":420,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_6_heart":
+{
+	"frame": {"x":124,"y":420,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_6_spade":
+{
+	"frame": {"x":186,"y":420,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_7_clover":
+{
+	"frame": {"x":0,"y":504,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_7_diamond":
+{
+	"frame": {"x":62,"y":504,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_7_heart":
+{
+	"frame": {"x":124,"y":504,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_7_spade":
+{
+	"frame": {"x":186,"y":504,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_8_clover":
+{
+	"frame": {"x":0,"y":588,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_8_diamond":
+{
+	"frame": {"x":62,"y":588,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_8_heart":
+{
+	"frame": {"x":124,"y":588,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_8_spade":
+{
+	"frame": {"x":186,"y":588,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_9_clover":
+{
+	"frame": {"x":0,"y":672,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_9_diamond":
+{
+	"frame": {"x":62,"y":672,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_9_heart":
+{
+	"frame": {"x":124,"y":672,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_9_spade":
+{
+	"frame": {"x":186,"y":672,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_10_clover":
+{
+	"frame": {"x":0,"y":756,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_10_diamond":
+{
+	"frame": {"x":62,"y":756,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_10_heart":
+{
+	"frame": {"x":124,"y":756,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_10_spade":
+{
+	"frame": {"x":186,"y":756,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_11_clover":
+{
+	"frame": {"x":0,"y":840,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_11_diamond":
+{
+	"frame": {"x":62,"y":840,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_11_heart":
+{
+	"frame": {"x":124,"y":840,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_11_spade":
+{
+	"frame": {"x":186,"y":840,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_12_clover":
+{
+	"frame": {"x":0,"y":924,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_12_diamond":
+{
+	"frame": {"x":62,"y":924,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_12_heart":
+{
+	"frame": {"x":124,"y":924,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_12_spade":
+{
+	"frame": {"x":186,"y":924,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_13_clover":
+{
+	"frame": {"x":0,"y":1008,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_13_diamond":
+{
+	"frame": {"x":62,"y":1008,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_13_heart":
+{
+	"frame": {"x":124,"y":1008,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"card_13_spade":
+{
+	"frame": {"x":186,"y":1008,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+},
+"cardback":
+{
+	"frame": {"x":0,"y":1092,"w":62,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":84},
+	"sourceSize": {"w":62,"h":84}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cards.png",
+	"format": "RGBA8888",
+	"size": {"w":248,"h":1176},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e0ed488fe7cb8fd9b14f61a0a671b15d:f9c7a6935ccf2fe27105a59d2693b47e:8056528aade6b91f4a89f8c9da7f2d4c$"
+}
+}

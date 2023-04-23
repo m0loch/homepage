@@ -8,6 +8,7 @@ import TalksPreview from '../components/projects/talks/talksPreview';
 import MastermindPreview from '../components/projects/mastermind/mastermindPreview';
 import TylesPreview from '../components/projects/tyles/tylesPreview';
 import MinesweeperPreview from '../components/projects/minesweeper/minesweeperPreview';
+import SolitairePreview from '../components/projects/solitaire/solitairePreview';
 
 const games = [{
     key: 0,
@@ -72,6 +73,13 @@ const games = [{
     content: "Yet another classic game to prevent you from working",
     fullContent: MinesweeperPreview,
     url: "minesweeper",
+},
+{
+    key: 9,
+    title: "Solitaire",
+    content: "Because every once in a while you end up with a deck of cards and nobody to play with",
+    fullContent: SolitairePreview,
+    url: "solitaire",
 },
 {
     key: 100,
