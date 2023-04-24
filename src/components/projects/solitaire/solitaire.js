@@ -8,7 +8,7 @@ function Solitaire(props) {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+        PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
         PIXI.Loader.shared
             .add('char', `${props.assetsFolder}/cards.json`)
