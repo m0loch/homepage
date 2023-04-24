@@ -87,6 +87,13 @@ class Board extends PIXI.Container {
     }
 
     NewGame = () => {
+
+        // Remove every card - useless only on the first load
+        this.deck.Destroy();
+        this.discardPile.Destroy();
+        this.houses.forEach(house => house.Destroy());
+        this.cardColumns.forEach(col => col.Destroy());
+
         let initialCfg = RandomizeStart(52);
 
         for (let i = 0; i < this.cardColumns.length; i++) {
@@ -100,6 +107,7 @@ class Board extends PIXI.Container {
         while (initialCfg.length > 0) {
             this.deck.AddCard(new Card(initialCfg.pop()));
         }
+
     }
 
     CheckWinCondition = () => {

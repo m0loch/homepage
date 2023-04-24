@@ -5,8 +5,15 @@ import Board from './board';
 
 class PixiCanvas extends Component {
 
-    updatePixiContainer = (element) => {
+    NewGame = () => {
+        if (!this.board) {
+            return;
+        }
 
+        this.board.NewGame();
+    }
+
+    updatePixiContainer = (element) => {
         // DOM element where the PIXI canvas will be docked
         this.pixiContainer = element;
 
