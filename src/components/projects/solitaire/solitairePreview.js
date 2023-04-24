@@ -48,6 +48,7 @@ function SolitairePreview(props) {
             <Collapse in={open[1]} timeout="auto" unmountOnExit>
                 {splitText(`
                     The game uses a plain <a href="https://pixijs.com/">PIXI.js</a> component.
+                    Animations are done via <a href="https://www.npmjs.com/package/@tweenjs/tween.js">@tweenjs/tween.js</a>.
 
                     The cards pack has been retrieved from the internet (see Credits).
                 `)}
