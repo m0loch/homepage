@@ -10,13 +10,11 @@ export default function FuturePlans() {
                 on the other I'm well aware I'm not an UI/UX designer by any means but I'd still like the site
                 to feel a little less "basic" and just a little more polished.
                 <br/>
-                I'm thinking I could aim for having 10 games available before starting the real refactor, I still have to think about it.
+                Now that I've reached the mileston of having 10 minigames available, I should start to really think about some real refactoring...
             </p>
 
             <h4>Future games that <i>I'd like</i> to implement in the future (in no particular order)</h4>
             <ul>
-                <li>Minesweeper</li>
-                <li>Card solitaire</li>
                 <li>Sudoku</li>
                 <li>Snake</li>
                 <li>Jigsaw puzzle</li>
