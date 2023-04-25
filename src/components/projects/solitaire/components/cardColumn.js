@@ -7,7 +7,7 @@ class CardColumn extends CardInteractableDocker {
 
         return({
             x: 0,
-            y: i * 25,
+            y: i * 20,
         });
     }
 

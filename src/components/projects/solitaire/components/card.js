@@ -4,14 +4,6 @@ import Button from './abstract/button'
 
 const baseScale = { x: 1.5, y: 1.5 };
 
-export function GetCardSize() {
-    return {
-        height: PIXI.utils.TextureCache['cardback'].height * baseScale.y,
-        width: PIXI.utils.TextureCache['cardback'].width * baseScale.x,
-    };
-}
-
-
 function onClick(sender, eventData) {
     // Propagates the event - only if the parents supports that
     if (!sender.parent || !sender.parent.onCardClicked) {
