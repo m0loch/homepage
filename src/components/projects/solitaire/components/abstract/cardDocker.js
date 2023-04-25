@@ -20,7 +20,7 @@ class CardDocker extends PIXI.Container {
             this.shadow.onClickCallback = onClickCallback;
             this.shadow.interactive = true;
 
-            this.shadow.on('click', () => { this.shadow.onClickCallback(this); });
+            this.shadow.on('pointertap', () => { this.shadow.onClickCallback(this); });
         }
     }
 

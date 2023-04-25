@@ -2,6 +2,16 @@ import * as PIXI from 'pixi.js'
 import * as TWEEN from '@tweenjs/tween.js'
 import Button from './abstract/button'
 
+const baseScale = { x: 1.5, y: 1.5 };
+
+export function GetCardSize() {
+    return {
+        height: PIXI.utils.TextureCache['cardback'].height * baseScale.y,
+        width: PIXI.utils.TextureCache['cardback'].width * baseScale.x,
+    };
+}
+
+
 function onClick(sender, eventData) {
     // Propagates the event - only if the parents supports that
     if (!sender.parent || !sender.parent.onCardClicked) {
@@ -63,6 +73,8 @@ class Card extends Button {
         this.backTexture = PIXI.utils.TextureCache['cardback'];
         this.frontTexture = PIXI.utils.TextureCache[`card_${this.cardValue}_${this.cardSuit}`];
 
+        this.scale = baseScale;
+
         this.on('mousemove', this.onDragMove);
         this.on('touchmove', this.onDragMove);
     }
@@ -114,10 +126,6 @@ class Card extends Button {
 
     Click = () => {
         onClick(this);
-    }
-
-    ToString = () => {
-        return `${this.cardValue} of ${this.cardSuit}`;
     }
 
     onDragMove = () => {

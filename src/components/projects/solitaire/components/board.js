@@ -9,8 +9,10 @@ import CardColumn from './cardColumn';
 
 import Card from './card';
 
-const baseWidth = 800;
-const baseHeight = 600;
+const baseWidth = 960;
+const baseHeight = 540;
+
+const baseStep = baseWidth / 8;
 
 class Board extends PIXI.Container {
     constructor(app, onWin) {
@@ -26,8 +28,8 @@ class Board extends PIXI.Container {
         this.addChild(this.background);
 
         this.cardSize = {
-            height: PIXI.utils.TextureCache['cardback'].height,
-            width: PIXI.utils.TextureCache['cardback'].width,
+            height: PIXI.utils.TextureCache['cardback'].height * 1.5,
+            width: PIXI.utils.TextureCache['cardback'].width * 1.5,
         };
 
         // Creates inner elements:
@@ -38,15 +40,15 @@ class Board extends PIXI.Container {
 
         // Deck
         this.deck = new Deck({
-            x: 100,
-            y: 100,
+            x: baseStep,
+            y: 80,
             ...this.cardSize,
         }, this.onDeckClicked);
 
         // Discard pile
         this.discardPile = new DiscardPile({
-            x: 200,
-            y: 100,
+            x: 2 * baseStep,
+            y: 80,
             ...this.cardSize,
         });
 
@@ -54,8 +56,8 @@ class Board extends PIXI.Container {
         this.houses = [];
         for (let i = 0; i < 4; i++) {
             this.houses.push(new House({
-                x: (i + 4) * 100,
-                y: 100,
+                x: (i + 4) * baseStep,
+                y: 80,
                 ...this.cardSize,
             }));
         }
@@ -64,8 +66,8 @@ class Board extends PIXI.Container {
         this.cardColumns = [];
         for (let i = 0; i < 7; i++ ) {
             this.cardColumns.push(new CardColumn({
-                x: (i + 1) * 100,
-                y: 250,
+                x: (i + 1) * baseStep,
+                y: 230,
                 ...this.cardSize,
             }));
         }

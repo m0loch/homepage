@@ -1,14 +1,11 @@
-import * as PIXI from 'pixi.js';
 import CardDocker from './cardDocker';
+import { GetCardSize } from '../card';
 
 class CardInteractableDocker extends CardDocker {
     constructor(props) {
         super(props);
 
-        this.cardSize = {
-            height: PIXI.utils.TextureCache['cardback'].height,
-            width: PIXI.utils.TextureCache['cardback'].width,
-        };
+        this.cardSize = GetCardSize();
     }
 
     CheckDockableArea = (position) => {

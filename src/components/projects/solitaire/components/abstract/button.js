@@ -13,16 +13,11 @@ class Button extends PIXI.Sprite {
         this.isTouched = false;
 
         // Events handling
-        this.on('mousedown', this.onMouseDown);
-        this.on('mouseup', this.onMouseUp);
-        this.on('mouseover', this.onMouseOver);
-        this.on('mouseout', this.onMouseOut);
-        this.on('mouseupoutside', this.onMouseUpOutside);
-
-        // Mobile events
-        this.on('touchstart', this.onMouseDown);
-        this.on('touchend', this.onMouseUp);
-        this.on('touchendoutside', this.onMouseUpOutside);
+        this.on('pointerdown', this.onMouseDown);
+        this.on('pointerup', this.onMouseUp);
+        this.on('pointerover', this.onMouseOver);
+        this.on('pointerout', this.onMouseOut);
+        this.on('pointerupoutside', this.onMouseUpOutside);
     }
 
     onMouseDown = function(event) {
