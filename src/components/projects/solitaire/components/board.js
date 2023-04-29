@@ -113,6 +113,7 @@ class Board extends PIXI.Container {
     }
 
     CheckWinCondition = () => {
+
         let result = true;
         this.houses.forEach((house) => { if (house.cards.length < 13) result = false; });
 

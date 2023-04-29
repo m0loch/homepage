@@ -13,10 +13,7 @@ class CardInteractableDocker extends CardDocker {
         }
 
         return dockableSlot.containsPoint(position);
-    }
 
-    AddCard(card) {
-        super.AddCard(card);
     }
 }
 

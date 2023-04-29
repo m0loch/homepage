@@ -50,6 +50,7 @@ class CardDocker extends PIXI.Container {
 
     Destroy = () => {
         this.cards.forEach(card => this.removeChild(card));
+        this.cards = [];
     }
 }
 
