@@ -74,7 +74,7 @@ class Board extends PIXI.Container {
 
         this.onResize();
 
-        // Actually add childred
+        // Actually add children
         this.addChild(this.discardPile);
         this.addChild(this.deck);
         this.houses.forEach((item) => this.addChild(item));
@@ -84,6 +84,7 @@ class Board extends PIXI.Container {
         this.deck.on('emptydeckclicked', this.onEmptyDeckClicked);
         this.on('dragStart', this.onStartDrag);
         this.on('dragEnd', this.onEndDrag);
+        this.on('dblClick', this.onDblClick);
 
         this.NewGame();
     }
@@ -188,6 +189,10 @@ class Board extends PIXI.Container {
             }
         });
 
+        this.moveCard(card, dockPlace);
+    }
+
+    moveCard = (card, dockPlace) => {
         let destination = undefined;
         if (dockPlace && dockPlace.AcceptsCardDock && dockPlace.AcceptsCardDock(card)) {
             destination = dockPlace;
@@ -215,6 +220,33 @@ class Board extends PIXI.Container {
 
         if (this.CheckWinCondition()) {
             this.onWin();
+        }
+    }
+
+    onDblClick = (card) => {
+        if (card.isFaceDown || card.linkedDownCard || card.formerParent instanceof House) {
+            return;
+        }
+
+        const targetHouse = this.houses.find(
+            house => {
+                const topCard = house.getTopCard();
+
+                if (topCard === undefined) {
+                    return card.cardValue === 1; // card is an Ace
+                }
+                return (card.cardSuit === topCard.cardSuit && topCard.cardValue === (card.cardValue -1));
+            }            
+        );
+
+        if (targetHouse) {
+            card.BreakChainLinks();
+
+            card.formerParent = card.parent;
+            card.parent.RemoveCard(card);
+            this.addChild(card);
+    
+            this.moveCard(card, targetHouse);
         }
     }
 }

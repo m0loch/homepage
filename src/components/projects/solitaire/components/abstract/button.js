@@ -11,6 +11,7 @@ class Button extends PIXI.Sprite {
         // States handling
         this.isPressed = false;
         this.isTouched = false;
+        this.isDoubleClk = false;
 
         // Events handling
         this.on('pointerdown', this.onMouseDown);
@@ -18,6 +19,15 @@ class Button extends PIXI.Sprite {
         this.on('pointerover', this.onMouseOver);
         this.on('pointerout', this.onMouseOut);
         this.on('pointerupoutside', this.onMouseUpOutside);
+    }
+
+    // Test double click
+    startPressTimer = () => {
+        this.isDoubleClk = true;
+        this.dblClkTimer = setTimeout(() => {
+          this.isDoubleClk = false;
+          clearTimeout(this.dblClkTimer);
+        }, 500)
     }
 
     onMouseDown = function(event) {
@@ -38,8 +48,19 @@ class Button extends PIXI.Sprite {
         this.isPressed = false;
         this.updateTexture();
 
-        if (this.callbacks && this.callbacks.onClickEnded) {
-            this.callbacks.onClickEnded(this, event);
+        if (this.callbacks) {
+            if (this.callbacks.onClickEnded) {
+                this.callbacks.onClickEnded(this, event);
+            }
+
+            if (this.callbacks.onDoubleClickEnded) {
+                if (this.isDoubleClk) {
+                    this.callbacks.onDoubleClickEnded(this, event);
+                    this.isDoubleClk = false;
+                } else {
+                    this.startPressTimer();
+                }
+            }
         }
 
         this.updateTexture();

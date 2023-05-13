@@ -20,12 +20,17 @@ function onEndDrag(sender, eventData) {
     sender.parent.emit('dragEnd', sender, eventData);
 }
 
+function onDoubleClick(sender, eventData) {
+    sender.parent.parent.emit('dblClick', sender, eventData);
+}
+
 let cardCallbacks = {
     onClickStarted: (sender) => {if (!sender.isFaceDown) { onStartDrag(sender) }},
     onClickEnded: (sender, eventData) => {
         onEndDrag(sender, eventData);
         onClick(sender, eventData);
     },
+    onDoubleClickEnded: (sender, eventData) => onDoubleClick(sender, eventData),
 }
 
 function GetCardValue(intValue) {
@@ -126,11 +131,7 @@ class Card extends Button {
             newPosition.y -= this.localStartDragY;
             this.position = newPosition;
 
-            // Breaks card chain, if we're in the middle of one
-            if (this.linkedUpCard) {
-                this.linkedUpCard.linkedDownCard = undefined;
-                this.linkedUpCard = undefined;
-            }
+            this.BreakChainLinks();
 
             this.DragLinkedCards(newPosition.x, newPosition.y + 14);
         }
@@ -141,6 +142,14 @@ class Card extends Button {
             this.linkedDownCard.x = x;
             this.linkedDownCard.y = y;
             this.linkedDownCard.DragLinkedCards(x, y + 14);
+        }
+    }
+
+    // Breaks card chain, if we're in the middle of one
+    BreakChainLinks() {
+        if (this.linkedUpCard) {
+            this.linkedUpCard.linkedDownCard = undefined;
+            this.linkedUpCard = undefined;
         }
     }
 }
