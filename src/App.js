@@ -28,6 +28,7 @@ import MasterMind from './components/projects/mastermind/mastermind';
 import Tyles from './components/projects/tyles/tyles';
 import Minesweeper from './components/projects/minesweeper/minesweeper';
 import Solitaire from './components/projects/solitaire/solitaire';
+import Simon from './components/projects/simon/simon';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -56,6 +57,7 @@ function App(props) {
         <Route path="/projects/tyles" element={<Tyles levelsFolder={`${process.env.PUBLIC_URL}/assets/tyles/levels`} {...props.tyles} />} />
         <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />
         <Route path="/projects/solitaire" element={<Solitaire {...props.solitaire} assetsFolder={`${process.env.PUBLIC_URL}/assets/solitaire`} />} />
+        <Route path="/projects/simon" element={<Simon />} />
 
         {/* Main sections */}
         <Route path="/about" element={<About />} />

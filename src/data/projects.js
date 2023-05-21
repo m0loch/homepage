@@ -9,6 +9,7 @@ import MastermindPreview from '../components/projects/mastermind/mastermindPrevi
 import TylesPreview from '../components/projects/tyles/tylesPreview';
 import MinesweeperPreview from '../components/projects/minesweeper/minesweeperPreview';
 import SolitairePreview from '../components/projects/solitaire/solitairePreview';
+import SimonPreview from '../components/projects/simon/simonPreview';
 
 const games = [{
     key: 0,
@@ -80,6 +81,13 @@ const games = [{
     content: "Because every once in a while you end up with a deck of cards and nobody to play with",
     fullContent: SolitairePreview,
     url: "solitaire",
+},
+{
+    key: 10,
+    title: "Simon",
+    content: "Prove the power of your mind!",
+    fullContent: SimonPreview,
+    url: "simon",
 },
 {
     key: 100,
