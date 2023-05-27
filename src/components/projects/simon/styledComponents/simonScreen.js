@@ -2,7 +2,7 @@ import { styled } from '@mui/system';
 
 const SimonScreenInternal = styled('div')(
     ({ theme }) => ({
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.background.main,
         position: "absolute",
         top: "50%",
         left: "50%",

@@ -3,9 +3,7 @@ import { styled } from '@mui/system';
 
 const BaseSimonField = styled('div')(
     ({ theme }) => ({
-        margin: "8px auto",
-        borderRadius: "5px",
-        backgroundColor: theme.palette.primary.main,
+        margin: "30px auto",
         touchAction: "pan-down",
         height: 0,
         width: "60%",
@@ -19,7 +17,7 @@ const BaseSimonField = styled('div')(
 );
 
 const Rotator = styled(Grid)(
-    ({ theme }) => ({
+    () => ({
         position: "relative",
 
         height: 0,
