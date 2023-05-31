@@ -65,6 +65,9 @@ const baseTheme = (theme) => {
                         color: theme.palette.primary.contrast,
                     },
                     // /Radio
+                    "span.MuiCheckbox-colorPrimary.Mui-checked": {
+                        color: theme.palette.primary.contrast,  
+                    },
                     "@media only screen and (max-width: 899px)": {
                         h1: {
                             fontSize: "8vmin",
