@@ -9,21 +9,20 @@ import StateReducer, { StateComponents } from './stateMachine';
 const isDebug = false;
 const lightDuration = 700;
 
-const GenerateSolution = () => {
+const GenerateSolution = (level) => {
   const retVal = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < level; i++) {
     retVal.push(Math.floor(Math.random() * 4));
   }
 
   return retVal;
 }
 
-function Simon() {
+function Simon(props) {
 
-  const [state, dispatch] = useReducer(StateReducer, { phase:'FirstLoad' });
+  const [state, dispatch] = useReducer(StateReducer, { phase:'FirstLoad', reverseMode: props.reverseMode });
   const buttonRefs = useRef([]);
-
 
   const LightButton = idx => {
 
@@ -35,7 +34,7 @@ function Simon() {
 }
 
 const onPlayBtn = () => {
-    dispatch({ type: 'Play', solution: GenerateSolution() });
+    dispatch({ type: 'Play', solution: GenerateSolution(props.level) });
   }
 
   const registerAttempt = idx => {

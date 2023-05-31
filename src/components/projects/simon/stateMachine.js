@@ -48,8 +48,17 @@ export default function StateReducer(state, action) {
             break;
         case 'UserInput':
             if (action.type === 'Button') {
-                if (action.value !== state.solution[state.step]) {
-                    return { ...state, phase: 'Error' }
+                if (state.reverseMode) {
+                    // The check for the inverse solution is a bit more complicated
+                    // because we need to check the i-th element of the inverted subsequence
+                    const sub = state.solution.slice(0, state.level + 1).reverse();
+                    if (action.value !== sub[state.step]) {
+                        return { ...state, phase: 'Error' };
+                    }
+                } else {
+                    if (action.value !== state.solution[state.step]) {
+                        return { ...state, phase: 'Error' }
+                    }
                 }
 
                 // Right attempt: next step, next level or victory?
