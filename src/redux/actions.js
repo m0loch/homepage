@@ -96,3 +96,18 @@ export function talksSelectStory(value) {
         selectedTalk: parseInt(value),
     }
 }
+
+// Simon
+export function simonSelectLevel(value) {
+    return {
+        type: 'SIMON_SELECT_LEVEL',
+        level: parseInt(value),
+    }
+}
+
+export function simonSetReverse(value) {
+    return {
+        type: 'SIMON_SET_REVERSE',
+        reverseMode: value,
+    }
+}

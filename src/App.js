@@ -57,7 +57,7 @@ function App(props) {
         <Route path="/projects/tyles" element={<Tyles levelsFolder={`${process.env.PUBLIC_URL}/assets/tyles/levels`} {...props.tyles} />} />
         <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />
         <Route path="/projects/solitaire" element={<Solitaire {...props.solitaire} assetsFolder={`${process.env.PUBLIC_URL}/assets/solitaire`} />} />
-        <Route path="/projects/simon" element={<Simon />} />
+        <Route path="/projects/simon" element={<Simon {...props.simon} />} />
 
         {/* Main sections */}
         <Route path="/about" element={<About />} />
