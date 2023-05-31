@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
@@ -46,7 +46,7 @@ const BtnInternal = styled(Grid)(
     }
 );
 
-const SimonButton = React.forwardRef((props, ref) => {
+const SimonButton = forwardRef((props, ref) => {
 
     let style = null;
     switch (props.value) {

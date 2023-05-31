@@ -1,44 +1,76 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useReducer, useRef } from 'react';
 
 import { Container } from "@mui/material";
 import SimonField from './styledComponents/simonField';
 import SimonButton from './styledComponents/simonButton';
-import WinScreen from '../common/winScreen';
 import SimonScreen from './styledComponents/simonScreen';
+import StateReducer, { StateComponents } from './stateMachine';
 
-const isDebug = true;
+const isDebug = false;
+const lightDuration = 700;
+
+const GenerateSolution = () => {
+  const retVal = [];
+
+  for (let i = 0; i < 10; i++) {
+    retVal.push(Math.floor(Math.random() * 4));
+  }
+
+  return retVal;
+}
 
 function Simon() {
 
-  const [victory, setVictory] = useState(false);
-
+  const [state, dispatch] = useReducer(StateReducer, { phase:'FirstLoad' });
   const buttonRefs = useRef([]);
 
-  const newGame = () => {
-    setVictory(false);
+
+  const LightButton = idx => {
+
+    // animation
+    buttonRefs.current[idx].style.animation = `lightup${idx} ${lightDuration}ms ease normal`;
+
+    // + reset
+    setTimeout(() => buttonRefs.current[idx].style.animation = null, lightDuration);
+}
+
+const onPlayBtn = () => {
+    dispatch({ type: 'Play', solution: GenerateSolution() });
   }
 
   const registerAttempt = idx => {
-
-    if (isDebug) {
-      console.log(idx);
+    if (state.phase === 'UserInput' && buttonRefs.current) {
+      LightButton(idx);
+      dispatch({ type: 'Button', value: idx });
     }
+  }
 
-    if (buttonRefs.current) {
-      // animation
-      buttonRefs.current[idx].style.animation = `lightup${idx} 750ms ease normal`;
+  useEffect(() => {
+    switch (state.phase) {
+      case 'Countdown':
+        setTimeout(() => dispatch({ type: 'Step' }), 1000);
+        break;
 
-      // + reset
-      setTimeout(() => buttonRefs.current[idx].style.animation = null, 750);
+      case 'Hint':
+        setTimeout(() => {
+          LightButton(state.solution[state.step]);
+          setTimeout(() => dispatch({ type: 'Step' }), lightDuration + 50); // Fix consecutive hits...
+        }, state.initialDelay ? 800 : 0);
+        break;
+
+      default:
+        break;
     }
+  }, [state]);
 
+  if (isDebug) {
+    console.log(state);
   }
 
   const tiles = [0, 1, 2, 3];
   return (
     <Container style={{ display: "flex" }}>
       <SimonField>
-        {victory ? <WinScreen onClick={newGame} /> : null}
         {tiles.map((el, idx) => (
           <SimonButton
             key={idx}
@@ -49,8 +81,10 @@ function Simon() {
           />
         )
         )}
-        <SimonScreen>
-          START
+        <SimonScreen
+          onClick={onPlayBtn}
+        >
+          {StateComponents(state)}
         </SimonScreen>
       </SimonField>
     </Container>

@@ -17,15 +17,6 @@ const SimonScreenInternal = styled('div')(
     })
 );
 
-const SimonText = styled('p')(
-    ({ theme }) => ({
-        fontSize: "100px",
-        [theme.breakpoints.down('lg')]: {
-            fontSize: "8vw"
-        }
-    })
-)
-
 function SimonScreen(props) {
     return (
         <SimonScreenInternal
@@ -44,9 +35,7 @@ function SimonScreen(props) {
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                 }}>
-                    <SimonText>
-                        {props.children}
-                    </SimonText>
+                    {props.children}
                 </div>
             </div>
         </SimonScreenInternal>
