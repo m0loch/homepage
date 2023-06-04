@@ -45,7 +45,7 @@ const StyledNavbar = styled('div')(
         borderBottom: `3px solid ${theme.palette.primary.light}`,
         padding: "20px",
     
-        zIndex: "10",
+        zIndex: 11,
 
         [theme.breakpoints.down('md')]: {
             padding: "5px",
@@ -55,7 +55,7 @@ const StyledNavbar = styled('div')(
 );
 
 const StyledNav = styled('nav')(
-    ({ theme }) => ({
+    () => ({
         display: "flex",
         flexGrow: 1,
         justifyContent: "space-evenly",

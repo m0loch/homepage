@@ -19,7 +19,7 @@ const StyledContainer = styled('div')(
 );
     
 const StyledContact = styled('a')(
-    ({ theme }) => ({
+    () => ({
         display: "flex",
         flexDirection: "row",
         height: "25px",
@@ -29,7 +29,7 @@ const StyledContact = styled('a')(
 );
 
 const StyledItchIoIcon = styled(ItchIoIcon)(
-    ({ theme }) => ({
+    () => ({
         userSelect: "none",
         width: "1em",
         height: "1em",
