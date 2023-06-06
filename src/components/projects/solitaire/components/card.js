@@ -92,7 +92,13 @@ class Card extends Button {
             .to({
                 x: destination.position.x - this.parent.position.x + landingPosition.x,
                 y: destination.position.y - this.parent.position.y + landingPosition.y
-            }, 500);
+            }, 510)
+            .onComplete(() => {
+                this.interactive = true;
+                if (callback) {
+                    callback(this);
+                }
+            });
 
         // Setup flip animation
         let defaultScale = this.scale.x;
@@ -108,13 +114,7 @@ class Card extends Button {
             });
 
         let FlipOut = new TWEEN.Tween(this.scale)
-            .to({x: defaultScale}, 250)
-            .onComplete(() => {
-                this.interactive = true;
-                if (callback) {
-                    callback(this);
-                }
-            });
+            .to({x: defaultScale}, 250);
 
         FlipIn.chain(FlipOut);
         FlipIn.start();
