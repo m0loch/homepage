@@ -7,7 +7,7 @@ import CollapseHeader from '../common/collapseHeader';
 
 function MinesweeperPreview(props) {
 
-    const open = props.sectionsState;
+    const open = props.sectionsState || [true, false, true, false];
 
     const handleStateChange = (idx) => {
         const newState = [...open];
