@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import * as PIXI from 'pixi.js';
-import { Stage } from '@inlet/react-pixi';
+import { Stage } from '@pixi/react';
 import PlayArea from './playArea';
 
 function Runner(props) {
-    PIXI.utils.skipHello();
-
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {

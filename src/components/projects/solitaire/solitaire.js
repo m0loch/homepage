@@ -4,8 +4,6 @@ import PixiCanvas from './components/pixiCanvas';
 import WinScreen from '../common/winScreen';
 
 function Solitaire(props) {
-    PIXI.utils.skipHello();
-
     const [loaded, setLoaded] = useState(false);
     const [victory, setVictory] = useState(false);
 

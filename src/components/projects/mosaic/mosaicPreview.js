@@ -39,7 +39,7 @@ function MosaicPreview() {
                 {splitText(`
                     As mentioned in the description, the game itself just does some very basic texture handling using a <a href="https://pixijs.com/">PIXI.js</a> canvas.
                     
-                    In order to embed it in a functional React component I also had to import <a href="https://www.npmjs.com/package/@inlet/react-pixi">@inlet/react-pixi</a>.
+                    In order to embed it in a functional React component I also had to import <a href="https://www.npmjs.com/package/@pixi/react">@pixi/react</a>.
                 `)}
             </Collapse>
 

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Container, Sprite, useApp, useTick } from '@inlet/react-pixi';
+import { Container, Sprite, useApp, useTick } from '@pixi/react';
 import * as PIXI from 'pixi.js';
 import { CalculateScaleWithTiles } from '../common/calculateScale';
 import TerrainFactory from './utils/terrainFactory';

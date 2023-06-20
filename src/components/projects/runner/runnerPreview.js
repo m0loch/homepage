@@ -40,7 +40,7 @@ function RunnerPreview(props) {
             />
             <Collapse in={open[1]} timeout="auto" unmountOnExit>
                 {splitText(`
-                    Like Mosaic, the game is uses a <a href="https://pixijs.com/">PIXI.js</a> canvas imported managed via <a href="https://www.npmjs.com/package/@inlet/react-pixi">@inlet/react-pixi</a>.
+                    Like Mosaic, the game is uses a <a href="https://pixijs.com/">PIXI.js</a> canvas imported managed via <a href="https://www.npmjs.com/package/@pixi/react">@pixi/react</a>.
 
                     The character sprite and the backgrounds are both free tilesets retrieved from the internet (see Credits).
                 `)}

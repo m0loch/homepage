@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { Container, Sprite, useApp } from '@inlet/react-pixi';
+import { Container, Sprite, useApp } from '@pixi/react';
 import * as PIXI from 'pixi.js';
 import { CalculateFullscreenScale } from '../common/calculateScale';
 
