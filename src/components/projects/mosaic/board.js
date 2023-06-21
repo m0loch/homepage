@@ -82,8 +82,6 @@ function Board(props) {
 
     useEffect(() => {
         app.stage.on('pointermove', handleDrag);
-
-        return () => app.stage.on('pointermove', handleDrag);
     }, [app, handleDrag]);
 
     // Resizing
