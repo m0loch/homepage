@@ -198,7 +198,7 @@ function PlayArea(props) {
         }
     }, [resize, handleKeyDown, handleKeyUp, handleTapBegin, handleTapEnd]);
 
-    if (!props.loaded) {
+    if (!props.textures) {
         return null;
     }
 
