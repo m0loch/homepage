@@ -34,7 +34,7 @@ const PixiContainer = styled('div')(
 );
 
 function Mosaic(props) {
-    const [loaded, setLoaded] = useState(false);
+    const [texture, setTexture] = useState(undefined);
     const [sprites, setSprites] = useState([]);
     const [victory, setVictory] = useState(false);
 
@@ -43,16 +43,21 @@ function Mosaic(props) {
     }
 
     const newGame = useCallback(() => {
+
+        if (!texture) {
+            return
+        }
+
         const cfg = RandomizeTiles(props.rows * props.cols, isDebug);
 
-        const texture = PIXI.utils.TextureCache[props.imgName];
         const tileHeight = (texture.height / props.rows);
         const tileWidth = (texture.width / props.cols);
 
         const tiles = [];
         for (let i = 0; i < (props.rows * props.cols); i++) {
 
-            let texture = CalculateTileTexture(
+            let tile = CalculateTileTexture(
+                texture,
                 cfg[i],
                 props,
                 tileHeight,
@@ -61,7 +66,7 @@ function Mosaic(props) {
             tiles.push({
                 realIndex: cfg[i], // this will keep track of where the tile will need to end up
                 currIndex: i,
-                texture,
+                texture: tile,
                 x: (i % props.cols) * tileWidth,
                 y: Math.floor(i / props.cols) * tileHeight,
             });
@@ -69,25 +74,15 @@ function Mosaic(props) {
 
         setSprites(tiles);
         setVictory(false);
-    }, [props]);
+    }, [texture, props]);
 
     useEffect(() => {
-        const loader = PIXI.Loader.shared;
-
-        if (!PIXI.utils.TextureCache[props.imgName]) {
-            loader
-                .add(props.imgName, process.env.PUBLIC_URL + props.img)
-                .load(() => {
-                    setLoaded(true);
-                    newGame();
-                });
-        } else {
-            setLoaded(true);
-            newGame();
-        }
-
-        return () => PIXI.Loader.shared.reset();
-    }, [newGame, props.img, props.imgName])
+        PIXI.Assets.load(process.env.PUBLIC_URL + props.img)
+            .then(texture => {
+                setTexture(texture);
+                newGame();
+            });
+    }, [newGame, props.img])
 
     return (
         <FullBody>
@@ -100,7 +95,7 @@ function Mosaic(props) {
                     <Board
                         {...props}
                         sprites={sprites}
-                        loaded={loaded}
+                        texture={texture}
                         onVictory={onVictory}
                         victory={victory}
                     />
