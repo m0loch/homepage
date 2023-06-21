@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
 import { StyledEngineProvider } from '@mui/material/styles';
@@ -24,7 +24,8 @@ const store = createStore(persistedReducer, applyMiddleware());
 
 const persistor = persistStore(store);
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <HashRouter>
       <StyledEngineProvider injectFirst>
@@ -35,6 +36,5 @@ ReactDOM.render(
         </Provider>
       </StyledEngineProvider>
     </HashRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
