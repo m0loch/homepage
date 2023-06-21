@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import * as PIXI from 'pixi.js';
+import React, { /*useEffect, */useState } from 'react';
+//import * as PIXI from 'pixi.js';
 import { Stage } from '@pixi/react';
 import PlayArea from './playArea';
 
 function Runner(props) {
-    const [loaded, setLoaded] = useState(false);
+    const [loaded/*, setLoaded*/] = useState(false);
 
-    useEffect(() => {
-        PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+    // useEffect(() => {
+    //     PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
-        PIXI.Loader.shared
-            .add('char', `${props.assetsFolder}/nature-paltformer-tileset-16x16.json`) 
-            .add('tiles', `${props.assetsFolder}/Standard sprites upd.json`)
-            .load(() => {
-            setLoaded(true);
-            });
+    //     PIXI.Loader.shared
+    //         .add('char', `${props.assetsFolder}/nature-paltformer-tileset-16x16.json`) 
+    //         .add('tiles', `${props.assetsFolder}/Standard sprites upd.json`)
+    //         .load(() => {
+    //         setLoaded(true);
+    //         });
 
-        return () => PIXI.Loader.shared.reset();
-    }, [props])
+    //     return () => PIXI.Loader.shared.reset();
+    // }, [props])
 
     return (
         <div style={{position: "relative", margin: "auto", width: "100%", height: "100%", display: "flex", alignContent: "center", justifyContent: "center"}}>

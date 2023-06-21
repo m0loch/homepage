@@ -1,24 +1,24 @@
 import React, { useEffect, useState, useRef } from 'react';
-import * as PIXI from 'pixi.js';
+//import * as PIXI from 'pixi.js';
 import PixiCanvas from './components/pixiCanvas';
 import WinScreen from '../common/winScreen';
 
 function Solitaire(props) {
-    const [loaded, setLoaded] = useState(false);
+    const [loaded/*, setLoaded*/] = useState(false);
     const [victory, setVictory] = useState(false);
 
     const boardRef = useRef(null);
 
     useEffect(() => {
-        PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
+        // PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
-        PIXI.Loader.shared
-            .add('char', `${props.assetsFolder}/cards.json`)
-            .load(() => {
-                setLoaded(true);
-            });
+        // PIXI.Loader.shared
+        //     .add('char', `${props.assetsFolder}/cards.json`)
+        //     .load(() => {
+        //         setLoaded(true);
+        //     });
 
-        return () => PIXI.Loader.shared.reset();
+        // return () => PIXI.Loader.shared.reset();
     }, [props])
 
     const onWin = () => {
