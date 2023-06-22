@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import * as PIXI from 'pixi.js';
+import PixiContainer from '../common/pixiContainer';
 import PixiCanvas from './components/pixiCanvas';
 import WinScreen from '../common/winScreen';
 
@@ -29,18 +30,10 @@ function Solitaire(props) {
     }
 
     return (
-        <div style={{
-            position: "relative",
-            margin: "auto",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center"
-        }}>
+        <PixiContainer>
             {victory ? <WinScreen onClick={newGame} /> : null}
             {textures ? <PixiCanvas ref={boardRef} onWin={onWin} /> : null}
-        </div>
+        </PixiContainer>
     );
 }
 

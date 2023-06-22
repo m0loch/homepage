@@ -6,6 +6,7 @@ import { styled } from '@mui/system';
 
 import Board from './board';
 import WinScreen from '../common/winScreen';
+import PixiContainer from '../common/pixiContainer';
 import RandomizeTiles from './utils/randomizeTiles';
 import CalculateTileTexture from './utils/calculateTileTexture';
 
@@ -18,18 +19,6 @@ const FullBody = styled('div')(
         flex: "1 1 auto",
         width: "100%",
         height: "90vh",
-    })
-);
-
-const PixiContainer = styled('div')(
-    () => ({
-        position: "relative",
-        margin: "auto",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        alignContent: "center",
-        justifyContent: "center",
     })
 );
 

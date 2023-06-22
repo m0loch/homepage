@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as PIXI from 'pixi.js';
+import PixiContainer from '../common/pixiContainer';
 import { Stage } from '@pixi/react';
 import PlayArea from './playArea';
 
@@ -21,15 +22,7 @@ function Runner(props) {
     }, [props.assetsFolder]);
 
     return (
-        <div style={{
-            position: "relative",
-            margin: "auto",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center"
-        }}>
+        <PixiContainer>
             <Stage
                 style={{ margin: "auto" }}
                 options={{
@@ -40,7 +33,7 @@ function Runner(props) {
             >
                 <PlayArea textures={textures} />
             </Stage>
-        </div>
+        </PixiContainer>
     );
 }
 
