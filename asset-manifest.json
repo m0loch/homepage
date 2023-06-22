@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.4524346b.js",
+    "main.js": "/homepage/static/js/main.e0f83cdd.js",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
+    "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
     "static/media/explosion.svg": "/homepage/static/media/explosion.2667c6eb52ac06a390e5d2f91fee38eb.svg",
     "static/media/itchio-logo-textless-white.svg": "/homepage/static/media/itchio-logo-textless-white.bdb53e4f63aab9ff2bada633e16d1c01.svg",
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.4524346b.js.map": "/homepage/static/js/main.4524346b.js.map"
+    "main.e0f83cdd.js.map": "/homepage/static/js/main.e0f83cdd.js.map"
   },
   "entrypoints": [
-    "static/js/main.4524346b.js"
+    "static/js/main.e0f83cdd.js"
   ]
 }
