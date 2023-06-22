@@ -7,16 +7,10 @@ function Runner(props) {
     const [textures, setTextures] = useState(undefined);
 
     useEffect(() => {
-        PIXI.Assets.add(
-            'char',
-            `${props.assetsFolder}/nature-paltformer-tileset-16x16.json`,
-            { scaleMode: PIXI.SCALE_MODES.LINEAR }
-        );
+        PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.NEAREST;
 
-        PIXI.Assets.add('tiles',
-            `${props.assetsFolder}/Standard sprites upd.json`,
-            { scaleMode: PIXI.SCALE_MODES.LINEAR }
-        );
+        PIXI.Assets.add('char', `${props.assetsFolder}/nature-paltformer-tileset-16x16.json`);
+        PIXI.Assets.add('tiles', `${props.assetsFolder}/Standard sprites upd.json`);
 
         PIXI.Assets.load(['char', 'tiles'])
             .then(textures => {
