@@ -4,7 +4,6 @@ import { IconButton } from "@mui/material";
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 
 export default function CollapseHeader(props) {
-    console.log(props);
     return (
         <div
             style={{ display: "flex", alignItems: "center" }}
