@@ -1,24 +1,22 @@
 import React, { useEffect, useState, useRef } from 'react';
-//import * as PIXI from 'pixi.js';
+import * as PIXI from 'pixi.js';
 import PixiCanvas from './components/pixiCanvas';
 import WinScreen from '../common/winScreen';
 
 function Solitaire(props) {
-    const [loaded/*, setLoaded*/] = useState(false);
+    const [textures, setTextures] = useState(undefined);
     const [victory, setVictory] = useState(false);
 
     const boardRef = useRef(null);
 
     useEffect(() => {
-        // PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
+        PIXI.Assets.add('cards', `${props.assetsFolder}/cards.json`, { scaleMode: PIXI.SCALE_MODES.LINEAR });
+        PIXI.Assets.load('cards')
+            .then(textures => {
+                setTextures(textures);
+            });
 
-        // PIXI.Loader.shared
-        //     .add('char', `${props.assetsFolder}/cards.json`)
-        //     .load(() => {
-        //         setLoaded(true);
-        //     });
-
-        // return () => PIXI.Loader.shared.reset();
+        return () => PIXI.Assets.reset();
     }, [props])
 
     const onWin = () => {
@@ -31,9 +29,17 @@ function Solitaire(props) {
     }
 
     return (
-        <div style={{ position: "relative", margin: "auto", width: "100%", height: "100%", display: "flex", alignContent: "center", justifyContent: "center" }}>
-            { victory  ? <WinScreen onClick={newGame} /> : null}
-            { loaded ? <PixiCanvas ref={boardRef} onWin={onWin} /> : null }
+        <div style={{
+            position: "relative",
+            margin: "auto",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center"
+        }}>
+            {victory ? <WinScreen onClick={newGame} /> : null}
+            {textures ? <PixiCanvas ref={boardRef} onWin={onWin} /> : null}
         </div>
     );
 }

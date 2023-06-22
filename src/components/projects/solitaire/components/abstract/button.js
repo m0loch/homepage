@@ -15,10 +15,8 @@ class Button extends PIXI.Sprite {
 
         // Events handling
         this.on('pointerdown', this.onMouseDown);
-        this.on('pointerup', this.onMouseUp);
         this.on('pointerover', this.onMouseOver);
         this.on('pointerout', this.onMouseOut);
-        this.on('pointerupoutside', this.onMouseUpOutside);
     }
 
     // Test double click
@@ -31,9 +29,8 @@ class Button extends PIXI.Sprite {
     }
 
     onMouseDown = function(event) {
-        this.eventData = event.data;
         if (!this.isPressed) {
-            this.localStartDragY = event.data.getLocalPosition(this).y;
+            this.touchOffset = event.data.getLocalPosition(this);
         }
 
         this.isPressed = true;
@@ -73,11 +70,6 @@ class Button extends PIXI.Sprite {
 
     onMouseOut = function() {
         this.isTouched = false;
-        this.updateTexture();
-    }
-
-    onMouseUpOutside = function() {
-        this.isPressed = false;
         this.updateTexture();
     }
 

@@ -12,8 +12,8 @@ function onClick(sender, eventData) {
     sender.parent.onCardClicked(sender, eventData);
 }
 
-function onStartDrag(sender) {
-    sender.parent.parent.emit('dragStart', sender);
+function onStartDrag(sender, eventData) {
+    sender.parent.parent.emit('dragStart', sender, eventData);
 }
 
 function onEndDrag(sender, eventData) {
@@ -25,7 +25,9 @@ function onDoubleClick(sender, eventData) {
 }
 
 let cardCallbacks = {
-    onClickStarted: (sender) => {if (!sender.isFaceDown) { onStartDrag(sender) }},
+    onClickStarted: (sender ,eventData) => {
+        onStartDrag(sender, eventData);
+    },
     onClickEnded: (sender, eventData) => {
         onEndDrag(sender, eventData);
         onClick(sender, eventData);
@@ -71,9 +73,6 @@ class Card extends Button {
         this.frontTexture = PIXI.utils.TextureCache[`card_${this.cardValue}_${this.cardSuit}`];
 
         this.scale = baseScale;
-
-        this.on('mousemove', this.onDragMove);
-        this.on('touchmove', this.onDragMove);
     }
 
     SetFaceDown = function(faceDown) {
@@ -123,18 +122,6 @@ class Card extends Button {
 
     Click = () => {
         onClick(this);
-    }
-
-    onDragMove = () => {
-        if (!this.isFaceDown && this.isPressed) {
-            let newPosition = this.eventData.getLocalPosition(this.parent);
-            newPosition.y -= this.localStartDragY;
-            this.position = newPosition;
-
-            this.BreakChainLinks();
-
-            this.DragLinkedCards(newPosition.x, newPosition.y + 14);
-        }
     }
 
     DragLinkedCards(x, y) {

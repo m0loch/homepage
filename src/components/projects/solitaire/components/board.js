@@ -19,6 +19,11 @@ class Board extends PIXI.Container {
         super();
 
         this.app = app;
+
+        // Needed for handling drag
+        app.stage.interactive = true;
+        app.stage.hitArea = app.screen;
+        
         this.onWin = onWin;
 
         this.background = new PIXI.Sprite(PIXI.Texture.WHITE);
@@ -85,6 +90,10 @@ class Board extends PIXI.Container {
         this.on('dragStart', this.onStartDrag);
         this.on('dragEnd', this.onEndDrag);
         this.on('dblClick', this.onDblClick);
+
+        app.stage.on('pointermove', this.onDragMove);
+        app.stage.on('pointerup', this.onPointerUp);
+        app.stage.on('pointerupoutside', this.onPointerUp);
 
         this.NewGame();
     }
@@ -162,21 +171,43 @@ class Board extends PIXI.Container {
         }
     }
 
-    onStartDrag = (sender) => {
-        sender.formerParent = sender.parent;
-        sender.parent.RemoveCard(sender);
-        this.addChild(sender);
+    onDragMove = event => {
+        if (this.activeCard && !this.activeCard.isFaceDown) {
+            let newPosition = event.data.getLocalPosition(this.activeCard.parent);
+            newPosition.x -= this.activeCard.touchOffset.x;
+            newPosition.y -= this.activeCard.touchOffset.y;
+            this.activeCard.position = newPosition;
 
-        let chainHandler = sender;
-        while (chainHandler.linkedDownCard) {
-            chainHandler.linkedDownCard.interactive = false;
-            sender.formerParent.RemoveCard(chainHandler.linkedDownCard);
-            this.addChild(chainHandler.linkedDownCard);
-            chainHandler = chainHandler.linkedDownCard;
+            this.activeCard.BreakChainLinks();
+
+            this.activeCard.DragLinkedCards(newPosition.x, newPosition.y + 14);
+        }
+    }
+
+    onPointerUp = event => {
+        if (this.activeCard) {
+            this.activeCard.onMouseUp(event);
+            this.activeCard = undefined;
+        }
+    }
+
+    onStartDrag = (sender, event) => {
+        if (!sender.isFaceDown) {
+            sender.formerParent = sender.parent;
+            sender.parent.RemoveCard(sender);
+            this.addChild(sender);
+
+            let chainHandler = sender;
+            while (chainHandler.linkedDownCard) {
+                chainHandler.linkedDownCard.interactive = false;
+                sender.formerParent.RemoveCard(chainHandler.linkedDownCard);
+                this.addChild(chainHandler.linkedDownCard);
+                chainHandler = chainHandler.linkedDownCard;
+            }
         }
 
-        sender.onDragMove();
-        this.draggedCard = sender;
+        this.activeCard = sender;
+        this.onDragMove(event);
     }
 
     onEndDrag = (card, event) => {
@@ -211,7 +242,7 @@ class Board extends PIXI.Container {
             chainHandler = chainHandler.linkedDownCard;
         }
 
-        this.draggedCard = undefined;
+        this.activeCard = undefined;
 
         // If the sender comes from a CardColumn, ensure that the last card is face up
         if (card.formerParent instanceof CardColumn) {
