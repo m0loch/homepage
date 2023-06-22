@@ -1,7 +1,7 @@
 import FifteenPreview from '../components/projects/fifteen/fifteenPreview';
 import MosaicPreview from '../components/projects/mosaic/mosaicPreview';
 import WordlePreview from '../components/projects/wordle/wordlePreview';
-import RunnerPreview from '../components/projects/runner/runnerPreview';
+//import RunnerPreview from '../components/projects/runner/runnerPreview';
 import TetrisPreview from '../components/projects/tetris/tetrisPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 import TalksPreview from '../components/projects/talks/talksPreview';
@@ -32,13 +32,13 @@ const games = [{
     fullContent: WordlePreview,
     url: "wordle",
 },
-{
-    key: 3,
-    title: "Endless runner",
-    content: "The game that you could play by just turning your wifi off",
-    fullContent: RunnerPreview,
-    url: "runner",
-},
+// {
+//     key: 3,
+//     title: "Endless runner",
+//     content: "The game that you could play by just turning your wifi off",
+//     fullContent: RunnerPreview,
+//     url: "runner",
+// },
 {
     key: 4,
     title: "Tetris",
