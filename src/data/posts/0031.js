@@ -20,7 +20,7 @@ const StyledSpoiler = styled(Collapse)(
         color: theme.palette.primary.contrast,
         backgroundColor: theme.palette.background.card,
         padding: '10px',
-        border: '3px inset white',
+        border: `3px inset ${theme.palette.primary.contrast}`,
         borderRadius: '5px',
     })
 );
