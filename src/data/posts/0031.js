@@ -64,6 +64,18 @@ function StatefulPost(props) {
                     <br/><img alt="broken-runner" src={props.img} style={{ display: "block", margin: "15px auto 0", maxWidth: "80%" }} /><br/>
                     ... so I just decided to shut it off for the time being, one day I'll fix it and maybe make it more fun.</li>
                 </ul>
+                <h3>UPDATE</h3>
+                <p>After sleeping on the matter I found a quick solution abount the Runner's graphical issues.</p>
+                <br/>
+                <p>When transitioning I thought that the following code</p> 
+                <code>PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;</code>
+                <br/>
+                <p>had become obsolete and needed to be changed with directives passed to the PIXI.Assets loading functions, on a per-texture basis.</p>
+                <br/>
+                <p>Instead, it just needed to be changed to</p>
+                <code>PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.NEAREST;</code>
+                <br/><br/>
+                <p>There's still some flickering associated to the animation cycle though, so the project will remain shut off for the time being.</p>
                 </StyledSpoiler>
 
             <br />

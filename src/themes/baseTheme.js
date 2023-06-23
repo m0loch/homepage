@@ -28,6 +28,9 @@ const baseTheme = (theme) => {
                         fontSize: "20px",
                         margin: 0,
                     },
+                    code: {
+                        paddingLeft: "2rem",
+                    },
                     "legend, ul li": {
                         fontSize: "20px",
                         margin: 0,
