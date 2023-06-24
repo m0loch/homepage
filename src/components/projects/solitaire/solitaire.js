@@ -11,7 +11,9 @@ function Solitaire(props) {
     const boardRef = useRef(null);
 
     useEffect(() => {
-        PIXI.Assets.add('cards', `${props.assetsFolder}/cards.json`, { scaleMode: PIXI.SCALE_MODES.LINEAR });
+        PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.LINEAR;
+
+        PIXI.Assets.add('cards', `${props.assetsFolder}/cards.json`);
         PIXI.Assets.load('cards')
             .then(textures => {
                 setTextures(textures);

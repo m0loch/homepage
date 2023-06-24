@@ -24,7 +24,7 @@ class PixiCanvas extends Component {
                 antialias: true,
             });
 
-            this.app.renderer.backgroundColor = 0x303030;
+            this.app.renderer.background.color = 0x303030;
             this.pixiContainer.appendChild(this.app.view);
 
             this.board = new Board(this.app, this.props.onWin);

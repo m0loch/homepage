@@ -66,6 +66,8 @@ function Mosaic(props) {
     }, [texture, props]);
 
     useEffect(() => {
+        PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.LINEAR;
+
         PIXI.Assets.load(process.env.PUBLIC_URL + props.img)
             .then(texture => {
                 setTexture(texture);
