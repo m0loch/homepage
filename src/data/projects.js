@@ -10,6 +10,7 @@ import TylesPreview from '../components/projects/tyles/tylesPreview';
 import MinesweeperPreview from '../components/projects/minesweeper/minesweeperPreview';
 import SolitairePreview from '../components/projects/solitaire/solitairePreview';
 import SimonPreview from '../components/projects/simon/simonPreview';
+import RpgPreview from '../components/projects/wiprpg/rpgPreview';
 
 const games = [{
     key: 0,
@@ -88,6 +89,13 @@ const games = [{
     content: "Prove the power of your mind!",
     fullContent: SimonPreview,
     url: "simon",
+},
+{
+    key: 99,
+    title: "Rpg",
+    content: "...",
+    fullContent: RpgPreview,
+    url: "rpg",
 },
 {
     key: 100,

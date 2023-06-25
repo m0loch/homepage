@@ -32,6 +32,8 @@ import Simon from './components/projects/simon/simon';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+import Rpg from './components/projects/wiprpg/rpg';
+
 function App(props) {
   const theme = createTheme(props.darkMode ? darkTheme : lightTheme);
 
@@ -58,6 +60,7 @@ function App(props) {
         <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />
         <Route path="/projects/solitaire" element={<Solitaire {...props.solitaire} assetsFolder={`${process.env.PUBLIC_URL}/assets/solitaire`} />} />
         <Route path="/projects/simon" element={<Simon {...props.simon} />} />
+        <Route path="/projects/rpg" element={<Rpg assetsFolder={`${process.env.PUBLIC_URL}/assets/wiprpg`} />} />
 
         {/* Main sections */}
         <Route path="/about" element={<About />} />

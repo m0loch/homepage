@@ -7,6 +7,7 @@ const lightTheme = baseTheme({
             main: "#F0F0F0",
             card: "#FFFFFF",
             opaque: "#303030C0",
+            menu: "#FFFFFFF0",
         },
         link: "#028666",
         primary: {
