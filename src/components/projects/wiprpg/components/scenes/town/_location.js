@@ -1,11 +1,11 @@
 import * as PIXI from 'pixi.js';
-import Button from "../../abstract/pixiButton";
+import PixiButton from "../../abstract/pixiButton";
 
 class Location extends PIXI.Container {
     constructor(texture, x, y, eventName, label, tint = 0xFFFFFF) {
         super();
 
-        this.button = new Button(
+        this.button = new PixiButton(
             texture ? PIXI.utils.TextureCache[texture] : PIXI.Texture.WHITE,
             { onClickEnded: sender => window.dispatchEvent(new CustomEvent(eventName, sender)) },
             tint
@@ -20,6 +20,8 @@ class Location extends PIXI.Container {
             fontFamily: 'Ubuntu,sans-serif',
             fontSize: 20,
             fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 5
         });
         this.label.anchor.set(0.5);
         this.label.x = this.width / 2;

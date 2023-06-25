@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js'
 
-class Button extends PIXI.Sprite {
+class PixiButton extends PIXI.Sprite {
     constructor(texture, callbacks, tint = 0xFFFFFF) {
         super(texture);
 
@@ -23,7 +23,6 @@ class Button extends PIXI.Sprite {
         this.on('pointerup', this.onMouseUp);
         this.on('pointerover', this.onMouseOver);
         this.on('pointerout', this.onMouseOut);
-        // this.on('pointertap', () => console.log('tap'));
         this.on('pointerupoutside', this.onMouseUpOutside);
     }
 
@@ -102,4 +101,4 @@ class Button extends PIXI.Sprite {
     }
 }
 
-export default Button;
+export default PixiButton;
