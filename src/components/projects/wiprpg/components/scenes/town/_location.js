@@ -18,7 +18,7 @@ class Location extends PIXI.Container {
 
         this.label = new PIXI.Text(label, {
             fontFamily: 'Ubuntu,sans-serif',
-            fontSize: 20,
+            fontSize: PIXI.utils.isMobile.any ? 35 : 20,
             fill: 0xFFFFFF,
             stroke: 0x000000,
             strokeThickness: 5
