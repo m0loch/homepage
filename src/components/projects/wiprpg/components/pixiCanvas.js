@@ -21,10 +21,6 @@ class PixiCanvas extends Component {
             antialias: false,
         });
 
-        // ...needed?
-        // this.app.stage.eventMode = 'static';
-        // this.app.stage.hitArea = this.app.screen
-
         this.app.renderer.background.color = 0x303030;
         this.pixiContainer.appendChild(this.app.view);
 
