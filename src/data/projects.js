@@ -2,7 +2,7 @@ import FifteenPreview from '../components/projects/fifteen/fifteenPreview';
 import MosaicPreview from '../components/projects/mosaic/mosaicPreview';
 import WordlePreview from '../components/projects/wordle/wordlePreview';
 //import RunnerPreview from '../components/projects/runner/runnerPreview';
-import TetrisPreview from '../components/projects/tetris/tetrisPreview';
+// import TetrisPreview from '../components/projects/tetris/tetrisPreview';
 import FuturePlans from '../components/projectsSection/futurePlans';
 import TalksPreview from '../components/projects/talks/talksPreview';
 import MastermindPreview from '../components/projects/mastermind/mastermindPreview';
@@ -40,14 +40,14 @@ const games = [{
 //     fullContent: RunnerPreview,
 //     url: "runner",
 // },
-{
-    key: 4,
-    title: "Tetris",
-    content: "A game of four",
-    fullContent: TetrisPreview,
-    url: "tetris",
-    disableOnMobile: true,
-},
+// {
+//     key: 4,
+//     title: "Tetris",
+//     content: "A game of four",
+//     fullContent: TetrisPreview,
+//     url: "tetris",
+//     disableOnMobile: true,
+// },
 {
     key: 5,
     title: "Talks",
