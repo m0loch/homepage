@@ -33,6 +33,8 @@ const SettingsReducer = (state = InitialState, action) => {
             return { ...state, simon: { ...state.simon, level: action.level } }
         case 'SIMON_SET_REVERSE':
             return { ...state, simon: { ...state.simon, reverseMode: action.reverseMode } }
+        case 'RPG_SET_PARTY_STATE':
+            return { ...state, rpg: { ...state.rpg, party: action.party } }
         default:
             return state;
     }

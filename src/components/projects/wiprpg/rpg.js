@@ -1,4 +1,7 @@
 import React, { useEffect, useCallback, useReducer, useRef } from 'react';
+import { connect } from 'react-redux';
+import { rpgSetPartyState } from "../../../redux/actions";
+
 import * as PIXI from 'pixi.js';
 import PixiContainer from '../common/pixiContainer';
 import PixiCanvas from './components/pixiCanvas';
@@ -75,4 +78,12 @@ function Rpg(props) {
     );
 }
 
-export default Rpg;
+function mapStateToProps(state) {
+    return { ...state.rpg };
+  }
+  
+  const mapDispatchToProps = {
+    rpgSetPartyState,
+  };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Rpg);

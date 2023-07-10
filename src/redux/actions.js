@@ -111,3 +111,11 @@ export function simonSetReverse(value) {
         reverseMode: value,
     }
 }
+
+// Rpg
+export function rpgSetPartyState(value) {
+    return {
+        type: 'RPG_SET_PARTY_STATE',
+        party: value,
+    }
+}
