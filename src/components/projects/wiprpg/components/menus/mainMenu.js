@@ -4,23 +4,23 @@ import { Button } from "@mui/material";
 import RpgMenu from '../abstract/menu';
 import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
+import CharSheet from './main/charSheet';
 
 function NavColumn(props) {
     return (
         <Grid
             container
             direction='column'
-            item xs={2}
-            style={{ height: '100%' }}
+            style={{ flexBasis: 'content', height: '100%', marginRight: '8px' }}
         >
             {props.children}
         </Grid>
     );
 }
 
-function MainColumn(props) {
+function Body(props) {
     return (
-        <Grid container item xs={10} style={{ height: '100%' }}>
+        <Grid container style={{ height: '100%' }}>
             {props.children}
         </Grid>
     );
@@ -28,60 +28,45 @@ function MainColumn(props) {
 
 const StyledMenuButton = styled(Button)(
     () => ({
-        margin: "8px auto",
+        margin: "8px",
         fontSize: "2vmin",
+        width: "100%"
     })
 );
 
-export function MenuButton(props) {
+function MenuButtonInternal(props) {
     return (
-        <Grid item>
-            <StyledMenuButton
-                variant="outlined"
-                size="normal"
-                {...props}
-            >
-                {props.children}
-            </StyledMenuButton>
-        </Grid>
-    );
-}
-
-function CharTiles(props) {
-    return (
-        <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center', height: '50%' }}>
+        <StyledMenuButton
+            variant="contained"
+            size="normal"
+            {...props}
+        >
             {props.children}
-        </Grid>
+        </StyledMenuButton>
     );
 }
 
 export default function MainMenu(props) {
     return (
         <RpgMenu {...props}>
-            <Grid container style={{ height: "100%"}}>
+            <Grid container style={{ height: "95%", flexWrap: "nowrap" }}>
                 <NavColumn>
-                    <StyledMenuButton>Item</StyledMenuButton>
-                    <StyledMenuButton>Magic</StyledMenuButton>
-                    <StyledMenuButton>Equip</StyledMenuButton>
-                    <StyledMenuButton>Stats</StyledMenuButton>
-                    <StyledMenuButton>Save/Load</StyledMenuButton>
+                    <MenuButtonInternal>Item</MenuButtonInternal>
+                    <MenuButtonInternal>Magic</MenuButtonInternal>
+                    <MenuButtonInternal>Equip</MenuButtonInternal>
+                    <MenuButtonInternal>Order</MenuButtonInternal>
                     <br /><br />
-                    <StyledMenuButton>Close</StyledMenuButton>
+                    <MenuButtonInternal>Save/Load</MenuButtonInternal>
+                    <MenuButtonInternal>Close</MenuButtonInternal>
                 </NavColumn>
-                <MainColumn>
-                    <CharTiles>
-                        CHAR1
-                    </CharTiles>
-                    <CharTiles>
-                        CHAR2
-                    </CharTiles>
-                    <CharTiles>
-                        CHAR3
-                    </CharTiles>
-                    <CharTiles>
-                        CHAR4
-                    </CharTiles>
-                </MainColumn>
+                <Body>
+                    {props.state.party.map((char, idx) =>
+                        <CharSheet
+                            key={idx}
+                            char={char}
+                        />
+                    )}
+                </Body>
             </Grid>
         </RpgMenu>
     );

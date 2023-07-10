@@ -11,7 +11,7 @@ import Merchant from './components/menus/menuMerchant';
 import Smith from './components/menus/menuSmith';
 
 function Rpg(props) {
-    const [state, dispatch] = useReducer(StateReducer, { state: 'PreLoad', reverseMode: props.reverseMode });
+    const [state, dispatch] = useReducer(StateReducer, { state: 'PreLoad', ...props });
 
     const boardRef = useRef(null);
 
