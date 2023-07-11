@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@mui/material";
 
 import RpgMenu from '../abstract/menu';
@@ -26,20 +26,29 @@ function Body(props) {
     );
 }
 
-const StyledMenuButton = styled(Button)(
-    () => ({
+const StyledMenuButton = styled(Button, {
+    shouldForwardProp: (prop) => prop !== 'active'
+})(
+    ({ theme, active }) => ({
         margin: "8px",
         fontSize: "2vmin",
-        width: "100%"
+        width: "100%",
+        color: active ? theme.palette.primary.contrast : theme.palette.primary.text,
     })
 );
 
 function MenuButtonInternal(props) {
+
+    // Note: this is to avoid spreading setTab to the Button component, it would trigger a warning
+    const { activeTab, setTab, ...rest } = props;
+
     return (
         <StyledMenuButton
             variant="contained"
             size="normal"
-            {...props}
+            onClick={props.setTab ? () => props.setTab(props.idx) : null }
+            active={props.activeTab === props.idx}
+            {...rest}
         >
             {props.children}
         </StyledMenuButton>
@@ -47,27 +56,29 @@ function MenuButtonInternal(props) {
 }
 
 export default function MainMenu(props) {
+    const [tab, setTab] = useState(0);
     return (
         <RpgMenu {...props}>
             <Grid container style={{ height: "95%", flexWrap: "nowrap" }}>
                 <NavColumn>
-                    <MenuButtonInternal>Status</MenuButtonInternal>
+                    <MenuButtonInternal idx={0} activeTab={tab} setTab={setTab}>Status</MenuButtonInternal>
                     <br />
-                    <MenuButtonInternal>Item</MenuButtonInternal>
-                    <MenuButtonInternal>Magic</MenuButtonInternal>
-                    <MenuButtonInternal>Equip</MenuButtonInternal>
-                    <MenuButtonInternal>Order</MenuButtonInternal>
+                    <MenuButtonInternal idx={1} activeTab={tab} setTab={setTab}>Item</MenuButtonInternal>
+                    <MenuButtonInternal idx={2} activeTab={tab} setTab={setTab}>Magic</MenuButtonInternal>
+                    <MenuButtonInternal idx={3} activeTab={tab} setTab={setTab}>Equip</MenuButtonInternal>
+                    <MenuButtonInternal idx={4} activeTab={tab} setTab={setTab}>Order</MenuButtonInternal>
                     <br /><br />
-                    <MenuButtonInternal>Save/Load</MenuButtonInternal>
-                    <MenuButtonInternal>Close</MenuButtonInternal>
+                    <MenuButtonInternal idx={5} activeTab={tab} setTab={setTab}>Save/Load</MenuButtonInternal>
+                    <MenuButtonInternal activeTab={tab}  onClick={() => window.dispatchEvent(new CustomEvent('exitMenu'))}>Close</MenuButtonInternal>
                 </NavColumn>
                 <Body>
-                    {props.state.party.map((char, idx) =>
+                    {tab === 0 && props.state.party.map((char, idx) =>
                         <CharSheet
                             key={idx}
                             char={char}
                         />
                     )}
+                    {/* TODO: add other tabs */}
                 </Body>
             </Grid>
         </RpgMenu>

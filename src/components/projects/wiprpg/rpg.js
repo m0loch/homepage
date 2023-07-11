@@ -24,7 +24,8 @@ function Rpg(props) {
     const onSmithEntered = useCallback(sender => dispatch({ type: 'EnterSmith', sender }), []);
     const onTavernEntered = useCallback(sender => dispatch({ type: 'EnterTavern', sender }), []);
     const onLeaveTown = useCallback(sender => dispatch({ type: 'LeaveTown', sender }), []);
-    const onExit = useCallback(() => dispatch({ type: 'Exit' }), []);
+    const onExitBuilding = useCallback(() => dispatch({ type: 'Exit' }), []);
+    const onExitMenu = useCallback(() => dispatch({ type: 'ExitMenu' }), []);
 
     useEffect(() => {
         PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.LINEAR;
@@ -46,7 +47,8 @@ function Rpg(props) {
         window.addEventListener("enterSmith", onSmithEntered);
         window.addEventListener("enterTavern", onTavernEntered);
         window.addEventListener("leaveTown", onLeaveTown);
-        window.addEventListener("exit", onExit);
+        window.addEventListener("exit", onExitBuilding);
+        window.addEventListener("exitMenu", onExitMenu);
 
         return () => {
             window.removeEventListener("keydown", inputCallback);
@@ -55,7 +57,8 @@ function Rpg(props) {
             window.removeEventListener("enterSmith", onSmithEntered);
             window.removeEventListener("enterTavern", onTavernEntered);
             window.removeEventListener("leaveTown", onLeaveTown);
-            window.removeEventListener("exit", onExit);
+            window.removeEventListener("exit", onExitBuilding);
+            window.removeEventListener("exitMenu", onExitMenu);
         }
     }, [inputCallback,
         onChurchEntered,
@@ -63,7 +66,8 @@ function Rpg(props) {
         onSmithEntered,
         onTavernEntered,
         onLeaveTown,
-        onExit
+        onExitBuilding,
+        onExitMenu,
     ]);
 
     return (
