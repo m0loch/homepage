@@ -51,6 +51,8 @@ export default function MainMenu(props) {
         <RpgMenu {...props}>
             <Grid container style={{ height: "95%", flexWrap: "nowrap" }}>
                 <NavColumn>
+                    <MenuButtonInternal>Status</MenuButtonInternal>
+                    <br />
                     <MenuButtonInternal>Item</MenuButtonInternal>
                     <MenuButtonInternal>Magic</MenuButtonInternal>
                     <MenuButtonInternal>Equip</MenuButtonInternal>
