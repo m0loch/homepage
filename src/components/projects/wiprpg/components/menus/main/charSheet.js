@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { styled } from '@mui/system';
 import { Card, LinearProgress } from '@mui/material';
+
 import Classes from '../../../data/classes';
 import getExpForNextLevel from '../../../data/levels';
 

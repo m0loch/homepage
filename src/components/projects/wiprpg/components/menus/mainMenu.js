@@ -5,6 +5,7 @@ import RpgMenu from '../abstract/menu';
 import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 import CharSheet from './main/charSheet';
+import WipPanel from './main/wipPanel';
 
 function NavColumn(props) {
     return (
@@ -72,13 +73,29 @@ export default function MainMenu(props) {
                     <MenuButtonInternal activeTab={tab}  onClick={() => window.dispatchEvent(new CustomEvent('exitMenu'))}>Close</MenuButtonInternal>
                 </NavColumn>
                 <Body>
+                    {/* Status */}
                     {tab === 0 && props.state.party.map((char, idx) =>
                         <CharSheet
                             key={idx}
                             char={char}
                         />
                     )}
-                    {/* TODO: add other tabs */}
+
+                    {/* Items */}
+                    {tab === 1 && <WipPanel>Items</WipPanel>}
+
+                    {/* Magic */}
+                    {tab === 2 && <WipPanel>Magic</WipPanel>}
+
+                    {/* Equip */}
+                    {tab === 3 && <WipPanel>Equip</WipPanel>}
+
+                    {/* Order */}
+                    {tab === 4 && <WipPanel>Order</WipPanel>}
+
+                    {/* Save */}
+                    {tab === 5 && <WipPanel>Save/Load</WipPanel>}
+
                 </Body>
             </Grid>
         </RpgMenu>

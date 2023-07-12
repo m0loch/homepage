@@ -25,6 +25,8 @@ function Rpg(props) {
     const onTavernEntered = useCallback(sender => dispatch({ type: 'EnterTavern', sender }), []);
     const onLeaveTown = useCallback(sender => dispatch({ type: 'LeaveTown', sender }), []);
     const onExitBuilding = useCallback(() => dispatch({ type: 'Exit' }), []);
+
+    const onOpenMenu = useCallback(() => dispatch({ type: 'OpenMenu' }), []);
     const onExitMenu = useCallback(() => dispatch({ type: 'ExitMenu' }), []);
 
     useEffect(() => {
@@ -48,6 +50,8 @@ function Rpg(props) {
         window.addEventListener("enterTavern", onTavernEntered);
         window.addEventListener("leaveTown", onLeaveTown);
         window.addEventListener("exit", onExitBuilding);
+
+        window.addEventListener("openMenu", onOpenMenu);
         window.addEventListener("exitMenu", onExitMenu);
 
         return () => {
@@ -58,6 +62,8 @@ function Rpg(props) {
             window.removeEventListener("enterTavern", onTavernEntered);
             window.removeEventListener("leaveTown", onLeaveTown);
             window.removeEventListener("exit", onExitBuilding);
+
+            window.removeEventListener("openMenu", onOpenMenu);
             window.removeEventListener("exitMenu", onExitMenu);
         }
     }, [inputCallback,
@@ -67,6 +73,7 @@ function Rpg(props) {
         onTavernEntered,
         onLeaveTown,
         onExitBuilding,
+        onOpenMenu,
         onExitMenu,
     ]);
 
@@ -84,10 +91,10 @@ function Rpg(props) {
 
 function mapStateToProps(state) {
     return { ...state.rpg };
-  }
-  
-  const mapDispatchToProps = {
+}
+
+const mapDispatchToProps = {
     rpgSetPartyState,
-  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Rpg);

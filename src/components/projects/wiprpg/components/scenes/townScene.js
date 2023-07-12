@@ -4,6 +4,7 @@ import Church from './town/church';
 import Merchant from './town/merchant';
 import Smith from './town/smith';
 import TownExit from './town/townExit';
+import MenuBtn from './menuBtn';
 
 class TownScene extends PIXI.Container {
     constructor(app) {
@@ -18,6 +19,7 @@ class TownScene extends PIXI.Container {
         // Background image
         this.addChild(new PIXI.Sprite(texture));
 
+        this.addChild(new MenuBtn(this.baseWidth - 30, 30));
         this.addChild(new Church(30, 260));
         this.addChild(new Merchant(220, 260));
         this.addChild(new Smith(690, 260));
