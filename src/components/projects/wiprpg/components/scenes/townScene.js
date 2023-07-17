@@ -6,25 +6,37 @@ import Smith from './town/smith';
 import TownExit from './town/townExit';
 import MenuBtn from './menuBtn';
 
+const LookUp = location => {
+    switch (location) {
+        case 'church': return Church;
+        case 'merchant': return Merchant;
+        case 'smith': return Smith;
+        case 'tavern': return Tavern;
+        default: return TownExit;
+    }
+}
+
 class TownScene extends PIXI.Container {
-    constructor(app) {
+    constructor(app, townDef) {
         super();
 
         this.app = app;
 
-        const texture = PIXI.utils.TextureCache['town'];
+        const texture = PIXI.utils.TextureCache[townDef.name];
         this.baseWidth = texture.width;
         this.baseHeight = texture.height;
 
         // Background image
         this.addChild(new PIXI.Sprite(texture));
 
+        // Menu button
         this.addChild(new MenuBtn(this.baseWidth - 30, 30));
-        this.addChild(new Church(30, 260));
-        this.addChild(new Merchant(220, 260));
-        this.addChild(new Smith(690, 260));
-        this.addChild(new Tavern(430, 260));
-        this.addChild(new TownExit(900, 470));
+
+        // Points of interest
+        for (const building in townDef.poi) {
+            const buildData = townDef.poi[building];
+            this.addChild(new (LookUp(building))(buildData.x, buildData.y));
+        }
 
         this.onResize();
     }

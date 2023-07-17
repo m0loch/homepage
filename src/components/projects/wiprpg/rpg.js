@@ -7,6 +7,7 @@ import PixiContainer from '../common/pixiContainer';
 import PixiCanvas from './components/pixiCanvas';
 import { readInput } from './gameLogic/input';
 import StateReducer from './gameLogic/stateMachine';
+import Locations from './data/locations';
 import MainMenu from './components/menus/mainMenu';
 import Tavern from './components/menus/menuTavern';
 import Church from './components/menus/menuChurch';
@@ -32,9 +33,9 @@ function Rpg(props) {
     useEffect(() => {
         PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.LINEAR;
 
-        PIXI.Assets.add('town', `${props.assetsFolder}/town/village.png`);
+        PIXI.Assets.add('vekstad', `${props.assetsFolder}/town/village.png`);
         PIXI.Assets.add('orb', `${props.assetsFolder}/orb.png`)
-        PIXI.Assets.load(['town', 'orb'])
+        PIXI.Assets.load(['vekstad', 'orb'])
             .then(() => {
                 dispatch({ type: 'Loaded' });
             });
@@ -79,12 +80,22 @@ function Rpg(props) {
 
     return (
         <PixiContainer>
+            {/* Main menu */}
             <MainMenu state={state} activeState='ShowMenu' />
+
+            {/* Locations */}
             <Church state={state} activeState='Church' />
             <Merchant state={state} activeState='Merchant' />
             <Smith state={state} activeState='Smith' />
             <Tavern state={state} activeState='Tavern' />
-            {state.state !== 'PreLoad' ? <PixiCanvas ref={boardRef} /> : null}
+
+            {/* Canvas */}
+            {state.state !== 'PreLoad' &&
+                <PixiCanvas
+                    ref={boardRef}
+                    location={new Locations[1]()}
+                    // add ref to phase and thus to pic
+                />}
         </PixiContainer>
     );
 }

@@ -24,7 +24,7 @@ class PixiCanvas extends Component {
         this.app.renderer.background.color = 0x303030;
         this.pixiContainer.appendChild(this.app.view);
 
-        this.scene = new TownScene(this.app);
+        this.scene = new TownScene(this.app, this.props.location);
 
         this.app.stage.addChild(this.scene);
 
