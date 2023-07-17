@@ -60,7 +60,7 @@ function App(props) {
         <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />
         <Route path="/projects/solitaire" element={<Solitaire {...props.solitaire} assetsFolder={`${process.env.PUBLIC_URL}/assets/solitaire`} />} />
         <Route path="/projects/simon" element={<Simon {...props.simon} />} />
-        <Route path="/projects/rpg" element={<Rpg assetsFolder={`${process.env.PUBLIC_URL}/assets/wiprpg`} />} />
+        <Route path="/projects/rpg" element={<Rpg assetsFolder={`${process.env.PUBLIC_URL}/assets/wiprpg`} {...props.rpg} />} />
 
         {/* Main sections */}
         <Route path="/about" element={<About />} />
