@@ -1,6 +1,4 @@
 export default class BaseLocation {
-
-    // TODO: define basic things
     constructor(name, poi) {
         this.name = name;
         this.poi = poi;
