@@ -1,5 +1,3 @@
-import React from 'react';
-import { Button } from "@mui/material";
 import { styled, keyframes } from '@mui/system';
 
 const appearAnimation = keyframes`
@@ -29,9 +27,9 @@ const ClickBlocker = styled('div', {
 );
 
 const StyledPanel = styled('div', {
-    shouldForwardProp: (prop) => prop !== 'mode'
+    shouldForwardProp: (prop) => !['mode', 'fullScreen'].includes(prop),
 })(
-    ({ theme, mode }) => {
+    ({ theme, mode, fullScreen }) => {
 
         const appearance = { opacity: 0 };
         if (mode === 'active') {
@@ -43,17 +41,18 @@ const StyledPanel = styled('div', {
 
         return {
             position: "absolute",
-            top: "17.5%",
-            left: "17.5%",
+            top: fullScreen ? "5%" : "17.5%",
+            left: fullScreen ? "5%" : "17.5%",
             zIndex: 10,
-            height: "65%",
-            width: "65%",
+            height: fullScreen ? "90%" : "65%",
+            width: fullScreen ? "90%" : "65%",
             backgroundColor: theme.palette.background.menu,
             border: "5px ridge",
             borderColor: theme.palette.primary.light,
             borderRadius: "5px",
 
             display: "flex",
+            flexDirection: fullScreen ? "column" : "inherit",
             alignItems: "center",
             justifyContent: "center",
 
@@ -62,33 +61,10 @@ const StyledPanel = styled('div', {
     }
 );
 
-const StyledMenuButton = styled(Button)(
-    () => ({
-        margin: "8px auto",
-        fontSize: "3vmin",
-    })
-);
-
-export function MenuButton(props) {
+export default function BaseDlg(props) {
     return (
-        <StyledMenuButton
-            variant="contained"
-            size="large"
-            {...props}
-        >
-            {props.children}
-        </StyledMenuButton>
-    );
-}
-
-export default function RpgMenu(props) {
-    const mode = props.state.state === props.activeState ? 'active'
-        : (props.state.prevState === props.activeState ? 'hiding'
-            : 'hidden');
-
-    return (
-        <ClickBlocker mode={mode}>
-            <StyledPanel mode={mode} onClick={props.onClick}>
+        <ClickBlocker mode={props.mode}>
+            <StyledPanel mode={props.mode} fullScreen={props.fullScreen} onClick={props.onClick}>
                 {props.children}
             </StyledPanel>
         </ClickBlocker>

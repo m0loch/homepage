@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "@mui/material";
 
-import RpgMenu from '../abstract/menu';
+import MenuDlg from '../abstract/menuDlg';
 import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 import CharSheet from './main/charSheet';
@@ -59,7 +59,7 @@ function MenuButtonInternal(props) {
 export default function MainMenu(props) {
     const [tab, setTab] = useState(0);
     return (
-        <RpgMenu {...props}>
+        <MenuDlg {...props}>
             <Grid container style={{ height: "95%", flexWrap: "nowrap" }}>
                 <NavColumn>
                     <MenuButtonInternal idx={0} activeTab={tab} setTab={setTab}>Status</MenuButtonInternal>
@@ -98,6 +98,6 @@ export default function MainMenu(props) {
 
                 </Body>
             </Grid>
-        </RpgMenu>
+        </MenuDlg>
     );
 }

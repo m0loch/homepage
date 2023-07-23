@@ -1,5 +1,6 @@
 import React from 'react';
-import RpgMenu, { MenuButton } from '../abstract/menu';
+import MenuDlg from '../abstract/menuDlg';
+import MenuButton from '../abstract/menuButton';
 import { Grid } from "@mui/material";
 
 function Column(props) {
@@ -12,7 +13,7 @@ function Column(props) {
 
 export default function Tavern(props) {
     return (
-        <RpgMenu {...props}>
+        <MenuDlg {...props}>
             <Grid container>
                 <Column>
                     <MenuButton onClick={() => alert('blabla')}>
@@ -30,6 +31,6 @@ export default function Tavern(props) {
                     </MenuButton>
                 </Column>
             </Grid>
-        </RpgMenu>
+        </MenuDlg>
     );
 }
