@@ -10,6 +10,7 @@ const InitialState = {
     talks: { selectedTalk: 0 },
     simon: { level: 8, reverseMode: false },
     rpg: {
+        plotStep: 'NewGame',
         party: [
             {
                 name: 'Rainer',
