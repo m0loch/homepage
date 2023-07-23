@@ -1,9 +1,15 @@
 export default function StateReducer(previousState, action) {
     switch (previousState.state) {
         case 'PreLoad':
-            if (action.type === 'Loaded') return { ...previousState, prevState: previousState.state, state: 'MainScene' };
+            if (action.type === 'Loaded') return {
+                ...previousState,
+                prevState: previousState.state,
+                // Test
+                state: 'TownScene',
+                dialogueTrigger: 'enter',
+            };
             break;
-        case 'MainScene':
+        case 'TownScene':
             switch (action.type) {
                 case 'OpenMenu':
                     return { ...previousState, prevState: previousState.state, state: 'ShowMenu' };
@@ -16,14 +22,13 @@ export default function StateReducer(previousState, action) {
                 case 'EnterTavern':
                     return { ...previousState, prevState: previousState.state, state: 'Tavern' };
                 case 'LeaveTown':
-                    alert('NO WORLD MAP YET');
-                    return { ...previousState /*, prevState: previousState.state, state: 'Overworld'*/ };
+                    return { ...previousState, prevState: previousState.state, /* test */ dialogueTrigger: 'leave' };
                 default:
                     break;
             }
             break;
         case 'ShowMenu':
-            if (action.type === 'ExitMenu') return { ...previousState, prevState: previousState.state, state: 'MainScene' };
+            if (action.type === 'ExitMenu') return { ...previousState, prevState: previousState.state, state: 'TownScene' };
             break;
         case 'Church':
         case 'Merchant':

@@ -2,14 +2,14 @@ export default class BaseLocation {
     constructor(name, poi) {
         this.name = name;
         this.poi = poi;
+        this.registeredEvents = {}
     }
 
-    onEnter = () => {
-        console.log(`Player entered ${this.name}`)
+    getTriggeredEvent = (trigger) => {
+        return this.registeredEvents[trigger];
     }
 
-
-    onLeave = () => {
-        console.log(`Player entered ${this.name}`)
+    setTriggered = (trigger) => {
+        this.registeredEvents[trigger].visited = true;
     }
 }

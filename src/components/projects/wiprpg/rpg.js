@@ -11,25 +11,29 @@ import PixiContainer from '../common/pixiContainer';
 import PixiCanvas from './components/pixiCanvas';
 import { readInput } from './gameLogic/input';
 import StateReducer from './gameLogic/stateMachine';
-import Locations from './data/locations';
+import LocationsManager from './data/locationsManager';
 import MainMenu from './components/menus/mainMenu';
 import Tavern from './components/menus/menuTavern';
 import Church from './components/menus/menuChurch';
 import Merchant from './components/menus/menuMerchant';
 import Smith from './components/menus/menuSmith';
+import NarrationDlg from './components/abstract/narrationDlg';
 
 function Rpg(props) {
     const [state, dispatch] = useReducer(StateReducer, { state: 'PreLoad', ...props });
 
     const boardRef = useRef(null);
+    const locationRef = useRef(null);
 
     const inputCallback = useCallback(ev => readInput(ev, state.state, dispatch), [state.state]);
     const onChurchEntered = useCallback(sender => dispatch({ type: 'EnterChurch', sender }), []);
     const onMerchantEntered = useCallback(sender => dispatch({ type: 'EnterMerchant', sender }), []);
     const onSmithEntered = useCallback(sender => dispatch({ type: 'EnterSmith', sender }), []);
     const onTavernEntered = useCallback(sender => dispatch({ type: 'EnterTavern', sender }), []);
-    const onLeaveTown = useCallback(sender => dispatch({ type: 'LeaveTown', sender }), []);
     const onExitBuilding = useCallback(() => dispatch({ type: 'Exit' }), []);
+
+    const onEnterTown = useCallback(sender => dispatch({ type: 'EnterTown', sender }), []);
+    const onLeaveTown = useCallback(sender => dispatch({ type: 'LeaveTown', sender }), []);
 
     const onOpenMenu = useCallback(() => dispatch({ type: 'OpenMenu' }), []);
     const onExitMenu = useCallback(() => dispatch({ type: 'ExitMenu' }), []);
@@ -48,13 +52,19 @@ function Rpg(props) {
     }, [props])
 
     useEffect(() => {
+        locationRef.current = (new LocationsManager()).getLocation(state.location, state.plotStep);
+    }, [state.location, state.plotStep])
+
+    useEffect(() => {
         window.addEventListener("keydown", inputCallback);
         window.addEventListener("enterChurch", onChurchEntered);
         window.addEventListener("enterMerchant", onMerchantEntered);
         window.addEventListener("enterSmith", onSmithEntered);
         window.addEventListener("enterTavern", onTavernEntered);
-        window.addEventListener("leaveTown", onLeaveTown);
         window.addEventListener("exit", onExitBuilding);
+
+        window.addEventListener("enterTown", onEnterTown);
+        window.addEventListener("leaveTown", onLeaveTown);
 
         window.addEventListener("openMenu", onOpenMenu);
         window.addEventListener("exitMenu", onExitMenu);
@@ -65,8 +75,10 @@ function Rpg(props) {
             window.removeEventListener("enterMerchant", onMerchantEntered);
             window.removeEventListener("enterSmith", onSmithEntered);
             window.removeEventListener("enterTavern", onTavernEntered);
-            window.removeEventListener("leaveTown", onLeaveTown);
             window.removeEventListener("exit", onExitBuilding);
+
+            window.removeEventListener("enterTown", onEnterTown);
+            window.removeEventListener("leaveTown", onLeaveTown);
 
             window.removeEventListener("openMenu", onOpenMenu);
             window.removeEventListener("exitMenu", onExitMenu);
@@ -76,8 +88,9 @@ function Rpg(props) {
         onMerchantEntered,
         onSmithEntered,
         onTavernEntered,
-        onLeaveTown,
         onExitBuilding,
+        onEnterTown,
+        onLeaveTown,
         onOpenMenu,
         onExitMenu,
     ]);
@@ -93,12 +106,17 @@ function Rpg(props) {
             <Smith state={state} activeState='Smith' />
             <Tavern state={state} activeState='Tavern' />
 
+            {/* Dialogues */}
+            <NarrationDlg
+                state={state}
+                locData={locationRef.current}
+            />
+
             {/* Canvas */}
             {state.state !== 'PreLoad' &&
                 <PixiCanvas
                     ref={boardRef}
-                    location={new Locations[1]()}
-                    // add ref to phase and thus to pic
+                    location={locationRef.current}
                 />}
         </PixiContainer>
     );
