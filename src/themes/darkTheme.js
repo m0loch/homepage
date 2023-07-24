@@ -14,6 +14,7 @@ const darkTheme = baseTheme({
             main: "#4A3A84",
             light: "#6E619C",
             contrast: "#FFFF00",
+            textBorder: "#000000",
         },
         secondary: {
             main: "#6f6f6f",
