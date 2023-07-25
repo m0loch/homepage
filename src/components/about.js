@@ -7,7 +7,6 @@ import MainText from './common/mainText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { ReactComponent as ItchIoIcon } from '../images/itchio-logo-textless-white.svg';
 
 const StyledContainer = styled('div')(
@@ -77,7 +76,6 @@ function About() {
                     <h2>You can reach me via any of the following:</h2>
                     <br/>
                     
-                    <StyledContact href="https://twitter.com/ilmeodev"><TwitterIcon/> @ilmeodev</StyledContact>
                     <StyledContact href="https://github.com/m0loch"><GitHubIcon/>m0loch on GitHub</StyledContact>
                     <StyledContact href="https://m0loch666.itch.io/"><StyledItchIoIcon/>m0loch666 on itch.io</StyledContact>
                     <StyledContact href="https://www.linkedin.com/in/romeo-graifenberg-a5770117b"><LinkedInIcon/>My LinkedIn profile</StyledContact>
