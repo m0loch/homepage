@@ -42,10 +42,13 @@ function Rpg(props) {
     useEffect(() => {
         PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.LINEAR;
 
+        // Locations
         PIXI.Assets.add('worldmap', `${props.assetsFolder}/worldmap/baseregion.png`);
         PIXI.Assets.add('vekstad', `${props.assetsFolder}/town/village.png`);
+        PIXI.Assets.add('banditsCamp', `${props.assetsFolder}/town/camp.jpg`);
+        // Assets
         PIXI.Assets.add('orb', `${props.assetsFolder}/orb.png`)
-        PIXI.Assets.load(['worldmap', 'vekstad', 'orb'])
+        PIXI.Assets.load(['worldmap', 'vekstad', 'banditsCamp', 'orb'])
             .then(() => {
                 dispatch({ type: 'Loaded' });
             });
