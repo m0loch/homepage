@@ -3,7 +3,7 @@ function getLocationsList() {
     const locs = require.context("./locations", false, /\.js$/);
 
     // Retrieves the default export for each module
-    return locs.keys().map(loc => locs(loc).default);
+    return locs.keys().map(loc => new (locs(loc).default)());
 }
 
 function getPlotPoints(location, plotPoint) {
@@ -13,23 +13,31 @@ function getPlotPoints(location, plotPoint) {
 
     // Retrieves the events for the specified location at the current time
     return events.keys()
-        .filter(ev => ev.includes(plotPoint) && ev.includes(location.toLowerCase()))
+        .filter(ev => ev.includes(plotPoint) && ev.includes(location?.toLowerCase()))
         .map(ev => events(ev).default);
 }
 
-class LocationsManager {
+// Singleton pattern
+class _LocationsManager {
     constructor() {
         this.list = getLocationsList();
     }
 
     getLocation = (locName, plotPoint) => {
-        const location = new (this.list.find(item => item.name === locName))();
 
+        // Loads properties of location
+        const location = this.list.find(item => item.name === locName);
+
+        // Loads events currently tied to the location
         const events = getPlotPoints(locName, plotPoint);
         events.map(ev => location.registeredEvents[ev.trigger] = ev);
 
         return location;
     }
 }
+
+// Instance
+var LocationsManager = new _LocationsManager();
+Object.freeze(LocationsManager);
 
 export default LocationsManager;

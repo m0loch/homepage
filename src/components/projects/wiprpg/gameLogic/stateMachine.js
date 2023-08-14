@@ -1,15 +1,15 @@
 export default function StateReducer(previousState, action) {
+
     switch (previousState.state) {
         case 'PreLoad':
             if (action.type === 'Loaded') return {
                 ...previousState,
                 prevState: previousState.state,
-                // Test
-                state: 'TownScene',
+                state: 'Location',
                 dialogueTrigger: 'enter',
             };
             break;
-        case 'TownScene':
+        case 'Location':
             switch (action.type) {
                 case 'OpenMenu':
                     return { ...previousState, prevState: previousState.state, state: 'ShowMenu' };
@@ -21,14 +21,29 @@ export default function StateReducer(previousState, action) {
                     return { ...previousState, prevState: previousState.state, state: 'Smith' };
                 case 'EnterTavern':
                     return { ...previousState, prevState: previousState.state, state: 'Tavern' };
+
+                case 'EnterTown':
+                    return {
+                        ...previousState,
+                        prevState: previousState.state,
+                        state: 'Location',
+                        location: action.sender.detail?.location,
+                        dialogueTrigger: 'enter',
+                    };
                 case 'LeaveTown':
-                    return { ...previousState, prevState: previousState.state, /* test */ dialogueTrigger: 'leave' };
+                    return {
+                        ...previousState,
+                        prevState: previousState.state,
+                        state: 'Location',
+                        location: action.sender.detail?.location,
+                        dialogueTrigger: 'leave',
+                    };
                 default:
                     break;
             }
             break;
         case 'ShowMenu':
-            if (action.type === 'ExitMenu') return { ...previousState, prevState: previousState.state, state: 'TownScene' };
+            if (action.type === 'ExitMenu') return { ...previousState, prevState: previousState.state, state: 'Location' };
             break;
         case 'Church':
         case 'Merchant':
@@ -36,7 +51,6 @@ export default function StateReducer(previousState, action) {
         case 'Tavern':
             if (action.type === 'Exit') return { ...previousState, prevState: previousState.state, state: previousState.prevState };
             break;
-
         default:
             break;
     }

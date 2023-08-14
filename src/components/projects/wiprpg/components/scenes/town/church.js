@@ -1,7 +1,7 @@
-import Location from "./_location";
+import Location from "../../abstract/_location";
 
 class Church extends Location {
-    constructor(x, y) {
+    constructor({x, y}) {
         super('orb', x, y, 'enterChurch', 'Church', 0xAFF7FA);
     }
 }

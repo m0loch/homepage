@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import * as PIXI from 'pixi.js';
 import * as TWEEN from '@tweenjs/tween.js';
-import TownScene from './scenes/townScene';
+import Location from './scenes/location';
 
 class PixiCanvas extends Component {
 
@@ -24,7 +24,7 @@ class PixiCanvas extends Component {
         this.app.renderer.background.color = 0x303030;
         this.pixiContainer.appendChild(this.app.view);
 
-        this.scene = new TownScene(this.app, this.props.location);
+        this.scene = new Location(this.app, this.props.location);
 
         this.app.stage.addChild(this.scene);
 
@@ -62,6 +62,16 @@ class PixiCanvas extends Component {
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.onResize);
+    }
+
+    shouldComponentUpdate(nextProps) {
+        // Check for location change
+        if (this.app && (nextProps.location?.name !== this.scene?.name)) {
+            this.app.stage.removeChild(this.scene);
+            this.scene = new Location(this.app, nextProps.location);
+            this.app.stage.addChild(this.scene);
+        }
+        return true;
     }
 }
 

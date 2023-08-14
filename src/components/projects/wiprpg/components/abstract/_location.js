@@ -1,13 +1,21 @@
 import * as PIXI from 'pixi.js';
-import PixiButton from "../../abstract/pixiButton";
+import PixiButton from "./pixiButton";
 
 class Location extends PIXI.Container {
-    constructor(texture, x, y, eventName, label, tint = 0xFFFFFF) {
+    constructor(
+        texture,
+        x,
+        y,
+        eventName,
+        label,
+        tint = 0xFFFFFF,
+        eventPayload = {}
+    ) {
         super();
 
         this.button = new PixiButton(
             texture ? PIXI.utils.TextureCache[texture] : PIXI.Texture.WHITE,
-            { onClickEnded: sender => window.dispatchEvent(new CustomEvent(eventName, sender)) },
+            { onClickEnded: () => window.dispatchEvent(new CustomEvent(eventName, { detail: eventPayload })) },
             tint
         );
 

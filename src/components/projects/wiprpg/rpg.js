@@ -23,7 +23,8 @@ function Rpg(props) {
     const [state, dispatch] = useReducer(StateReducer, { state: 'PreLoad', ...props });
 
     const boardRef = useRef(null);
-    const locationRef = useRef(null);
+
+    const location = LocationsManager.getLocation(state.location, state.plotStep);
 
     const inputCallback = useCallback(ev => readInput(ev, state.state, dispatch), [state.state]);
     const onChurchEntered = useCallback(sender => dispatch({ type: 'EnterChurch', sender }), []);
@@ -41,19 +42,16 @@ function Rpg(props) {
     useEffect(() => {
         PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.LINEAR;
 
+        PIXI.Assets.add('worldmap', `${props.assetsFolder}/worldmap/baseregion.png`);
         PIXI.Assets.add('vekstad', `${props.assetsFolder}/town/village.png`);
         PIXI.Assets.add('orb', `${props.assetsFolder}/orb.png`)
-        PIXI.Assets.load(['vekstad', 'orb'])
+        PIXI.Assets.load(['worldmap', 'vekstad', 'orb'])
             .then(() => {
                 dispatch({ type: 'Loaded' });
             });
 
         return () => PIXI.Assets.reset();
     }, [props])
-
-    useEffect(() => {
-        locationRef.current = (new LocationsManager()).getLocation(state.location, state.plotStep);
-    }, [state.location, state.plotStep])
 
     useEffect(() => {
         window.addEventListener("keydown", inputCallback);
@@ -63,7 +61,7 @@ function Rpg(props) {
         window.addEventListener("enterTavern", onTavernEntered);
         window.addEventListener("exit", onExitBuilding);
 
-        window.addEventListener("enterTown", onEnterTown);
+        window.addEventListener("enterLocation", onEnterTown);
         window.addEventListener("leaveTown", onLeaveTown);
 
         window.addEventListener("openMenu", onOpenMenu);
@@ -77,7 +75,7 @@ function Rpg(props) {
             window.removeEventListener("enterTavern", onTavernEntered);
             window.removeEventListener("exit", onExitBuilding);
 
-            window.removeEventListener("enterTown", onEnterTown);
+            window.removeEventListener("enterLocation", onEnterTown);
             window.removeEventListener("leaveTown", onLeaveTown);
 
             window.removeEventListener("openMenu", onOpenMenu);
@@ -109,14 +107,14 @@ function Rpg(props) {
             {/* Dialogues */}
             <NarrationDlg
                 state={state}
-                locData={locationRef.current}
+                locData={location}
             />
 
             {/* Canvas */}
             {state.state !== 'PreLoad' &&
                 <PixiCanvas
                     ref={boardRef}
-                    location={locationRef.current}
+                    location={location}
                 />}
         </PixiContainer>
     );

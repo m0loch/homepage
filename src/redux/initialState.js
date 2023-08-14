@@ -11,6 +11,7 @@ const InitialState = {
     simon: { level: 8, reverseMode: false },
     rpg: {
         plotStep: 'NewGame',
+        location: 'Vekstad',
         party: [
             {
                 name: 'Rainer',

@@ -6,8 +6,6 @@ export default function MenuDlg(props) {
     : (props.state.prevState === props.activeState ? 'hiding'
         : 'hidden');
 
-//    console.log(mode);
-
     return <BaseDlg {...props} mode={mode}>
         {props.children}
     </BaseDlg>

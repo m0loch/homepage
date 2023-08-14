@@ -14,7 +14,7 @@
 export function readInput(event, state, dispatch) {
 
     switch (state) {
-        case 'TownScene':
+        case 'Location':
             return readInputForMainSchene(event, dispatch);
         case 'ShowMenu':
             return readInputForMenu(event, dispatch);
