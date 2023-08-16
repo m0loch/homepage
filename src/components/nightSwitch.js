@@ -21,7 +21,7 @@ const StyledSwitch = styled('div')(
 );
 
 const StyledFlicker = styled('div', {
-    shouldForwardProp: (prop) => prop !== 'dark' 
+    shouldForwardProp: (prop) => prop !== 'dark'
 })(
     ({ theme, dark }) => ({
         [theme.breakpoints.up('md')]: {
@@ -47,7 +47,7 @@ const StyledFlicker = styled('div', {
 );
 
 const StyledSun = styled(LightModeIcon, {
-    shouldForwardProp: (prop) => prop !== 'dark' 
+    shouldForwardProp: (prop) => prop !== 'dark'
 })(
     ({ theme, dark }) => ({
         width: theme.components.logoWidth,
