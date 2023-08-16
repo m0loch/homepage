@@ -1,29 +1,9 @@
 import { useState } from "react";
-import { Collapse } from "@mui/material";
-import CollapseHeader from "../../components/projects/common/collapseHeader";
-import { styled } from '@mui/system';
-
 import { splitText } from '../../components/common/textFunctions';
 import YouTubeVideo from '../../components/posts/youtubeVideo';
+import { StyledCollapseHeader, StyledCollapse } from "../../components/posts/collapse";
 
 import screenshot from '../../images/brokenrunner.png';
-
-const StyledHeader = styled(CollapseHeader)(
-    ({ theme }) => ({
-        color: theme.palette.primary.contrast,
-        fontSize: '1.33rem',
-    })
-);
-
-const StyledSpoiler = styled(Collapse)(
-    ({ theme }) => ({
-        color: theme.palette.primary.contrast,
-        backgroundColor: theme.palette.background.card,
-        padding: '10px',
-        border: `3px inset ${theme.palette.primary.contrast}`,
-        borderRadius: '5px',
-    })
-);
 
 function StatefulPost(props) {
     const [open, setOpen] = useState(false);
@@ -40,12 +20,12 @@ function StatefulPost(props) {
                 As I tend to do I overdid things a little, so I ended up migrating the whole site to React 18 and PIXI.js 7.2.4, which led to a wide spectrum of collateral problems like fixing older projects in order to behave properly.
             `)}
 
-            <StyledHeader
+            <StyledCollapseHeader
                 caption={"(the problems)"}
                 open={open}
                 onClick={() => setOpen(!open)}
             />
-            <StyledSpoiler in={open} timeout="auto" unmountOnExit>
+            <StyledCollapse in={open} timeout="auto" unmountOnExit>
                 <p>The first issue that came with the migration towards React 18 was the incompatibility with the Material UI libraries, which meant I had to reinstall them with the following parameter:</p>
                 <br/>
                 <code>npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps</code>
@@ -76,7 +56,7 @@ function StatefulPost(props) {
                 <code>PIXI.BaseTexture.defaultOptions.scaleMode = PIXI.SCALE_MODES.NEAREST;</code>
                 <br/><br/>
                 <p>There's still some flickering associated to the animation cycle though, so the project will remain shut off for the time being.</p>
-                </StyledSpoiler>
+            </StyledCollapse>
 
             <br />
             {splitText(`
