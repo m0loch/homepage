@@ -60,9 +60,6 @@ export default function CustomImage(props) {
         document.body.style.overflow = e.target.classList.contains('fullView') ? "hidden" : "scroll";
     }
 
-    // const handleEsc = e => {
-    //     if (e.keyCode == 27) {
-
     return (
         <StyledFigure align={props.align}>
             <StyledPanel ref={panelRef} onClick={zoomImg}/>
