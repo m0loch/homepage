@@ -1,7 +1,7 @@
 import { splitText } from '../../components/common/textFunctions';
 
 const post = {
-    title: "Minor update",
+    title: "Minor update (2)",
     date: new Date("2023-05-14"),
     smartContent: <>
         {splitText(`

@@ -3,10 +3,10 @@ import { styled } from '@mui/system';
 const TextSection = styled('section')(
     () => ({
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "space-around",
         alignItems: "center",
-        padding: "30px",    
+        padding: "30px",
     })
 );
     

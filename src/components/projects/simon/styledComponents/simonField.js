@@ -22,7 +22,7 @@ const Rotator = styled(Grid)(
 
         height: 0,
         width: "100%",
-        paddingBottom: "100%",        
+        paddingBottom: "100%",
         transform: "rotate(45deg)",
     })
 );
