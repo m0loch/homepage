@@ -23,7 +23,7 @@ export function Bookmark(props) {
             <span id={props.id}>
                 <b>{props.children}</b>
             </span>
-            <BookmarkLink id={"Table_of_contents"} style={{ "margin-left": "5px" }}>
+            <BookmarkLink id={"Table_of_contents"} style={{ "marginLeft": "5px" }}>
                 <b>^</b>
             </BookmarkLink>
         </h3>
