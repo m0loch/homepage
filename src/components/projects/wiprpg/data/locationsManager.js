@@ -26,7 +26,7 @@ class _LocationsManager {
     getLocation = (locName, plotPoint) => {
 
         // Loads properties of location
-        const location = this.list.find(item => item.name === locName);
+        const location = this.list.find(item => item.name === locName.toLowerCase());
 
         // Loads events currently tied to the location
         const events = getPlotPoints(locName, plotPoint);

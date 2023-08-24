@@ -45,10 +45,10 @@ function Rpg(props) {
         // Locations
         PIXI.Assets.add('worldmap', `${props.assetsFolder}/worldmap/baseregion.png`);
         PIXI.Assets.add('vekstad', `${props.assetsFolder}/town/village.png`);
-        PIXI.Assets.add('banditsCamp', `${props.assetsFolder}/town/camp.jpg`);
+        PIXI.Assets.add('banditscamp', `${props.assetsFolder}/town/camp.jpg`);
         // Assets
         PIXI.Assets.add('orb', `${props.assetsFolder}/orb.png`)
-        PIXI.Assets.load(['worldmap', 'vekstad', 'banditsCamp', 'orb'])
+        PIXI.Assets.load(['worldmap', 'vekstad', 'banditscamp', 'orb'])
             .then(() => {
                 dispatch({ type: 'Loaded' });
             });

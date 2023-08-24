@@ -2,7 +2,7 @@ export default class BaseLocation {
     constructor(name, poi) {
         this.name = name;
         this.poi = poi;
-        this.registeredEvents = {}
+        this.registeredEvents = [];
     }
 
     getTriggeredEvent = (trigger) => {
