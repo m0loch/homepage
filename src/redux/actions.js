@@ -119,17 +119,3 @@ export function rpgSetPartyState(value) {
         party: value,
     }
 }
-
-export function rpgSetLocation(value) {
-    return {
-        type: 'RPG_SET_LOCATION',
-        location: value,
-    }
-}
-
-export function rpgSetPlotState(value) {
-    return {
-        type: 'RPG_SET_PLOT_STATE',
-        plot: value,
-    }
-}

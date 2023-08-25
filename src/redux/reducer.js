@@ -35,10 +35,6 @@ const SettingsReducer = (state = InitialState, action) => {
             return { ...state, simon: { ...state.simon, reverseMode: action.reverseMode } }
         case 'RPG_SET_PARTY_STATE':
             return { ...state, rpg: { ...state.rpg, party: action.party } }
-        case 'RPG_SET_LOCATION':
-            return { ...state, rpg: { ...state.rpg, location: action.location } }
-        case 'RPG_SET_PLOT_STATE':
-            return { ...state, rpg: { ...state.rpg, plotStep: action.plot } }
         default:
             return state;
     }
