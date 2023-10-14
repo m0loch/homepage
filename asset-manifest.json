@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.969063f0.js",
+    "main.js": "/homepage/static/js/main.c22d2ae9.js",
     "static/media/phoenix.jpg": "/homepage/static/media/phoenix.2f06caa90c7d0778b13a.jpg",
     "static/media/torgal.jpg": "/homepage/static/media/torgal.4a52cb2fd83ab43654da.jpg",
     "static/media/ifrit.jpg": "/homepage/static/media/ifrit.768fee274995c795cff5.jpg",
+    "static/media/angry-cat-AI.png": "/homepage/static/media/angry-cat-AI.2de2db30e8a0fcaae8ca.png",
     "static/media/ff16quest.jpg": "/homepage/static/media/ff16quest.b3f9a949adfe50fdfcca.jpg",
     "static/media/ahriman.jpg": "/homepage/static/media/ahriman.775f93217477d2c9489a.jpg",
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
@@ -22,9 +23,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.969063f0.js.map": "/homepage/static/js/main.969063f0.js.map"
+    "main.c22d2ae9.js.map": "/homepage/static/js/main.c22d2ae9.js.map"
   },
   "entrypoints": [
-    "static/js/main.969063f0.js"
+    "static/js/main.c22d2ae9.js"
   ]
 }
