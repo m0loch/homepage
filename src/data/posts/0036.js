@@ -1,9 +1,8 @@
 const post = {
-    title: "Work test",
+    title: "Deeplink test",
     date: new Date("2023-12-05"),
     smartContent: 
     <>
-        <h1>Deep link 4 test:</h1>
         <a href="sfc://sisal.it?referral=IAMMEO">REFERRAL (IAMMEO)</a><br/>
         <br/>
         <a href="sfc://sisal.it?goto=store">SHOP</a><br/>

@@ -14,7 +14,7 @@ const post = {
 
                 Long story short: at the moment I still work in Milan, but lack any kind of stable housing there.
                 Commuting from the mountains is hell.
-                The whole Milan housing situation is a nightmare and people can't really understand how messed up the situation actually is, but I really can't spare the mental energies to even just rant about it.
+                The whole Milan housing situation is a nightmare and people can't really understand how messed up it actually is, but I really can't spare the mental energies to even just rant about it.
 
                 I spend my free time by either traveling or watching soccer.
                 
