@@ -36,7 +36,7 @@ const post = {
         <br/>
         <ButtonInternal onClick={() => { window.open(document.getElementById('testLink').value, '_blank'); }}>Trigger deep link</ButtonInternal>
         <br/>
-        In the future I'll set up a standalone page in order to avoid having to find these posts among the others, for now just bear with me
+        <p>In the future I'll set up a standalone page in order to avoid having to find these posts among the others, for now just bear with me.</p>
     </>,
     signature: `One day I'll post something new, I swear
     Romeo`
