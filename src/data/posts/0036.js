@@ -1,5 +1,5 @@
 const post = {
-    title: "Deeplink test",
+    title: "Deep link test",
     date: new Date("2023-12-05"),
     smartContent: 
     <>
