@@ -1,6 +1,7 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.eeb9b88f.js",
+    "main.js": "/homepage/static/js/main.9d562f9a.js",
+    "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
     "static/media/phoenix.jpg": "/homepage/static/media/phoenix.2f06caa90c7d0778b13a.jpg",
     "static/media/torgal.jpg": "/homepage/static/media/torgal.4a52cb2fd83ab43654da.jpg",
     "static/media/ifrit.jpg": "/homepage/static/media/ifrit.768fee274995c795cff5.jpg",
@@ -14,6 +15,7 @@
     "static/media/benedikta.jpg": "/homepage/static/media/benedikta.85fe1318825fccfa4cf2.jpg",
     "static/media/hooded-man.jpg": "/homepage/static/media/hooded-man.c7e8e51b11da7c5e60ef.jpg",
     "static/media/active-time-lore.jpg": "/homepage/static/media/active-time-lore.53896a7549c70a1c28f2.jpg",
+    "static/media/kob.png": "/homepage/static/media/kob.0fce5f27fe6562753704.png",
     "static/media/ifrit-garuda.webp": "/homepage/static/media/ifrit-garuda.d97f98745afdb5efd60c.webp",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
@@ -23,9 +25,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.eeb9b88f.js.map": "/homepage/static/js/main.eeb9b88f.js.map"
+    "main.9d562f9a.js.map": "/homepage/static/js/main.9d562f9a.js.map"
   },
   "entrypoints": [
-    "static/js/main.eeb9b88f.js"
+    "static/js/main.9d562f9a.js"
   ]
 }
