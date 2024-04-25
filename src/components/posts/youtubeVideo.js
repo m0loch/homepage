@@ -17,7 +17,6 @@ const YTframe = styled('iframe')({
 });
 
 const YouTubeVideo = ({ videoId, caption }) => {
-    console.log(caption);
     return (
         <>
         <DockArea>
