@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useTheme } from '@mui/system';
+import { useMediaQuery } from '@mui/material';
 import TextSection from './common/textSection';
 import MainText from './common/mainText';
 import Post from './posts/post';
@@ -26,13 +28,16 @@ function Main(props) {
         .sort((a, b) => b.date - a.date) // newer posts are meant to be shown before the older ones
         .filter((item, idx) => idx >= ((page - 1) * postsPerPage) && (idx < page * postsPerPage));
 
+    const theme = useTheme();
+    let useSmallPagination = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
         <TextSection>
-            <Pagination count={range} page={page} onChange={handleChange} showFirstButton showLastButton />
+            <Pagination count={range} page={page} onChange={handleChange} showFirstButton showLastButton size={useSmallPagination ? "small" : undefined} />
             <MainText>
                 {filteredPosts.map((post, index) => <Post {...post} index={index} key={index} />)}
             </MainText>
-            <Pagination count={range} page={page} onChange={handleChange} showFirstButton showLastButton />
+            <Pagination count={range} page={page} onChange={handleChange} showFirstButton showLastButton size={useSmallPagination ? "small" : undefined} />
         </TextSection>
     );
 }
