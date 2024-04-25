@@ -16,8 +16,10 @@ const YTframe = styled('iframe')({
     height: "100%",
 });
 
-const YouTubeVideo = ({ videoId }) => {
+const YouTubeVideo = ({ videoId, caption }) => {
+    console.log(caption);
     return (
+        <>
         <DockArea>
             <YTframe
                 width="853"
@@ -28,7 +30,10 @@ const YouTubeVideo = ({ videoId }) => {
                 allowFullScreen
                 title="Embedded youtube"
             />
-        </DockArea>)
+        </DockArea>
+        {caption ? <center><i>{caption}</i><br/></center> : null}
+        </>
+    )
 }
 
 export default YouTubeVideo;
