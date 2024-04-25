@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.9d562f9a.js",
+    "main.js": "/homepage/static/js/main.c326f99c.js",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
     "static/media/phoenix.jpg": "/homepage/static/media/phoenix.2f06caa90c7d0778b13a.jpg",
     "static/media/torgal.jpg": "/homepage/static/media/torgal.4a52cb2fd83ab43654da.jpg",
@@ -20,14 +20,15 @@
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
+    "static/media/inter20.svg": "/homepage/static/media/inter20.752f8e742172428f50e4498f95670b33.svg",
     "static/media/explosion.svg": "/homepage/static/media/explosion.2667c6eb52ac06a390e5d2f91fee38eb.svg",
     "static/media/itchio-logo-textless-white.svg": "/homepage/static/media/itchio-logo-textless-white.bdb53e4f63aab9ff2bada633e16d1c01.svg",
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.9d562f9a.js.map": "/homepage/static/js/main.9d562f9a.js.map"
+    "main.c326f99c.js.map": "/homepage/static/js/main.c326f99c.js.map"
   },
   "entrypoints": [
-    "static/js/main.9d562f9a.js"
+    "static/js/main.c326f99c.js"
   ]
 }
