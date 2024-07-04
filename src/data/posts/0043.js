@@ -8,14 +8,14 @@ const post = {
     Last time I said that after finishing Final Fantasy VII Rebirth I would need some time to elaborate my thoughts.
     That was weeks ago.
 
-    Now it's not like I was lying or anything, but <i>things are difficult</i> and I'm trying to juggle between work, things that the few free days I managed to get allowed me to finally tackle and <i>more work</i>, so I never got the time to actually tackle the issue.
+    Now it's not like I was lying or anything, but <i>things are difficult</i> and I'm trying to juggle work, things that the few free days I managed to get allowed me to finally tackle and <i>more work</i>, so I never got the time to actually face the issue.
     `)}
 
     <iframe title="Watch out! A non metal song!" style={{ borderRadius: "12px"}} src="https://open.spotify.com/embed/track/3J3ikI3V92StCrZhrknEW6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <i>...sometimes we make promises we never mean to keep</i>
     <br/><br/>
     {splitText(`
-    To beh 100% honest, I've also got to add that I actually wanted to beat the hard mode as well but it is -as you might expect- <i>difficult</i>.
+    To beh 100% honest, I've also got to add that I really wanted to beat the hard mode as well but it is -as you might expect- <i>difficult</i>.
     Like <b>actually</b> difficult.
     I don't know, Final Fantasy VII Remake had a similar concept for its hard mode but I considered it to be a outstandingly well balanced, letting you transition from a first playthrough where you can enjoy the plot without spending an excessive amount of effort to a second run where the game would actually challenge your understanding of the mechanics without ever getting unfair.
 
