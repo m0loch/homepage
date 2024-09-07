@@ -2,11 +2,11 @@ import { splitText } from '../../components/common/textFunctions';
 
 const post = {
     title: "It is done.",
-    date: new Date("2024-07-22"),
+    date: new Date("2024-08-18"),
     smartContent: (
         <>
             {splitText(`
-            I proudly announce that today, August 19th 2024, I obtained the platinum trophy for Final Fantasy 7 Rebirth.
+            I proudly announce that today, August 18th 2024, I obtained the platinum trophy for Final Fantasy 7 Rebirth.
 
             This will have consequences.
 
