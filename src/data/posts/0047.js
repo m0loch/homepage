@@ -247,7 +247,7 @@ function StatefulPost() {
                     src={unreliableCloud2}
                     align="right"
                 >
-                    (This has never happened)
+                    (This never happened)
                 </CustomImage>
                 {splitText(`
                 ...so we also witness Cloud ret-con his own memory and come up with a completely made up scenario where Zack died in the river when the bridge collapsed.
@@ -320,8 +320,6 @@ function StatefulPost() {
                 The original Dyne is not just a crazy monster that succumbed to his own trauma and went full Joker, but he's first and foremost an actual reflection of Barret, and by facing him Barret also ends up facing his own self, the fact that while he managed to "do a better job" than Dyne in recovering, he mainly did so thanks to the responsabilities he took towards Marlene, while her <i>actual father</i> had to live all these years thinking she was dead.
 
                 After their confrontation, the original Dyne decided to put an end to his own life because he didn't want her daughter's father to be a monster and realized that, from his point of view, that was his only way out; Barret can't do anything about this, he'll just have to bear the burden of this on top of everything else.
-                His friend, that was right all along about Shinra, is basically dead <i>again</i> and he could do nothing to save him <i>again</i>.
-                It's sad, it's powerful... and it's probably a bit too much for Square Enix in 2024.
                 `)}
                 <CustomImage
                 alt="Facing Dyne"
@@ -329,6 +327,8 @@ function StatefulPost() {
                 align="right"
                 />
                 {splitText(`
+                His friend, that was right all along about Shinra, is basically dead <i>again</i> and he could do nothing to save him <i>again</i>.
+                It's sad, it's powerful... and it's probably a bit too much for Square Enix in 2024.
 
                 Now please fight Palmer in the robofrog, it's wacky boss time!
                 (By the way: I'll talk about the weird pacing of these story beats later when discussing about Corel).
