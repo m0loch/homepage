@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.6273b648.js",
+    "main.js": "/homepage/static/js/main.97f5a0ce.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -15,6 +15,8 @@
     "static/media/yuffie.jpg": "/homepage/static/media/yuffie.b944d8a229fd70deec9a.jpg",
     "static/media/sephiroth.jpg": "/homepage/static/media/sephiroth.8e3ed6d3a99f83e102af.jpg",
     "static/media/torgal.jpg": "/homepage/static/media/torgal.4a52cb2fd83ab43654da.jpg",
+    "static/media/aerith-ending.jpg": "/homepage/static/media/aerith-ending.0321f98793670ed891bf.jpg",
+    "static/media/aerith-prayer.jpg": "/homepage/static/media/aerith-prayer.92d17fce5e77cc6df906.jpg",
     "static/media/cloud-unreliable-1.jpg": "/homepage/static/media/cloud-unreliable-1.ea6ea4d16b446f17232e.jpg",
     "static/media/red_xiii.jpg": "/homepage/static/media/red_xiii.e0e1af3158b37906d1b4.jpg",
     "static/media/barret-date.jpg": "/homepage/static/media/barret-date.ec75e3a643c6866755b3.jpg",
@@ -24,9 +26,11 @@
     "static/media/aerith.jpg": "/homepage/static/media/aerith.c6d96864472f1499e92e.jpg",
     "static/media/cait_sith.jpg": "/homepage/static/media/cait_sith.d06899f177d8f679951b.jpg",
     "static/media/barret-dyne-2.jpg": "/homepage/static/media/barret-dyne-2.0f0f92e844c95c9824c6.jpg",
+    "static/media/tifa-junon.jpg": "/homepage/static/media/tifa-junon.2e72a4b82637a03620a4.jpg",
     "static/media/vincent.jpg": "/homepage/static/media/vincent.ba7b8d1b6e60876452da.jpg",
     "static/media/angry-cat-AI.png": "/homepage/static/media/angry-cat-AI.2de2db30e8a0fcaae8ca.png",
     "static/media/barret-dyne.jpg": "/homepage/static/media/barret-dyne.1d63a33f74fb427d43c4.jpg",
+    "static/media/tifa-past.jpg": "/homepage/static/media/tifa-past.b26df87af99c891a0ecc.jpg",
     "static/media/tifa.jpg": "/homepage/static/media/tifa.4a37d45ccffaac8abe32.jpg",
     "static/media/ff16quest.jpg": "/homepage/static/media/ff16quest.b3f9a949adfe50fdfcca.jpg",
     "static/media/ahriman.jpg": "/homepage/static/media/ahriman.775f93217477d2c9489a.jpg",
@@ -49,9 +53,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.6273b648.js.map": "/homepage/static/js/main.6273b648.js.map"
+    "main.97f5a0ce.js.map": "/homepage/static/js/main.97f5a0ce.js.map"
   },
   "entrypoints": [
-    "static/js/main.6273b648.js"
+    "static/js/main.97f5a0ce.js"
   ]
 }
