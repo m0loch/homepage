@@ -2,14 +2,17 @@ import { useRef } from 'react';
 import { styled } from '@mui/system';
 
 const StyledFigure = styled('figure', {
-    shouldForwardProp: (prop) => prop !== 'align'
+    shouldForwardProp: (prop) => prop !== 'align' && prop !== 'hasCaption'
 })(
-    ({ align }) => ({
+    ({ align, hasCaption }) => {
+        return ({
         display: "grid",
-        margin: "25px 25px 0",
+        marginLeft: align === 'center' ? "auto" : "25px",
+        marginRight: align === 'center' ? "auto" : "25px",
+        marginBottom: hasCaption ? "0" : "25px",
         float: align,
         maxWidth: align ? "40%" : "100%"
-    })
+    })}
 );
 
 const StyledImg = styled('img')(
@@ -61,7 +64,7 @@ export default function CustomImage(props) {
     }
 
     return (
-        <StyledFigure align={props.align}>
+        <StyledFigure align={props.align} hasCaption={props.children !== undefined}>
             <StyledPanel ref={panelRef} onClick={zoomImg}/>
             <StyledImg
                 alt={props.alt}

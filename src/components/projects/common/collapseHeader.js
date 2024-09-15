@@ -9,7 +9,8 @@ export default function CollapseHeader(props) {
             style={{ display: "flex", alignItems: "center" }}
             className={props.className}
         >
-            <h4>{props.caption}</h4>
+            <h4>{props.caption ?? null}</h4>
+            {props.children}
             <IconButton onClick={props.onClick}>
                 {props.open ? <ExpandLess /> : <ExpandMore />}
             </IconButton>

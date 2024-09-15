@@ -10,7 +10,7 @@ export function BookmarkLink(props) {
         <a
             href={`#${props.id}`}
             onClick={e => GoToContent(e, props.id)}
-            style={props.style}
+            style={{...props.style, ...(props.isTitle ? {fontSize: '1.17rem', fontWeight: "bold"} : null)}}
         >
             {props.children}
         </a>
@@ -19,11 +19,11 @@ export function BookmarkLink(props) {
 
 export function Bookmark(props) {
     return (
-        <h3>
+        <h3 style={ props.isTitle ? {fontSize: '1.75rem', fontWeight: "bold"} : null}>
             <span id={props.id}>
                 <b>{props.children}</b>
             </span>
-            <BookmarkLink id={"Table_of_contents"} style={{ "margin-left": "5px" }}>
+            <BookmarkLink id={"Table_of_contents"} style={{ "marginLeft": "5px" }}>
                 <b>^</b>
             </BookmarkLink>
         </h3>
