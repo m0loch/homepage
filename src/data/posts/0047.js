@@ -31,6 +31,10 @@ import homecoming from '../../images/post-0047/ch2/cloud-homecoming.jpg';
 import barret_date from '../../images/post-0047/ch2/barret-date.jpg';
 import barret_dyne from '../../images/post-0047/ch2/barret-dyne.jpg';
 import barret_dyne2 from '../../images/post-0047/ch2/barret-dyne-2.jpg';
+import tifa_junon from '../../images/post-0047/ch2/tifa-junon.jpg'
+import tifa_past from '../../images/post-0047/ch2/tifa-past.jpg'
+import aerith_prayer from '../../images/post-0047/ch2/aerith-prayer.jpg'
+import aerith_ending from '../../images/post-0047/ch2/aerith-ending.jpg'
 
 import WarningIcon from '@mui/icons-material/Warning';
 
@@ -39,8 +43,6 @@ function StatefulPost() {
 
     const handleStateChange = (idx) => {
         const newState = [...open];
-        console.log(newState);
-        console.log(open);
         newState[idx] = !open[idx];
         setOpen(newState);
     }
@@ -341,7 +343,41 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                We left Tifa being the best damage dealer in Remake and -guess what- she still is.
+                She's great at avoiding attacks, she's got an outstanding phisical strength, her aerial play has been improved dramatically like Cloud's, her stagger manipulation is a game changer.
+                "Phisical attacks are great, but in Rebirth magic is just broken" you might say - and you'll be right.
+                Give her the ATK<->MATK attack and she suddenly rivals Aerith while still retaining all her pluses.
+                
+                Now, for the plot: if I had a lot of complaints about the "new" Barret, the rewriting done on Tifa is something I really appreciate.
                 `)}
+                <CustomImage
+                    alt="Tifa confessing"
+                    src={tifa_junon}
+                    align="right"
+                >
+                    <i>Do you remember eMiLiO?!?</i>
+                </CustomImage>
+                {splitText(`
+                In the original nobody ever challenges Cloud's recollection of the Nibelheim's facts in Kalm, and when we finally discover the truth Tifa just says that she knew he was wrong all along but she feared confronting him on that because <i>reasons</i>.
+                Rebirth is a game with a completely different deliver though, which has let the writers to address the issue in a way that, while being way more complicated, manages to depict a different Tifa.
+
+                As soon as chapter 2 starts she immediately confronts Cloud over his story's inconsistency, doubling down on Junon when she tries to test Cloud's memories of their younger days, and throughout the story while bonding with Aerith it's heavily implied that the two of them are constantly discussing what happened back in the day, the role of Zack, and what to make of Cloud's mental state.
+
+                `)}
+                <CustomImage
+                    alt="Tifa with a younger Cloud"
+                    src={tifa_past}
+                    align="left"
+                />
+                {splitText(`
+                She's also always the first one to spot when Cloud starts acting weird, and her role as Cloud's mental ward is so prominent that Sephiroth tries to gaslight him multiple times on doubting her identity, ending up with him attacking her in Gongaga - in a scene that leads to what I expect to be a set up of the big "healing" scene that should come up in the third installment.
+
+                I just don't get why Lara Croft's breast size could be normalized over the last 30 years while the FF fan base can't let us having a normal looking character but whatever...
+                `)}
+                <a href="https://www.thegamer.com/tifa-lockhart-italian-icon-senate-hentai-final-fantasy/"
+                    onClick={e => {e.preventDefault(); window.open('https://www.thegamer.com/tifa-lockhart-italian-icon-senate-hentai-final-fantasy/', "_blank", "noreferrer");}}>
+                        But we're talking about a character so sexualized she found her way to the italian senate, so...
+                </a>
                 
                 <Bookmark id="Aerith">Aerith Gainsborough</Bookmark>
                 <CustomImage
@@ -350,6 +386,39 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                Aerith, the last character from Remake, but I dare say the most important of Rebirth.
+
+                In combat she's by far the best spellcaster and while her basic combat is apparently lacking, her wards are utterly gamebreaking, so I won't delve too much on her combat prowess.
+
+                `)}
+                <CustomImage
+                    alt="THAT scene"
+                    src={aerith_prayer}
+                    align="left"
+                >
+                    Yup. It's <i>that</i> scene.
+                </CustomImage>
+                {splitText(`
+                From a narrative standpoint, she's in a difficult position, needing to be both the pivotal character that ends up sacrificing herself in order to save the world <i>and</i> kind of a sidelined character that lets everyone elsehave their own spotlight.
+                We start the game by discovering that at the end of Remake the whispers took her memory of the future away.
+                Wait, we <u>actually</u> start the game by controlling a dead character that saves her comatose body from Shinra in a different universe.
+
+                My God, this game's plot is really something.
+                `)}
+                <CustomImage
+                    alt="And if I said I wasn't?"
+                    src={aerith_ending}
+                    align="right"
+                >
+                </CustomImage>
+                {splitText(`
+                Whatever, long story short her role has been greatly expanded - while in the original game she's basically a character on par with the others that at some point realizes that her being an ancient means she has extra duties and dies trying to save the world, this time around we live the same scenes <i>but at the same time</i> we know that her is a superior being, fragmented in the multiverse, representing the opposite of Sephiroth's power.
+                `)}
+                <p>All in all, she's dead as she was supposed to be, but at the same time she really isn't<InlineSpoiler mask='*'>Because, you know, she shows up for the final boss</InlineSpoiler>.</p>
+                {splitText(`
+                Even if we won't discover if the version of her we see at the ending is actually her ghost, an astral projection of her actual self from another universe or just the delusion of a broken mind.
+
+                We just need to wait some years.
                 `)}
 
                 <Bookmark id="Red_XIII">Red XIII</Bookmark>
