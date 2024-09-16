@@ -31,10 +31,17 @@ import homecoming from '../../images/post-0047/ch2/cloud-homecoming.jpg';
 import barret_date from '../../images/post-0047/ch2/barret-date.jpg';
 import barret_dyne from '../../images/post-0047/ch2/barret-dyne.jpg';
 import barret_dyne2 from '../../images/post-0047/ch2/barret-dyne-2.jpg';
-import tifa_junon from '../../images/post-0047/ch2/tifa-junon.jpg'
-import tifa_past from '../../images/post-0047/ch2/tifa-past.jpg'
-import aerith_prayer from '../../images/post-0047/ch2/aerith-prayer.jpg'
-import aerith_ending from '../../images/post-0047/ch2/aerith-ending.jpg'
+import tifa_junon from '../../images/post-0047/ch2/tifa-junon.jpg';
+import tifa_past from '../../images/post-0047/ch2/tifa-past.jpg';
+import aerith_prayer from '../../images/post-0047/ch2/aerith-prayer.jpg';
+import aerith_ending from '../../images/post-0047/ch2/aerith-ending.jpg';
+import red_back_home from '../../images/post-0047/ch2/red-back-home.jpg';
+import red_seto from '../../images/post-0047/ch2/red-seto.jpg';
+import yuffie_boat from '../../images/post-0047/ch2/yuffie-boat.jpg';
+import yuffie_materia from '../../images/post-0047/ch2/yuffie-materia.jpg';
+import cait_sacrifice from '../../images/post-0047/ch2/cait-sacrifice.jpg';
+import reeve from '../../images/post-0047/ch2/reeve.jpg';
+import tiny_bronco from '../../images/post-0047/ch2/tiny-bronco.jpg';
 
 import WarningIcon from '@mui/icons-material/Warning';
 
@@ -103,10 +110,10 @@ function StatefulPost() {
                     <li><BookmarkLink id="Red_XIII">Red XIII</BookmarkLink></li>
                     <li><BookmarkLink id="Yuffie">Yuffie Kisaragi</BookmarkLink></li>
                     <li><BookmarkLink id="Cait_Sith">Cait Sith</BookmarkLink></li>
-                    <li><BookmarkLink id="Zack">Zack Fair</BookmarkLink></li>
-                    <li><BookmarkLink id="Sephiroth">Sephiroth</BookmarkLink></li>
                     <li><BookmarkLink id="Cid">Cid Highwind</BookmarkLink></li>
                     <li><BookmarkLink id="Vincent Valentine">Vincent</BookmarkLink></li>
+                    <li><BookmarkLink id="Zack">Zack Fair</BookmarkLink></li>
+                    <li><BookmarkLink id="Sephiroth">Sephiroth</BookmarkLink></li>
                     <li><BookmarkLink id="Shinra_Turks">Shinra and the Turks</BookmarkLink></li>
                     <li><BookmarkLink id="Cameos">Cameos</BookmarkLink></li>
                     <br/>
@@ -418,7 +425,7 @@ function StatefulPost() {
                 {splitText(`
                 Even if we won't discover if the version of her we see at the ending is actually her ghost, an astral projection of her actual self from another universe or just the delusion of a broken mind.
 
-                We just need to wait some years.
+                We <i>just</i> need to wait <i>some years</i>.
                 `)}
 
                 <Bookmark id="Red_XIII">Red XIII</Bookmark>
@@ -428,6 +435,41 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                Red XIII is the first "new" character introduced by Rebirth, as his past iteration from Remake wasn't actually playable.
+                
+                Mechanically speaking he's a melee fighter that makes up for his lack of aerial prowess and long range options with some unique twists:
+                <ul><li>his Vengeance mechanic favours good blocking, giving him a way to power up both his base attacks and regain small amounts of HP;</li>
+                <li>Stardust Ray costs 2 ATB bars but takes care of small critters, builds a good amount of stagger and (kind of) stuns enemies for a bit, letting you dictate the tempo of the fight;</li>
+                <li>he's very agile, his attacks are ok for closing in, he's got good dodging abilities, and by keeping square pushed you access his spinning attack that lets you dish out damage while still being constantly on the move;</li>
+                </ul>
+                `)}
+                <CustomImage
+                alt="Red XIII coming home"
+                src={red_back_home}
+                align="left"
+                >
+                    <i>Yeah, go ahead and pet our mighty companion, that's not weird at all</i>
+                </CustomImage>
+                {splitText(`
+
+                He's kind of a weird entry, as he's not a bad character by any means, but at the same time he doesn't bring anything really outstanding to the table, meaning that you're either a fan of him or he's going to quietly drop to the back ranks, waiting for his own story bits to shine.
+
+                Now, this is just a matter of personal taste, but I'm not a big fan of how some of his best abilities are tied to his Vengeance gauge (i.e.: Supernatural Fervor) and while I remember how I thought "I have to try this with Reddie-boi" as soon as I found the Darkside materia, I never really bothered to do so.
+
+                Rebirth puts him in a <i>thematically</i> weird spot as well: on one side I consider the return to Cosmo Canyon hilarious and overall a good way to take advantage of the different delivery this game can support when confronted to the original game, but on the other hand I feel like this new version of the cave of the Gi feels a little contrived, with the Seto reveal also ending up a bit rushed thanks to the impromptu trip to the island of the Gi.
+                `)}
+                <CustomImage
+                alt="Seto"
+                src={red_seto}
+                align="right"
+                >
+                    "Sorry dad, I've gotta go but I'll come back and visit I promise!"
+                </CustomImage>
+                {splitText(`
+
+                To reiterate: I liked the choice of having two different voice actors for when he's wearing the wise warrior coat or his young puppy Nanaki persona and the whole "Bye guys, I'm home, have fun saving the world" stance he assumes at the start of his subplot, yet at the same time the game doesn't let you enjoy the big moment of him reuniting to his dad (or what's left of him, depending on your point of view) because COME ON, HERE'S SOME MORE EXTRA CONTENT.
+
+                Letting the scene sink in a bit would have done wonders but whatever, this seems to be a recurring issue (Dyne anyone?), and it's a pity.
                 `)}
 
                 <Bookmark id="Yuffie">Yuffie Kisaragi</Bookmark>
@@ -437,12 +479,107 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                Another new character, but this time not really, since she already had her own DLC in remake.
+
+                I won't spend too much time on her combat style: she's agile, she can throw her shuriken thus building up ATB while staying safe, she comes with built-in elemental attack support <b>and</b> she's part of a game breaking combo with Aerith.
+
+                `)}
+                <CustomImage
+                alt="Yuffie in Junon"
+                src={yuffie_boat}
+                align="left"
+                >
+                    I've never seen a character SO defined by their motion sickness, yet they put her on a boat in a pond for <i>plot</i>
+                </CustomImage>
+                {splitText(`
+                She's also getting a lot of screen time that isn't supposed to be here, but that's something you have to take in account given that she was pushed to being a bonus character in the original game by budget/time constraints during development.
+
+                So, be prepared to meet her in Junon and take Priscilla's place in getting attacked by the Bottomswell (and getting subjected to CPR), then see her having a cameo role during the parade, then popping up again during an originally non-existent scene in Costa del Sol, then joining the party.
+
+                `)}
+                <CustomImage
+                alt="Yuffie collecting materia"
+                src={yuffie_materia}
+                align="right"
+                />
+                {splitText(`
+                All in all I feel she's a well written character and shows a good chemistry with the other members of the party, but every time she has even an ounce of "relevance" in the plot, you just know that it's something that should not be part of the plot in the first place, like the scene in Nibelheim where you find a bunch of dead wutaian soldier.
+                Let's see how the visit to Wutai pans out in part 3, the dynamics between the fallen nation and the world we managed to visit so far have been hyped up a lot.
                 `)}
 
                 <Bookmark id="Cait_Sith">Cait Sith</Bookmark>
                 <CustomImage
                     alt="Cait Sith"
                     src={cait_sith}
+                >
+                </CustomImage>
+                {splitText(`
+                As the last playable character, here's the most peculiar one.
+                Cait Sith is a pint-sized cat animatronic that can summon a big, stuffed moogle to fight at his side - this means that being proficient with the character goes through mastering both his mounted and unmounted stances, reworking one's brain to a different style of dodging and managing the ATB bar knowing that in order to have the full spectrum of skills available, you need to summon the moogle and either try to keep it alive or be prepared to summon a new one.
+
+                `)}
+                <CustomImage
+                alt="Reeve among Scarlet and Hojo"
+                src={reeve}
+                align="left"
+                >
+                    The man behind the cat
+                </CustomImage>
+                {splitText(`
+                I'll be honest here: I tried to stay away from him as much as I could in the original game, I uninstalled Ever Crisis a week after he was added, and during Rebirth I used it just when the plot (or Chadley) forced me to do so.
+
+                Oddly enough, compared to most other characters, his bits have been changed a bit, but not <i>that</i> much.
+
+                `)}
+                <CustomImage
+                alt="Cait Sith sacrificing his body for the party"
+                src={cait_sacrifice}
+                align="right"
+                />
+                {splitText(`
+                While in the original game he betrayed the party but managed to keep following it by kidnapping Marlene and blackmailing everyone, this time he just accepts the consequences of smuggling the keystone to the Turks and comes back later just in time for his not-so-heroic not-so-sacrifice.
+
+                He also has a couple of extra moments where he's seen helping the party by just trolling Shinra and he's also the main protagonist of the worst dungeon of the whole game in my opinion (located in chapter 11, if you're wondering).
+
+                All in all, I don't hate the character, but I can't be bothered using him either.
+                `)}
+
+                <Bookmark id="Cid">Cid Highwind</Bookmark>
+                <CustomImage
+                    alt="Cid Highwind"
+                    src={cid}
+                >
+                </CustomImage>
+                {splitText(`
+                I'm going to briefly address Cid here as a member of the original cast, even though he's not a playable character (much like Red XIII in Remake).
+
+                There's no way for me to state how much I hate the complete rewriting he's been through in this game.
+
+                In the original game he was a Shinra employee that wanted to be the first man in space, then called off the launch of his rocket in order to save a scientist that was doing some late tests on said rocket oxygen's tanks, and witnessed his dreams shatter as Shinra stopped caring about space exploration in order to divert all the budget towards mako production.
+
+                `)}
+                <CustomImage
+                alt="The party sees the Tiny Bronco for the first time"
+                src={tiny_bronco}
+                align="right"
+                >
+                    This is the Tiny Bronco. It bears more charisma than its pilot.
+                </CustomImage>
+                {splitText(`
+                He was a constantly swearing old man, a chain smoker, and a straight abuser towards Shera, the aforementioned scientist that basically saved his life by forfeiting her life to finish her job.
+                I get that Rocket Town has been cut out of the story (for budget reasons or to keep the writing lean? I don't really know) and I <b>also</b> understand that we're talking about a character that's a bit too much too handle for the current standard of politically correctness (I'm not even complaining, I swear), but this new Cid doesn't even share the <i>same hair color</i> of the original.
+
+                Now it's just a pilot.
+                The party stumbles into him in Gongaga.
+                He decides to enter the party because Ifalna -Aerith's mother- was pretty and he's sad in discovering she's dead.
+
+                I'll just move on before I start screaming.
+                `)}
+
+                <Bookmark id="Vincent">Vincent Valentine</Bookmark>
+                <CustomImage
+                    alt="Vincent Valentine"
+                    src={vincent}
                 >
                 </CustomImage>
                 {splitText(`
@@ -461,24 +598,6 @@ function StatefulPost() {
                 <CustomImage
                     alt="Sephiroth"
                     src={sephiroth}
-                >
-                </CustomImage>
-                {splitText(`
-                `)}
-
-                <Bookmark id="Cid">Cid Highwind</Bookmark>
-                <CustomImage
-                    alt="Cid Highwind"
-                    src={cid}
-                >
-                </CustomImage>
-                {splitText(`
-                `)}
-
-                <Bookmark id="Vincent">Vincent Valentine</Bookmark>
-                <CustomImage
-                    alt="Vincent Valentine"
-                    src={vincent}
                 >
                 </CustomImage>
                 {splitText(`
