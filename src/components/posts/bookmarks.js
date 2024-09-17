@@ -1,6 +1,5 @@
 const GoToContent = (e, label) => {
     e.preventDefault();
-    console.log("LET'S GOOOO")
     document.querySelector(`#${label}`)?.scrollIntoView({
         behavior: "smooth"
     });
