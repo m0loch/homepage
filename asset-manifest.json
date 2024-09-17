@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.d0c900ee.js",
+    "main.js": "/homepage/static/js/main.a8c20760.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
     "static/media/intro.jpg": "/homepage/static/media/intro.ff4533332a5fd2d2b8a5.jpg",
     "static/media/world_map.jpg": "/homepage/static/media/world_map.508cd73c4e767654fce4.jpg",
     "static/media/phoenix.jpg": "/homepage/static/media/phoenix.2f06caa90c7d0778b13a.jpg",
+    "static/media/vincent-monster.jpg": "/homepage/static/media/vincent-monster.d92f7e8a3e1fbed7c755.jpg",
     "static/media/tiny-bronco.jpg": "/homepage/static/media/tiny-bronco.93f0017942b49af91cf5.jpg",
     "static/media/gilgamesh.jpg": "/homepage/static/media/gilgamesh.e0cef86094f20a8af898.jpg",
     "static/media/logo.png": "/homepage/static/media/logo.dac89f8ab0284d5113f2.png",
@@ -20,6 +21,7 @@
     "static/media/torgal.jpg": "/homepage/static/media/torgal.4a52cb2fd83ab43654da.jpg",
     "static/media/aerith-ending.jpg": "/homepage/static/media/aerith-ending.0321f98793670ed891bf.jpg",
     "static/media/aerith-prayer.jpg": "/homepage/static/media/aerith-prayer.92d17fce5e77cc6df906.jpg",
+    "static/media/zack-cloud.jpg": "/homepage/static/media/zack-cloud.e266682a5b35d54359b1.jpg",
     "static/media/cloud-unreliable-1.jpg": "/homepage/static/media/cloud-unreliable-1.ea6ea4d16b446f17232e.jpg",
     "static/media/red_xiii.jpg": "/homepage/static/media/red_xiii.e0e1af3158b37906d1b4.jpg",
     "static/media/barret-date.jpg": "/homepage/static/media/barret-date.ec75e3a643c6866755b3.jpg",
@@ -60,9 +62,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.d0c900ee.js.map": "/homepage/static/js/main.d0c900ee.js.map"
+    "main.a8c20760.js.map": "/homepage/static/js/main.a8c20760.js.map"
   },
   "entrypoints": [
-    "static/js/main.d0c900ee.js"
+    "static/js/main.a8c20760.js"
   ]
 }
