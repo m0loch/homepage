@@ -11,7 +11,7 @@ const post = {
     Now it's not like I was lying or anything, but <i>things are difficult</i> and I'm trying to juggle work, things that the few free days I managed to get allowed me to finally tackle and <i>more work</i>, so I never got the time to actually face the issue.
     `)}
 
-    <iframe title="Watch out! A non metal song!" style={{ borderRadius: "12px"}} src="https://open.spotify.com/embed/track/3J3ikI3V92StCrZhrknEW6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe title="Watch out! A non metal song!" style={{ borderRadius: "12px"}} src="https://open.spotify.com/embed/track/3J3ikI3V92StCrZhrknEW6?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <i>...sometimes we make promises we never mean to keep</i>
     <br/><br/>
     {splitText(`
