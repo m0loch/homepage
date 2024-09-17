@@ -42,16 +42,28 @@ import yuffie_materia from '../../images/post-0047/ch2/yuffie-materia.jpg';
 import cait_sacrifice from '../../images/post-0047/ch2/cait-sacrifice.jpg';
 import reeve from '../../images/post-0047/ch2/reeve.jpg';
 import tiny_bronco from '../../images/post-0047/ch2/tiny-bronco.jpg';
+import vincent_monster from '../../images/post-0047/ch2/vincent-monster.jpg';
+import zack_cloud from '../../images/post-0047/ch2/zack-cloud.jpg';
 
 import WarningIcon from '@mui/icons-material/Warning';
 
 function StatefulPost() {
-    const [open, setOpen] = useState([true, true, true, false, false]);
+    const [open, setOpen] = useState([true, false, false, false, false]);
 
-    const handleStateChange = (idx) => {
+    const handleStateChange = idx => {
         const newState = [...open];
         newState[idx] = !open[idx];
         setOpen(newState);
+    }
+
+    const forcePanelOpen = idx => {
+        const newState = [...open];
+
+        // If the section is closed, force it open to allow navigation
+        if (!open[idx]) {
+            newState[idx] = true;
+            setOpen(newState);
+        }
     }
 
     const tempIconStyle = {
@@ -98,24 +110,22 @@ function StatefulPost() {
             <StyledCollapse in={open[0]} timeout="auto" unmountOnExit>
                 <ol>
                     <BookmarkLink id="Pt1" isTitle>Part 1: Rebirth in a vacuum</BookmarkLink>
-                    <li><BookmarkLink id="Nutshell">What are we even talking about?</BookmarkLink></li>
-                    <li><BookmarkLink id="Game_Structure">Game structure</BookmarkLink></li>
-                    <li><BookmarkLink id="Gameplay">Gameplay</BookmarkLink></li>
+                    <li><BookmarkLink id="Nutshell" onPreClick={() => forcePanelOpen(1)}>What are we even talking about?</BookmarkLink></li>
+                    <li><BookmarkLink id="Game_Structure" onPreClick={() => forcePanelOpen(1)}>Game structure</BookmarkLink></li>
+                    <li><BookmarkLink id="Gameplay" onPreClick={() => forcePanelOpen(1)}>Gameplay</BookmarkLink></li>
                     <br/>
                     <BookmarkLink id="Pt2" isTitle>Part 2: The characters</BookmarkLink>
-                    <li><BookmarkLink id="Cloud">Cloud Strife</BookmarkLink></li>
-                    <li><BookmarkLink id="Barret">Barret Wallace</BookmarkLink></li>
-                    <li><BookmarkLink id="Tifa">Tifa Lockhart</BookmarkLink></li>
-                    <li><BookmarkLink id="Aerith">Aerith Gainsborough</BookmarkLink></li>
-                    <li><BookmarkLink id="Red_XIII">Red XIII</BookmarkLink></li>
-                    <li><BookmarkLink id="Yuffie">Yuffie Kisaragi</BookmarkLink></li>
-                    <li><BookmarkLink id="Cait_Sith">Cait Sith</BookmarkLink></li>
-                    <li><BookmarkLink id="Cid">Cid Highwind</BookmarkLink></li>
-                    <li><BookmarkLink id="Vincent Valentine">Vincent</BookmarkLink></li>
-                    <li><BookmarkLink id="Zack">Zack Fair</BookmarkLink></li>
-                    <li><BookmarkLink id="Sephiroth">Sephiroth</BookmarkLink></li>
-                    <li><BookmarkLink id="Shinra_Turks">Shinra and the Turks</BookmarkLink></li>
-                    <li><BookmarkLink id="Cameos">Cameos</BookmarkLink></li>
+                    <li><BookmarkLink id="Cloud" onPreClick={() => forcePanelOpen(2)}>Cloud Strife</BookmarkLink></li>
+                    <li><BookmarkLink id="Barret" onPreClick={() => forcePanelOpen(2)}>Barret Wallace</BookmarkLink></li>
+                    <li><BookmarkLink id="Tifa" onPreClick={() => forcePanelOpen(2)}>Tifa Lockhart</BookmarkLink></li>
+                    <li><BookmarkLink id="Aerith" onPreClick={() => forcePanelOpen(2)}>Aerith Gainsborough</BookmarkLink></li>
+                    <li><BookmarkLink id="Red_XIII" onPreClick={() => forcePanelOpen(2)}>Red XIII</BookmarkLink></li>
+                    <li><BookmarkLink id="Yuffie" onPreClick={() => forcePanelOpen(2)}>Yuffie Kisaragi</BookmarkLink></li>
+                    <li><BookmarkLink id="Cait_Sith" onPreClick={() => forcePanelOpen(2)}>Cait Sith</BookmarkLink></li>
+                    <li><BookmarkLink id="Cid" onPreClick={() => forcePanelOpen(2)}>Cid Highwind</BookmarkLink></li>
+                    <li><BookmarkLink id="Vincent" onPreClick={() => forcePanelOpen(2)}>Vincent Valentine</BookmarkLink></li>
+                    <li><BookmarkLink id="Zack" onPreClick={() => forcePanelOpen(2)}>Zack Fair</BookmarkLink></li>
+                    <li><BookmarkLink id="Sephiroth" onPreClick={() => forcePanelOpen(2)}>Sephiroth</BookmarkLink></li>
                     <br/>
                     <BookmarkLink id="Pt3" isTitle>Part 3: The discovery of the "new" Gaia</BookmarkLink>
                     <li><BookmarkLink id="WB_Summary">How the planet changed in just 27 years</BookmarkLink></li>
@@ -583,6 +593,25 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                Another fan favourite, Vincent Valentine is back but he doesn't deserve to be a playable character yet.
+                `)}
+                <br/>
+                <p>He's pretty much the same old self, <i>except</i> the fact that instead of choosing to spend his life in a coffin<InlineSpoiler mask='*'>I just recently discovered that if its section has six-sides it's called coffin, while caskets just have four and appears to be more box-like. I just HAD to share this with you, I KNOW you wanted to know</InlineSpoiler> waiting for the inevitable heat death of the universe while repenting for his sins, he is now spending his life in a coffin as a Shinra employee while guarding a lab.</p>
+                {splitText(`
+
+                Seriously, I couldn't make that up.
+                `)}
+                <CustomImage
+                alt="Vincent as the Galian Beast"
+                src={vincent_monster}
+                align="left"
+                >
+                    <i>"I'M SO ANGRY I JUST HAVE TO SHOW OFF MY COOL POWERS. RAWR."</i>
+                </CustomImage>
+                {splitText(`
+                He also attacks the party because, after granting them access to the inner chambers even though they're presenting false credentials, he manages to both decide to <u>not</u> escort them (so... he trusted them...?) and then attack the party because they wandered off from where he told them they were allowed to go.
+
+                Let's just pretend chapter 11 never happened, I beg you.
                 `)}
 
                 <Bookmark id="Zack">Zack Fair</Bookmark>
@@ -592,6 +621,23 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                Oddly enough for a guy that's been dead for years, Zack is the first playable character we get to control in Rebirth.
+
+                I'll be 100% honest with you: I don't consider Crisis Core a masterful piece of writing, but I still love Zack as a character and I seriously hoped they could come up with a good way to write him back into the story.
+
+                And I'll be lying if I said I'm completely happy with the final result - luckily you can turn his scenes off in the second playthrough so you can avoid all those "scenes from the multiverse" where he takes care of Aerith's and Cloud's bodies while trying to make sense of the situation with Biggs.
+                `)}
+                <CustomImage
+                alt="Zack fighting along Cloud"
+                src={zack_cloud}
+                align="right"
+                />
+                {splitText(`
+                Still, I'm happy I managed to play as him a little. Bonds of Friendship is tough but he's a cool character.
+
+                If we just consider the main plot, I actually loved the subplot where Aerith and Tifa try to make sense of his destiny, and the bit where you meet his parents in Gongaga manages to be sad without getting trite (and I really loved the girls' reaction to Cloud stating the obvious).
+
+                Let's hope everything pays off in the third act.
                 `)}
 
                 <Bookmark id="Sephiroth">Sephiroth</Bookmark>
@@ -601,11 +647,13 @@ function StatefulPost() {
                 >
                 </CustomImage>
                 {splitText(`
+                I'll try to keep this short: the writers decided to follow the same path they went down in Remake, so Sephiroth is basically <i>everywhere</i>, and I really don't want to discuss everything in this section as I feel like it would drag on forever.
+
+                I'm happy they let me control him as a playable character, though.
+                They also managed to give him enough depth to not make him feel like a rushed extra while at the same time conveying the idea that he's <i>way</i> stronger than any other character we're supposed to handle, with the result that (compared to Bonds of Friendship) the To Be a Hero fight is kind of easy.
+
+                No complaints here.
                 `)}
-
-                <Bookmark id="Shinra_Turks">Shinra and the Turks</Bookmark>
-                <Bookmark id="Cameos">Cameos</Bookmark>
-
             </Collapse>
 
             <StyledCollapseHeader
@@ -613,7 +661,7 @@ function StatefulPost() {
                 onClick={() => handleStateChange(3)}
                 isSectionTitle
             >
-                <Bookmark id="Pt2" isTitle>Part 3: The discovery of the "new" Gaia</Bookmark>
+                <Bookmark id="Pt3" isTitle>Part 3: The discovery of the "new" Gaia</Bookmark>
             </StyledCollapseHeader>
 
             <Collapse in={open[3]} timeout="auto" unmountOnExit>
@@ -627,7 +675,7 @@ function StatefulPost() {
                 onClick={() => handleStateChange(4)}
                 isSectionTitle
             >
-                <Bookmark id="Pt2" isTitle>Part 4: what is <i>actually</i> happening here</Bookmark>
+                <Bookmark id="Pt4" isTitle>Part 4: what is <i>actually</i> happening here</Bookmark>
             </StyledCollapseHeader>
 
             <Collapse in={open[4]} timeout="auto" unmountOnExit>
