@@ -97,22 +97,22 @@ function StatefulPost() {
                     <li><BookmarkLink id="Sephiroth" onPreClick={() => forcePanelOpen(2)}>Sephiroth</BookmarkLink></li>
                     <br/>
                     <BookmarkLink id="Pt3" isTitle>Part 3: The discovery of the "new" Gaia</BookmarkLink>
-                    <li><BookmarkLink id="WB_Summary">How the planet changed in just 27 years</BookmarkLink></li>
-                    <li><BookmarkLink id="Grasslands">The grasslands</BookmarkLink></li>
-                    <li><BookmarkLink id="Mythril_Mines">The mythril mines</BookmarkLink></li>
-                    <li><BookmarkLink id="Junon">Junon and its surroundings</BookmarkLink></li>
-                    <li><BookmarkLink id="Corel">Costa del Sol, Mt Corel, the Gold Saucer and the desert</BookmarkLink></li>
-                    <li><BookmarkLink id="Gongaga">Gongaga!</BookmarkLink></li>
-                    <li><BookmarkLink id="Cosmo_Canyon">Cosmo Canyon</BookmarkLink></li>
-                    <li><BookmarkLink id="Nibelheim">The Nibelheim area</BookmarkLink></li>
-                    <li><BookmarkLink id="Meridian_Ocean">The ocean and Gilgamesh island</BookmarkLink></li>
-                    <li><BookmarkLink id="Temple_Cetra">The temple of the Ancient and their city</BookmarkLink></li>
+                    <li><BookmarkLink id="WB_Summary" onPreClick={() => forcePanelOpen(3)}>How the planet changed in just 27 years</BookmarkLink></li>
+                    <li><BookmarkLink id="Grasslands" onPreClick={() => forcePanelOpen(3)}>The grasslands</BookmarkLink></li>
+                    <li><BookmarkLink id="Mythril_Mines" onPreClick={() => forcePanelOpen(3)}>The mythril mines</BookmarkLink></li>
+                    <li><BookmarkLink id="Junon" onPreClick={() => forcePanelOpen(3)}>Junon and its surroundings</BookmarkLink></li>
+                    <li><BookmarkLink id="Corel" onPreClick={() => forcePanelOpen(3)}>Costa del Sol, Mt Corel, the Gold Saucer and the desert</BookmarkLink></li>
+                    <li><BookmarkLink id="Gongaga" onPreClick={() => forcePanelOpen(3)}>Gongaga!</BookmarkLink></li>
+                    <li><BookmarkLink id="Cosmo_Canyon" onPreClick={() => forcePanelOpen(3)}>Cosmo Canyon</BookmarkLink></li>
+                    <li><BookmarkLink id="Nibelheim" onPreClick={() => forcePanelOpen(3)}>The Nibelheim area</BookmarkLink></li>
+                    <li><BookmarkLink id="Meridian_Ocean" onPreClick={() => forcePanelOpen(3)}>The ocean and Gilgamesh island</BookmarkLink></li>
+                    <li><BookmarkLink id="Temple_Cetra" onPreClick={() => forcePanelOpen(3)}>The temple of the Ancient and their city</BookmarkLink></li>
                     <br/>
                     <BookmarkLink id="Pt4" isTitle>Part 4: what is <i>actually</i> happening here</BookmarkLink>
-                    <li><BookmarkLink id="Multiverse">The elephant in the room</BookmarkLink></li>
-                    <li><BookmarkLink id="That_Scene"><i>That</i> scene</BookmarkLink></li>
-                    <li><BookmarkLink id="Ending">The ending</BookmarkLink></li>
-                    <li><BookmarkLink id="Future">What's missing, and what I think will happen in part three</BookmarkLink></li>
+                    <li><BookmarkLink id="Multiverse" onPreClick={() => forcePanelOpen(4)}>The elephant in the room</BookmarkLink></li>
+                    <li><BookmarkLink id="That_Scene" onPreClick={() => forcePanelOpen(4)}><i>That</i> scene</BookmarkLink></li>
+                    <li><BookmarkLink id="Ending" onPreClick={() => forcePanelOpen(4)}>The ending</BookmarkLink></li>
+                    <li><BookmarkLink id="Future" onPreClick={() => forcePanelOpen(4)}>What's missing, and what I think will happen in part three</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 

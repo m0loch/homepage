@@ -431,7 +431,9 @@ function Chapter2() {
 
             I'll be 100% honest with you: I don't consider Crisis Core a masterful piece of writing, but I still love Zack as a character and I seriously hoped they could come up with a good way to write him back into the story.
 
-            And I'll be lying if I said I'm completely happy with the final result - luckily you can turn his scenes off in the second playthrough so you can avoid all those "scenes from the multiverse" where he takes care of Aerith's and Cloud's bodies while trying to make sense of the situation with Biggs.
+            And I'll be lying if I said I'm completely happy with the final result - luckily you can turn his scenes off in the second playthrough so you can avoid all those "scenes from the multiverse" where he takes care of Aerith's and Cloud's bodies while trying to make sense of the whole situation.
+
+            <i>We'll have to discuss this eventually, for now let's just move on.</i>
             `)}
             <CustomImage
             alt="Zack fighting along Cloud"
@@ -439,7 +441,7 @@ function Chapter2() {
             align="right"
             />
             {splitText(`
-            Still, I'm happy I managed to play as him a little. Bonds of Friendship is tough but he's a cool character.
+            Anyhow, I'm happy I managed to play as him a little. Bonds of Friendship is tough but he's a cool character.
 
             If we just consider the main plot, I actually loved the subplot where Aerith and Tifa try to make sense of his destiny, and the bit where you meet his parents in Gongaga manages to be sad without getting trite (and I really loved the girls' reaction to Cloud stating the obvious).
 
