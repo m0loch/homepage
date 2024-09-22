@@ -14,6 +14,12 @@ import mythril_cave from '../../../images/post-0047/ch3/mythril-cave.jpg';
 import mythril_turks from '../../../images/post-0047/ch3/mythril-turks.jpg';
 import mythril_golem from '../../../images/post-0047/ch3/mythril-golem.jpg';
 import mythril_gear from '../../../images/post-0047/ch3/mythril-gear.jpg';
+import junon_cpr from '../../../images/post-0047/ch3/junon-cpr.jpg';
+import junon_fort_condor from '../../../images/post-0047/ch3/junon-fort-condor.jpg';
+import junon_fort_condor_board from '../../../images/post-0047/ch3/junon-fort-condor-board.jpg';
+import junon_panorama from '../../../images/post-0047/ch3/junon-panorama.jpg';
+import junon_parade from '../../../images/post-0047/ch3/junon-parade.jpg';
+import junon_highwind from '../../../images/post-0047/ch3/junon-highwind.jpg';
 
 function Chapter3() {
     return (
@@ -162,6 +168,79 @@ function Chapter3() {
             </CustomImage>
             
             <Bookmark id="Junon">Junon and its surroundings</Bookmark>
+            <CustomImage
+                alt="A view of Junon from afar"
+                src={junon_panorama}
+            />
+
+            <CustomImage
+                alt="An abandoned Fort Condor board"
+                src={junon_fort_condor_board}
+                align="right"
+            >
+                Minigames! Minigames!
+            </CustomImage>
+            {splitText(`            
+            Junon is the second open area of the game, and is partly used to set in stone some rules, partly to introduce a couple of extra elements: of course you'll ride chocobos here as well, but now they've got a special ability; time for another protorelic chase, but this time you'll have to play a strategic minigame.
+
+            `)}
+            <CustomImage
+                alt="Fort Condor in the distance"
+                src={junon_fort_condor}
+                align="left"
+            >
+                Fort Condor in the distance
+            </CustomImage>
+            {splitText(`            
+            For the ones of you that played the Intergrade DLC, we're talking about the Fort Condor tabletop game, that I personally consider a welcome comeback, and this lets us talk about the differences between this and the original games, given the fact that the <i>actual</i> Fort Condor has been retconned away from the continent; it's now placed on a distant, inaccessible island on the south. 
+
+            I know that some people are really mad about something trivial as locations being moved around, but we have to face the truth: the original Fort Condor was just a way to add an extra, environmentally-themed minigame, but didn't add much to the actual plot.
+            27 years later we have a new iteration of that minigame that is way better implemented, and the environmentalism is not the focus anymore, so the devs are free to just move around the pieces of the puzzle in order to give the players a better game experience.            
+            `)}
+            <CustomImage
+                alt="Yuffie getting rescued"
+                src={junon_cpr}
+                align="right"
+            >
+                Back in the day you had to resuscitate Priscilla - now a <i>slightly less</i> underaged girl
+            </CustomImage>
+            {splitText(`
+            This is not even the worst "offense" we're going to witness, so let's just move to more important matters.
+            
+            When visiting Lower Junon we experience the full effect of the modern rewriting:
+            <ul>
+                <li>this time around the Bottomswell will attack Yuffie instead of Priscilla because the dev needed to treat her as a character that's not optional anymore;</li>
+                <li>the party will stay for the night like in the original, but everything hasbeen rewritten to accomodate for the new <i>tone</i> the mystery around Cloud's psyche has taken;</li>
+                <li>Roche will pop up just for the sake of announcing his own cameo - LAAAAAME~</li>
+                <li>the original game then add you go through yet another inconsequential minigame where you had to interact with Mr Dolphin to jump on a platform and find a way to Upper Junon - there was <i>no way in the multiverse</i> this could have gone differently than just having a more fleshed out minigame here.</li>
+            </ul>
+            `)}
+            <CustomImage
+                alt="Cloud dressed as a Shinra soldier"
+                src={junon_parade}
+                align="left"
+            >
+                Ready for the parade
+            </CustomImage>
+            {splitText(`
+                A quick note about the parade: the whole "let's pass as a Shinra soldier" was very unhinged back in the days, and now the game doubles down by having Tifa and Aerith - two girls with no formal soldier training - follow Cloud around.
+                It's played for laughs, so no big issue - nobody could taka as <i>realistic</i> the original version of this section, so there's no purpose in complaining here.
+                
+                The idea of Rufus knowing the party whereabouts and letting them be in order to meet them makes even <i>more</i> sense, too bad that the Yuffie's attempt at assassination is so randomly execute.
+                Also, Barret's reaction at Cloud's attempting to bargain some sort of truce with Rufus is completely out of character.
+            `)}
+            <CustomImage
+                alt="The Highwind"
+                src={junon_highwind}
+                align="right"
+            >
+                At least we get to see the Highwind
+            </CustomImage>
+            {splitText(`
+                I'll just avoid mentioning anything about the subsequent escape, the meeting with Roche and the whole traversal of the Meridian Ocean.
+
+                Let me just say I love Queen's Blood and I've played plenty of real life card games' tournaments, but while the chapter ended up being fun I just hate how much they ended up changing just for the sake of having you play some minigames WHILE having some cameos WHILE trying to picture Hojo as a supervillain rather than "just" a mad scientist.
+            `)}
             
             <Bookmark id="Corel">Costa del Sol, Mt Corel, the Gold Saucer and the desert</Bookmark>
             
