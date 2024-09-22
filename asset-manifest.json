@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.279e7c0a.js",
+    "main.js": "/homepage/static/js/main.35343484.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -9,7 +9,9 @@
     "static/media/grasslands-farm.jpg": "/homepage/static/media/grasslands-farm.010c137c53906b6f8db4.jpg",
     "static/media/world_map.jpg": "/homepage/static/media/world_map.508cd73c4e767654fce4.jpg",
     "static/media/junon-panorama.jpg": "/homepage/static/media/junon-panorama.29d50cc326e9e309c565.jpg",
+    "static/media/corel-prison.jpg": "/homepage/static/media/corel-prison.bb23caa2b553581f676f.jpg",
     "static/media/phoenix.jpg": "/homepage/static/media/phoenix.2f06caa90c7d0778b13a.jpg",
+    "static/media/corel-reactor.jpg": "/homepage/static/media/corel-reactor.64d995e56eb1f54c30f4.jpg",
     "static/media/vincent-monster.jpg": "/homepage/static/media/vincent-monster.d92f7e8a3e1fbed7c755.jpg",
     "static/media/junon-highwind.jpg": "/homepage/static/media/junon-highwind.7194c02b22b9737c3816.jpg",
     "static/media/tiny-bronco.jpg": "/homepage/static/media/tiny-bronco.93f0017942b49af91cf5.jpg",
@@ -17,15 +19,18 @@
     "static/media/junon-fort-condor.jpg": "/homepage/static/media/junon-fort-condor.99f1044523c297b86c13.jpg",
     "static/media/logo.png": "/homepage/static/media/logo.dac89f8ab0284d5113f2.png",
     "static/media/junon-cpr.jpg": "/homepage/static/media/junon-cpr.b6fa0ed7290f7d3412b8.jpg",
+    "static/media/corel-gold-saucer.jpg": "/homepage/static/media/corel-gold-saucer.9fb5d69fb7b6dfd8e9fc.jpg",
     "static/media/red-back-home.jpg": "/homepage/static/media/red-back-home.bfd42b789b1db80e8b6d.jpg",
     "static/media/mythril-golem.jpg": "/homepage/static/media/mythril-golem.2c10fa1a705db693bf42.jpg",
     "static/media/barret.jpg": "/homepage/static/media/barret.74b929d7e4f789985280.jpg",
     "static/media/post46.png": "/homepage/static/media/post46.1b5ab3fd7523cff231a0.png",
     "static/media/cloud.jpg": "/homepage/static/media/cloud.80cc1577ad700e9f1c11.jpg",
+    "static/media/corel-gs-from-north.jpg": "/homepage/static/media/corel-gs-from-north.2e71957c620e6c7a2055.jpg",
     "static/media/mythril-museum.jpg": "/homepage/static/media/mythril-museum.8e20f324dc23296aae1a.jpg",
     "static/media/junon-fort-condor-board.jpg": "/homepage/static/media/junon-fort-condor-board.c2281291a43f11c83f50.jpg",
     "static/media/yuffie.jpg": "/homepage/static/media/yuffie.b944d8a229fd70deec9a.jpg",
     "static/media/sephiroth.jpg": "/homepage/static/media/sephiroth.8e3ed6d3a99f83e102af.jpg",
+    "static/media/corel-costa-del-sol.jpg": "/homepage/static/media/corel-costa-del-sol.0353303eba9fd1457fae.jpg",
     "static/media/grasslands-kalm.jpg": "/homepage/static/media/grasslands-kalm.d4eca26ef8971f410de7.jpg",
     "static/media/yuffie-materia.jpg": "/homepage/static/media/yuffie-materia.c457cfdc9de929d3febc.jpg",
     "static/media/torgal.jpg": "/homepage/static/media/torgal.4a52cb2fd83ab43654da.jpg",
@@ -77,9 +82,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.279e7c0a.js.map": "/homepage/static/js/main.279e7c0a.js.map"
+    "main.35343484.js.map": "/homepage/static/js/main.35343484.js.map"
   },
   "entrypoints": [
-    "static/js/main.279e7c0a.js"
+    "static/js/main.35343484.js"
   ]
 }
