@@ -9,6 +9,11 @@ import farms from '../../../images/post-0047/ch3/grasslands-farm.jpg';
 import kalm_view from '../../../images/post-0047/ch3/grasslands-kalm.jpg';
 import kalm_invasion from '../../../images/post-0047/ch3/kalm-invasion.jpg';
 import swamp from '../../../images/post-0047/ch3/grasslands-swamp.jpg';
+import mythril_museum from '../../../images/post-0047/ch3/mythril-museum.jpg';
+import mythril_cave from '../../../images/post-0047/ch3/mythril-cave.jpg';
+import mythril_turks from '../../../images/post-0047/ch3/mythril-turks.jpg';
+import mythril_golem from '../../../images/post-0047/ch3/mythril-golem.jpg';
+import mythril_gear from '../../../images/post-0047/ch3/mythril-gear.jpg';
 
 function Chapter3() {
     return (
@@ -98,6 +103,63 @@ function Chapter3() {
             `)}
 
             <Bookmark id="Mythril_Mines">The mythril mines</Bookmark>
+            <CustomImage
+                alt="The museum at the entrance"
+                src={mythril_museum}
+            >
+                We just crossed a swamp infested with giant snakes. What better place for a <i>museum</i>.
+            </CustomImage>
+            <br/>
+            <p>This section is a bit of a stretch, as this is not an actual "Location", but more like a dungeon linking two open world areas - but I wanted to talk about this as it symbolizes a common trend around the whole game.</p>
+            <CustomImage
+                alt="The inner mine"
+                src={mythril_cave}
+                align="left"
+            >
+                Ok, <i>this</i> looks like a mine
+            </CustomImage>
+
+            {splitText(`
+            The original game had the mythril mines serve the same purpose of linking two major areas, but it was hardly "a mine"... it was more like a series of monster-infested tunnels traversing the mountain, ending with a short encounter with the Turks that could fill the party in on some plot points.
+
+            This version of the location is a lot more like what you could expect: it is definitely a place that <i>at least used</i> to feature human activity in some capacity.
+
+            The entrance of the cave is not even an actual mine, but a museum, and you'd better get used to this: this world has an incredibly strong focus on tourism, while at the same time alternating overcrowded places and incredibly empty ones.
+            `)}
+            <CustomImage
+                alt="Rude and Elena"
+                src={mythril_turks}
+                align="right"
+            />
+            {splitText(`
+            After entering and catching up with the black robes, the party splits for the first time, introducing the idea of sections with mandatory party compositions - starting with Cloud, Aerith and Tifa descending into the oh so empty tunnels towards our first encounter with the Turks of the current game.
+
+            This, of course, ends with a boss fight, because this is a new game and we need to re-state who the Turks are, other than presenting <s>blonde Yuffie</s> Elena to the party.
+
+            After the fight Tseng shows up, and, after a quick chat, the party ends up split again, but with the player now following Barret and Red XIII. 
+            `)}
+            <CustomImage
+                alt="Balancing puzzle"
+                src={mythril_gear}
+                align="left"
+            >
+                Also: who thought of putting an heavy gear on a HANGING TREE ROOT?
+            </CustomImage>
+            {splitText(`
+            I personally consider this section <i>tragic</i> in its own way, because everything in this chapter between the Turks fight and the exit feels like content padding of the worst type: the whole wall-climbing, cart-pushing nature of the puzzles here makes you feel like you shouldn't be engaging in such activities with a party formed by a one-armed leader and his dog-shaped companion.
+
+            Also, let me reinstate this: these caves are really devoid of human life.
+            While I understand that this is motivated by the fact that the whole place is a testament of how things worked at the time of the Old Republic and that Shinra moved on from this all, the location manages to be <i>too gorgeous</i> for its own merit and doesn't feel like abandoned at all.
+
+            All in all, even though a lot of this content feels tacked on in an insincere way, the chapter manages to be short enough to avoid alienating the players: after a quick boss, the party manages to regroup and move on to the next region.
+            `)}
+            <CustomImage
+                alt="The mythril golem"
+                src={mythril_golem}
+                align="center"
+            >
+                To be fair, the Mythril Golem comes out of nowhere, but it's cool
+            </CustomImage>
             
             <Bookmark id="Junon">Junon and its surroundings</Bookmark>
             
