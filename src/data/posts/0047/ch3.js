@@ -5,10 +5,10 @@ import InlineSpoiler from "../../../components/posts/inlineSpoiler";
 import CustomImage from "../../../components/posts/customImage";
 import YouTubeVideo from '../../../components/posts/youtubeVideo';
 
-import farms from '../../../images/post-0047/ch3/grasslands-farm.jpg';
-import kalm_view from '../../../images/post-0047/ch3/grasslands-kalm.jpg';
-import kalm_invasion from '../../../images/post-0047/ch3/kalm-invasion.jpg';
-import swamp from '../../../images/post-0047/ch3/grasslands-swamp.jpg';
+import grasslands_farms from '../../../images/post-0047/ch3/grasslands-farm.jpg';
+import grasslands_kalm_view from '../../../images/post-0047/ch3/grasslands-kalm.jpg';
+import grasslands_kalm_invasion from '../../../images/post-0047/ch3/kalm-invasion.jpg';
+import grasslands_swamp from '../../../images/post-0047/ch3/grasslands-swamp.jpg';
 import mythril_museum from '../../../images/post-0047/ch3/mythril-museum.jpg';
 import mythril_cave from '../../../images/post-0047/ch3/mythril-cave.jpg';
 import mythril_turks from '../../../images/post-0047/ch3/mythril-turks.jpg';
@@ -20,6 +20,11 @@ import junon_fort_condor_board from '../../../images/post-0047/ch3/junon-fort-co
 import junon_panorama from '../../../images/post-0047/ch3/junon-panorama.jpg';
 import junon_parade from '../../../images/post-0047/ch3/junon-parade.jpg';
 import junon_highwind from '../../../images/post-0047/ch3/junon-highwind.jpg';
+import corel_costa_del_sol from '../../../images/post-0047/ch3/corel-costa-del-sol.jpg';
+import corel_gold_saucer from '../../../images/post-0047/ch3/corel-gold-saucer.jpg';
+import corel_gold_saucer_from_north_corel from '../../../images/post-0047/ch3/corel-gs-from-north.jpg';
+import corel_prison from '../../../images/post-0047/ch3/corel-prison.jpg';
+import corel_reactor from '../../../images/post-0047/ch3/corel-reactor.jpg';
 
 function Chapter3() {
     return (
@@ -29,8 +34,8 @@ function Chapter3() {
             There are two things to say about Gaia and its representation in Rebirth: the first one is that, given the differences in technology and game style, Rebirth just <i>had</i> to go for a different style of presentation, the other is that they had every right to change things around in order to smooth the experience and the narrative and, for better or for worse, they decided to go all-in.
             `)}
             <CustomImage
-                alt="Farms"
-                src={kalm_invasion}
+                alt="Shinra helicopters invading Kalm"
+                src={grasslands_kalm_invasion}
                 align="right"
             >
                 Kalm is stunning. <i>Please ignore the helicopters.</i>
@@ -62,7 +67,7 @@ function Chapter3() {
             <Bookmark id="Grasslands">The grasslands</Bookmark>
             <CustomImage
                 alt="Farms in the grasslands"
-                src={farms}
+                src={grasslands_farms}
             >
                 A view of the grasslands, with farms and the mountains in the background
             </CustomImage>
@@ -72,7 +77,7 @@ function Chapter3() {
             `)}
             <CustomImage
                 alt="The swamps"
-                src={swamp}
+                src={grasslands_swamp}
                 align="right"
             >
                 The swamp in 2024
@@ -92,7 +97,7 @@ function Chapter3() {
             `)}
             <CustomImage
                 alt="Midgar's view from Kalm's clocktower"
-                src={kalm_view}
+                src={grasslands_kalm_view}
                 align="left"
             >
                 A view of Midgar from the top of Kalm's clocktower
@@ -223,11 +228,11 @@ function Chapter3() {
                 Ready for the parade
             </CustomImage>
             {splitText(`
-                A quick note about the parade: the whole "let's pass as a Shinra soldier" was very unhinged back in the days, and now the game doubles down by having Tifa and Aerith - two girls with no formal soldier training - follow Cloud around.
-                It's played for laughs, so no big issue - nobody could taka as <i>realistic</i> the original version of this section, so there's no purpose in complaining here.
-                
-                The idea of Rufus knowing the party whereabouts and letting them be in order to meet them makes even <i>more</i> sense, too bad that the Yuffie's attempt at assassination is so randomly execute.
-                Also, Barret's reaction at Cloud's attempting to bargain some sort of truce with Rufus is completely out of character.
+            A quick note about the parade: the whole "let's pass as a Shinra soldier" was very unhinged back in the days, and now the game doubles down by having Tifa and Aerith - two girls with no formal soldier training - follow Cloud around.
+            It's played for laughs, so no big issue - nobody could taka as <i>realistic</i> the original version of this section, so there's no purpose in complaining here.
+            
+            The idea of Rufus knowing the party whereabouts and letting them be in order to meet them makes even <i>more</i> sense, too bad that the Yuffie's attempt at assassination is so randomly execute.
+            Also, Barret's reaction at Cloud's attempting to bargain some sort of truce with Rufus is completely out of character.
             `)}
             <CustomImage
                 alt="The Highwind"
@@ -237,26 +242,90 @@ function Chapter3() {
                 At least we get to see the Highwind
             </CustomImage>
             {splitText(`
-                I'll just avoid mentioning anything about the subsequent escape, the meeting with Roche and the whole traversal of the Meridian Ocean.
+            I'll just avoid mentioning anything about the subsequent escape, the meeting with Roche and the whole traversal of the Meridian Ocean.
 
-                Let me just say I love Queen's Blood and I've played plenty of real life card games' tournaments, but while the chapter ended up being fun I just hate how much they ended up changing just for the sake of having you play some minigames WHILE having some cameos WHILE trying to picture Hojo as a supervillain rather than "just" a mad scientist.
+            Let me just say I love Queen's Blood and I've played plenty of real life card games' tournaments, but while the chapter ended up being fun I just hate how much they ended up changing just for the sake of having you play some minigames WHILE having some cameos WHILE trying to picture Hojo as a supervillain rather than "just" a mad scientist.
             `)}
             
             <Bookmark id="Corel">Costa del Sol, Mt Corel, the Gold Saucer and the desert</Bookmark>
+            <CustomImage
+                alt="The Gold Saucer"
+                src={corel_gold_saucer}
+            />
+            {splitText(`
+            After all these adventures, we finally reach the main open area of Rebirth.
+
+            This is both due to the fact that it contains the Gold Saucer, that we'll need to visit multiple times for plot reasons, but also by the sheer amount of different locations it harbors.
+
+            Mix in the fact that it's also the area where most of the minigames are located, and the math becomes very easy.
+            `)}
+            <CustomImage
+                alt="Tifa and Aerith at the beach"
+                src={corel_costa_del_sol}
+                align="left"
+            >
+                Is the fan service worth it?
+            </CustomImage>
+            {splitText(`
+            The first location we visit is Costa del Sol and right after finishing a chapter equally split between a kind-of-forced minigame and a boss sequence, the player is presented with a <i>series</i> of forced minigames followed by a boss sequence.
             
+            The game stumbles once again on its need to force feed side content to its player base, and since Costa del Sol was a tourist location even in the original game there was no possible way we were doomed to end like this from the start.
+            But the "worst" is yet to come, no worries.
+            `)}
+            <CustomImage
+                alt="The ruins of the Corel reactor"
+                src={corel_reactor}
+                align="right"
+            >
+                Quite a mess
+            </CustomImage>
+            {splitText(`
+            Moving on with the plot, after the boss fight (I really preferred how the original treated Hojo's character development, but I don't want to become redundant), Yuffie forces herself in the party and everyone leaves the village; the next stop is the nearby reactor atop the near mountains.
+
+            After reaching the top of the mountain, the party faces another boss fight and reaches what remains of the Corel reactor, has its first encounter with a weapon and moves on.
+
+            The descent towards North Corel offers a good spot for the game to throw at us another extra bit of content that wasn't in the original game: this time, instead of just activating a switch and then backtracking, the player will have to traverse a dungeon specifically designed to give Yuffie her own moment.
+            This is probably the prime example of the kind of extra content everybody would have loved to see back in 1997, or at least I swear that the teenager me did - even if I didn't exactly envision this mine and these rules of engagement.`)}
+            <CustomImage
+                alt="The Gold Saucer as seen from North Corel"
+                src={corel_gold_saucer_from_north_corel}
+                align="left"
+            >
+                The Gold Saucer as seen from North Corel
+            </CustomImage>
+            {splitText(`
+            After yet another minigame section, the party ends up in North Corel and everybody there bullies Barret.
+            Classic old fun.
+
+            I won't go into any extra detail on how different the Barret section plays out because I've already mentioned it in Barret's section, let's just skip to <b>the Gold Saucer</b>!
+
+            I find this new iteration of it to be too crowded and impossible to navigate, exactly like an <i>actual</i> amusement park, so nothing to question here and let's move on. 
+            `)}
+            <CustomImage
+                alt="The Gold Saucer as seen from North Corel"
+                src={corel_prison}
+                align="right"
+            >
+                On the right: a chocobo stable and a pillar leading to the Gold Saucer; on the left: yet another minigame installment
+            </CustomImage>
+            {splitText(`
+            I'll also avoid commenting the different terms on which the shooting is treated, but I can't avoid complaining about the whole Corel Prison plot line refactor.
+            Basically, after reaching the prison -that's not a prison anymore, but just another settlement trying to mimic che <i>actual</i> Gold Saucer with some second brand minigames- the original story would have seen us get in touch with Barret, find Dyne, solve the mystery and then find a way up.
+            This time we instead get ambushed by some goons, then we're forced to feed a chocobo in order to win a race, and just then we'll be allowed to go back to our plot.
+
+            Dyne is not even on the run, he's already been dealt with and Barret's just instructed on the whereabouts of where he's being held captive so he can achieve some kind of resolution - through the usual boss fight.
+            More than one, actually, because we also need to fight Palmer on a frog mecha.
+            Let's just add a rail shooter, just for the sake of it.
+
+            Neeeeeeext!`)}
+
             <Bookmark id="Gongaga">Gongaga!</Bookmark>
             
             <Bookmark id="Cosmo_Canyon">Cosmo Canyon</Bookmark>
-            
+
             <Bookmark id="Nibelheim">The Nibelheim area</Bookmark>
             
-            <Bookmark id="Meridian_Ocean">The ocean and Gilgamesh island</Bookmark>
-            
             <Bookmark id="Temple_Cetra">The temple of the Ancient and their city</Bookmark>
-
-
-            {/* Corel
-            - now that we've reached the prison, rather than get in touch with Barret, find Dyne, solve the mystery and then find a way up, we get ambushed by some goons, forced to feed a chocobo in order to win a race, and just then we'll be able to go back to our plot */}
         </>
     )
 }

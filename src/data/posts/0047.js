@@ -105,7 +105,6 @@ function StatefulPost() {
                     <li><BookmarkLink id="Gongaga" onPreClick={() => forcePanelOpen(3)}>Gongaga!</BookmarkLink></li>
                     <li><BookmarkLink id="Cosmo_Canyon" onPreClick={() => forcePanelOpen(3)}>Cosmo Canyon</BookmarkLink></li>
                     <li><BookmarkLink id="Nibelheim" onPreClick={() => forcePanelOpen(3)}>The Nibelheim area</BookmarkLink></li>
-                    <li><BookmarkLink id="Meridian_Ocean" onPreClick={() => forcePanelOpen(3)}>The ocean and Gilgamesh island</BookmarkLink></li>
                     <li><BookmarkLink id="Temple_Cetra" onPreClick={() => forcePanelOpen(3)}>The temple of the Ancient and their city</BookmarkLink></li>
                     <br/>
                     <BookmarkLink id="Pt4" isTitle>Part 4: what is <i>actually</i> happening here</BookmarkLink>
