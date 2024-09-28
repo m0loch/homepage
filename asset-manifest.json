@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.a8abfc13.js",
+    "main.js": "/homepage/static/js/main.26d521cc.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -11,7 +11,9 @@
     "static/media/junon-panorama.jpg": "/homepage/static/media/junon-panorama.29d50cc326e9e309c565.jpg",
     "static/media/corel-prison.jpg": "/homepage/static/media/corel-prison.bb23caa2b553581f676f.jpg",
     "static/media/nibelheim-water-tower.jpg": "/homepage/static/media/nibelheim-water-tower.f5c6f55ecbe4fa93e8c1.jpg",
+    "static/media/cosmo-observatory.jpg": "/homepage/static/media/cosmo-observatory.f511611ebfef9994d466.jpg",
     "static/media/gongaga-reactor.jpg": "/homepage/static/media/gongaga-reactor.9c63c5a896e42dbf2dc1.jpg",
+    "static/media/cosmo-planetologists.jpg": "/homepage/static/media/cosmo-planetologists.d3b6206cad2e760fbccf.jpg",
     "static/media/phoenix.jpg": "/homepage/static/media/phoenix.2f06caa90c7d0778b13a.jpg",
     "static/media/ancient-city.jpg": "/homepage/static/media/ancient-city.983970030542351680bd.jpg",
     "static/media/corel-reactor.jpg": "/homepage/static/media/corel-reactor.64d995e56eb1f54c30f4.jpg",
@@ -29,6 +31,7 @@
     "static/media/mythril-golem.jpg": "/homepage/static/media/mythril-golem.2c10fa1a705db693bf42.jpg",
     "static/media/barret.jpg": "/homepage/static/media/barret.74b929d7e4f789985280.jpg",
     "static/media/post46.png": "/homepage/static/media/post46.1b5ab3fd7523cff231a0.png",
+    "static/media/cosmo-canyon.jpg": "/homepage/static/media/cosmo-canyon.fa10ceed91129334c405.jpg",
     "static/media/gongaga-prayer.jpg": "/homepage/static/media/gongaga-prayer.abf8d5184bc452b52d28.jpg",
     "static/media/cloud.jpg": "/homepage/static/media/cloud.80cc1577ad700e9f1c11.jpg",
     "static/media/corel-gs-from-north.jpg": "/homepage/static/media/corel-gs-from-north.2e71957c620e6c7a2055.jpg",
@@ -64,6 +67,7 @@
     "static/media/vincent.jpg": "/homepage/static/media/vincent.ba7b8d1b6e60876452da.jpg",
     "static/media/angry-cat-AI.png": "/homepage/static/media/angry-cat-AI.2de2db30e8a0fcaae8ca.png",
     "static/media/barret-dyne.jpg": "/homepage/static/media/barret-dyne.1d63a33f74fb427d43c4.jpg",
+    "static/media/cosmo-gi-nattak.jpg": "/homepage/static/media/cosmo-gi-nattak.3b274f4a636c75297f5c.jpg",
     "static/media/tifa-past.jpg": "/homepage/static/media/tifa-past.b26df87af99c891a0ecc.jpg",
     "static/media/red-seto.jpg": "/homepage/static/media/red-seto.a63ac462b448c9d20e0a.jpg",
     "static/media/tifa.jpg": "/homepage/static/media/tifa.4a37d45ccffaac8abe32.jpg",
@@ -89,9 +93,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.a8abfc13.js.map": "/homepage/static/js/main.a8abfc13.js.map"
+    "main.26d521cc.js.map": "/homepage/static/js/main.26d521cc.js.map"
   },
   "entrypoints": [
-    "static/js/main.a8abfc13.js"
+    "static/js/main.26d521cc.js"
   ]
 }
