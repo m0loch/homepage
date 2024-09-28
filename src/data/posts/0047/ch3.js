@@ -29,6 +29,10 @@ import gongaga_reactor from '../../../images/post-0047/ch3/gongaga-reactor.jpg';
 import gongaga_prayer from '../../../images/post-0047/ch3/gongaga-prayer.jpg';
 import gongaga_zack_parents from '../../../images/post-0047/ch3/gongaga-zack-parents.jpg';
 import gongaga_airstrip from '../../../images/post-0047/ch3/gongaga-airstrip.jpg';
+import cosmo_canyon from '../../../images/post-0047/ch3/cosmo-canyon.jpg';
+import cosmo_gi_nattak from '../../../images/post-0047/ch3/cosmo-gi-nattak.jpg';
+import cosmo_planetologists from '../../../images/post-0047/ch3/cosmo-planetologists.jpg';
+import cosmo_observatory from '../../../images/post-0047/ch3/cosmo-observatory.jpg';
 import cosmo_river_of_lights from '../../../images/post-0047/ch3/cosmo-river-of-lights.jpg';
 import nibelheim_water_tower from '../../../images/post-0047/ch3/nibelheim-water-tower.jpg';
 import ancient_city from '../../../images/post-0047/ch3/ancient-city.jpg';
@@ -390,11 +394,70 @@ function Chapter3() {
             
             <Bookmark id="Cosmo_Canyon">Cosmo Canyon</Bookmark>
             <CustomImage
-                alt="The River of Lights"
-                src={cosmo_river_of_lights}
+                alt="Road to Cosmo Canyon"
+                src={cosmo_canyon}
             />
             {splitText(`
-            WiP
+            There are a few things to say about Cosmo Canyon, but I'll start from the one that stings: planetology.
+            `)}
+            <CustomImage
+                alt="Tifa, Aerith, and the planetologists"
+                src={cosmo_planetologists}
+                align="right"
+            >
+                The first rule of Planetology is: you do not talk about Planetology.
+            </CustomImage>
+            {splitText(`
+            In the original game Cosmo Canyon is a place where the party wasn't even supposed to take a stop, bar a convenient breakdown of the buggy.
+            Once there, the party would take a breather, think of the situation they're living, discover <s>Red XIII</s> Nanaki's past and, with the help of the old sage Bugenhagen, discover more around the planet and find a new resolve to move on - this is also where Barret takes a new oath of revenge against Shinra, for example.
+
+            The current version of Cosmo Canyon, though, feels way less intimate.
+
+            Everything is much bigger and way more confusing, and the whole location is filled to the brim with tourists.`)}
+            <CustomImage
+                alt="A look inside the observatory in Cosmo Canyon"
+                src={cosmo_observatory}
+                align="left"
+            >
+                Even the observatory is now a museum...
+            </CustomImage>
+            {splitText(`I know I'm getting pedantic with the point, but adding crowds everywhere doesn't make the place feel alive, it makes it chaotic.
+
+            This time around Bugenhagen is still a scientist, a wise old man and a fatherly figure for Red XIII, but he's also a wannabe enterpreneur that explicitly inquires the party about their impressions of the River of Lights, because you know he's happy that tourists like the ceremony but he wanted more people to develop an interest in science through it.
+
+            He's talking about marketing, he's thinking about a <a href="https://sproutsocial.com/glossary/marketing-funnel/">damn funnel</a>.
+            `)}
+            <YouTubeVideo videoId={"qa1yrkaLnQ0"} caption="Bugenhagen's lesson on the world of Gaia is still iconic, though" />
+            {splitText(`
+
+            There is this whole contrast between the spirituality that one would expect from the situation and the way everything appears to be just a little bit <i>off</i>.
+            And I kind of think that this is something the writer wanted, but I don't really get their message.
+            `)}
+            <CustomImage
+                alt="The River of Lights ceremony"
+                src={cosmo_river_of_lights}
+                align="right"
+            >
+                Impressive! Now we just have to work on user retention
+            </CustomImage>
+            {splitText(`
+            On one hand the original bonfire scene has been reworked to what's supposed to be a touching moment for Aerith to share her experience as a Cetra, but the planetologist meeting where she and Tifa take part reminds you more than an alcoholics anonymous session rather than anything, Barret gets scolded off by one practitioner that says there's nothing he can to to save the Planet ("Only she can save herself") and even Bugenhagen himself, when Tifa tells him the party has met weapons and that she fell in the Lifestream, tells her to go see a doctor because she must be hallucinating.
+
+            Moving on: Red XIII coming home is funny, but I talked about this already and <i>sometimes</i> I remember to avoid getting redundant.
+            `)}
+            <CustomImage
+                alt="Gi nattak telling the party the origin of the Black Materia"
+                src={cosmo_gi_nattak}
+                align="left"
+            >
+                Gi nattak in all his <i>stature</i>
+            </CustomImage>
+            {splitText(`
+            His reunion with his dad should be a tear jerker, but the moment gets immediately stolen by Gi nattak that wants to bring us home and add some much appreciated lore about the tribe and the Black Materia, it's just <i>too sudden</i>.
+
+            I also struggle keeping my suspension of disbelief up when I think that the guy invited the party to his private island in order to beg us to bring him the Black Materia <i>all while his fellow tribesmen try to kill our beloved characters</i>. 
+            Wrapping up: a very suggestive location, but with some bad moments.
+            And I hate both Gears and Gambits and the local Glide de Chocobo minigame.
             `)}
 
             <Bookmark id="Nibelheim">The Nibelheim area</Bookmark>
