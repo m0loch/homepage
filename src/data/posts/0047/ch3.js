@@ -25,6 +25,13 @@ import corel_gold_saucer from '../../../images/post-0047/ch3/corel-gold-saucer.j
 import corel_gold_saucer_from_north_corel from '../../../images/post-0047/ch3/corel-gs-from-north.jpg';
 import corel_prison from '../../../images/post-0047/ch3/corel-prison.jpg';
 import corel_reactor from '../../../images/post-0047/ch3/corel-reactor.jpg';
+import gongaga_reactor from '../../../images/post-0047/ch3/gongaga-reactor.jpg';
+import gongaga_prayer from '../../../images/post-0047/ch3/gongaga-prayer.jpg';
+import gongaga_zack_parents from '../../../images/post-0047/ch3/gongaga-zack-parents.jpg';
+import gongaga_airstrip from '../../../images/post-0047/ch3/gongaga-airstrip.jpg';
+import cosmo_river_of_lights from '../../../images/post-0047/ch3/cosmo-river-of-lights.jpg';
+import nibelheim_water_tower from '../../../images/post-0047/ch3/nibelheim-water-tower.jpg';
+import ancient_city from '../../../images/post-0047/ch3/ancient-city.jpg';
 
 function Chapter3() {
     return (
@@ -247,7 +254,7 @@ function Chapter3() {
             Let me just say I love Queen's Blood and I've played plenty of real life card games' tournaments, but while the chapter ended up being fun I just hate how much they ended up changing just for the sake of having you play some minigames WHILE having some cameos WHILE trying to picture Hojo as a supervillain rather than "just" a mad scientist.
             `)}
             
-            <Bookmark id="Corel">Costa del Sol, Mt Corel, the Gold Saucer and the desert</Bookmark>
+            <Bookmark id="Corel">Costa del Sol, Mt Corel, the Gold Saucer</Bookmark>
             <CustomImage
                 alt="The Gold Saucer"
                 src={corel_gold_saucer}
@@ -300,7 +307,8 @@ function Chapter3() {
             I won't go into any extra detail on how different the Barret section plays out because I've already mentioned it in Barret's section, let's just skip to <b>the Gold Saucer</b>!
 
             I find this new iteration of it to be too crowded and impossible to navigate, exactly like an <i>actual</i> amusement park, so nothing to question here and let's move on. 
-            `)}
+
+            I'll also avoid commenting the different terms on which the shooting is treated, but I can't avoid complaining about the whole Corel Prison plot line refactor.`)}
             <CustomImage
                 alt="The Gold Saucer as seen from North Corel"
                 src={corel_prison}
@@ -309,23 +317,104 @@ function Chapter3() {
                 On the right: a chocobo stable and a pillar leading to the Gold Saucer; on the left: yet another minigame installment
             </CustomImage>
             {splitText(`
-            I'll also avoid commenting the different terms on which the shooting is treated, but I can't avoid complaining about the whole Corel Prison plot line refactor.
             Basically, after reaching the prison -that's not a prison anymore, but just another settlement trying to mimic che <i>actual</i> Gold Saucer with some second brand minigames- the original story would have seen us get in touch with Barret, find Dyne, solve the mystery and then find a way up.
             This time we instead get ambushed by some goons, then we're forced to feed a chocobo in order to win a race, and just then we'll be allowed to go back to our plot.
 
-            Dyne is not even on the run, he's already been dealt with and Barret's just instructed on the whereabouts of where he's being held captive so he can achieve some kind of resolution - through the usual boss fight.
-            More than one, actually, because we also need to fight Palmer on a frog mecha.
-            Let's just add a rail shooter, just for the sake of it.
+            Dyne is not even on the run, he's already been dealt with so Barret can just reach the place he's being held captive and achieve some sort of resolution - through the usual boss fight.
+            Did I just say one? Make it two, as we also need to fight Palmer on a frog mecha - you didn't expect Barret to be able to properly mourn the loss of his long lost friend, did you?.
+            And why not add a rail shooter section on top of that, just for the sake of it?
 
             Neeeeeeext!`)}
 
             <Bookmark id="Gongaga">Gongaga!</Bookmark>
+            <CustomImage
+                alt="The jungle and the ruins of the Gongaga reactor"
+                src={gongaga_reactor}
+            />
+            {splitText(`
+            Gongaga is a weird one.
+            After starting out as an optional village -or rather, the ruins of one- in the original game, it took a much more central role in Crisis Core, being the hometown of the late Zack Fair.
+            
+            It has basically become a big Crisis Core shout out, to be completely honest.
+            Not that it's a bad thing by any means.`)}
+            <CustomImage
+                alt="Cissnei and Cait Sith praying"
+                src={gongaga_prayer}
+                align="left"
+            >
+                Isn't it a little tasteless to have a robot cat pray on a monument?
+            </CustomImage>
+
+            {splitText(`
+            The small jungle that once just harbored a blown-up reactor and a town build around a graveyard, commemorating said reactor's explosion, has now been inflated to be a whole, labyrinthic region where the village and the reactor are not even <i>that</i> close.
+
+            The reactor that once was just hiding the Summon Titan materia, now will be visited multiple times and will also be the stage of the first real manic episode from Cloud, right between a Scarlet boss fight and a bizarre trip in the lifestream where Tifa will, in this order:
+            <ul>
+            <li>fall while avoiding being sliced in half by Cloud;</li>
+            <li>be engulfed by a weapon - creatures we shouldn't meet at this point of the game;</li>
+            <li>witness different factions of Whispers "fighting";</li>
+            <li>experience some flashbacks <i>that she shouldn't be experiencing alone and right now</i>;</li>
+            <li>risk being killed by yet another appearance of the <i>omnipresent</i> Sephiroth.</li>
+            </ul>
+            `)}
+
+            <CustomImage
+                alt="Cloud with Zack parents"
+                src={gongaga_zack_parents}
+                align="right"
+            >
+                Your son sacrificed himself for this dunce. I'm so, so sorry.
+            </CustomImage>
+
+            {splitText(`But the important difference between this iteration and the original game lies in the village itself: while back in 1997 the user could meet Zack's parents and, provided either Tifa, Aerith or both were in the party, have a clue about the fact that their son could be someone of any kind of importance, this time around the party splits up and we will have Cloud witnessing Aerith's decision to meet them in order to talk about his saviour.
+
+            It doesn't end particularly well, with Cloud spitting out some crude remark about the guy and causing the ire of both Aerith and Tifa.
+
+            It would be criminal to not point out that the village mayor is the former Turk Cissnei that, as she did in Crisis Core, keeps some mystery about her past, but it's heavily implied that she still hopes to see Zack come back someday.`)}
+
+            <CustomImage
+                alt="The first encounter with the Tiny Bronco"
+                src={gongaga_airstrip}
+                align="left"
+            >
+                Now, <i>that</i>'s what I call a <i>random encounter</i>
+            </CustomImage>
+            {splitText(`The last things that have been added to the area are a Turk virtual arena (please, just stop), the area where you'll end up fighting the Queen's Blood final boss and the air strip.
+            
+            Now, Gongaga is a big chapter full of unexpected content, but there was no way for me to be prepared to meet Cid so early.
+
+            Or the fact that Cid could have been changed <i>that</i> much in the last 27 years.
+
+            Oooh boy, I had no idea about what Rebirth still had in store for me.
+            `)}
             
             <Bookmark id="Cosmo_Canyon">Cosmo Canyon</Bookmark>
+            <CustomImage
+                alt="The River of Lights"
+                src={cosmo_river_of_lights}
+            />
+            {splitText(`
+            WiP
+            `)}
 
             <Bookmark id="Nibelheim">The Nibelheim area</Bookmark>
-            
+            <CustomImage
+                alt="Modern day Nibelheim"
+                src={nibelheim_water_tower}
+            />
+            {splitText(`
+            WiP
+            `)}
+
             <Bookmark id="Temple_Cetra">The temple of the Ancient and their city</Bookmark>
+            <CustomImage
+                alt="Vincent looking at the City of the Ancients from afar"
+                src={ancient_city}
+            />
+            {splitText(`
+            WiP
+            `)}
+
         </>
     )
 }

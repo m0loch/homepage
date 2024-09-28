@@ -156,7 +156,6 @@ function Chapter2() {
             It's sad, it's powerful... and it's probably a bit too much for Square Enix in 2024.
 
             Now please fight Palmer in the robofrog, it's wacky boss time!
-            (By the way: I'll talk about the weird pacing of these story beats later when discussing about Corel).
             `)}
 
             <Bookmark id="Tifa">Tifa Lockhart</Bookmark>
@@ -461,6 +460,8 @@ function Chapter2() {
             They also managed to give him enough depth to not make him feel like a rushed extra while at the same time conveying the idea that he's <i>way</i> stronger than any other character we're supposed to handle, with the result that (compared to Bonds of Friendship) the To Be a Hero fight is kind of easy.
 
             No complaints here.
+
+            If we start talking about his role in the game, things get a bit hairy, for a number of reasons...
             `)}
         </>
     )

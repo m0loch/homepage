@@ -101,7 +101,7 @@ function StatefulPost() {
                     <li><BookmarkLink id="Grasslands" onPreClick={() => forcePanelOpen(3)}>The grasslands</BookmarkLink></li>
                     <li><BookmarkLink id="Mythril_Mines" onPreClick={() => forcePanelOpen(3)}>The mythril mines</BookmarkLink></li>
                     <li><BookmarkLink id="Junon" onPreClick={() => forcePanelOpen(3)}>Junon and its surroundings</BookmarkLink></li>
-                    <li><BookmarkLink id="Corel" onPreClick={() => forcePanelOpen(3)}>Costa del Sol, Mt Corel, the Gold Saucer and the desert</BookmarkLink></li>
+                    <li><BookmarkLink id="Corel" onPreClick={() => forcePanelOpen(3)}>Costa del Sol, Mt Corel, the Gold Saucer</BookmarkLink></li>
                     <li><BookmarkLink id="Gongaga" onPreClick={() => forcePanelOpen(3)}>Gongaga!</BookmarkLink></li>
                     <li><BookmarkLink id="Cosmo_Canyon" onPreClick={() => forcePanelOpen(3)}>Cosmo Canyon</BookmarkLink></li>
                     <li><BookmarkLink id="Nibelheim" onPreClick={() => forcePanelOpen(3)}>The Nibelheim area</BookmarkLink></li>
