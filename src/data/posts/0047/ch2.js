@@ -35,6 +35,7 @@ import reeve from '../../../images/post-0047/ch2/reeve.jpg';
 import tiny_bronco from '../../../images/post-0047/ch2/tiny-bronco.jpg';
 import vincent_monster from '../../../images/post-0047/ch2/vincent-monster.jpg';
 import zack_cloud from '../../../images/post-0047/ch2/zack-cloud.jpg';
+import sephiroth_pose from '../../../images/post-0047/ch2/sephiroth-pose.jpg';
 
 function Chapter2() {
     return (
@@ -281,7 +282,6 @@ function Chapter2() {
                 "Sorry dad, I've gotta go but I'll come back and visit I promise!"
             </CustomImage>
             {splitText(`
-
             To reiterate: I liked the choice of having two different voice actors for when he's wearing the wise warrior coat or his young puppy Nanaki persona and the whole "Bye guys, I'm home, have fun saving the world" stance he assumes at the start of his subplot, yet at the same time the game doesn't let you enjoy the big moment of him reuniting to his dad (or what's left of him, depending on your point of view) because COME ON, HERE'S SOME MORE EXTRA CONTENT.
 
             Letting the scene sink in a bit would have done wonders but whatever, this seems to be a recurring issue (Dyne anyone?), and it's a pity.
@@ -461,7 +461,21 @@ function Chapter2() {
 
             No complaints here.
 
-            If we start talking about his role in the game, things get a bit hairy, for a number of reasons...
+            If we start talking about his role in the game, things get a bit hairy, for a number of reasons... but it's really an issue we can't avoid.
+
+            During the section of the original game covered by Rebirth, Sephiroth is a lingering presence that permeates everything: sometimes he just haunts locations (see: the corpse of the Midgar Zolom in the grasslands' swamp) or briefly shows up just to run away (like on the cargo between Junon and Costa del Sol or in the Shinra Manor's basement), <i>but</i> Rebirth has to manage things differently.
+            `)}
+            <CustomImage
+                alt="A dramatic shot of the One Winged Angel"
+                src={sephiroth_pose}
+                align="left"
+            >
+                We also couldn't let Jenova∙LIFE be the final boss
+            </CustomImage>
+            {splitText(`
+            First of all, it had Remake before it setting a different standard: Sephiroth wasn't even supposed to show up during that section of the story, but he was pretty much everywhere anyway (mostly because they wanted the game to reach a proper conclusion if it bombed, but that's just my opinion), and you can't expect Rebirth to act differently - but this time around we <i>also</i> have the entire multiverse discourse to handle, and Sephiroth is central to that.
+            
+            So yeah, he's really coming in left, right and center, but you can't really expect anything different.
             `)}
         </>
     )
