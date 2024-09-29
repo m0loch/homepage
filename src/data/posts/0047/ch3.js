@@ -38,7 +38,10 @@ import nibelheim_water_tower from '../../../images/post-0047/ch3/nibelheim-water
 import nibelheim_model_employee from '../../../images/post-0047/ch3/nibelheim-model-employee.jpg';
 import nibelheim_surveillance from '../../../images/post-0047/ch3/nibelheim-surveillance.jpg';
 import nibelheim_code from '../../../images/post-0047/ch3/nibelheim-code.jpg';
-import ancient_city from '../../../images/post-0047/ch3/ancient-city.jpg';
+import cetra_aerith_powers from '../../../images/post-0047/ch3/cetra-aerith-powers.jpg';
+import cetra_ancient_city from '../../../images/post-0047/ch3/cetra-ancient-city.jpg';
+import cetra_final_showdown from '../../../images/post-0047/ch3/cetra-final-showdown.jpg';
+import cetra_temple_run from '../../../images/post-0047/ch3/cetra-temple-run.jpg';
 
 function Chapter3() {
     return (
@@ -519,7 +522,7 @@ function Chapter3() {
                 src={nibelheim_surveillance}
                 align="right"
             >
-                Somebody's watching as we're sneaking in the lab!<br/><i>(not really, it's just ChadleyHojo)</i>
+                Somebody's watching as we're sneaking in the lab!<br/><i>(spoiler: it's just ChadleyHojo)</i>
             </CustomImage>
             {splitText(`
             This gets even weirder when you then find the <i>other</i> basement (connected to the same elevator, obviously) where Sephiroth discovered the truth about his origins and the chambers where Zack and Cloud where held captive: the two basements' architecture is so different that things just stop making sense.
@@ -532,12 +535,56 @@ function Chapter3() {
             <Bookmark id="Temple_Cetra">The temple of the Ancient and their city</Bookmark>
             <CustomImage
                 alt="Vincent looking at the City of the Ancients from afar"
-                src={ancient_city}
+                src={cetra_ancient_city}
             />
             {splitText(`
-            WiP
-            `)}
+            I'll just skip the Meridian Ocean and Gilgamesh Island as they have no real connection with anything else.
 
+            At the same time, even though they're not proper regions, I still want to spend a couple of words on the two final locations - I don't use the world "dungeons" because, while the Temple of the Ancients is a prime example of what a dungeon actually is, the latter is barely a stage for a couple of minutes.
+            `)}
+            <CustomImage
+                alt="The party traversing the temple"
+                src={cetra_temple_run}
+                align="left"
+            >
+                Weeeeee!
+            </CustomImage>
+            {splitText(`
+            Functionally, the Temple of the Ancients works in the same way it used to in the original: you get in just after the Turks, Cait Sith goes for something that's not even really a sacrifice in order to retrieve the Black Materia, Sephiroth shows up and gets it from Cloud.
+
+            One could argue that it has been moved way north, that it doesn't feature the weird ancient spirits but a bunch of Shinra soldiers, that the clock puzzle is gone, that it's too long, that the water is wet and so on and so forth, but it would be utterly meaningless.
+
+            The near-totality of Chapter 13 is meant to be spent inside the Temple (feel free to do some preparations before entering, of course), and that comes with two strong design implications: the dungeon needs to progress the story and to engage the player for a reasonable amount of time.
+            `)}
+            <CustomImage
+                alt="Aerith using her Cetra powers"
+                src={cetra_aerith_powers}
+                align="right"
+            >
+                "Alexa, rebuild the Temple"
+            </CustomImage>
+            {splitText(`
+
+            The original incarnation of the Temple was not as <i>stretchable</i> as everybody would have liked it to, so it either had to be redesigned from scratch or interwoven with just some new features mixed in.
+
+            If you ask me, chapter 13 is the best in the entire game just because of that: it tries to stick as much as possible to the original plan, things get tweaked a bit in order to fit the rest of the game, some content is added in order to let a character shine (in this case: Aerith), some for coherence (Cloud cosplaying Sephiroth), some for coherence with other subplots.
+            Some content gets re-done completely (Sephiroth getting the Black Materia) because we're in 2024 and we can do a more cinematic scene that we were capable of in 1997, I might not like the outcome too much (I rarely enjoy streams of Whispers) but I do love the thought process behind those kind of decision.
+            `)}
+            <CustomImage
+                alt="Cloud and Aerith before Sephiroth"
+                src={cetra_final_showdown}
+                align="left"
+            >
+                Let's end this
+            </CustomImage>
+            {splitText(`And then -after a brief walk in the Sleeping Forest- there's the City of the Ancients.
+
+            Chapter 14 is the polar opposite of chapter 13: it does the bare minimum to show its fidelity to the original's aesthetics... but it's just a ginormous, multi-staged boss fight.
+
+            I'm not even complaining about it, it's the last chapter and things need to be wrapped up, possibly by adding an extended boss fight that forces you to plan ahead your free time; I'm just sad you spend in the actual city a couple of minutes tops.
+
+            <i>We'll talk about <u>that</u> scene -that needed some more breathing room- in its own section</i>.
+            `)}
         </>
     )
 }
