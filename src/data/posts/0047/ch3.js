@@ -35,6 +35,9 @@ import cosmo_planetologists from '../../../images/post-0047/ch3/cosmo-planetolog
 import cosmo_observatory from '../../../images/post-0047/ch3/cosmo-observatory.jpg';
 import cosmo_river_of_lights from '../../../images/post-0047/ch3/cosmo-river-of-lights.jpg';
 import nibelheim_water_tower from '../../../images/post-0047/ch3/nibelheim-water-tower.jpg';
+import nibelheim_model_employee from '../../../images/post-0047/ch3/nibelheim-model-employee.jpg';
+import nibelheim_surveillance from '../../../images/post-0047/ch3/nibelheim-surveillance.jpg';
+import nibelheim_code from '../../../images/post-0047/ch3/nibelheim-code.jpg';
 import ancient_city from '../../../images/post-0047/ch3/ancient-city.jpg';
 
 function Chapter3() {
@@ -154,7 +157,7 @@ function Chapter3() {
                 align="right"
             />
             {splitText(`
-            After entering and catching up with the black robes, the party splits for the first time, introducing the idea of sections with mandatory party compositions - starting with Cloud, Aerith and Tifa descending into the oh so empty tunnels towards our first encounter with the Turks of the current game.
+            After entering and catching up with the Black Robes, the party splits for the first time, introducing the idea of sections with mandatory party compositions - starting with Cloud, Aerith and Tifa descending into the oh so empty tunnels towards our first encounter with the Turks of the current game.
 
             This, of course, ends with a boss fight, because this is a new game and we need to re-state who the Turks are, other than presenting <s>blonde Yuffie</s> Elena to the party.
 
@@ -456,6 +459,7 @@ function Chapter3() {
             His reunion with his dad should be a tear jerker, but the moment gets immediately stolen by Gi nattak that wants to bring us home and add some much appreciated lore about the tribe and the Black Materia, it's just <i>too sudden</i>.
 
             I also struggle keeping my suspension of disbelief up when I think that the guy invited the party to his private island in order to beg us to bring him the Black Materia <i>all while his fellow tribesmen try to kill our beloved characters</i>. 
+
             Wrapping up: a very suggestive location, but with some bad moments.
             And I hate both Gears and Gambits and the local Glide de Chocobo minigame.
             `)}
@@ -466,7 +470,63 @@ function Chapter3() {
                 src={nibelheim_water_tower}
             />
             {splitText(`
-            WiP
+            I feel like everything just built up to bring me to this chapter - probably the only one I actually hated.
+
+            The whole trip to the actual town Nibelheim gets <u>properly</u> hyped up by Tifa... but then you discover that it's just been reworked to be a kind of resort for the Black Robes.
+            
+            It's <i>nuts</i>.
+
+            And everyone in the village is just <i>so</i> open about it.
+
+            The original weirdness of the party entering Nibelheim going "<i>Excuse me</i> Cloud, wasn't this supposed to be a burned down village?" has been deleted.
+            The eerie interactions with its inhabitants not recognizing neither Cloud or Tifa are completely gone.
+            `)}
+            <CustomImage
+                alt="The party being spied by security cameras"
+                src={nibelheim_model_employee}
+                align="right"
+            >
+                In this universe, Vincent is still a paid Shinra employee, somehow
+            </CustomImage>
+            {splitText(`
+            There's just no more façade to be kept: Shinra was supposed to have rebuilt Nibelheim and populated it with paid actors in order to cover up the incident from 5 years ago (not the smartest of plans if you ask me, but that's another discussion), but that's not the case anymore.
+            You just get Black Robes and nursing staff dressed in outfits that resemble the local folklore.
+            Also, for some reasons, they rebuilt Nibelheim exactly as it was for no apparent reason, since there's nothing to cover up anymore.
+
+            Whatever, let's just move on.
+
+            The <i>other</i> issue I have with this region is the Shinra Manor.
+            `)}
+            <CustomImage
+                alt="The code location revealed"
+                src={nibelheim_code}
+                align="left"
+            >
+                Wow, it took about 12 seconds
+            </CustomImage>
+            {splitText(`
+            In the original game it was eerie, unsettling and evocative.`)}
+            <p>While navigating it you encountered monsters like <a href="https://finalfantasy.fandom.com/wiki/Ghirofelgo">Ghirofelgo</a> that increased the creepyness factor a lot, and you had the chance of recruiting Vincent by collecting hints<InlineSpoiler mask='*'>Rebirth references the safe code by just writing it on a wall behind some boxes, which really makes you think about how the devs wanted to stay close to the original game but at the same time couldn't <i>manage</i> to do so...</InlineSpoiler> and opening the safe (also finding che Odin Summon Materia in the process).</p>
+            {splitText(`
+
+            Now, I didn't like how it was depicted in Crisis Core, but this is a new level of disappointment: they cut off the victorian part of the mansion and once entering you'll be forced to just go to the basement.
+            But you're not going to descend a sinister stair of case - you're taking a badly disguised, perfectly modern elevator.
+
+            Under the mansion you'll now find a perfectly operative and quite-well maintained lab that still manages to be perfectly empty, except of course for the local monster population.
+            `)}
+            <CustomImage
+                alt="The party being spied by security cameras"
+                src={nibelheim_surveillance}
+                align="right"
+            >
+                Somebody's watching as we're sneaking in the lab!<br/><i>(not really, it's just ChadleyHojo)</i>
+            </CustomImage>
+            {splitText(`
+            This gets even weirder when you then find the <i>other</i> basement (connected to the same elevator, obviously) where Sephiroth discovered the truth about his origins and the chambers where Zack and Cloud where held captive: the two basements' architecture is so different that things just stop making sense.
+
+            I also found it <i>absurd</i> to have the lab itself being controlled by an AI modeled on Hojo, just for the sake of re-using a known character model by making it really clear it's not him.
+
+            I'm not going to say anything about the plot of chapter 11 because I see what they were doing here, I'll just say that Cait Sith's dungeon is just bad, that the box-throwing minigame has clunky controls, that it being only accessible by the story mode <i>and</i> needed for the platinum is preposterous and that I love the local chocobos.
             `)}
 
             <Bookmark id="Temple_Cetra">The temple of the Ancient and their city</Bookmark>
