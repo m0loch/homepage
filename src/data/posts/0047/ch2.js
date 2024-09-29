@@ -4,17 +4,17 @@ import { Bookmark } from "../../../components/posts/bookmarks";
 import InlineSpoiler from "../../../components/posts/inlineSpoiler";
 import CustomImage from "../../../components/posts/customImage";
 
-import cloud from '../../../images/post-0047/characters/cloud.jpg';
-import barret from '../../../images/post-0047/characters/barret.jpg';
-import tifa from '../../../images/post-0047/characters/tifa.jpg';
-import aerith from '../../../images/post-0047/characters/aerith.jpg';
-import red_xiii from '../../../images/post-0047/characters/red_xiii.jpg';
-import yuffie from '../../../images/post-0047/characters/yuffie.jpg';
-import cait_sith from '../../../images/post-0047/characters/cait_sith.jpg';
-import zack from '../../../images/post-0047/characters/zack.jpg';
-import sephiroth from '../../../images/post-0047/characters/sephiroth.jpg';
-import cid from '../../../images/post-0047/characters/cid.jpg';
-import vincent from '../../../images/post-0047/characters/vincent.jpg';
+import cloud from '../../../images/post-0047/ch2/cloud.jpg';
+import barret from '../../../images/post-0047/ch2/barret.jpg';
+import tifa from '../../../images/post-0047/ch2/tifa.jpg';
+import aerith from '../../../images/post-0047/ch2/aerith.jpg';
+import red_xiii from '../../../images/post-0047/ch2/red_xiii.jpg';
+import yuffie from '../../../images/post-0047/ch2/yuffie.jpg';
+import cait_sith from '../../../images/post-0047/ch2/cait_sith.jpg';
+import zack from '../../../images/post-0047/ch2/zack.jpg';
+import sephiroth from '../../../images/post-0047/ch2/sephiroth.jpg';
+import cid from '../../../images/post-0047/ch2/cid.jpg';
+import vincent from '../../../images/post-0047/ch2/vincent.jpg';
 
 import unreliableCloud from '../../../images/post-0047/ch2/cloud-unreliable-1.jpg';
 import unreliableCloud2 from '../../../images/post-0047/ch2/cloud-unreliable-2.jpg';
