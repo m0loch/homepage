@@ -75,7 +75,7 @@ function Chapter1() {
             alt="..."
             src={gilgamesh}
         >
-            You should also prepare for a bunch of weird moments - that's why we play JRPGs, don't we?       
+            You should also prepare for a bunch of weird moments - that's why we play JRPGs, isn't it?       
         </CustomImage>
         </>
     )
