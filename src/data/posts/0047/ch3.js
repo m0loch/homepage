@@ -48,7 +48,7 @@ function Chapter3() {
         <>
             <Bookmark id="WB_Summary">How the planet changed in just 27 years</Bookmark>
             {splitText(`
-            There are two things to say about Gaia and its representation in Rebirth: the first one is that, given the differences in technology and game style, Rebirth just <i>had</i> to go for a different style of presentation, the other is that they had every right to change things around in order to smooth the experience and the narrative and, for better or for worse, they decided to go all-in.
+            There are two things to say about Gaia and its representation in Rebirth: the first one is that, given the differences in technology and game style, Rebirth just <i>had</i> to go for a different style of presentation, the other is that the developers had every right to change things in order to smooth the experience and the narrative and, for better or for worse, they decided to go all-in.
             `)}
             <CustomImage
                 alt="Shinra helicopters invading Kalm"
@@ -231,7 +231,7 @@ function Chapter3() {
             
             When visiting Lower Junon we experience the full effect of the modern rewriting:
             <ul>
-                <li>this time around the Bottomswell will attack Yuffie instead of Priscilla because the dev needed to treat her as a character that's not optional anymore;</li>
+                <li>this time around the Bottomswell will attack Yuffie instead of Priscilla, as the devs needed to integrate her as a <i>main</i> character;</li>
                 <li>the party will stay for the night like in the original, but everything hasbeen rewritten to accomodate for the new <i>tone</i> the mystery around Cloud's psyche has taken;</li>
                 <li>Roche will pop up just for the sake of announcing his own cameo - LAAAAAME~</li>
                 <li>the original game then add you go through yet another inconsequential minigame where you had to interact with Mr Dolphin to jump on a platform and find a way to Upper Junon - there was <i>no way in the multiverse</i> this could have gone differently than just having a more fleshed out minigame here.</li>

@@ -42,7 +42,7 @@ function Chapter4() {
             `)}
             <YouTubeVideo videoId={"6fp81GzKarQ"} caption="You know what I mean" align="left" />
             {splitText(`
-            More importantly, these are not even parallel dimensions in the "canonical" idea, but more like collective, kind of lucid dreams by the dead people that have returned to the Lifestream.
+            More importantly, these are not even parallel dimensions in the "canonical" idea, but more like collective lucid dreams of those who returned to the Lifestream.
 
             Marlene says that it's better if Aerith doesn't wake up, because when she does "a scary man he's gonna kill her".
             `)}
@@ -73,7 +73,7 @@ function Chapter4() {
 
             And we also have proof that new worlds can branch at any given point: we see Zack creating a new split when he has to choose whether to search for Hojo in hopes to find a cure for Cloud or stopping Biggs from bombing reactor 6.
 
-            This is extra funny because we see him choose the former option and end up seeing the outcome of the latter - but I digress.
+            Ironically, we watch him choose the first option, yet we see the consequences of the second - but I digress.
 
             Back to the main point:
             How many realities have been created?
@@ -103,7 +103,7 @@ function Chapter4() {
 
             At the beginning of Chapter 14, just after Zack chooses to go face Hojo creating yet another dimensional split, Aerith takes Cloud on a date in <i>Zack's world</i>.
             And she states clearly that we're visiting her dreamworld.
-            It is an ominous date, and it ends with her giving Cloud the White Materia before shoving him back to reality, while we watch Sephiroth enter the church and presumably end her.
+            It is an ominous date, and it ends with her giving Cloud the White Materia before shoving him back to reality, just as we see Sephiroth enter the church and presumably kill her.
 
             Marlene's prophecy is fulfilled, Aerith and Cloud woke up but the latter couldn't do his job of protecting her and the bad guy killed her.
             `)}
@@ -122,7 +122,7 @@ function Chapter4() {
             
             People would come up with the most incredible theories on how to save/revive her, but eventually people understood it couldn't be helped.
             
-            It just took the better part of 27 years.
+            It just took nearly 27 years.
 
             It's no wonder that, when the game became playable, everyone was on their toes waiting to see how this scene would play out.
             `)}

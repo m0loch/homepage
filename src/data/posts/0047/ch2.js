@@ -51,7 +51,7 @@ function Chapter2() {
             But.
             This is not what this section is about.
 
-            Cloud is still the mail focus of the plot, he's the literal cornerstone of everything that has happened in the past and is happening in the present, and he is also our own <i>unreliable narrator</i>.
+            Cloud is still the main focus of the plot, the literal cornerstone of everything that has happened in the past and is happening in the present, and he is also our own <i>unreliable narrator</i>.
 
             This is a bit different from the original game, where his psychotic breaks were few and far between and the narration was more party-based, and it's A LOT stronger than it was in the Remake.
             `)}
@@ -64,7 +64,7 @@ function Chapter2() {
             </CustomImage>
             {splitText(`
 
-            With some minor exceptions, the plot of Rebirth is either seen through his very eyes of with a specific focus on him and his deteriorating mental state.
+            With some minor exceptions, the plot of Rebirth is seen through his eyes, with a specific focus on him and his deteriorating mental state.
 
             In the second chapter Tifa confronts him about the fact that his recollection of the Nibelheim facts is not... really on point, let's say - and we're confronted to multiple instances of here and Aerith discussing Cloud, that incident and the fact that our hero doesn't remember Zack at all.
             `)}
@@ -80,7 +80,7 @@ function Chapter2() {
 
             And don't get me started on the multiple occasions where visions of Sephiroth pop up telling Cloud that Tifa is dead and he should be aware of that girl in our party claiming to be her.
 
-            Or the multiple times times when he starts acting like Sephiroth, for that matter. 
+            Or the multiple times his behaviour starts mirroring Sephiroth's, for that matter. 
 
             The actual end of Rebirth dances between the great multiverse plot point and his own mental breakdown - I'm talking both about the actual ending and <i>that scene</i>.
 
@@ -107,7 +107,7 @@ function Chapter2() {
             Mechanically he's pretty much the same character we used to play in Remake, focusing mainly in tanking damage and supporting the rest of the crew, so I'm not going to comment upon that.
             From a plot perspective, I don't like what they did to him.
 
-            Please bear with me: in the original game he was a self-centered, constantly swearing caricature of a person of color as seen from a japanese writer trying to incorporate some stereotypes taken from Hollywood movies... but just below that first layer, he is first of all a damaged man that leads a group of ecoterrorists against Shinra while secretly pursuing his personal vendetta.
+            Please stay with me here: in the original game he was a self-centered, constantly swearing caricature of a person of color as seen from a japanese writer trying to incorporate some stereotypes taken from Hollywood movies... but just below that first layer, he is first of all a damaged man that leads a group of ecoterrorists against Shinra while secretly pursuing his personal vendetta.
             His story is tragic and he is broken: his actions are always fueled by anger and passion, he refuses to bow down and wants to be the leader of the party, even when his close friends at Avalanche die in the Sector 7 incident he raises the stakes bouncing off any kind of personal responsibility but adding them to the stack of things that Shinra should pay for.
 
             No, I'm not saying that he doesn't care about them, I'm just pointing out the way his brain works.
@@ -142,7 +142,7 @@ function Chapter2() {
             align="left"
             />
             {splitText(`
-            This is outrageous, and robs Barret of a dramatic moment that let the character grow.
+            This is outrageous, robbing Barret of a dramatic moment that allowed for character growth.
             The original Dyne is not just a crazy monster that succumbed to his own trauma and went full Joker, but he's first and foremost an actual reflection of Barret, and by facing him Barret also ends up facing his own self, the fact that while he managed to "do a better job" than Dyne in recovering, he mainly did so thanks to the responsabilities he took towards Marlene, while her <i>actual father</i> had to live all these years thinking she was dead.
 
             After their confrontation, the original Dyne decided to put an end to his own life because he didn't want her daughter's father to be a monster and realized that, from his point of view, that was his only way out; Barret can't do anything about this, he'll just have to bear the burden of this on top of everything else.
@@ -167,7 +167,7 @@ function Chapter2() {
             </CustomImage>
             {splitText(`
             We left Tifa being the best damage dealer in Remake and -guess what- she still is.
-            She's great at avoiding attacks, she's got an outstanding phisical strength, her aerial play has been improved dramatically like Cloud's, her stagger manipulation is a game changer.
+            She's great at avoiding attacks, she's got an outstanding phisical strength, her aerial play, like Cloud's, has been improved dramatically, her ability to manipulate stagger is a game changer.
             "Phisical attacks are great, but in Rebirth magic is just broken" you might say - and you'll be right.
             Give her the ATK<->MATK attack and she suddenly rivals Aerith while still retaining all her pluses.
             
@@ -184,7 +184,7 @@ function Chapter2() {
             In the original nobody ever challenges Cloud's recollection of the Nibelheim's facts in Kalm, and when we finally discover the truth Tifa just says that she knew he was wrong all along but she feared confronting him on that because <i>reasons</i>.
             Rebirth is a game with a completely different deliver though, which has let the writers to address the issue in a way that, while being way more complicated, manages to depict a different Tifa.
 
-            As soon as chapter 2 starts she immediately confronts Cloud over his story's inconsistency, doubling down on Junon when she tries to test Cloud's memories of their younger days, and throughout the story while bonding with Aerith it's heavily implied that the two of them are constantly discussing what happened back in the day, the role of Zack, and what to make of Cloud's mental state.
+            As soon as chapter 2 starts she immediately confronts Cloud over his story's inconsistency, doubling down on Junon when she tries to test Cloud's memories of their younger days, and throughout the story while bonding with Aerith it's heavily implied that they are constantly discussing what happened back in the day, the role of Zack, and what to make of Cloud's mental state.
 
             `)}
             <CustomImage
@@ -209,9 +209,9 @@ function Chapter2() {
             >
             </CustomImage>
             {splitText(`
-            Aerith, the last character from Remake, but I dare say the most important of Rebirth.
+            Aerith, the last of the returning characters from Remake, but I dare say the most important of Rebirth.
 
-            In combat she's by far the best spellcaster and while her basic combat is apparently lacking, her wards are utterly gamebreaking, so I won't delve too much on her combat prowess.
+            In combat she's by far the best spellcaster and while her basic combat may seem lacking, her wards are utterly gamebreaking, so I won't delve too much on her combat prowess.
 
             `)}
             <CustomImage
@@ -235,7 +235,7 @@ function Chapter2() {
             >
             </CustomImage>
             {splitText(`
-            Whatever, long story short her role has been greatly expanded - while in the original game she's basically a character on par with the others that at some point realizes that her being an ancient means she has extra duties and dies trying to save the world, this time around we live the same scenes <i>but at the same time</i> we know that her is a superior being, fragmented in the multiverse, representing the opposite of Sephiroth's power.
+            Whatever, long story short her role has been greatly expanded - while in the original game she's basically a character on par with the others that at some point realizes that her being an ancient means she has extra duties and dies trying to save the world, this time around we experience the same scenes, <i>but knowing she is a superior being</i>, fragmented in the multiverse, representing the opposite of Sephiroth's power.
             `)}
             <p>All in all, she's dead as she was supposed to be, but at the same time she really isn't<InlineSpoiler mask='*'>Because, you know, she shows up for the final boss</InlineSpoiler>.</p>
             {splitText(`

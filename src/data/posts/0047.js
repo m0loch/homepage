@@ -11,8 +11,6 @@ import rebirthlogo from '../../images/post-0047/ch1/logo.png';
 
 import Chapter1 from "./0047/ch1";
 import Chapter2 from "./0047/ch2";
-
-import WarningIcon from '@mui/icons-material/Warning';
 import Chapter3 from './0047/ch3';
 import Chapter4 from './0047/ch4';
 
@@ -35,24 +33,8 @@ function StatefulPost() {
         }
     }
 
-    const tempIconStyle = {
-            fill: "red",
-            width: "60",
-            height: "auto"
-    }
-
     return (
         <>
-            {/* temp warning */}
-            <div style={{
-                display: "flex",
-                justifyContent: "center",
-            }}>
-                    <WarningIcon style={tempIconStyle}/>
-                    <p style={{color: "red", textAlign: "center"}}>This is a work in progress and it's taking forever, so I'll just update this post over the course of the next <i>weeks</i></p>
-                    <WarningIcon style={tempIconStyle}/>
-            </div>
-            {/* temp warning */}
             <CustomImage
                 alt="FF7 Rebirth logo"
                 src={rebirthlogo}
@@ -60,14 +42,14 @@ function StatefulPost() {
             />
 
             {splitText(`
-                <u>Disclaimer</u>: this <i>will</i> end up being lengthy and boring, proceed at your own discretion.
+                <u>Spoiler warning</u>: This post is meant for people that have played the original game <b>and</b> the new ones. If you didn't, proceed at your own risk.
 
-                <u>Disclaimer #2</u>: this will not be short and will not be easy - at the time of writing I have no plans on which direction this whole post will take.
+                I know this post is huge, but the impact this game had on me cannot be overstated.
+                I bought it as soon as it became available, then waited for several months after the official release in order to be sure I had enough time to play it.
 
-                It could end up being a big rant or just be a lengthy analysis, I don't know yet.
-                I know I have a strong opinion and that I need to put it down on (digital) paper, but I'm not even sure if that's an overall good opinion or not.
+                After finishing it, I let another month go by before actually trying to go for the platinum, another month then passed by before starting to write this post, and then it took me almost a month to actually write it.
 
-                <u>Disclaimer #3</u>: this won't be spoiler free. This post is meant for people that have played the original game <b>and</b> the new ones. If you didn't, proceed at your own risk.
+                I apologize to anyone that'll try to read this, but I've finally reached my catharsis.
             `)}
 
             <span id="Table_of_contents"></span>
@@ -173,6 +155,7 @@ function StatefulPost() {
 const post = {
     title: "The big Final Fantasy VII Rebirth post",
     date: new Date("2024-09-15"),
+    lastUpdate: new Date("2024-10-06"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };

@@ -35,7 +35,7 @@ function Chapter1() {
         <Bookmark id="Game_Structure">Game structure</Bookmark>
         {splitText(`
         Rebirth is, first and foremost, an action RPG.
-        It builds upon the combat mechanics of its predecessor placing a lot more focus on the sinergies between the various party members.
+        It builds upon the combat mechanics of its predecessor placing a lot more focus on the synergies between the various party members.
         `)}
         <CustomImage
             alt="The world of Rebirth"
@@ -56,8 +56,8 @@ function Chapter1() {
         {splitText(`
         The combat system expands on the original Remake, it's smooth, fun and deep and the materia system is very well designed, letting casual players find their comfort zone without the need of spending hours studying, but rewards people wanting to invest some time in research to break the game spectacularly.
 
-        The main new feature you'll notice is the addition of Synergy Skills and Synergy Abilities, with the former being special attacks (or special defensive skills) you can have your controller character perform with the aid of another party member, and the latter being some special attacks performed by two characters at the same time.
-        To be more clear: Synergy Skills are either situational defensive skill that help build stagger/limit gauge or slow but powerful attacks that both raise the involved characters' ATB; on the other hand, using ATB bars earns them a synergy bar - every character can store up to 5 ofthem, and those are meant to be spent for Synergy Abilities that <u>do not</u> consume any ATB but cost 3-5 bars from each character that'll be performing them (the cost starts on 3 but rises after each use durin a single combat).
+        The most noticeable new feature is the addition of Synergy Skills and Synergy Abilities, with the former being special attacks (or special defensive skills) you can have your controller character perform with the aid of another party member, and the latter being some special attacks performed by two characters at the same time.
+        To be more clear: Synergy Skills are either situational defensive skill that help build stagger/limit gauge or slow but powerful attacks that both raise the involved characters' ATB; on the other hand, using ATB bars earns them a synergy bar - every character can store up to 5 of them, and those are meant to be spent for Synergy Abilities that <u>do not</u> consume any ATB but cost 3-5 bars from each character that'll be performing them (the cost starts on 3 but rises after each use during a single combat).
 
         This is brilliant, as this feature kills two birds with a stone, managing to both address an issue of Remake (the ATB building slowly for non-active characters) and adding some powerful skills in a system that's not tied to the "usual" ATB bar, adding depth to the game play and a lot of personality to the playable characters.
         `)}
