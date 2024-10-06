@@ -135,7 +135,7 @@ function Chapter3() {
                 alt="The museum at the entrance"
                 src={mythril_museum}
             >
-                We just crossed a swamp infested with giant snakes. What better place for a <i>museum</i>.
+                We just crossed a swamp infested with giant snakes. What better place for a <i>museum</i>?
             </CustomImage>
             <br/>
             <p>This section is a bit of a stretch, as this is not an actual "Location", but more like a dungeon linking two open world areas - but I wanted to talk about this as it symbolizes a common trend around the whole game.</p>
@@ -294,7 +294,7 @@ function Chapter3() {
                 src={corel_reactor}
                 align="right"
             >
-                Quite a mess
+                Quite the mess
             </CustomImage>
             {splitText(`
             Moving on with the plot, after the boss fight (I really preferred how the original treated Hojo's character development, but I don't want to become redundant), Yuffie forces herself in the party and everyone leaves the village; the next stop is the nearby reactor atop the near mountains.
@@ -373,7 +373,7 @@ function Chapter3() {
                 src={gongaga_zack_parents}
                 align="right"
             >
-                Your son sacrificed himself for this dunce. I'm so, so sorry.
+                Your son sacrificed himself for this dunce.<br/>I'm so, so sorry.
             </CustomImage>
 
             {splitText(`But the important difference between this iteration and the original game lies in the village itself: while back in 1997 the user could meet Zack's parents and, provided either Tifa, Aerith or both were in the party, have a clue about the fact that their son could be someone of any kind of importance, this time around the party splits up and we will have Cloud witnessing Aerith's decision to meet them in order to talk about his saviour.
@@ -522,7 +522,7 @@ function Chapter3() {
                 src={nibelheim_surveillance}
                 align="right"
             >
-                Somebody's watching as we're sneaking in the lab!<br/><i>(spoiler: it's just ChadleyHojo)</i>
+                Somebody's watching as we're sneaking in the lab!<br/><i>(no worries: it's just ChadleyHojo)</i>
             </CustomImage>
             {splitText(`
             This gets even weirder when you then find the <i>other</i> basement (connected to the same elevator, obviously) where Sephiroth discovered the truth about his origins and the chambers where Zack and Cloud where held captive: the two basements' architecture is so different that things just stop making sense.

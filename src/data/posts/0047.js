@@ -107,8 +107,10 @@ function StatefulPost() {
                     <li><BookmarkLink id="Nibelheim" onPreClick={() => forcePanelOpen(3)}>The Nibelheim area</BookmarkLink></li>
                     <li><BookmarkLink id="Temple_Cetra" onPreClick={() => forcePanelOpen(3)}>The temple of the Ancient and their city</BookmarkLink></li>
                     <br/>
-                    <BookmarkLink id="Pt4" isTitle>Part 4: what is <i>actually</i> happening here</BookmarkLink>
+                    <BookmarkLink id="Pt4" isTitle>Part 4: What is <i>actually</i> happening here</BookmarkLink>
                     <li><BookmarkLink id="Multiverse" onPreClick={() => forcePanelOpen(4)}>The elephant in the room</BookmarkLink></li>
+                    <li><BookmarkLink id="Multiverse_1" onPreClick={() => forcePanelOpen(4)}>General concepts</BookmarkLink></li>
+                    <li><BookmarkLink id="Multiverse_2" onPreClick={() => forcePanelOpen(4)}>Epileptic Trees</BookmarkLink></li>
                     <li><BookmarkLink id="That_Scene" onPreClick={() => forcePanelOpen(4)}><i>That</i> scene</BookmarkLink></li>
                     <li><BookmarkLink id="Ending" onPreClick={() => forcePanelOpen(4)}>The ending</BookmarkLink></li>
                     <li><BookmarkLink id="Future" onPreClick={() => forcePanelOpen(4)}>What's missing, and what I think will happen in part three</BookmarkLink></li>
