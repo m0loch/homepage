@@ -38,7 +38,7 @@ function StyledSection(props) {
                         key={idx}
                         idx={idx}
                         value={tile.value}
-                        isBase={tile.base}
+                        base={tile.base}
                         section={props.idx}
                         hCount={props.hCount}
                         vCount={props.vCount}

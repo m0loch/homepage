@@ -3,13 +3,13 @@ import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
 const StyledCellInternal = styled('div', {
-    shouldForwardProp: (props) => props !== 'dark'
+    shouldForwardProp: (props) => props !== 'dark' && props !== 'base'
 })(
-    ({ theme, dark, isBase }) => {
+    ({ theme, dark, base }) => {
         return ({
             display: "flex",
             backgroundColor: dark ? theme.palette.sudoku.darkbg : theme.palette.sudoku.lightbg,
-            color: isBase ? theme.palette.sudoku.base : theme.palette.sudoku.value,
+            color: base ? theme.palette.sudoku.base : theme.palette.sudoku.value,
             alignContent: "center",
             justifyContent: "center",
             height: '100%',
@@ -37,7 +37,7 @@ function StyledCell(props) {
             key={props.value}
             style={style}
         >
-            <StyledCellInternal dark={dark} isBase={props.isBase} onClick={(e) => props.onClick(e, props.section, props.idx)}>
+            <StyledCellInternal dark={dark} base={props.base} onClick={(e) => props.onClick(e, props.section, props.idx)}>
                 <p style={{ margin: "auto", fontSize: "3vw" }} value={props.value}>{props.value}</p>
             </StyledCellInternal>
         </Grid>
