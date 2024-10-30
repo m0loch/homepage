@@ -16,6 +16,7 @@ const StyledCellInternal = styled('div', {
             borderWidth: "2px",
             borderStyle: "solid",
             borderColor: theme.palette.link,
+            fontWeight: base ? "bold" : "normal",
         })
     }
 );
@@ -37,7 +38,11 @@ function StyledCell(props) {
             key={props.value}
             style={style}
         >
-            <StyledCellInternal dark={dark} base={props.base} onClick={(e) => props.onClick(e, props.section, props.idx)}>
+            <StyledCellInternal dark={dark} base={props.base}
+                onClick={(e) => {
+                    return props.base ? undefined : props.onClick(e, props.section, props.idx);
+                }}
+            >
                 <p style={{ margin: "auto", fontSize: "3vw" }} value={props.value}>{props.value}</p>
             </StyledCellInternal>
         </Grid>
