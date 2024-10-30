@@ -111,3 +111,6 @@ export function simonSetReverse(value) {
         reverseMode: value,
     }
 }
+
+// Sudoku
+// TODO: set current level, mark level as done

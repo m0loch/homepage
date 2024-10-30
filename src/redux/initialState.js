@@ -9,6 +9,7 @@ const InitialState = {
     minesweeper: { difficulty: 1, sectionsState: [true, false, true, false] },
     talks: { selectedTalk: 0 },
     simon: { level: 8, reverseMode: false },
+    sudoku: { },
 };
 
 export default InitialState;

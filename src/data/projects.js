@@ -10,6 +10,7 @@ import TylesPreview from '../components/projects/tyles/tylesPreview';
 import MinesweeperPreview from '../components/projects/minesweeper/minesweeperPreview';
 import SolitairePreview from '../components/projects/solitaire/solitairePreview';
 import SimonPreview from '../components/projects/simon/simonPreview';
+import SudokuPreview from '../components/projects/sudoku/sudokuPreview';
 
 const games = [{
     key: 0,
@@ -88,6 +89,13 @@ const games = [{
     content: "Prove the power of your mind!",
     fullContent: SimonPreview,
     url: "simon",
+},
+{
+    key: 11,
+    title: "Sudoku",
+    content: "When you like crossword puzzles, but hate words",
+    fullContent: SudokuPreview,
+    url: "sudoku",
 },
 {
     key: 100,
