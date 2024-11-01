@@ -32,7 +32,7 @@ const StyledPanel = styled('div',
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        width: `calc(200px)`,
+        width: "160px",
         alignItems: "center",
         justifyContent: "center",
 
@@ -42,16 +42,13 @@ const StyledPanel = styled('div',
         transform: `translate(-${selection.col*100/totalSize}%,-${selection.row*100/totalSize}%)`,
 
         [theme.breakpoints.down('md')]: {
-            width: `calc(120px)`,
+            width: "120px",
         }
     })
 );
 
 function SelectionDlg(props) {
     const options = Array.apply(0, { length: props.vCount * props.hCount });
-
-    console.log(props.selected);
-    console.log(props.position);
 
     return (props.open ? <>
         <StyledBG onClick={props.onClose} />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Container } from "@mui/material";
+import ControlBar from './components/controlBar';
 import StyledTable from './styledComponents/styledTable';
 import StyledSection from './styledComponents/styledSection';
 import SelectionDlg from './components/selectionDlg';
@@ -81,8 +82,6 @@ function Sudoku(props) {
     const row = (Math.floor(section / HDIM) * HDIM) + Math.floor(idx / VDIM);
     const col = ((section % HDIM) * VDIM) + (idx % VDIM);
     
-    // console.log(`section is ${section}, idx is ${idx}\nrow should be ${row}, column should be ${col}?`);
-
     setGameState({
         ...gameState,
         dialogOpen: {x: e.clientX, y: e.clientY},
@@ -96,11 +95,9 @@ function Sudoku(props) {
   }
 
   const onDlgSelect = (value) => {
-    // DOBBIAMO PORTARCI PURE LA SEZIONE
-    // const tiles = gameState.tiles;
-    // tiles[gameState.editingDigit] = value;
+    const tiles = gameState.tiles;
 
-    // console.log(tiles);
+    tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
 
     setGameState({
         ...gameState,
@@ -118,11 +115,15 @@ function Sudoku(props) {
   }
   // /Events
 
-  console.log(gameState.tiles);
-
   return (
-    <Container style={{ display: "flex" }}>
-
+    <Container style={{ display: "flex", flexDirection: "column" }}>
+      <ControlBar
+        reset={() => alert('reset')}
+        undo={() => alert('undo')}
+        erase={() => alert('erase')}
+        notes={() => alert('notes')}
+        hint={() => alert('hint')}
+      />
       <SelectionDlg
         open={gameState.dialogOpen !== false}
         hCount={HDIM}

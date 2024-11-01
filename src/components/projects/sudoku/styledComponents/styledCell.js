@@ -43,7 +43,7 @@ function StyledCell(props) {
                     return props.base ? undefined : props.onClick(e, props.section, props.idx);
                 }}
             >
-                <p style={{ margin: "auto", fontSize: "3vw" }} value={props.value}>{props.value}</p>
+                <p style={{ margin: "auto", fontSize: "3.5vmin" }} value={props.value}>{props.value}</p>
             </StyledCellInternal>
         </Grid>
     )
