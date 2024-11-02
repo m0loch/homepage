@@ -9,24 +9,24 @@ import WinScreen from '../common/winScreen';
 
 // THIS NEEDS TO BE MOVED AWAY
 const EXAMPLE = [
-  null,null,null,   2,   7,null,null,   9,null,
-  null,   9,null,   4,null,   5,   8,   1,   7,
-  null,null,   3,null,null,null,null,null,   5,
-  null,null,null,   7,null,   9,   1,   2,   3,
-  null,null,   4,null,   1,   2,null,   8,null,
-     1,null,null,   3,   5,null,null,   4,null,
-     6,   5,null,   1,null,null,   4,null,null,
-  null,   3,   2,null,   6,   7,   9,null,   1,
-     9,   1,null,null,null,null,null,   3,   8,
+  0,0,0,2,7,0,0,9,0,
+  0,9,0,4,0,5,8,1,7,
+  0,0,3,0,0,0,0,0,5,
+  0,0,0,7,0,9,1,2,3,
+  0,0,4,0,1,2,0,8,0,
+  1,0,0,3,5,0,0,4,0,
+  6,5,0,1,0,0,4,0,0,
+  0,3,2,0,6,7,9,0,1,
+  9,1,0,0,0,0,0,3,8,
 ];
 
 // const EXAMPLE = [
 //   1, 2, 3, 4, 5, 6,
-//   4, 5, 6, null, 1, 2,
-//   11, 12, 13, 34, 35, 36,
-//   14, 15, 16, null, 31, 32,
-//   21, 22, 23, 44, 45, 46,
-//   24, 25, 26, null, 41, 42,
+//   4, 5, 6, 0, 1, 2,
+//  11,12,13,34,35,36,
+//  14,15,16, 0,31,32,
+//  21,22,23,44,45,46,
+//  24,25,26, 0,41,42,
 // ]
 
 const HDIM = 3; // sezioni per colonna
@@ -52,7 +52,7 @@ const loadSections = (source, vCount, hCount) => {
       for (let k = 0; k < hCount * vCount; k++) {
         // Cycle on actual columns
         tiles[i * vCount + Math.floor(k / hCount)]
-          .push({ value: source[iterator], base: source[iterator] !== null });
+          .push({ value: source[iterator] !== 0 ? source[iterator] : null, base: source[iterator] !== 0 });
         iterator++;
       }
     }
