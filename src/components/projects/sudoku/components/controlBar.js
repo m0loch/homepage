@@ -21,13 +21,15 @@ const ControlBarInternal = styled(Grid)(
     })
 );
 
-const ButtonInternal = styled(IconButton)(
-    ({ theme }) => ({
+const ButtonInternal = styled(IconButton, {
+    shouldForwardProp: (prop) => prop !== 'pressed'
+})(
+    ({ theme, pressed }) => ({
         height: "4vw",
         width: "4vw",
         display: "flex",
         flexDirection: "column",
-        color: theme.palette.link,
+        color: pressed ? "white" : theme.palette.link,
 
         [theme.breakpoints.down('md')]: {
             width: "16vw",
@@ -40,35 +42,31 @@ const ControlBar = (props) => {
     return (
         <ControlBarInternal>
             <ButtonInternal
-                variant="contained"
                 onClick={props.reset}
             >
                 <ReplayIcon />
                 <p>Reset</p>
             </ButtonInternal>
             <ButtonInternal
-                variant="contained"
                 onClick={props.undo}
             >
                 <UndoIcon />
                 <p>Undo</p>
             </ButtonInternal>
             <ButtonInternal
-                variant="contained"
                 onClick={props.erase}
+                pressed={props.isErasing}
             >
                 <ClearIcon />
                 <p>Erase</p>
             </ButtonInternal>
             <ButtonInternal
-                variant="contained"
                 onClick={props.notes}
             >
                 <EditNoteIcon />
                 <p>Notes</p>
             </ButtonInternal>
             <ButtonInternal
-                variant="contained"
                 onClick={props.hint}
             >
                 <HelpOutlineIcon />

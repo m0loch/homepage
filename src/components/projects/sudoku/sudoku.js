@@ -70,6 +70,7 @@ const NewGame = () => {
     dialogOpen: false,
     editingDigit: undefined,
     moves: [],
+    erasing: false,
   }
 }
 
@@ -77,12 +78,24 @@ function Sudoku(props) {
   const [gameState, setGameState] = useState(NewGame());
 
   // Events
-  const onShowSelector = (e, section, idx) => {
+  const onCellSelected = (e, section, idx) => {
     e.preventDefault();
 
     const row = (Math.floor(section / HDIM) * HDIM) + Math.floor(idx / VDIM);
     const col = ((section % HDIM) * VDIM) + (idx % VDIM);
-    
+
+    if (gameState.erasing) {
+      const tiles = gameState.tiles;
+      gameState.moves.push(JSON.stringify(tiles));
+      tiles[section][idx].value = null;
+
+      setGameState({
+        ...gameState,
+        erasing: false,
+      });
+      return;
+    }
+
     setGameState({
         ...gameState,
         dialogOpen: {x: e.clientX, y: e.clientY},
@@ -128,6 +141,13 @@ function Sudoku(props) {
       ...gameState,
     })
   }
+
+  const onEraseNumber = () => {
+    setGameState({
+      ...gameState,
+      erasing: !gameState.erasing,
+    })
+  }
   // /Events
 
   return (
@@ -135,9 +155,10 @@ function Sudoku(props) {
       <ControlBar
         reset={() => setGameState(NewGame())}
         undo={onUndo}
-        erase={() => alert('erase')}
+        erase={onEraseNumber}
         notes={() => alert('notes')}
         hint={() => alert('hint')}
+        isErasing={gameState.erasing}
       />
       <SelectionDlg
         open={gameState.dialogOpen !== false}
@@ -157,7 +178,7 @@ function Sudoku(props) {
             section={section}
             hCount={HDIM}
             vCount={VDIM}
-            onShowSelector={onShowSelector}
+            onCellSelected={onCellSelected}
           />
         ))}
       </StyledTable>

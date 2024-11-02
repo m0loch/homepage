@@ -42,7 +42,7 @@ function StyledSection(props) {
                         section={props.idx}
                         hCount={props.hCount}
                         vCount={props.vCount}
-                        onClick={props.onShowSelector}
+                        onClick={props.onCellSelected}
                     />
                 ))} 
             </StyledSectionInternal>
