@@ -7,7 +7,7 @@ import StyledSection from './styledComponents/styledSection';
 import SelectionDlg from './components/selectionDlg';
 import WinScreen from '../common/winScreen';
 
-// THIS NEEDS TO BE MOVED AWAY
+// THIS NEEDS TO BE PASSED AS A PROP
 const EXAMPLE = [
   0,0,0,2,7,0,0,9,0,
   0,9,0,4,0,5,8,1,7,
@@ -20,28 +20,14 @@ const EXAMPLE = [
   9,1,0,0,0,0,0,3,8,
 ];
 
-// const EXAMPLE = [
-//   1, 2, 3, 4, 5, 6,
-//   4, 5, 6, 0, 1, 2,
-//  11,12,13,34,35,36,
-//  14,15,16, 0,31,32,
-//  21,22,23,44,45,46,
-//  24,25,26, 0,41,42,
-// ]
-
-const HDIM = 3; // sezioni per colonna
-const VDIM = 3; // sezioni per riga
-
-// The grid needs to be square, so it will always end up having
-// a dimension of HDIM x VDIM for both height and width.
-//
-// A 2x3 grid will feature sections made of 3x2 tiles.
+const HDIM = 3;
+const VDIM = 3;
 
 const loadSections = (source, vCount, hCount) => {
   const tiles = new Array(vCount * hCount);
   for (let a = 0; a < tiles.length; a++) tiles[a] = [];
 
-  // Hypothesis: 2 3x2 sections per row, split on 3 tows
+  // Hypothesis: 2 3x2 sections per row, split on 3 columns
   // vCount = 2
   // hCount = 3
   let iterator = 0;
