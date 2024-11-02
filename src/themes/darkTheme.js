@@ -35,6 +35,7 @@ const darkTheme = baseTheme({
             darkbg: "#465E85",
             value: "#FFFFFF",
             base: "#FFFF00",
+            selected: "#FFFFFF",
         },
     },
 });

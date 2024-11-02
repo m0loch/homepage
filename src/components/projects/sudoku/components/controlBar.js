@@ -29,7 +29,7 @@ const ButtonInternal = styled(IconButton, {
         width: "4vw",
         display: "flex",
         flexDirection: "column",
-        color: pressed ? "white" : theme.palette.link,
+        color: pressed ? theme.palette.sudoku.selected : theme.palette.link,
 
         [theme.breakpoints.down('md')]: {
             width: "16vw",
