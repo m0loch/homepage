@@ -69,6 +69,7 @@ const NewGame = () => {
     victory: false,
     dialogOpen: false,
     editingDigit: undefined,
+    moves: [],
   }
 }
 
@@ -97,6 +98,8 @@ function Sudoku(props) {
   const onNumberSelected = (value) => {
     const tiles = gameState.tiles;
 
+    gameState.moves.push(JSON.stringify(tiles));
+
     tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
 
     setGameState({
@@ -113,13 +116,25 @@ function Sudoku(props) {
         editingDigit: undefined
       });
   }
+
+  const onUndo = () => {
+    if (gameState.moves.length === 0) {
+      return;
+    }
+
+    gameState.tiles = JSON.parse(gameState.moves.pop());
+
+    setGameState({
+      ...gameState,
+    })
+  }
   // /Events
 
   return (
     <Container style={{ display: "flex", flexDirection: "column" }}>
       <ControlBar
-        reset={() => alert('reset')}
-        undo={() => alert('undo')}
+        reset={() => setGameState(NewGame())}
+        undo={onUndo}
         erase={() => alert('erase')}
         notes={() => alert('notes')}
         hint={() => alert('hint')}
