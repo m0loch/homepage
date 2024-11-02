@@ -94,7 +94,7 @@ function Sudoku(props) {
      });
   }
 
-  const onDlgSelect = (value) => {
+  const onNumberSelected = (value) => {
     const tiles = gameState.tiles;
 
     tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
@@ -106,7 +106,7 @@ function Sudoku(props) {
     })
   }
 
-  const onDlgCancel = () => {
+  const onNumberInsertCancel = () => {
       setGameState({
         ...gameState,
         dialogOpen: false,
@@ -128,8 +128,8 @@ function Sudoku(props) {
         open={gameState.dialogOpen !== false}
         hCount={HDIM}
         vCount={VDIM}
-        onSelect={onDlgSelect}
-        onClose={onDlgCancel}
+        onSelect={onNumberSelected}
+        onClose={onNumberInsertCancel}
         position={gameState.dialogOpen}
         selected={gameState.editingDigit}
       />
