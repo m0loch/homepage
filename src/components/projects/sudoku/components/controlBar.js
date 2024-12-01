@@ -5,7 +5,6 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import UndoIcon from '@mui/icons-material/Undo';
 import ClearIcon from '@mui/icons-material/Clear';
 import EditNoteIcon from '@mui/icons-material/EditNote';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 const ControlBarInternal = styled(Grid)(
     ({ theme }) => ({
@@ -66,12 +65,6 @@ const ControlBar = (props) => {
             >
                 <EditNoteIcon />
                 <p>Notes</p>
-            </ButtonInternal>
-            <ButtonInternal
-                onClick={props.hint}
-            >
-                <HelpOutlineIcon />
-                <p>Hint</p>
             </ButtonInternal>
         </ControlBarInternal>
     )

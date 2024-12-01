@@ -199,7 +199,6 @@ function Sudoku(props) {
         undo={onUndo}
         erase={onEraseNumber}
         notes={onActivateNotes}
-        hint={() => alert('hint')}
         isErasing={gameState.erasing}
         isNotating={gameState.notating}
       />
