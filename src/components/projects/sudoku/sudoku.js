@@ -5,6 +5,7 @@ import ControlBar from './components/controlBar';
 import StyledTable from './styledComponents/styledTable';
 import StyledSection from './styledComponents/styledSection';
 import SelectionDlg from './components/selectionDlg';
+import NotationDlg from './components/notationDlg';
 import WinScreen from '../common/winScreen';
 
 // THIS NEEDS TO BE PASSED AS A PROP
@@ -47,16 +48,36 @@ const loadSections = (source, vCount, hCount) => {
   return tiles;
 }
 
+const createNotes = (vCount, hCount) => {
+  // Construct N empty sections
+  const notes = new Array(vCount * hCount);
+
+  // For each sections, construct N cells
+  for (let i = 0; i < notes.length; i++) {
+    notes[i] = new Array(vCount * hCount);
+
+    // For each cell, construct N flags
+    for (let j = 0; j < notes[i].length; j++) {
+      notes[i][j] = new Array(vCount * hCount).fill(0);
+    }
+  }
+
+  return notes;
+}
+
 //////////////////////////////////////////////////
 
 const NewGame = () => {
   return {
     tiles: loadSections(EXAMPLE, HDIM, VDIM),
+    notes: createNotes(HDIM, VDIM),
     victory: false,
     dialogOpen: false,
     editingDigit: undefined,
     moves: [],
+    selecting: false,
     erasing: false,
+    notating: false,
   }
 }
 
@@ -108,12 +129,40 @@ function Sudoku(props) {
     })
   }
 
-  const onNumberInsertCancel = () => {
-      setGameState({
-        ...gameState,
-        dialogOpen: false,
-        editingDigit: undefined
-      });
+  const onNumberInsertCanceled = () => {
+    setGameState({
+      ...gameState,
+      dialogOpen: false,
+      editingDigit: undefined,
+    });
+  }
+
+  const onNoteEntered = (value) => {
+    setGameState({
+      ...gameState,
+      dialogOpen: false,
+      editingDigit: undefined,
+      notating: false,
+    })
+  }
+
+  const onNoteAltered = (value) => {
+    const notes = gameState.notes;
+
+    notes[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx] = value;
+
+    setGameState({
+      ...gameState,
+      notes,
+    })
+  }
+
+  const onNoteCanceled = () => {
+    setGameState({
+      ...gameState,
+      dialogOpen: false,
+      editingDigit: undefined,
+    });
   }
 
   const onUndo = () => {
@@ -134,6 +183,13 @@ function Sudoku(props) {
       erasing: !gameState.erasing,
     })
   }
+
+  const onActivateNotes = () => {
+    setGameState({
+      ...gameState,
+      notating: !gameState.notating,
+    })
+  }
   // /Events
 
   return (
@@ -142,18 +198,30 @@ function Sudoku(props) {
         reset={() => setGameState(NewGame())}
         undo={onUndo}
         erase={onEraseNumber}
-        notes={() => alert('notes')}
+        notes={onActivateNotes}
         hint={() => alert('hint')}
         isErasing={gameState.erasing}
+        isNotating={gameState.notating}
       />
       <SelectionDlg
-        open={gameState.dialogOpen !== false}
+        open={!gameState.notating && gameState.dialogOpen !== false}
         hCount={HDIM}
         vCount={VDIM}
         onSelect={onNumberSelected}
-        onClose={onNumberInsertCancel}
+        onClose={onNumberInsertCanceled}
         position={gameState.dialogOpen}
         selected={gameState.editingDigit}
+      />
+      <NotationDlg
+        open={gameState.notating && gameState.dialogOpen !== false}
+        hCount={HDIM}
+        vCount={VDIM}
+        onSelect={onNoteEntered}
+        onChange={onNoteAltered}
+        onClose={onNoteCanceled}
+        position={gameState.dialogOpen}
+        selected={gameState.editingDigit}
+        notes={gameState.notes}
       />
       <StyledTable container>
         {gameState.victory ? <WinScreen onClick={NewGame()} /> : null}
@@ -164,6 +232,7 @@ function Sudoku(props) {
             section={section}
             hCount={HDIM}
             vCount={VDIM}
+            notes={gameState.notes[idx]}
             onCellSelected={onCellSelected}
           />
         ))}

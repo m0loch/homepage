@@ -62,6 +62,7 @@ const ControlBar = (props) => {
             </ButtonInternal>
             <ButtonInternal
                 onClick={props.notes}
+                pressed={props.isNotating}
             >
                 <EditNoteIcon />
                 <p>Notes</p>

@@ -3,13 +3,13 @@ import { Grid } from "@mui/material";
 import { styled } from '@mui/system';
 
 const StyledCellInternal = styled('div', {
-    shouldForwardProp: (props) => props !== 'dark' && props !== 'base'
+    shouldForwardProp: (props) => props !== 'dark' && props !== 'base' && props !== 'toggle'
 })(
-    ({ theme, dark, base }) => {
+    ({ theme, dark, base, toggle }) => {
         return ({
             display: "flex",
             backgroundColor: dark ? theme.palette.sudoku.darkbg : theme.palette.sudoku.lightbg,
-            color: base ? theme.palette.sudoku.base : theme.palette.sudoku.value,
+            color: toggle || base ? theme.palette.sudoku.base : theme.palette.sudoku.value,
             alignContent: "center",
             justifyContent: "center",
             height: '100%',
@@ -31,19 +31,32 @@ function StyledCell(props) {
     // at the beginning of each row
     const dark = props.hCount % 2 ?
         props.section % 2 === 0 : // odd columns: easy
-        (props.section + Math.floor(props.section / 2)) % 2 === 0;
+        (props.section + Math.floor(props.section / 2)) % 2 === 0
+    ;
+
+    let value = props.value;
+    let isNote = (value === null);
+
+    if (isNote) {
+        value = [];
+        for (let i = 0; i < props.notes.length; i++) {
+            if (props.notes[i] === 0) continue;
+            if (value.length > 0) value += " ";
+            value += i+1;
+        }
+    }
 
     return (
         <Grid item
             key={props.value}
             style={style}
         >
-            <StyledCellInternal dark={dark} base={props.base}
+            <StyledCellInternal dark={dark} base={props.base} toggle={props.toggle}
                 onClick={(e) => {
                     return props.base ? undefined : props.onClick(e, props.section, props.idx);
                 }}
             >
-                <p style={{ margin: "auto", fontSize: "3.5vmin" }} value={props.value}>{props.value}</p>
+                <p style={{ margin: "auto 5px", fontSize: isNote ? "1.4vmin" : "3.5vmin" }}>{value}</p>
             </StyledCellInternal>
         </Grid>
     )

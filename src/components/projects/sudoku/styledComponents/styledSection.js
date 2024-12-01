@@ -40,6 +40,7 @@ function StyledSection(props) {
                         value={tile.value}
                         base={tile.base}
                         section={props.idx}
+                        notes={props.notes[idx]}
                         hCount={props.hCount}
                         vCount={props.vCount}
                         onClick={props.onCellSelected}
