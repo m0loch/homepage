@@ -53,7 +53,7 @@ function StyledCell(props) {
         >
             <StyledCellInternal dark={dark} base={props.base} toggle={props.toggle}
                 onClick={(e) => {
-                    return props.base ? undefined : props.onClick(e, props.section, props.idx);
+                    return (props.base || !props.onClick) ? undefined : props.onClick(e, props.section, props.idx);
                 }}
             >
                 <p style={{ margin: "auto 5px", fontSize: isNote ? "1.4vmin" : "3.5vmin" }}>{value}</p>

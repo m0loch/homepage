@@ -10,6 +10,7 @@ import NotationDlg from './components/notationDlg';
 import WinScreen from '../common/winScreen';
 
 import LevelLoader from './utils/levelLoader';
+import { FindDoubles, FindEmptyTiles } from './utils/tilesFunctions';
 
 const NewGame = (level) => {
   return {
@@ -43,9 +44,6 @@ function Sudoku(props) {
       }
     })
   }, [level]);
-
-  // !!! Wait for level to be loaded
-  if (!level.cols) return null;
 
   // Events
   const onCellSelected = (e, section, idx) => {
@@ -84,8 +82,16 @@ function Sudoku(props) {
     gameState.moves.push(JSON.stringify(tiles));
     tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
 
+    // Check for errors and win condition
+    const doubles = FindDoubles(tiles);
+    const freeTiles = FindEmptyTiles(tiles);
+
+    // TODO: Highlights errors
+    doubles.forEach(element => element.SetError(true));
+
     setGameState({
         ...gameState,
+        victory: !freeTiles && doubles.length === 0,
         tiles,
         dialogOpen: false,
         editingDigit: undefined,
@@ -186,7 +192,7 @@ function Sudoku(props) {
         notes={gameState.notes}
       />
       <StyledTable container>
-        {gameState.victory ? <WinScreen onClick={NewGame(level)} /> : null}
+        {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(level))} /> : null}
         {gameState.tiles?.map((section, idx) => (
           <StyledSection
             key={idx}
@@ -195,7 +201,7 @@ function Sudoku(props) {
             vCount={level.cols}
             hCount={level.rows}
             notes={gameState.notes[idx]}
-            onCellSelected={onCellSelected}
+            onCellSelected={gameState.victory ? null : onCellSelected}
           />
         ))}
       </StyledTable>

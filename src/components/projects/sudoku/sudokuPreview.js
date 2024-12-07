@@ -6,7 +6,7 @@ import { Collapse } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
 import { splitText } from "../../common/textFunctions";
 import LevelSelect from "./components/levelSelect";
-import LoadSudokuLevels from './utils/levelScanner';
+import LoadSudokuLevels from './utils/loadSudokuLevels';
 
 function SudokuPreview(props) {
 
