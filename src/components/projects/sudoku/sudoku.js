@@ -192,8 +192,8 @@ function Sudoku(props) {
             key={idx}
             idx={idx}
             section={section}
-            hCount={level.cols}
-            vCount={level.rows}
+            vCount={level.cols}
+            hCount={level.rows}
             notes={gameState.notes[idx]}
             onCellSelected={onCellSelected}
           />

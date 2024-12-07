@@ -1,15 +1,13 @@
 const loadSections = (source, rows, columns) => {
 
-    console.log(source);
-    console.log(rows);
-    console.log(columns);
-
     const tiles = new Array(rows * columns);
     for (let a = 0; a < tiles.length; a++) tiles[a] = [];
 
-    // Hypothesis: 2 3x2 sections per row, split on 3 columns
+    // EXAMPLE:
+    // The rows x column format applies to the section structure
     // rows = 2
     // columns = 3
+
     let iterator = 0;
     for (let i = 0; i < columns; i++) {
       // Cycle on the vertical number of sections
@@ -18,7 +16,7 @@ const loadSections = (source, rows, columns) => {
         for (let k = 0; k < columns * rows; k++) {
           // Cycle on actual columns
           tiles[i * rows + Math.floor(k / columns)]
-            .push({ value: source[iterator] !== 0 ? source[iterator] : null, base: source[iterator] !== 0 });
+            .push({ value: source[iterator] !== 0 ? source[iterator] : null, base: source[iterator] !== " " });
           iterator++;
         }
       }
