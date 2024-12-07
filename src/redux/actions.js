@@ -113,4 +113,9 @@ export function simonSetReverse(value) {
 }
 
 // Sudoku
-// TODO: set current level, mark level as done
+export function sudokuSetLevel(value) {
+    return {
+        type: 'SUDOKU_SET_LEVEL',
+        ...value,
+    }
+}

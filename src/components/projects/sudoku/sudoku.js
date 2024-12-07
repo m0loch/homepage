@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { CloneArray } from '../../common/arrayUtils';
 
 import { Container } from "@mui/material";
 import ControlBar from './components/controlBar';
@@ -8,69 +9,12 @@ import SelectionDlg from './components/selectionDlg';
 import NotationDlg from './components/notationDlg';
 import WinScreen from '../common/winScreen';
 
-// THIS NEEDS TO BE PASSED AS A PROP
-const EXAMPLE = [
-  0,0,0,2,7,0,0,9,0,
-  0,9,0,4,0,5,8,1,7,
-  0,0,3,0,0,0,0,0,5,
-  0,0,0,7,0,9,1,2,3,
-  0,0,4,0,1,2,0,8,0,
-  1,0,0,3,5,0,0,4,0,
-  6,5,0,1,0,0,4,0,0,
-  0,3,2,0,6,7,9,0,1,
-  9,1,0,0,0,0,0,3,8,
-];
+import LevelLoader from './utils/levelLoader';
 
-const HDIM = 3;
-const VDIM = 3;
-
-const loadSections = (source, vCount, hCount) => {
-  const tiles = new Array(vCount * hCount);
-  for (let a = 0; a < tiles.length; a++) tiles[a] = [];
-
-  // Hypothesis: 2 3x2 sections per row, split on 3 columns
-  // vCount = 2
-  // hCount = 3
-  let iterator = 0;
-  for (let i = 0; i < hCount; i++) {
-    // Cycle on the vertical number of sections
-    for (let j = 0; j < vCount; j++) {
-      // Cycle on the number of "section rows"
-      for (let k = 0; k < hCount * vCount; k++) {
-        // Cycle on actual columns
-        tiles[i * vCount + Math.floor(k / hCount)]
-          .push({ value: source[iterator] !== 0 ? source[iterator] : null, base: source[iterator] !== 0 });
-        iterator++;
-      }
-    }
-  }
-
-  return tiles;
-}
-
-const createNotes = (vCount, hCount) => {
-  // Construct N empty sections
-  const notes = new Array(vCount * hCount);
-
-  // For each sections, construct N cells
-  for (let i = 0; i < notes.length; i++) {
-    notes[i] = new Array(vCount * hCount);
-
-    // For each cell, construct N flags
-    for (let j = 0; j < notes[i].length; j++) {
-      notes[i][j] = new Array(vCount * hCount).fill(0);
-    }
-  }
-
-  return notes;
-}
-
-//////////////////////////////////////////////////
-
-const NewGame = () => {
+const NewGame = (level) => {
   return {
-    tiles: loadSections(EXAMPLE, HDIM, VDIM),
-    notes: createNotes(HDIM, VDIM),
+    tiles: CloneArray(level.tiles),
+    notes: CloneArray(level.notes),
     victory: false,
     dialogOpen: false,
     editingDigit: undefined,
@@ -82,14 +26,33 @@ const NewGame = () => {
 }
 
 function Sudoku(props) {
-  const [gameState, setGameState] = useState(NewGame());
+  const [level, setLevel] = useState({ });
+  const [gameState, setGameState] = useState(NewGame(level));
+
+  useEffect(() => {
+    LevelLoader(props.rows, props.columns, props.values, setLevel);
+  }, [props.rows, props.columns, props.values, props.level]);
+
+  useEffect(() => {
+    // Used like this in order to avoid gameState to be a dependency
+    // (it would lead to a recursive call)
+    setGameState(gstate => {
+        return {
+        ...gstate,
+        ...level
+      }
+    })
+  }, [level]);
+
+  // !!! Wait for level to be loaded
+  if (!level.cols) return null;
 
   // Events
   const onCellSelected = (e, section, idx) => {
     e.preventDefault();
 
-    const row = (Math.floor(section / HDIM) * HDIM) + Math.floor(idx / VDIM);
-    const col = ((section % HDIM) * VDIM) + (idx % VDIM);
+    const row = (Math.floor(section / level.cols) * level.cols) + Math.floor(idx / level.rows);
+    const col = ((section % level.cols) * level.rows) + (idx % level.rows);
 
     if (gameState.erasing) {
       const tiles = CloneArray(gameState.tiles);
@@ -137,7 +100,7 @@ function Sudoku(props) {
     });
   }
 
-  const onNoteEntered = (value) => {
+  const onNoteEntered = () => {
     setGameState({
       ...gameState,
       dialogOpen: false,
@@ -195,7 +158,7 @@ function Sudoku(props) {
   return (
     <Container style={{ display: "flex", flexDirection: "column" }}>
       <ControlBar
-        reset={() => setGameState(NewGame())}
+        reset={() => setGameState(NewGame(level))}
         undo={onUndo}
         erase={onEraseNumber}
         notes={onActivateNotes}
@@ -204,8 +167,8 @@ function Sudoku(props) {
       />
       <SelectionDlg
         open={!gameState.notating && gameState.dialogOpen !== false}
-        hCount={HDIM}
-        vCount={VDIM}
+        hCount={level.cols}
+        vCount={level.rows}
         onSelect={onNumberSelected}
         onClose={onNumberInsertCanceled}
         position={gameState.dialogOpen}
@@ -213,8 +176,8 @@ function Sudoku(props) {
       />
       <NotationDlg
         open={gameState.notating && gameState.dialogOpen !== false}
-        hCount={HDIM}
-        vCount={VDIM}
+        hCount={level.cols}
+        vCount={level.rows}
         onSelect={onNoteEntered}
         onChange={onNoteAltered}
         onClose={onNoteCanceled}
@@ -223,14 +186,14 @@ function Sudoku(props) {
         notes={gameState.notes}
       />
       <StyledTable container>
-        {gameState.victory ? <WinScreen onClick={NewGame()} /> : null}
-        {gameState.tiles.map((section, idx) => (
+        {gameState.victory ? <WinScreen onClick={NewGame(level)} /> : null}
+        {gameState.tiles?.map((section, idx) => (
           <StyledSection
             key={idx}
             idx={idx}
             section={section}
-            hCount={HDIM}
-            vCount={VDIM}
+            hCount={level.cols}
+            vCount={level.rows}
             notes={gameState.notes[idx]}
             onCellSelected={onCellSelected}
           />

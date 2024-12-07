@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { connect } from 'react-redux';
+import { sudokuSetLevel } from "../../../redux/actions";
 
-import { Collapse /*, RadioGroup, Radio, FormControlLabel*/ } from "@mui/material";
+import { Collapse } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
+import { splitText } from "../../common/textFunctions";
+import LevelSelect from "./components/levelSelect";
+import LoadSudokuLevels from './utils/levelScanner';
 
 function SudokuPreview(props) {
 
@@ -14,6 +18,8 @@ function SudokuPreview(props) {
         setOpen(newState);
     }
 
+    const levelsList =  LoadSudokuLevels(props.folder);
+
     return (
         <div style={{ display: "inline-block" }}>
             <CollapseHeader
@@ -22,21 +28,20 @@ function SudokuPreview(props) {
                 onClick={() => handleStateChange(0)}
             />
             <Collapse in={open[0]} timeout="auto" unmountOnExit>
-                <p>Come on, you know what a sudoku is...</p>
+                {splitText(`
+                Come on, you know what a sudoku is...
+                `)}
             </Collapse>
 
-            {/* <CollapseHeader
+            <CollapseHeader
                 caption={"Realization"}
                 open={open[1]}
                 onClick={() => handleStateChange(1)}
             />
             <Collapse in={open[1]} timeout="auto" unmountOnExit>
-                <p>Coding game itself was quite an easy task, being it just a simple grid where only one tile can be manipulated at a time.</p>
-                <p>Checking the win condition is trivial, but I found a couple of interesting points to tackle:</p>
-                <ul>
-                    <li>doing the tile sliding animations entirely via CSS;</li>
-                    <li>generating a random yet solvable initial setup - check out the <a href="https://en.wikipedia.org/wiki/15_puzzle">Wikipedia entry</a> for more info.</li>
-                </ul>
+                {splitText(`
+                Temp
+                `)}
             </Collapse>
 
             <CollapseHeader
@@ -45,25 +50,23 @@ function SudokuPreview(props) {
                 onClick={() => handleStateChange(2)}
             />
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
-                <RadioGroup
-                    value={props.size}
-                    name="mode-select"
-                    onChange={ev => props.SudokuSetSize(ev.target.value)}
-                >
-                    <FormControlLabel value="3" control={<Radio />} label="9 tiles" />
-                    <FormControlLabel value="4" control={<Radio />} label="16 tiles" />
-                </RadioGroup>
-            </Collapse> */}
+            {/* TODO: save which sudokus have already been completed, add an icon to them */}
+                <LevelSelect
+                    levelsNumber = {levelsList.length}
+                    level={props.level}
+                    onSelect={idx => props.sudokuSetLevel({level: idx, ...levelsList[idx]})}
+                />
+            </Collapse>
         </div>
     );
 }
 
-// function mapStateToProps(state) {
-//     return { ...state.Sudoku };
-//   }
+function mapStateToProps(state) {
+    return { ...state.sudoku };
+  }
   
-//   const mapDispatchToProps = {
-//     SudokuSetSize,
-//   };
+  const mapDispatchToProps = {
+    sudokuSetLevel,
+  };
 
-export default /*connect(mapStateToProps, mapDispatchToProps)(*/SudokuPreview/*)*/;
+export default connect(mapStateToProps, mapDispatchToProps)(SudokuPreview);

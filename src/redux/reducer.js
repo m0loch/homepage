@@ -33,6 +33,8 @@ const SettingsReducer = (state = InitialState, action) => {
             return { ...state, simon: { ...state.simon, level: action.level } }
         case 'SIMON_SET_REVERSE':
             return { ...state, simon: { ...state.simon, reverseMode: action.reverseMode } }
+        case 'SUDOKU_SET_LEVEL':
+            return { ...state, sudoku: { ...state.sudoku, ...action } }
         default:
             return state;
     }
