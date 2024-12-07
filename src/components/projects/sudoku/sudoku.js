@@ -92,12 +92,13 @@ function Sudoku(props) {
     const col = ((section % HDIM) * VDIM) + (idx % VDIM);
 
     if (gameState.erasing) {
-      const tiles = gameState.tiles;
+      const tiles = CloneArray(gameState.tiles);
       gameState.moves.push(JSON.stringify(tiles));
       tiles[section][idx].value = null;
 
       setGameState({
         ...gameState,
+        tiles,
         erasing: false,
       });
       return;
@@ -116,14 +117,13 @@ function Sudoku(props) {
   }
 
   const onNumberSelected = (value) => {
-    const tiles = gameState.tiles;
-
+    const tiles = CloneArray(gameState.tiles);
     gameState.moves.push(JSON.stringify(tiles));
-
     tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
 
     setGameState({
         ...gameState,
+        tiles,
         dialogOpen: false,
         editingDigit: undefined,
     })
