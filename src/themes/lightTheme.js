@@ -36,6 +36,7 @@ const lightTheme = baseTheme({
             value: "#028666",
             base: "#0044BF",
             selected: "#0044BF",
+            error: "#FF0000",
         },
     },
 });

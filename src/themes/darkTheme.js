@@ -36,6 +36,7 @@ const darkTheme = baseTheme({
             value: "#FFFFFF",
             base: "#FFFF00",
             selected: "#FFFFFF",
+            error: "#FF0000",
         },
     },
 });

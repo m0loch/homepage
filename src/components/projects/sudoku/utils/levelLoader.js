@@ -1,3 +1,5 @@
+import { createErrors } from "./tilesFunctions";
+
 const loadSections = (source, rows, columns) => {
 
     const tiles = new Array(rows * columns);
@@ -28,11 +30,11 @@ const loadSections = (source, rows, columns) => {
 const createNotes = (rows, columns) => {
     // Construct N empty sections
     const notes = new Array(rows * columns);
-  
+
     // For each sections, construct N cells
     for (let i = 0; i < notes.length; i++) {
       notes[i] = new Array(rows * columns);
-  
+
       // For each cell, construct N flags
       for (let j = 0; j < notes[i].length; j++) {
         notes[i][j] = new Array(rows * columns).fill(0);
@@ -48,6 +50,7 @@ function LevelLoader(rows, cols, values, levelSetter) {
         cols,
         tiles: loadSections(values, rows, cols),
         notes: createNotes(rows, cols),
+        errors: createErrors(rows, cols),
     });
 }
 
