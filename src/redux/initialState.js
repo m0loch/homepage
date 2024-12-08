@@ -11,9 +11,10 @@ const InitialState = {
     simon: { level: 8, reverseMode: false },
     sudoku: {
         level: 0,
-        rows: 3,
-        cols: 3,
-        values: "   27  90  9 4 5817   3     5    7 9123   4 12 8  1  35  4  65 1  4    32 679 1 91     38",
+        columns: 2,
+        rows: 2,
+        values: " 12   1  2   43 ",
+        doneList: [],
      },
 };
 

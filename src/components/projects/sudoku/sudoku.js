@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { sudokuSetLevel, sudokuSetLevelDone } from '../../../redux/actions';
+
 import { CloneArray } from '../../common/arrayUtils';
 
 import { Container } from "@mui/material";
@@ -87,6 +90,11 @@ function Sudoku(props) {
     const errors = FindErrors(tiles, level);
     const freeTiles = FindEmptyTiles(tiles);
     const foundDuplicates = CheckErrors(errors);
+
+    // Saves to state the fact that the current level has been done
+    if (!freeTiles && !foundDuplicates) {
+      props.sudokuSetLevelDone(props.level);
+    }
 
     setGameState({
         ...gameState,
@@ -209,4 +217,14 @@ function Sudoku(props) {
   );
 }
 
-export default Sudoku;
+
+function mapStateToProps(state) {
+  return { ...state.Sudoku };
+}
+
+const mapDispatchToProps = {
+  sudokuSetLevel,
+  sudokuSetLevelDone,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sudoku);

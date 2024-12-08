@@ -18,7 +18,7 @@ function SudokuPreview(props) {
         setOpen(newState);
     }
 
-    const levelsList =  LoadSudokuLevels(props.folder);
+    const levelsList = LoadSudokuLevels(props.folder);
 
     return (
         <div style={{ display: "inline-block" }}>
@@ -50,10 +50,10 @@ function SudokuPreview(props) {
                 onClick={() => handleStateChange(2)}
             />
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
-            {/* TODO: save which sudokus have already been completed, add an icon to them */}
                 <LevelSelect
-                    levelsNumber = {levelsList.length}
+                    levelsList={levelsList}
                     level={props.level}
+                    doneLevels={props.doneList}
                     onSelect={idx => props.sudokuSetLevel({level: idx, ...levelsList[idx]})}
                 />
             </Collapse>
