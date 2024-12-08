@@ -10,12 +10,13 @@ import NotationDlg from './components/notationDlg';
 import WinScreen from '../common/winScreen';
 
 import LevelLoader from './utils/levelLoader';
-import { FindDoubles, FindEmptyTiles } from './utils/tilesFunctions';
+import { FindErrors, FindEmptyTiles, CheckErrors } from './utils/tilesFunctions';
 
 const NewGame = (level) => {
   return {
     tiles: CloneArray(level.tiles),
     notes: CloneArray(level.notes),
+    errors: CloneArray(level.errors),
     victory: false,
     dialogOpen: false,
     editingDigit: undefined,
@@ -83,16 +84,15 @@ function Sudoku(props) {
     tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
 
     // Check for errors and win condition
-    const doubles = FindDoubles(tiles);
+    const errors = FindErrors(tiles, level);
     const freeTiles = FindEmptyTiles(tiles);
-
-    // TODO: Highlights errors
-    doubles.forEach(element => element.SetError(true));
+    const foundDuplicates = CheckErrors(errors);
 
     setGameState({
         ...gameState,
-        victory: !freeTiles && doubles.length === 0,
+        victory: !freeTiles && !foundDuplicates,
         tiles,
+        errors,
         dialogOpen: false,
         editingDigit: undefined,
     })
@@ -117,7 +117,6 @@ function Sudoku(props) {
 
   const onNoteAltered = (value) => {
     const notes = gameState.notes;
-
     notes[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx] = value;
 
     setGameState({
@@ -201,6 +200,7 @@ function Sudoku(props) {
             vCount={level.cols}
             hCount={level.rows}
             notes={gameState.notes[idx]}
+            errors={gameState.errors[idx]}
             onCellSelected={gameState.victory ? null : onCellSelected}
           />
         ))}
