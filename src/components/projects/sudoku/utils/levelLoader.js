@@ -16,7 +16,7 @@ const loadSections = (source, rows, columns) => {
         for (let k = 0; k < columns * rows; k++) {
           // Cycle on actual columns
           tiles[i * rows + Math.floor(k / columns)]
-            .push({ value: source[iterator] !== 0 ? source[iterator] : null, base: source[iterator] !== " " });
+            .push({ value: source[iterator] !== ' ' ? source[iterator] : null, base: source[iterator] !== ' ' });
           iterator++;
         }
       }
