@@ -5,6 +5,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import UndoIcon from '@mui/icons-material/Undo';
 import ClearIcon from '@mui/icons-material/Clear';
 import EditNoteIcon from '@mui/icons-material/EditNote';
+import ListAltIcon from '@mui/icons-material/ListAlt';
 
 const ControlBarInternal = styled(Grid)(
     ({ theme }) => ({
@@ -65,6 +66,12 @@ const ControlBar = (props) => {
             >
                 <EditNoteIcon />
                 <p>Notes</p>
+            </ButtonInternal>
+            <ButtonInternal
+                onClick={props.selectLevel}
+            >
+                <ListAltIcon />
+                <p>Levels</p>
             </ButtonInternal>
         </ControlBarInternal>
     )

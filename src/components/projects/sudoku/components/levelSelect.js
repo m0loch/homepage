@@ -12,14 +12,13 @@ const StyledItem = styled(MenuItem,
     })
 );
 
-const isDone =(list, idx) => {
-    return list.findIndex(level => level === idx) > -1;
+const isDone = (list, idx) => {
+    return list?.findIndex(level => level === idx) > -1;
 }
 
 function LevelSelect(props) {
-
     return (
-        <FormControl style={{width: "100%"}}>
+        <FormControl style={ props.style ?? {width: "100%"}}>
             <FormHelperText>Level select</FormHelperText>
             <Select
                 onChange={e => props.onSelect(e.target.value)}

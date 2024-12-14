@@ -14,6 +14,7 @@ import WinScreen from '../common/winScreen';
 
 import LevelLoader from './utils/levelLoader';
 import { FindErrors, FindEmptyTiles, CheckErrors } from './utils/tilesFunctions';
+import LevelSelectDlg from './components/levelSelectDlg';
 
 const NewGame = (level) => {
   return {
@@ -23,6 +24,7 @@ const NewGame = (level) => {
     victory: false,
     dialogOpen: false,
     editingDigit: undefined,
+    selectingLevel: false,
     moves: [],
     selecting: false,
     erasing: false,
@@ -166,6 +168,20 @@ function Sudoku(props) {
       notating: !gameState.notating,
     })
   }
+
+  const onLevelSelect = () => {
+    setGameState({
+      ...gameState,
+      selectingLevel: true,
+    })
+  }
+
+  const onLevelSelectCancel = () => {
+    setGameState({
+      ...gameState,
+      selectingLevel: false,
+    })
+  }
   // /Events
 
   return (
@@ -175,6 +191,7 @@ function Sudoku(props) {
         undo={onUndo}
         erase={onEraseNumber}
         notes={onActivateNotes}
+        selectLevel={onLevelSelect}
         isErasing={gameState.erasing}
         isNotating={gameState.notating}
       />
@@ -197,6 +214,14 @@ function Sudoku(props) {
         position={gameState.dialogOpen}
         selected={gameState.editingDigit}
         notes={gameState.notes}
+      />
+      <LevelSelectDlg
+        open={gameState.selectingLevel !== false}
+        level={props.level}
+        scores={props.scores}
+        doneLevels={props.doneList}
+        onSelect={idx => props.sudokuSetLevel(idx)}
+        onOK={onLevelSelectCancel}
       />
       <StyledTable container>
         {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(level))} /> : null}

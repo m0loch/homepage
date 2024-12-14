@@ -1,6 +1,6 @@
 import React from 'react';
 import Tyle from '../components/tyle';
-import { BaseDlgPanel, DlgBackground, DlgContent, DlgActions, ActionButton } from './baseDlg';
+import { BaseDlgPanel, DlgBackground, DlgContent, DlgActions, ActionButton } from '../../common/baseDlg';
 
 export default function HelpDlg(props) {
     return (
