@@ -1,9 +1,9 @@
 function getPosts() {
-    // Reads all the .js files in the ./data subfolders as modules
-    const chapterModules = require.context("./posts", true, /\.js$/);
+    // Reads all the .js files in the ./posts subfolder as modules
+    const posts = require.context("./posts", true, /\.js$/);
 
     // Retrieves the default export for each module
-    return chapterModules.keys().map(chapter => chapterModules(chapter).default);
+    return posts.keys().map(post => posts(post).default);
 }
 
 export default getPosts();
