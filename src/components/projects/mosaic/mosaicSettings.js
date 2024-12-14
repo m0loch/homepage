@@ -36,7 +36,7 @@ const StyledContainer = styled('div')(
 
 function MosaicSettings(props) {
 
-    const selected = images.find(item => item.value === props.img);
+    const selected = images.find(item => item.value === props.img) ?? 0;
 
     return (
         <StyledContainer>
