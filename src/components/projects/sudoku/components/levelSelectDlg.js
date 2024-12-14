@@ -1,10 +1,8 @@
 import React from 'react';
 import { BaseDlgPanel, DlgBackground, DlgActions, ActionButton } from '../../common/baseDlg';
-import LoadSudokuLevels from '../utils/loadSudokuLevels';
 import LevelSelect from './levelSelect';
 
 export default function LevelSelectDlg(props) {
-    const levelsList = LoadSudokuLevels(props.folder);
 
     return (props.open ?
         <>
@@ -16,10 +14,10 @@ export default function LevelSelectDlg(props) {
                         width: "40%",
              }}>
                 <LevelSelect
-                    levelsList={levelsList}
+                    levelsList={props.levelsList}
                     level={props.level}
                     doneLevels={props.doneLevels}
-                    onSelect={idx => props.onSelect({level: idx, ...levelsList[idx]})}
+                    onSelect={idx => props.onSelect({level: idx, ...props.levelsList[idx]})}
                     style={{
                         width: "80%"
                     }}

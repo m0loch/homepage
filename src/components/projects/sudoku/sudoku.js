@@ -10,8 +10,9 @@ import StyledTable from './styledComponents/styledTable';
 import StyledSection from './styledComponents/styledSection';
 import SelectionDlg from './components/selectionDlg';
 import NotationDlg from './components/notationDlg';
-import WinScreen from '../common/winScreen';
+import WinScreen from './components/winScreen';
 
+import LoadSudokuLevels from './utils/loadSudokuLevels';
 import LevelLoader from './utils/levelLoader';
 import { FindErrors, FindEmptyTiles, CheckErrors } from './utils/tilesFunctions';
 import LevelSelectDlg from './components/levelSelectDlg';
@@ -33,6 +34,8 @@ const NewGame = (level) => {
 }
 
 function Sudoku(props) {
+  const levelsList = LoadSudokuLevels(props.folder);
+
   const [level, setLevel] = useState({ });
   const [gameState, setGameState] = useState(NewGame(level));
 
@@ -182,6 +185,15 @@ function Sudoku(props) {
       selectingLevel: false,
     })
   }
+
+  const playNextLevel = () => {
+    const idx = (props.level + 1) % levelsList.length;
+    props.sudokuSetLevel({level: idx, ...levelsList[idx]});
+    setGameState({
+      ...gameState,
+      victory: false,
+    })
+  }
   // /Events
 
   return (
@@ -218,13 +230,18 @@ function Sudoku(props) {
       <LevelSelectDlg
         open={gameState.selectingLevel !== false}
         level={props.level}
+        levelsList={levelsList}
         scores={props.scores}
         doneLevels={props.doneList}
         onSelect={idx => props.sudokuSetLevel(idx)}
         onOK={onLevelSelectCancel}
       />
       <StyledTable container>
-        {gameState.victory ? <WinScreen onClick={() => setGameState(NewGame(level))} /> : null}
+        {gameState.victory ?
+          <WinScreen
+            onReplay={() => setGameState(NewGame(level))}
+            onNext={playNextLevel}
+          /> : null}
         {gameState.tiles?.map((section, idx) => (
           <StyledSection
             key={idx}
