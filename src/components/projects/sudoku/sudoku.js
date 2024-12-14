@@ -86,7 +86,7 @@ function Sudoku(props) {
   const onNumberSelected = (value) => {
     const tiles = CloneArray(gameState.tiles);
     gameState.moves.push(JSON.stringify(tiles));
-    tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value;
+    tiles[gameState.editingDigit.sectionId][gameState.editingDigit.sectionIdx].value = value.toString();
 
     // Check for errors and win condition
     const errors = FindErrors(tiles, level);
