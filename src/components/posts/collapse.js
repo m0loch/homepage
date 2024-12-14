@@ -18,3 +18,9 @@ export const StyledCollapse = styled(Collapse)(
         borderRadius: '5px',
     })
 );
+
+export const PlainCollapse  = styled(Collapse)(
+    () => ({
+        paddingLeft: '10px',
+    })
+);
