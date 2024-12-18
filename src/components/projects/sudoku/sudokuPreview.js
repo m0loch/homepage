@@ -28,9 +28,9 @@ function SudokuPreview(props) {
                 onClick={() => handleStateChange(0)}
             />
             <Collapse in={open[0]} timeout="auto" unmountOnExit>
-                {splitText(`
-                Come on, you know what a sudoku is...
-                `)}
+                <p>Sudoku, in case you lived on another planet, is a numeric puzzle game where the player needs to fill every cell of a table avoiding repeating the same nnumber in the same row, column and sector.</p>
+                <br/>
+                <p>Trivia: despite what people think, <a href="https://sudoku.com/how-to-play/where-was-sudoku-invented/" target="_blank">it doesn't originate in Japan</a> (where it's commonly referred as <i>nanpure</i>), even though it's the first place where it really blew up during the 80s.</p>
             </Collapse>
 
             <CollapseHeader
@@ -40,7 +40,11 @@ function SudokuPreview(props) {
             />
             <Collapse in={open[1]} timeout="auto" unmountOnExit>
                 {splitText(`
-                Temp
+                The game is entirely JavaScript based, as resorting to PIXI.js would have been overkill.
+
+                For a moment I wanted to come up with a level generator, then I just decided to roll with some old sudokus I had sitting around the house.
+
+                In order to accelerate things, I adapted the popup selector from Master Mind and the level selector from Tyles.
                 `)}
             </Collapse>
 
