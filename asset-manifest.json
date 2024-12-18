@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.5aa3eb1d.js",
+    "main.js": "/homepage/static/js/main.163ce0c4.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -101,15 +101,15 @@
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
     "static/media/inter20.svg": "/homepage/static/media/inter20.752f8e742172428f50e4498f95670b33.svg",
-    "static/media/game-awards-logo.svg": "/homepage/static/media/game-awards-logo.0af223ababd5d5030af81d10fe89ca40.svg",
+    "static/media/game-awards-logo.svg": "/homepage/static/media/game-awards-logo.fbd95e7d30cef3c0602a993e89d98cb6.svg",
     "static/media/explosion.svg": "/homepage/static/media/explosion.2667c6eb52ac06a390e5d2f91fee38eb.svg",
     "static/media/itchio-logo-textless-white.svg": "/homepage/static/media/itchio-logo-textless-white.bdb53e4f63aab9ff2bada633e16d1c01.svg",
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.5aa3eb1d.js.map": "/homepage/static/js/main.5aa3eb1d.js.map"
+    "main.163ce0c4.js.map": "/homepage/static/js/main.163ce0c4.js.map"
   },
   "entrypoints": [
-    "static/js/main.5aa3eb1d.js"
+    "static/js/main.163ce0c4.js"
   ]
 }
