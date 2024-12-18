@@ -30,9 +30,17 @@ const SettingsReducer = (state = InitialState, action) => {
         case 'TALKS_SELECT_STORY':
             return { ...state, talks: { ...state.talks, selectedTalk: action.selectedTalk } };
         case 'SIMON_SELECT_LEVEL':
-            return { ...state, simon: { ...state.simon, level: action.level } }
+            return { ...state, simon: { ...state.simon, level: action.level } };
         case 'SIMON_SET_REVERSE':
-            return { ...state, simon: { ...state.simon, reverseMode: action.reverseMode } }
+            return { ...state, simon: { ...state.simon, reverseMode: action.reverseMode } };
+        case 'SUDOKU_SET_LEVEL':
+            return { ...state, sudoku: { ...state.sudoku, ...action.value } };
+        case 'SUDOKU_SET_LEVEL_DONE':
+            const levels = [...state.sudoku.doneList];
+            if (levels.findIndex(item => item === action.level) === -1) {
+                levels.push(action.level);
+            }
+            return { ...state, sudoku: { ...state.sudoku, doneList: [...levels] } };
         default:
             return state;
     }

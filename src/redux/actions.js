@@ -111,3 +111,18 @@ export function simonSetReverse(value) {
         reverseMode: value,
     }
 }
+
+// Sudoku
+export function sudokuSetLevel(value) {
+    return {
+        type: 'SUDOKU_SET_LEVEL',
+        value,
+    }
+}
+
+export function sudokuSetLevelDone(value) {
+    return {
+        type: 'SUDOKU_SET_LEVEL_DONE',
+        level: value,
+    }
+}

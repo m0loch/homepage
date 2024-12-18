@@ -119,7 +119,6 @@ function Tyles(props) {
     );
 }
 
-
 function mapStateToProps(state) {
     return { ...state.tyles };
 }

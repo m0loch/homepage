@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { BaseDlgPanel, DlgActions, ActionButton } from './baseDlg';
+import { BaseDlgPanel, DlgActions, ActionButton } from '../../common/baseDlg';
 
 const ReportVoice = styled('div')(
     () => ({

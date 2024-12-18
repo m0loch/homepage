@@ -9,6 +9,13 @@ const InitialState = {
     minesweeper: { difficulty: 1, sectionsState: [true, false, true, false] },
     talks: { selectedTalk: 0 },
     simon: { level: 8, reverseMode: false },
+    sudoku: {
+        level: 0,
+        columns: 2,
+        rows: 2,
+        values: " 12   1  2   43 ",
+        doneList: [],
+     },
 };
 
 export default InitialState;

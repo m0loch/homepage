@@ -29,6 +29,7 @@ import Tyles from './components/projects/tyles/tyles';
 import Minesweeper from './components/projects/minesweeper/minesweeper';
 import Solitaire from './components/projects/solitaire/solitaire';
 import Simon from './components/projects/simon/simon';
+import Sudoku from './components/projects/sudoku/sudoku';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -58,6 +59,7 @@ function App(props) {
         <Route path="/projects/minesweeper" element={<Minesweeper {...props.minesweeper} />} />
         <Route path="/projects/solitaire" element={<Solitaire {...props.solitaire} assetsFolder={`${process.env.PUBLIC_URL}/assets/solitaire`} />} />
         <Route path="/projects/simon" element={<Simon {...props.simon} />} />
+        <Route path="/projects/sudoku" element={<Sudoku levelsFolder={`${process.env.PUBLIC_URL}/assets/sudoku/levels`} {...props.sudoku} />} />
 
         {/* Main sections */}
         <Route path="/about" element={<About />} />

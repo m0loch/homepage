@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseDlgPanel, DlgBackground, DlgActions, ActionButton } from './baseDlg';
+import { BaseDlgPanel, DlgBackground, DlgActions, ActionButton } from '../../common/baseDlg';
 import LevelSelect from '../components/levelSelect';
 
 export default function LevelSelectDlg(props) {

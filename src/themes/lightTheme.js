@@ -29,7 +29,15 @@ const lightTheme = baseTheme({
         },
         masterMind: {
             selected: "#02866680",
-        }
+        },
+        sudoku: {
+            lightbg: "#04FBBB40",
+            darkbg: "#FFFFFF",
+            value: "#028666",
+            base: "#0044BF",
+            selected: "#0044BF",
+            error: "#FF0000",
+        },
     },
 });
 
