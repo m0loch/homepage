@@ -16,6 +16,15 @@ const isDone = (list, idx) => {
     return list?.findIndex(level => level === idx) > -1;
 }
 
+const levels = [
+    "N/A",
+    "Very easy",
+    "Easy",
+    "Medium",
+    "Challenging",
+    "Hard",
+]
+
 function LevelSelect(props) {
     return (
         <FormControl style={ props.style ?? {width: "100%"}}>
@@ -31,7 +40,7 @@ function LevelSelect(props) {
                         value={idx}
                         selected={idx === props.level}
                     >
-                        {idx+1} - {item.columns}x{item.rows}
+                        {idx+1} - [{item.columns*item.rows}x{item.columns*item.rows}]: {levels[item.rank]} 
 
                         {isDone(props.doneLevels, idx) ? 
                         <ListItemIcon style={{justifyContent: "flex-end"}}>
