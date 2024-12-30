@@ -10,7 +10,7 @@ export function BookmarkLink(props) {
     function checkBookmark(e, label, isFirst) {
         if (!document.querySelector(`#${label}`))
         {
-            setTimeout(() => { checkBookmark(e, props.id, false) }, 100);            
+            setTimeout(() => { checkBookmark(e, props.id, false) }, 100);
         }
         else
         {

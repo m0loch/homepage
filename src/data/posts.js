@@ -3,7 +3,7 @@ function getPosts() {
     const posts = require.context("./posts", false, /\.js$/);
 
     // Retrieves the default export for each module
-    return posts.keys().map(post => posts(post).default);
+    return posts.keys().map((post, idx) => { return {...posts(post).default, id: idx}; });
 }
 
 export default getPosts();

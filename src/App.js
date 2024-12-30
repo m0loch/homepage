@@ -64,6 +64,7 @@ function App(props) {
         {/* Main sections */}
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<ProjectsSection games={games} />} />
+        <Route path="/posts/:id" element={<Main posts={posts} />} />
         <Route path="/" element={<Main posts={posts} />} />
 
       </Routes>
