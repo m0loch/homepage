@@ -11,7 +11,7 @@ const post = {
 
                 But, first thing first, here's my 2023 in a nutshell!
             `)}
-            <iframe title="2022 in a nutshell" style={{ borderRadius: "20px" }} src="https://open.spotify.com/embed/playlist/6Lwm6yrqXZT6g847Q95uvo" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="2023 in a nutshell" style={{ borderRadius: "20px" }} src="https://open.spotify.com/embed/playlist/6Lwm6yrqXZT6g847Q95uvo" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <br/><br/>
             <p>Going back to the issue, this is basically the situation (be aware, rant incoming):</p>
             <ul>
