@@ -11,6 +11,7 @@ const post = {
             <br/>
             <iframe title="2024 in a nutshell" style={{ borderRadius: "20px" }} src="https://open.spotify.com/embed/playlist/520dUurRrH7WOKqHUH3zmR?theme=0" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             {splitText(`
+            
 
             It <i>is</i> quite odd, but since I’m hardly playing guitar anymore and often end up listening to various podcasts during my interminable train rides, I haven't been listening to much new music lately.
 
