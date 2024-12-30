@@ -47,10 +47,7 @@ function Main(props) {
                 behavior: "smooth",
             });
         }
-
-        // Note: params.id gets handled by the next useEffect
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page]);
+    }, [page, params.id]);
 
     useEffect(() => {
         setPage(getPostPage(props.posts, params.id));
