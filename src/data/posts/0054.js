@@ -56,7 +56,7 @@ function StatefulPost() {
         {splitText(`
 
         The in-game representation of the concept is the Scales of Conviction, an artifact traditionally used by House Wolffort when facing a difficult decision - just a fancy way counting votes during a war council, if you think about it, but I'll talk about it again later.
-        For the momento, I'll just say that the game does a good job on making the player at least feel like their action are having an actual impact, presenting various choices where the boundaries are not as clear-cut as one might expect.
+        For the moment, I'll just say that the game does a good job on making the player at least feel like their action are having an actual impact, presenting various choices where the boundaries are not as clear-cut as one might expect.
 
         Then, we have the three nations that form the continent of Norzelia: Glenbrook, Aesfrost and Hyzante.
 
