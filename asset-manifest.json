@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.889445c0.js",
+    "main.js": "/homepage/static/js/main.1569aa0c.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
     "static/media/kalm-invasion.jpg": "/homepage/static/media/kalm-invasion.daa1cb984cec6b264622.jpg",
+    "static/media/roland.png": "/homepage/static/media/roland.a9e74c7de11f77e7784f.png",
+    "static/media/frederica.png": "/homepage/static/media/frederica.b4d15084744b699174d3.png",
+    "static/media/serenoa.png": "/homepage/static/media/serenoa.a165165f6836e057f25a.png",
+    "static/media/benedict.png": "/homepage/static/media/benedict.36b59398be3c1166ceaa.png",
     "static/media/intro.jpg": "/homepage/static/media/intro.ff4533332a5fd2d2b8a5.jpg",
     "static/media/grasslands-farm.jpg": "/homepage/static/media/grasslands-farm.010c137c53906b6f8db4.jpg",
     "static/media/world_map.jpg": "/homepage/static/media/world_map.508cd73c4e767654fce4.jpg",
@@ -92,6 +96,7 @@
     "static/media/joshua.jpg": "/homepage/static/media/joshua.a48bc1f0012278e0264a.jpg",
     "static/media/sanbreque-emperor.jpg": "/homepage/static/media/sanbreque-emperor.f8789f8b62cbb273dcf0.jpg",
     "static/media/ff16-clive.webp": "/homepage/static/media/ff16-clive.6f6b893ad25d54666080.webp",
+    "static/media/scales.png": "/homepage/static/media/scales.3903525779ceb3551419.png",
     "static/media/benedikta.jpg": "/homepage/static/media/benedikta.85fe1318825fccfa4cf2.jpg",
     "static/media/hooded-man.jpg": "/homepage/static/media/hooded-man.c7e8e51b11da7c5e60ef.jpg",
     "static/media/active-time-lore.jpg": "/homepage/static/media/active-time-lore.53896a7549c70a1c28f2.jpg",
@@ -107,9 +112,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.889445c0.js.map": "/homepage/static/js/main.889445c0.js.map"
+    "main.1569aa0c.js.map": "/homepage/static/js/main.1569aa0c.js.map"
   },
   "entrypoints": [
-    "static/js/main.889445c0.js"
+    "static/js/main.1569aa0c.js"
   ]
 }
