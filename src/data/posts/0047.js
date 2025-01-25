@@ -38,7 +38,6 @@ function StatefulPost() {
             <CustomImage
                 alt="FF7 Rebirth logo"
                 src={rebirthlogo}
-                align="center"
             />
 
             {splitText(`

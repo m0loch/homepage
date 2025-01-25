@@ -87,6 +87,9 @@ const baseTheme = (theme) => {
                         "span.MuiFormControlLabel-label": {
                             fontSize: "5vmin",
                         },
+                    },
+                    img : {
+                        borderRadius: "8px",
                     }
                 }
             },
