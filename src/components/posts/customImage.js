@@ -22,9 +22,9 @@ const StyledImg = styled('img')(
 
         "&.fullView": {
             position: 'fixed',
-            width: "90%",
-            height: "auto",
-            paddingBottom: "100%",
+            maxWidth: "90%",
+            maxHeight: "90%",
+            objectFit: "contain",
             left: "5%",
             top: "5%",
             zIndex: 1500,
