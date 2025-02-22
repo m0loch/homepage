@@ -1,4 +1,5 @@
 import { splitText } from '../../components/common/textFunctions';
+import { Link } from 'react-router-dom';
 import CustomImage from "../../components/posts/customImage";
 import JumboCactuar from '../../images/post-0055/Jumbo-Cactuar-2.webp';
 
@@ -17,9 +18,10 @@ const post = {
             {splitText(`
 
             I tried to avoid getting exposed to any info about this crossover, but unfortunately I've still got plenty of friends that want <del>to make me suffer</del> my opinion on the spoilers.
-
-            I'll just leave the link here so you can form your own opinion, I'll chime in later.
             `)}
+
+            <p>I'll just leave the link <Link to="https://www.magicspoiler.com/mtg-set/final-fantasy/">here</Link> so you can form your own opinion, I'll chime in later.</p>
+            <br/>
         </>
     ),
     signature: `Romeo`
