@@ -18,7 +18,7 @@ const post = {
 
             {splitText(`
             <b>Disclaimer:</b>
-            I'm not depressed or anything, I'm just going through a couple of <i>intricate</i> weeks and I wanted to put out this post as a way to remember what I was going through when I'm inevitably going to read this post again in the future.
+            I'm not depressed or anything, I'm just going through a couple of <i>intricate</i> weeks and I wanted to put this post out as a way to remember what I was going through when I'm inevitably going to stumble on this again in the future.
 
             Yes I'm treating this like my personal diary, sorry not sorry the joke's on you.
             `)}
