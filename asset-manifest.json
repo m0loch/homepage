@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.c7a8981a.js",
+    "main.js": "/homepage/static/js/main.87a2ed82.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -97,6 +97,7 @@
     "static/media/sanbreque-emperor.jpg": "/homepage/static/media/sanbreque-emperor.f8789f8b62cbb273dcf0.jpg",
     "static/media/ff16-clive.webp": "/homepage/static/media/ff16-clive.6f6b893ad25d54666080.webp",
     "static/media/scales.png": "/homepage/static/media/scales.3903525779ceb3551419.png",
+    "static/media/angry-pope.png": "/homepage/static/media/angry-pope.80f3f02e9d8b2d3532f1.png",
     "static/media/benedikta.jpg": "/homepage/static/media/benedikta.85fe1318825fccfa4cf2.jpg",
     "static/media/hooded-man.jpg": "/homepage/static/media/hooded-man.c7e8e51b11da7c5e60ef.jpg",
     "static/media/active-time-lore.jpg": "/homepage/static/media/active-time-lore.53896a7549c70a1c28f2.jpg",
@@ -113,9 +114,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.c7a8981a.js.map": "/homepage/static/js/main.c7a8981a.js.map"
+    "main.87a2ed82.js.map": "/homepage/static/js/main.87a2ed82.js.map"
   },
   "entrypoints": [
-    "static/js/main.c7a8981a.js"
+    "static/js/main.87a2ed82.js"
   ]
 }
