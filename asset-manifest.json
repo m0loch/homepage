@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.87a2ed82.js",
+    "main.js": "/homepage/static/js/main.13257d1a.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -40,6 +40,7 @@
     "static/media/post46.png": "/homepage/static/media/post46.1b5ab3fd7523cff231a0.png",
     "static/media/cosmo-canyon.jpg": "/homepage/static/media/cosmo-canyon.fa10ceed91129334c405.jpg",
     "static/media/gongaga-prayer.jpg": "/homepage/static/media/gongaga-prayer.abf8d5184bc452b52d28.jpg",
+    "static/media/e33-ending.jpg": "/homepage/static/media/e33-ending.cd89bb97e5f2bee0956e.jpg",
     "static/media/cloud.jpg": "/homepage/static/media/cloud.80cc1577ad700e9f1c11.jpg",
     "static/media/corel-gs-from-north.jpg": "/homepage/static/media/corel-gs-from-north.2e71957c620e6c7a2055.jpg",
     "static/media/mythril-museum.jpg": "/homepage/static/media/mythril-museum.8e20f324dc23296aae1a.jpg",
@@ -91,6 +92,7 @@
     "static/media/ff16quest.jpg": "/homepage/static/media/ff16quest.b3f9a949adfe50fdfcca.jpg",
     "static/media/ahriman.jpg": "/homepage/static/media/ahriman.775f93217477d2c9489a.jpg",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
+    "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
     "static/media/mythril-turks.jpg": "/homepage/static/media/mythril-turks.1d1fa3948fee314fc3c5.jpg",
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
     "static/media/joshua.jpg": "/homepage/static/media/joshua.a48bc1f0012278e0264a.jpg",
@@ -114,9 +116,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.87a2ed82.js.map": "/homepage/static/js/main.87a2ed82.js.map"
+    "main.13257d1a.js.map": "/homepage/static/js/main.13257d1a.js.map"
   },
   "entrypoints": [
-    "static/js/main.87a2ed82.js"
+    "static/js/main.13257d1a.js"
   ]
 }
