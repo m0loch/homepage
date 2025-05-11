@@ -29,7 +29,7 @@ const post = {
             <ol>
 
             Provided, of course, that a turn-based RPG with a dodge mechanic is something you'll be interested in.
-            The plot and the aesthetics are a breath of fresh air and the gameplay is the cherry on top of the cake.
+            The plot and the aesthetics are a breath of fresh air and the gameplay is the cherry on top.
 
             Seriously, this is GOTY material.
             `)}
