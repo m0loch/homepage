@@ -24,7 +24,7 @@ const post = {
 
     Maybe I should actually try to think of this as something I should add to my CV or at least broadcast a little (i.e.: linking it to my bio on socials / forums?) but I don't really feel like it, everything I've published so far is <b>SO UNREFINED</b>...
 
-    I guess I'll think about revamping the graphics and re-look at everything for scratch while playing <a href="https://store.steampowered.com/app/2379780/" target="_blank">Balatro</a> (like every cool guy does nowadays) and <a href="https://store.steampowered.com/app/2523120/" target="_blank">King of the Bridge</a>.
+    I guess I'll think about revamping the graphics and re-look at everything for scratch while playing <a href="https://store.steampowered.com/app/2379780/" target="_blank" rel="noreferrer">Balatro</a> (like every cool guy does nowadays) and <a href="https://store.steampowered.com/app/2523120/" target="_blank" rel="noreferrer">King of the Bridge</a>.
 
     Both the games are original takes on well-known concepts, let me just sum things up a bit:
 
@@ -38,7 +38,7 @@ const post = {
     </CustomImage>
     {splitText(`
 
-    We're talking about a roguelite (<a href="https://isitaroguelike.com/" target="_blank">not</a> a roguelike - but that's an endless debate) based on poker rules where you need to score a set amount of points in a set amount of hands in order to progress to the next table.
+    We're talking about a roguelite (<a href="https://isitaroguelike.com/" target="_blank" rel="noreferrer">not</a> a roguelike - but that's an endless debate) based on poker rules where you need to score a set amount of points in a set amount of hands in order to progress to the next table.
     
     You start with your usual 52 cards deck, but there are a lot of modifiers you can appeal to over the course of a run - booster packs, cards combinations that level up, the joker system, tarots that let you mess with the cards of your deck etcetera.
     

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from 'react-redux';
 import { mastermindSetDifficulty } from '../../../redux/actions';
 
-import { Collapse , RadioGroup, Radio, FormControlLabel } from "@mui/material";
+import { Collapse, RadioGroup, Radio, FormControlLabel } from "@mui/material";
 import CollapseHeader from '../common/collapseHeader';
 import { splitText } from '../../common/textFunctions';
 

@@ -49,7 +49,7 @@ function StatefulPost() {
                     <li><BookmarkLink id="Plot">Plot</BookmarkLink></li>
                     <li><BookmarkLink id="Conclusions">Conclusions</BookmarkLink></li>
                 </ol>
-            </StyledCollapse    >
+            </StyledCollapse>
 
             <Bookmark id="Presentation">Presentation</Bookmark>
             <CustomImage
@@ -86,7 +86,7 @@ function StatefulPost() {
             While I can't really say anything bad about the graphics, here things get a little more complicated.
 
             At the beginning of the game players gets to choose whether they want to focus on the story or the action, implying that the difficulty will get tweaked accordingly.
-            What's the difference between the two modes, you may ask - well, let me talk for a moment of the accessibility rings (no, not <a href="https://draftsim.com/mtg-the-one-ring/" target="_blank">that one</a>)...
+            What's the difference between the two modes, you may ask - well, let me talk for a moment of the accessibility rings (no, not <a href="https://draftsim.com/mtg-the-one-ring/" target="_blank" rel="noreferrer">that one</a>)...
             Square Enix designed a handful of special accessories with the aim of aiding players struggling with the gameplay, as per the following list:
             <ol>
                 <li>Ring of Timely Strikes: perform combos by just keeping the square button pressed</li>
@@ -143,7 +143,7 @@ function StatefulPost() {
             <Bookmark id="Game_Design">Game design</Bookmark>
             {splitText(`
             We've already talked about the combat system, but I want to reiterate: it is <u>good</u>.
-            <a href="https://finalweapon.net/2023/06/18/final-fantasy-xvi-all-about-combat-director-ryota-suzuki/" target="_blank">And nobody should wonder why</a>.
+            <a href="https://finalweapon.net/2023/06/18/final-fantasy-xvi-all-about-combat-director-ryota-suzuki/" target="_blank" rel="noreferrer">And nobody should wonder why</a>.
             `)}
             <CustomImage
                 alt="Good boi"
@@ -228,7 +228,7 @@ function StatefulPost() {
 
             While slavery -or rather, equality- is the central point of the game, there are a handful of extra themes that the game touches:
             <ul>
-            <li>the Blight, aka the illness of the land that progressively reduces the amout on inhabitable land of the continent (<a href="https://en.wikipedia.org/wiki/Lebensraum" target="_blank">Lebensraum</a> anyone?) and how people deal with the matter;</li>
+            <li>the Blight, aka the illness of the land that progressively reduces the amout on inhabitable land of the continent (<a href="https://en.wikipedia.org/wiki/Lebensraum" target="_blank" rel="noreferrer">Lebensraum</a> anyone?) and how people deal with the matter;</li>
             <li>how power corrupts individuals;</li>
             <li>the value of self-sacrifice vs the importance of the cause (the whole issue with the order of the Undying);</li>
             <li>the "economy" of the crystals in a society where magic is a common commodity and it's usage seem to cause <s>global warming</s> environmental problems;</li>

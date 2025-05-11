@@ -3,7 +3,6 @@ import YouTubeVideo from '../../components/posts/youtubeVideo';
 import CustomImage from "../../components/posts/customImage";
 import AngryPope from '../../images/post-0058/angry-pope.png';
 
-
 const post = {
     title: "Freedom, 80 years later",
     date: new Date("2025-04-25"),
@@ -16,7 +15,7 @@ const post = {
 
             If you don't live under a rock and share a resemblance of my interests, you should know that yesterday Clair Obscur: Expedition 33 (see the trailer on the right) has been released.
 
-            I don't really know where to start: the mechanics of the game seem to be interesting, the visuals are stunning, and this is the first project of <a href="https://www.sandfall.co/" target="_blank">a brand new french game studio</a>.
+            I don't really know where to start: the mechanics of the game seem to be interesting, the visuals are stunning, and this is the first project of <a href="https://www.sandfall.co/" target="_blank" rel="noreferrer">a brand new french game studio</a>.
 
             ...but I can't really say anything about the game at the moment, since my copy has not been delivered yet :D
 
