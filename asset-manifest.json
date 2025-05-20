@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.13257d1a.js",
+    "main.js": "/homepage/static/js/main.99265686.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -63,6 +63,7 @@
     "static/media/ifrit.jpg": "/homepage/static/media/ifrit.768fee274995c795cff5.jpg",
     "static/media/crazy-cloud.jpg": "/homepage/static/media/crazy-cloud.29b4736dd1b8609182eb.jpg",
     "static/media/aer-bar.mp4": "/homepage/static/media/aer-bar.d2cf3aa5b8aca2e6f956.mp4",
+    "static/media/e33-mansion.jpg": "/homepage/static/media/e33-mansion.77f9be13dc787cec8b67.jpg",
     "static/media/cetra-temple-run.jpg": "/homepage/static/media/cetra-temple-run.df0776040b54b7e10160.jpg",
     "static/media/cid.jpg": "/homepage/static/media/cid.add55c8b9ebfcf85ae1f.jpg",
     "static/media/nibelheim-model-employee.jpg": "/homepage/static/media/nibelheim-model-employee.4d755f95b933216f1a7a.jpg",
@@ -91,16 +92,21 @@
     "static/media/sephiroth-pose.jpg": "/homepage/static/media/sephiroth-pose.6c425418f36df6940262.jpg",
     "static/media/ff16quest.jpg": "/homepage/static/media/ff16quest.b3f9a949adfe50fdfcca.jpg",
     "static/media/ahriman.jpg": "/homepage/static/media/ahriman.775f93217477d2c9489a.jpg",
+    "static/media/e33-white-nevron.jpg": "/homepage/static/media/e33-white-nevron.64584da789608e40a740.jpg",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
     "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
     "static/media/mythril-turks.jpg": "/homepage/static/media/mythril-turks.1d1fa3948fee314fc3c5.jpg",
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
+    "static/media/e33-piano.jpg": "/homepage/static/media/e33-piano.b727e7aefe1fa2d3c785.jpg",
     "static/media/joshua.jpg": "/homepage/static/media/joshua.a48bc1f0012278e0264a.jpg",
     "static/media/sanbreque-emperor.jpg": "/homepage/static/media/sanbreque-emperor.f8789f8b62cbb273dcf0.jpg",
+    "static/media/e33-noco.jpg": "/homepage/static/media/e33-noco.a580347f080485e935a4.jpg",
     "static/media/ff16-clive.webp": "/homepage/static/media/ff16-clive.6f6b893ad25d54666080.webp",
     "static/media/scales.png": "/homepage/static/media/scales.3903525779ceb3551419.png",
+    "static/media/e33-mystery.jpg": "/homepage/static/media/e33-mystery.7dc20bd5489f6c246d73.jpg",
     "static/media/angry-pope.png": "/homepage/static/media/angry-pope.80f3f02e9d8b2d3532f1.png",
     "static/media/benedikta.jpg": "/homepage/static/media/benedikta.85fe1318825fccfa4cf2.jpg",
+    "static/media/e33-head.jpg": "/homepage/static/media/e33-head.20f17efc516ee20fd9f8.jpg",
     "static/media/hooded-man.jpg": "/homepage/static/media/hooded-man.c7e8e51b11da7c5e60ef.jpg",
     "static/media/active-time-lore.jpg": "/homepage/static/media/active-time-lore.53896a7549c70a1c28f2.jpg",
     "static/media/Jumbo-Cactuar-2.webp": "/homepage/static/media/Jumbo-Cactuar-2.436dc9846524b0ddea33.webp",
@@ -108,6 +114,7 @@
     "static/media/ifrit-garuda.webp": "/homepage/static/media/ifrit-garuda.d97f98745afdb5efd60c.webp",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
+    "static/media/wizardry.jpg": "/homepage/static/media/wizardry.c42ff6f9930a9d47f3eb.jpg",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
     "static/media/inter20.svg": "/homepage/static/media/inter20.752f8e742172428f50e4498f95670b33.svg",
     "static/media/game-awards-logo.svg": "/homepage/static/media/game-awards-logo.fbd95e7d30cef3c0602a993e89d98cb6.svg",
@@ -116,9 +123,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.13257d1a.js.map": "/homepage/static/js/main.13257d1a.js.map"
+    "main.99265686.js.map": "/homepage/static/js/main.99265686.js.map"
   },
   "entrypoints": [
-    "static/js/main.13257d1a.js"
+    "static/js/main.99265686.js"
   ]
 }
