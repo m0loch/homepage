@@ -37,14 +37,14 @@ const YTframe = styled('iframe')({
     height: "100%",
 });
 
-const YouTubeVideo = ({ videoId, caption, align, short }) => {
+const YouTubeVideo = ({ videoId, caption, align, short, time }) => {
     return (
         <FullContainer align={align}>
             <DockArea short={short ?? false}>
                 <YTframe
                     width="853"
                     height="480"
-                    src={`https://www.youtube.com/embed/${videoId}`}
+                    src={`https://www.youtube.com/embed/${videoId}${time ? `?start=${time}`: ''}`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
