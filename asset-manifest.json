@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.99265686.js",
+    "main.js": "/homepage/static/js/main.2c623a0f.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -95,6 +95,7 @@
     "static/media/e33-white-nevron.jpg": "/homepage/static/media/e33-white-nevron.64584da789608e40a740.jpg",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
     "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
+    "static/media/bahamut.png": "/homepage/static/media/bahamut.9fa62c6f7fa42071c67e.png",
     "static/media/mythril-turks.jpg": "/homepage/static/media/mythril-turks.1d1fa3948fee314fc3c5.jpg",
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
     "static/media/e33-piano.jpg": "/homepage/static/media/e33-piano.b727e7aefe1fa2d3c785.jpg",
@@ -123,9 +124,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.99265686.js.map": "/homepage/static/js/main.99265686.js.map"
+    "main.2c623a0f.js.map": "/homepage/static/js/main.2c623a0f.js.map"
   },
   "entrypoints": [
-    "static/js/main.99265686.js"
+    "static/js/main.2c623a0f.js"
   ]
 }
