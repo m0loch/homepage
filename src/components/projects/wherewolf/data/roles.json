@@ -2,7 +2,7 @@
     {
         "name": {
             "ita": "La Veggente",
-            "eng": "Seer"
+            "eng": "The Seer"
         },
         "description": {
             "ita": "Ogni notte indica un giocatore (compresa sé stessa) e scopre se possiede aura nera",
@@ -19,7 +19,7 @@
     {
         "name": {
             "ita": "La Strega",
-            "eng": "Witch"
+            "eng": "The Witch"
         },
         "description": {
             "ita": "Dalla seconda notte, ogni notte, indica un altro giocatore (non sé stessa) e lo protegge, solo per quella notte, da tutte le Creature dell'Ombra",
@@ -36,7 +36,7 @@
     {
         "name": {
             "ita": "Il Guaritore",
-            "eng": "Healer"
+            "eng": "The Healer"
         },
         "description": {
             "ita": "Dalla seconda notte in poi scopre chi è stato ucciso durante la notte, una volta per partita può indicare uno di questi giocatori (non sè stesso) e resuscitarlo.",
@@ -53,7 +53,7 @@
     {
         "name": {
             "ita": "Il Traditore",
-            "eng": "Traitor"
+            "eng": "The Traitor"
         },
         "description": {
             "ita": "La prima notte è individuato dai Lupi del Branco. È protetto da tutti i Lupi, se è da loro attaccato, apre gli occhi e li riconosce.",
@@ -70,7 +70,7 @@
     {
         "name": {
             "ita": "Il Giullare",
-            "eng": "Jester"
+            "eng": "The Jester"
         },
         "description": {
             "ita": "Se viene bruciato sul rogo, il giorno successivo il rogo è annullato a prescindere dai voti e dai poteri eventualmente utilizzati dagli altri giocatori. Questo significa che le votazioni e la discussione tra accusa e ballottaggio si svolgono normalmente, ma l'esito del rogo sarà sempre 'nessuno brucia sul rogo', come se ci fosse stato un pareggio di voti al ballottaggio",
@@ -87,7 +87,7 @@
     {
         "name": {
             "ita": "Il Pazzo",
-            "eng": "Madman"
+            "eng": "The Madman"
         },
         "description": {
             "ita": "Se viene attaccato ed ucciso (senza essere resuscitato) da un qualsiasi Lupo, la notte successiva solo il primo attacco dei Lupi (in caso dispongano di 2 attacchi, vedi GIOVANE LUPO) è annullato. Questo significa che chiunque i Lupi attacchino, l'attacco è sempre fallito e sprecato, come se avessero tentato di attaccare un giocatore protetto dalle Creature dell'Ombra",
@@ -104,7 +104,7 @@
     {
         "name": {
             "ita": "L'Oste",
-            "eng": "Innkeeper"
+            "eng": "The Innkeeper"
         },
         "description": {
             "ita": "Se durante la notte la VEGGENTE ha scoperto un'aura nera, al mattino, se l'OSTE è ancora in vita, il Moderatore annuncia pubblicamente che durante la notte è stata scoperta un'aura nera. Il potere si attiva anche se durante la notte precedente fosse stata eliminata la VEGGENTE stessa",
@@ -118,13 +118,214 @@
             "eng": "There are no more Shadow Creatures and at least one player is still in the game."
         }
     },
-
-
-
+    {
+        "name": {
+            "ita": "Il Medium",
+            "eng": "The Medium"
+        },
+        "description": {
+            "ita": "Dalla seconda notte, ogni notte, indica un giocatore morto e scopre se possedeva aura nera al momento della morte.",
+            "eng": "From the second night onwards, the Medium points to a dead player each night and discovers if they had a tainted aura at the time of death."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": true,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Monaco",
+            "eng": "The Monk"
+        },
+        "description": {
+            "ita": "La prima notte il Moderatore gli mostra alcune carte che non sono in gioco.",
+            "eng": "The first night, the Moderator shows them some cards that are not in play."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Prete",
+            "eng": "The Priest"
+        },
+        "description": {
+            "ita": "La 1° notte individua il PECCATORE e scopre se BOCCA DI ROSA è in gioco.",
+            "eng": "On the first night, the Priest identifies the SINNER and discovers if ROSEMOUTH is in play."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Peccatore",
+            "eng": "The Sinner"
+        },
+        "description": {
+            "ita": "La prima notte è individuato dal PRETE.",
+            "eng": "On the first night, the SINNER is identified by the PRIEST."
+        },
+        "faction": "Town",
+        "isTainted": true,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Bocca di Rosa",
+            "eng": "Rosemouth"
+        },
+        "description": {
+            "ita": "La prima notte è individuata dal PRETE. Può votare al ballottaggio anche se è accusata e, ad ogni votazione, riceve la metà dei voti, arrotondati per eccesso.",
+            "eng": "On the first night, ROSEMOUTH is identified by the PRIEST. They can vote in the runoff even if accused, and at each vote, they receive half of the votes, rounded up."
+        },
+        "faction": "Town",
+        "isTainted": true,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Giulietta",
+            "eng": "Juliet"
+        },
+        "description": {
+            "ita": "La prima notte sceglie un altro giocatore che apre gli occhi, la riconosce e diventa ROMEO: ROMEO riceve fazione Amanti e mantiene inalterata la sua aura ed i suoi poteri; la condizione di vittoria di ROMEO diventa 'a fine partita, GIULIETTA è ancora in vita'. ROMEO riceve il tratto Protetto da tutte le Creature dell'Ombra finchè GIULIETTA è in vita, se GIULIETTA dovesse morire durante la notte, quella notte stessa morirà anche ROMEO e viceversa. Se uno dei due dovesse bruciare sul rogo, l'altro/a muore all'inizio della notte seguente.",
+            "eng": "On the first night, JULIET chooses another player who opens their eyes, recognizes her, and becomes ROMEO: ROMEO receives the Lovers faction and retains their aura and powers; ROMEO's win condition becomes 'at the end of the game, JULIET is still alive'. ROMEO receives the trait Protected from all Shadow Creatures as long as JULIET is alive. If JULIET dies during the night, ROMEO will also die that same night, and vice versa. If one of them is burned at the stake, the other dies at the beginning of the following night."
+        },
+        "faction": "Lovers",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "A fine partita, ROMEO e GIULIETTA sono ancora in vita. Se ROMEO è una Creatura dell'Ombra, ROMEO e GIULIETTA devono essere gli unici due giocatori rimasti.",
+            "eng": "At the end of the game, ROMEO and JULIET are still alive. If ROMEO is a Shadow Creature, ROMEO and JULIET must be the only two players remaining."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Contadino",
+            "eng": "The Peasant"
+        },
+        "description": {
+            "ita": "Il CONTADINO ha una delle seguenti identità nascoste (a sua insaputa): Semplice, Eroe, Discendente dei Lupi.\nCONTADINO SEMPLICE: nessun potere.\nDISCENDENTE DEI LUPI: se viene attaccato dai lupi (anche se fosse ROMEO o protetto dalla STREGA) questo riceve i tratti Lupo Mannaro e Creatura dell'Ombra. Apre gli occhi, riconosce i Lupi del Branco e riceve fazione Lupi del Branco. Nella gerarchia dei Lupi, è l'ultimo lupo che può attaccare (dopo il LUPO DEL BRANCO).\nEROE: se attaccato e ucciso dal lupo più forte in gioco, quest'ultimo muore insieme al CONTADINO EROE stesso, anche se il lupo fosse ROMEO o protetto dalla STREGA. Se il CONTADINO EROE è protetto dall'attacco, il suo potere non si attiva.",
+            "eng": "The PEASANT has one of the following hidden identities (unknown to them): Simple, Hero, Descendant of Wolves.\nSIMPLE PEASANT: no power.\nDESCENDANT OF WOLVES: if attacked by wolves (even if they are ROMEO or protected by the WITCH), this player receives the traits Werewolf and Shadow Creature. They open their eyes, recognize the Pack Wolves, and receive the Pack Wolves faction. In the hierarchy of Wolves, they are the last wolf that can attack (after the PACK WOLF).\nHERO: if attacked and killed by the strongest wolf in play, that wolf dies along with the HERO PEASANT themselves, even if the wolf is ROMEO or protected by the WITCH. If the HERO PEASANT is protected from the attack, their power does not activate."
+        },
+        "faction": "Peasant",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "L'Azzeccagarbugli",
+            "eng": "The Attorney"
+        },
+        "description": {
+            "ita": "Può votare al ballottaggio anche se è accusato. Durante l'accusa, al posto di votare, può segnalare un altro giocatore: se il giocatore segnalato è un cittadino, i voti ricevuti dal giocatore segnalato sono azzerati a fine votazione, se si tratta di un Lupo andrà al ballottaggio a prescindere dai risultati della votazione.",
+            "eng": "The ATTORNEY can vote in the runoff even if accused. During the accusation, instead of voting, they can point to another player: if the pointed player is a Citizen, the votes received by the pointed player are reset at the end of the vote; if it is a Wolf, they will go to the runoff regardless of the voting results."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "L'Eremita",
+            "eng": "The Hermit"
+        },
+        "description": {
+            "ita": "È protetto da tutte le Creature dell'Ombra, se una qualsiasi Creatura dell'Ombra tenta di attaccarlo, l'attacco fallisce",
+            "eng": "The HERMIT is protected from all Shadow Creatures. If any Shadow Creature attempts to attack them, the attack fails."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Cappuccetto Rosso",
+            "eng": "Little Red Riding Hood"
+        },
+        "description": {
+            "ita": "Finchè la NONNA è in gioco e non si è trasformata in Lupo, CAPPUCCETTO ROSSO è protetta dall'attacco dei Lupi. Se l'ultimo Lupo in gioco attacca CAPPUCCETTO ROSSO, quest'ultima apre gli occhi e lo riconosce, anche se CAPPUCCETTO ROSSO fosse ROMEO o protetta dalla STREGA",
+            "eng": "As long as the GRANDMOTHER is in play and has not transformed into a Wolf, LITTLE RED RIDING HOOD is protected from attacks by Wolves. If the last Wolf in play attacks LITTLE RED RIDING HOOD, she opens her eyes and recognizes them, even if LITTLE RED RIDING HOOD is ROMEO or protected by the WITCH."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "La Nonna",
+            "eng": "The Grandmother"
+        },
+        "description": {
+            "ita": "Finchè è in gioco e non si è trasformata in Lupo, CAPPUCCETTO ROSSO è protetta da tutti i Lupi. Se un qualsiasi Lupo (anche se fosse ROMEO o protetto dalla STREGA) attacca ed uccide la NONNA non ROMEO non protetta dalla STREGA, la NONNA scarta la propria carta, prende quella del Lupo che l'ha attaccata e riconosce gli altri Lupi del Branco e individua il TRADITORE. Il Lupo che l'ha attaccata è immediatamente e definitivamente eliminato, e non verrà visto tra i morti di quella notte dal GUARITORE",
+            "eng": "If the GRANDMOTHER is in play and has not transformed into a Wolf, LITTLE RED RIDING HOOD is protected from all Wolves. If any Wolf (even if they are ROMEO or protected by the WITCH) attacks and kills the non-ROMEO GRANDMOTHER who is not protected by the WITCH, the GRANDMOTHER discards their card, takes the card of the Wolf that attacked them, recognizes the other Pack Wolves, and identifies the TRAITOR. The Wolf that attacked them is immediately and permanently eliminated and will not be seen among the dead of that night by the HEALER."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
+            "eng": "There are no more humans and at least one wolf is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Cacciatore",
+            "eng": "The Hunter"
+        },
+        "description": {
+            "ita": "Se la NONNA si trasforma in Lupo, il CACCIATORE è protetto dal Lupo ex NONNA. Se in gioco è rimasto un solo Lupo del Branco, il CACCIATORE è protetto da questo Lupo e se viene da questo attaccato, il Lupo muore, anche se uno tra il Lupo ed il CACCIATORE fosse ROMEO o protetto dalla STREGA",
+            "eng": "If the GRANDMOTHER transforms into a Wolf, the HUNTER is protected from the former GRANDMOTHER Wolf. If there is only one Pack Wolf left in the game, the HUNTER is protected from this Wolf, and if attacked by this Wolf, the Wolf dies, even if either the Wolf or the HUNTER is ROMEO or protected by the WITCH."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
     {
         "name": {
             "ita": "Il Capo Branco",
-            "eng": "Pack Leader"
+            "eng": "The Pack Leader"
         },
         "description": {
             "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Dalla seconda notte può indicare un giocatore, anche sé stesso, un altro Lupo o nessuno. Il giocatore indicato, se non è protetto per qualsiasi motivo dalle Creature dell'Ombra, muore",
@@ -141,7 +342,7 @@
     {
         "name": {
             "ita": "Lupo del branco",
-            "eng": "Pack Wolf"
+            "eng": "The Pack Wolf"
         },
         "description": {
             "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Dalla seconda notte, se Il Capo Brando non è più della partita, può indicare un giocatore, anche sé stesso, un altro Lupo o nessuno. Il giocatore indicato, se non è protetto per qualsiasi motivo dalle Creature dell'Ombra, muore",
@@ -158,7 +359,7 @@
     {
         "name": {
             "ita": "Giovane lupo",
-            "eng": "Young Wolf"
+            "eng": "The Young Wolf"
         },
         "description": {
             "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Non può mai attaccare, se viene bruciato sul rogo, la notte successiva i Lupi possono attaccare due volte. I due attacchi sono risolti contemporaneamente",

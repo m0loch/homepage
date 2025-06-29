@@ -8,8 +8,8 @@ import roles from '../data/roles.json';
 
 // Game logic
 const factions = [
-    { name: 'Villagers', type: 'Town', count: 5, mandatory: ["Seer"] }, // this will be dynamic based on the number of players
-    { name: 'Werewolves', type: 'Werewolf', count: 2, mandatory: ["Pack Leader"] },
+    { name: 'Villagers', type: 'Town', count: 5, mandatory: ["The Seer"] }, // this will be dynamic based on the number of players
+    { name: 'Werewolves', type: 'Werewolf', count: 2, mandatory: ["The Pack Leader"] },
     { name: 'Extras', type: 'Town', count: 3 },
 ];
 
