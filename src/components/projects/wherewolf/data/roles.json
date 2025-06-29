@@ -1,0 +1,175 @@
+[
+    {
+        "name": {
+            "ita": "La Veggente",
+            "eng": "Seer"
+        },
+        "description": {
+            "ita": "Ogni notte indica un giocatore (compresa sé stessa) e scopre se possiede aura nera",
+            "eng": "Each night, the seer points to a player (including themselves) and discovers if they have a tainted aura"
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": true,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "La Strega",
+            "eng": "Witch"
+        },
+        "description": {
+            "ita": "Dalla seconda notte, ogni notte, indica un altro giocatore (non sé stessa) e lo protegge, solo per quella notte, da tutte le Creature dell'Ombra",
+            "eng": "From the second night onwards, the Witch points to another player (not themselves) and protects them from all Shadow Creatures for that night"
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": true,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Guaritore",
+            "eng": "Healer"
+        },
+        "description": {
+            "ita": "Dalla seconda notte in poi scopre chi è stato ucciso durante la notte, una volta per partita può indicare uno di questi giocatori (non sè stesso) e resuscitarlo.",
+            "eng": "From the second night onwards, the healer discovers who was killed during the night. Once per game, they can choose one of these players (not themselves) and resurrect them."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": true,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Traditore",
+            "eng": "Traitor"
+        },
+        "description": {
+            "ita": "La prima notte è individuato dai Lupi del Branco. È protetto da tutti i Lupi, se è da loro attaccato, apre gli occhi e li riconosce.",
+            "eng": "On the first night, the Traitor is identified by the Pack Wolves. The Traitor is protected by all Wolves, and if attacked by them, opens the eyes and recognizes them."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
+            "eng": "There are no more humans and at least one wolf is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Giullare",
+            "eng": "Jester"
+        },
+        "description": {
+            "ita": "Se viene bruciato sul rogo, il giorno successivo il rogo è annullato a prescindere dai voti e dai poteri eventualmente utilizzati dagli altri giocatori. Questo significa che le votazioni e la discussione tra accusa e ballottaggio si svolgono normalmente, ma l'esito del rogo sarà sempre 'nessuno brucia sul rogo', come se ci fosse stato un pareggio di voti al ballottaggio",
+            "eng": "If the JESTER is burned at the stake, the next day the stake is canceled regardless of the votes and powers used by other players. This means that voting and discussion between accusation and runoff proceed normally, but the outcome of the stake will always be 'no one burns at the stake', as if there had been a tie in the runoff votes."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Essere bruciato sul rogo",
+            "eng": "Being burned at the stake"
+        }
+    },
+    {
+        "name": {
+            "ita": "Il Pazzo",
+            "eng": "Madman"
+        },
+        "description": {
+            "ita": "Se viene attaccato ed ucciso (senza essere resuscitato) da un qualsiasi Lupo, la notte successiva solo il primo attacco dei Lupi (in caso dispongano di 2 attacchi, vedi GIOVANE LUPO) è annullato. Questo significa che chiunque i Lupi attacchino, l'attacco è sempre fallito e sprecato, come se avessero tentato di attaccare un giocatore protetto dalle Creature dell'Ombra",
+            "eng": "If the MADMAN is attacked and killed (without being resurrected) by any Wolf, the next night only the first attack of the Wolves (in case they have 2 attacks, see YOUNG WOLF) is canceled. This means that whoever the Wolves attack, the attack always fails and is wasted, as if they had attempted to attack a player protected by Shadow Creatures."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Essere attaccato ed ucciso (senza essere resuscitato) da un qualsiasi Lupo",
+            "eng": "Being attacked and killed (without being resurrected) by any Wolf"
+        }
+    },
+    {
+        "name": {
+            "ita": "L'Oste",
+            "eng": "Innkeeper"
+        },
+        "description": {
+            "ita": "Se durante la notte la VEGGENTE ha scoperto un'aura nera, al mattino, se l'OSTE è ancora in vita, il Moderatore annuncia pubblicamente che durante la notte è stata scoperta un'aura nera. Il potere si attiva anche se durante la notte precedente fosse stata eliminata la VEGGENTE stessa",
+            "eng": "If the Seer has discovered a tainted aura during the night, in the morning, if the Innkeeper is still alive, the Moderator publicly announces that a tainted aura was discovered during the night. The power activates even if the Seer themselves was eliminated during the previous night."
+        },
+        "faction": "Town",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
+        }
+    },
+
+
+
+    {
+        "name": {
+            "ita": "Il Capo Branco",
+            "eng": "Pack Leader"
+        },
+        "description": {
+            "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Dalla seconda notte può indicare un giocatore, anche sé stesso, un altro Lupo o nessuno. Il giocatore indicato, se non è protetto per qualsiasi motivo dalle Creature dell'Ombra, muore",
+            "eng": "On the first night, the Pack Leader identifies the TRAITOR and recognizes the other Pack Wolves. From the second night onwards, they can point to a player, including themselves, another wolf, or no one. The pointed player, if not protected for any reason by Shadow Creatures, dies."
+        },
+        "faction": "Werewolf",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
+            "eng": "There are no more humans and at least one wolf is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Lupo del branco",
+            "eng": "Pack Wolf"
+        },
+        "description": {
+            "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Dalla seconda notte, se Il Capo Brando non è più della partita, può indicare un giocatore, anche sé stesso, un altro Lupo o nessuno. Il giocatore indicato, se non è protetto per qualsiasi motivo dalle Creature dell'Ombra, muore",
+            "eng": "On the first night, the Pack Wolf identifies the TRAITOR and recognizes the other Wolves. From the second night onwards, if there is no Pack Leader, they can point to a player, including themselves, another wolf, or no one. The pointed player, if not protected for any reason by Shadow Creatures, dies."
+        },
+        "faction": "Werewolf",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
+            "eng": "There are no more humans and at least one wolf is still in the game."
+        }
+    },
+    {
+        "name": {
+            "ita": "Giovane lupo",
+            "eng": "Young Wolf"
+        },
+        "description": {
+            "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Non può mai attaccare, se viene bruciato sul rogo, la notte successiva i Lupi possono attaccare due volte. I due attacchi sono risolti contemporaneamente",
+            "eng": "On the first night, the Young wolf identifies the TRAITOR and recognizes the other Pack Wolves. The Young Wolf can never attack. If they are burned at the stake, the following night, Wolves can attack twice. Both attacks are resolved simultaneously."
+        },
+        "faction": "Werewolf",
+        "isTainted": false,
+        "isMystic": false,
+        "winCondition": {
+            "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
+            "eng": "There are no more humans and at least one wolf is still in the game."
+        }
+    }
+]

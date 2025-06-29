@@ -126,3 +126,19 @@ export function sudokuSetLevelDone(value) {
         level: value,
     }
 }
+
+// Wherewolf
+export function wherewolfSetGamePhase(value) {
+    return {
+        type: 'WHEREWOLF_SET_GAME_PHASE',
+        phase: parseInt(value.phase) || 0,
+        subphase: parseInt(value.subphase) || 0,
+    }
+}
+
+export function wherewolfSetPlayers(value) {
+    return {
+        type: 'WHEREWOLF_SET_PLAYERS',
+        players: value,
+    }
+}

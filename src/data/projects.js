@@ -11,6 +11,7 @@ import MinesweeperPreview from '../components/projects/minesweeper/minesweeperPr
 import SolitairePreview from '../components/projects/solitaire/solitairePreview';
 import SimonPreview from '../components/projects/simon/simonPreview';
 import SudokuPreview from '../components/projects/sudoku/sudokuPreview';
+import WherewolfPreview from '../components/projects/wherewolf/wherewolfPreview';
 
 const games = [{
     key: 0,
@@ -96,6 +97,13 @@ const games = [{
     content: "When you like crossword puzzles, but hate words",
     fullContent: SudokuPreview,
     url: "sudoku",
+},
+{
+    key: 12,
+    title: "Wherewolf",
+    content: "A tool for lazy masters of the game",
+    fullContent: WherewolfPreview,
+    url: "wherewolf",
 },
 {
     key: 100,

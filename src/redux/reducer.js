@@ -41,6 +41,10 @@ const SettingsReducer = (state = InitialState, action) => {
                 levels.push(action.level);
             }
             return { ...state, sudoku: { ...state.sudoku, doneList: [...levels] } };
+        case 'WHEREWOLF_SET_GAME_PHASE':
+            return { ...state, wherewolf: { ...state.wherewolf, phase: action.phase, subphase: action.subphase } };
+        case 'WHEREWOLF_SET_PLAYERS':
+            return { ...state, wherewolf: { ...state.wherewolf, players: action.players } };
         default:
             return state;
     }

@@ -24,6 +24,11 @@ const baseTheme = (theme) => {
                         lineHeight: "40px",
                         fontWeight: 300,
                     },
+                    h3: {
+                        fontSize: "25px",
+                        lineHeight: "20px",
+                        fontWeight: 300,
+                    },
                     p: {
                         fontSize: "20px",
                         margin: 0,

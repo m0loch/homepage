@@ -16,6 +16,12 @@ const InitialState = {
         values: " 12   1  2   43 ",
         doneList: [],
      },
+     wherewolf: {
+        phase: 0,
+        subphase: 0,
+        players: [],
+        roles: [],
+     },
 };
 
 export default InitialState;
