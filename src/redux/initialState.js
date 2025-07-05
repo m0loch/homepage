@@ -26,6 +26,7 @@ const InitialState = {
          Extras: [],
       },
       takenRoles: ["The Seer", "The Pack Leader"],
+      assignments: {},
    },
 };
 

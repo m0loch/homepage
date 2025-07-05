@@ -11,6 +11,7 @@ const GamePhases = [
                 name: "Player census",
                 description: "Register every player (name or nickname) that will play the game.",
                 content: <PlayerInsertForm />,
+                validationClause: ({ players }) => players.length >= 6,
                 onLeave: (localState) => {
                     const playerCount = localState.players.length;
                     const wolvesCount = Math.floor(playerCount * 0.25);
@@ -29,12 +30,16 @@ const GamePhases = [
                 name: "Roles selection",
                 description: "Select which roles will be used in the game.\nThey will be assigned to the players later.",
                 content: <RoleSelectForm />,
-                validationClause: ({ roles }) => ![...roles.Villagers, ...roles.Werewolves, ...roles.Extras].some(item => !item)
+                validationClause: ({ roles }) => ![...roles.Villagers, ...roles.Werewolves, ...roles.Extras].some(item => !item),
+                onLeave: () => {
+                    return { assignments: [] }
+                }
             },
             {
                 name: "Roles assignment",
-                description: "Assign the selected roles to the players.\nEach player will receive a role that they will play during the game.",
+                description: "Assign roles to players.\nYou can assign roles manually or randomize them.",
                 content: <RoleAssignForm />,
+                validationClause: ({ players, assignments }) => !players.some(player => !assignments[player] || assignments[player] === 'Random'),
             },
         ],
      },

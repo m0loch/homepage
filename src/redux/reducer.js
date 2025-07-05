@@ -51,6 +51,8 @@ const SettingsReducer = (state = InitialState, action) => {
                 roles: action.roles,
                 takenRoles: [...action.roles.Villagers, ...action.roles.Werewolves, ...action.roles.Extras].filter(item => item)
             } };
+        case 'WHEREWOLF_SET_ASSIGNMENTS':
+            return { ...state, wherewolf: { ...state.wherewolf, assignments: { ...action.assignments } } };
         default:
             return state;
     }

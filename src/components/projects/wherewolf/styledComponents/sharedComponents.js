@@ -10,6 +10,18 @@ export const FormContainer = styled('div')(
     }),
 );
 
+export const FormLabel = styled('input')(
+    () => ({
+        font: "inherit",
+        background: "none",
+        border: "0px solid",
+        borderRadius: "4px",
+        height: "40px",
+        flexGrow: 1,
+        width: "75%",
+    }),
+);
+
 export const FormInput = styled('input')(
     () => ({
         font: "inherit",

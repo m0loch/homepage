@@ -150,3 +150,10 @@ export function wherewolfSetRoles(value) {
         roles: value,
     }
 }
+
+export function wherewolfSetAssignments(value) {
+    return {
+        type: 'WHEREWOLF_SET_ASSIGNMENTS',
+        assignments: value,
+    }
+}
