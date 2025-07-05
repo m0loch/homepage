@@ -38,9 +38,9 @@ function WerewolfPreview(props) {
             <CollapseHeader
                 caption={"Credits"}
                 open={open[1]}
-                onClick={() => handleStateChange(2)}
+                onClick={() => handleStateChange(1)}
             />
-            <Collapse in={open[2]} timeout="auto" unmountOnExit>
+            <Collapse in={open[1]} timeout="auto" unmountOnExit>
                 <a href="https://www.linkedin.com/in/christian-zoli/" target="_blank" rel="noreferrer">Christian Zoli</a> for the original game design.
             </Collapse>
         </div>
