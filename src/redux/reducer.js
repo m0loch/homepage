@@ -45,6 +45,8 @@ const SettingsReducer = (state = InitialState, action) => {
             return { ...state, wherewolf: { ...state.wherewolf, phase: action.phase, subphase: action.subphase } };
         case 'WHEREWOLF_SET_PLAYERS':
             return { ...state, wherewolf: { ...state.wherewolf, players: action.players } };
+        case 'WHEREWOLF_SET_ROLES':
+            return { ...state, wherewolf: { ...state.wherewolf, roles: action.roles } };
         default:
             return state;
     }

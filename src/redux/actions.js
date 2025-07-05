@@ -142,3 +142,10 @@ export function wherewolfSetPlayers(value) {
         players: value,
     }
 }
+
+export function wherewolfSetRoles(value) {
+    return {
+        type: 'WHEREWOLF_SET_ROLES',
+        roles: value,
+    }
+}
