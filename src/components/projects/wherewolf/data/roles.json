@@ -229,7 +229,7 @@
             "ita": "Il CONTADINO ha una delle seguenti identità nascoste (a sua insaputa): Semplice, Eroe, Discendente dei Lupi.\nCONTADINO SEMPLICE: nessun potere.\nDISCENDENTE DEI LUPI: se viene attaccato dai lupi (anche se fosse ROMEO o protetto dalla STREGA) questo riceve i tratti Lupo Mannaro e Creatura dell'Ombra. Apre gli occhi, riconosce i Lupi del Branco e riceve fazione Lupi del Branco. Nella gerarchia dei Lupi, è l'ultimo lupo che può attaccare (dopo il LUPO DEL BRANCO).\nEROE: se attaccato e ucciso dal lupo più forte in gioco, quest'ultimo muore insieme al CONTADINO EROE stesso, anche se il lupo fosse ROMEO o protetto dalla STREGA. Se il CONTADINO EROE è protetto dall'attacco, il suo potere non si attiva.",
             "eng": "The PEASANT has one of the following hidden identities (unknown to them): Simple, Hero, Descendant of Wolves.\nSIMPLE PEASANT: no power.\nDESCENDANT OF WOLVES: if attacked by wolves (even if they are ROMEO or protected by the WITCH), this player receives the traits Werewolf and Shadow Creature. They open their eyes, recognize the Pack Wolves, and receive the Pack Wolves faction. In the hierarchy of Wolves, they are the last wolf that can attack (after the PACK WOLF).\nHERO: if attacked and killed by the strongest wolf in play, that wolf dies along with the HERO PEASANT themselves, even if the wolf is ROMEO or protected by the WITCH. If the HERO PEASANT is protected from the attack, their power does not activate."
         },
-        "faction": "Peasant",
+        "faction": "Town",
         "isTainted": false,
         "isMystic": false,
         "winCondition": {
