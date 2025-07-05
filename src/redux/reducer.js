@@ -42,11 +42,15 @@ const SettingsReducer = (state = InitialState, action) => {
             }
             return { ...state, sudoku: { ...state.sudoku, doneList: [...levels] } };
         case 'WHEREWOLF_SET_GAME_PHASE':
-            return { ...state, wherewolf: { ...state.wherewolf, phase: action.phase, subphase: action.subphase } };
+            return { ...state, wherewolf: { ...state.wherewolf, ...action } };
         case 'WHEREWOLF_SET_PLAYERS':
             return { ...state, wherewolf: { ...state.wherewolf, players: action.players } };
         case 'WHEREWOLF_SET_ROLES':
-            return { ...state, wherewolf: { ...state.wherewolf, roles: action.roles } };
+            return { ...state, wherewolf: {
+                ...state.wherewolf,
+                roles: action.roles,
+                takenRoles: [...action.roles.Villagers, ...action.roles.Werewolves, ...action.roles.Extras].filter(item => item)
+            } };
         default:
             return state;
     }

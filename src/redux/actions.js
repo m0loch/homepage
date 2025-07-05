@@ -130,6 +130,7 @@ export function sudokuSetLevelDone(value) {
 // Wherewolf
 export function wherewolfSetGamePhase(value) {
     return {
+        ...value,
         type: 'WHEREWOLF_SET_GAME_PHASE',
         phase: parseInt(value.phase) || 0,
         subphase: parseInt(value.subphase) || 0,

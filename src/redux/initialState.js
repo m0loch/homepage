@@ -25,6 +25,7 @@ const InitialState = {
          Werewolves: ["The Pack Leader"],
          Extras: [],
       },
+      takenRoles: ["The Seer", "The Pack Leader"],
    },
 };
 

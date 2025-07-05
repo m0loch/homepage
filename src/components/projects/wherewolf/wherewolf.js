@@ -30,7 +30,7 @@ function Wherewolf(props) {
 
     const PerformNext = () => {
         if (ValidatePhase(gamephase, props)) {
-            props.wherewolfSetGamePhase(GetNextPhase(gamephase));
+            props.wherewolfSetGamePhase(GetNextPhase(gamephase, props));
         }
     }
 
