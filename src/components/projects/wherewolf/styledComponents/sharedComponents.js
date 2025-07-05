@@ -28,7 +28,7 @@ export const FormSelector = styled('select')(
         border: "1px solid",
         borderRadius: "4px",
         height: "40px",
-        minWidth: "50%",
+        width: "75%",
         textAlign: "center",
         margin: "8px",
     }),
