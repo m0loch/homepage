@@ -12,7 +12,8 @@ import {
     GetSubphaseName,
     GetSubphaseDescription,
     GetSubphaseContent,
-    GetNextPhase
+    GetNextPhase,
+    ValidatePhase
 } from './wherewolfPhases';
 
 function Wherewolf(props) {
@@ -28,7 +29,9 @@ function Wherewolf(props) {
     const subphaseContent = GetSubphaseContent(gamephase);
 
     const PerformNext = () => {
-        props.wherewolfSetGamePhase(GetNextPhase(gamephase));
+        if (ValidatePhase(gamephase, props)) {
+            props.wherewolfSetGamePhase(GetNextPhase(gamephase));
+        }
     }
 
     return (

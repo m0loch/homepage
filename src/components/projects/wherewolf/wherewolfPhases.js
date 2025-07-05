@@ -15,6 +15,7 @@ const GamePhases = [
                 name: "Roles selection",
                 description: "Select which roles will be used in the game.\nThey will be assigned to the players later.",
                 content: <RoleSelectForm />,
+                validationClause: ({ roles }) => ![...roles.Villagers, ...roles.Werewolves, ...roles.Extras].some(item => item === null)
             },
             {
                 name: "Roles assignment",
@@ -69,6 +70,16 @@ export function GetSubphaseContent({ phase, subphase }) {
         return "Unknown Subphase";
     }
     return GamePhases[phase].subphases[subphase].content || "";
+}
+
+export function ValidatePhase({ phase, subphase }, localState) {
+    const subPhaseRef = GamePhases[phase].subphases[subphase];
+    if (subPhaseRef?.validationClause) {
+        return subPhaseRef.validationClause(localState);
+    }
+
+    // If no validation clause is defined, assume the phase is valid
+    return true;
 }
 
 export function GetNextPhase({ phase, subphase }) {
