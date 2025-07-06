@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import { wherewolfSetRoles } from '../../../../redux/actions';
-import InitialState from '../../../../redux/initialState';
+import { wherewolfSetRoles } from '../../../../../redux/actions';
+import InitialState from '../../../../../redux/initialState';
 
-import { FormContainer, FormColumn, FormRow, FormSelector } from '../styledComponents/sharedComponents';
-import SceneSubTitle from '../styledComponents/sceneSubTitle';
+import { FormContainer, FormColumn, FormRow, FormSelector } from '../../styledComponents/sharedComponents';
+import SceneSubTitle from '../../styledComponents/sceneSubTitle';
 
-import roles from '../data/roles.json';
+import roles from '../../data/roles.json';
 
 // Game logic - 'count' properties will be dynamic based on the number of players
 const factions = [

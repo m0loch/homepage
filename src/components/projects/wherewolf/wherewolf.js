@@ -17,20 +17,14 @@ import {
 } from './wherewolfPhases';
 
 function Wherewolf(props) {
-
-    const gamephase = { 
-        phase: props.phase ?? 0,
-        subphase: props.subphase ?? 0
-    };
-
-    const phaseName = GetPhaseName(gamephase);
-    const subphaseName = GetSubphaseName(gamephase);
-    const subphaseDescription = GetSubphaseDescription(gamephase);
-    const subphaseContent = GetSubphaseContent(gamephase);
+    const phaseName = GetPhaseName(props);
+    const subphaseName = GetSubphaseName(props);
+    const subphaseDescription = GetSubphaseDescription(props);
+    const subphaseContent = GetSubphaseContent(props);
 
     const PerformNext = () => {
-        if (ValidatePhase(gamephase, props)) {
-            props.wherewolfSetGamePhase(GetNextPhase(gamephase, props));
+        if (ValidatePhase(props)) {
+            props.wherewolfSetGamePhase(GetNextPhase(props));
         }
     }
 

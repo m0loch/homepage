@@ -19,6 +19,7 @@ const InitialState = {
    wherewolf: {
       phase: 0,
       subphase: 0,
+      phaseStep: 0,
       players: [],
       roles: {
          Villagers: ["The Seer"],
@@ -27,6 +28,7 @@ const InitialState = {
       },
       takenRoles: ["The Seer", "The Pack Leader"],
       assignments: {},
+      logs: [],
    },
 };
 

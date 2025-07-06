@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { wherewolfSetAssignments } from '../../../../redux/actions';
+import { wherewolfSetAssignments } from '../../../../../redux/actions';
 
-import { FormContainer, FormRow, FormSelector, FormLabel, FormButton } from '../styledComponents/sharedComponents';
+import { FormContainer, FormRow, FormSelector, FormLabel, FormButton } from '../../styledComponents/sharedComponents';
 
 function RoleAssignForm(props) {
 
