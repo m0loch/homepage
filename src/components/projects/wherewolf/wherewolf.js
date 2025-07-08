@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { wherewolfSetGamePhase } from '../../../redux/actions';
 
@@ -17,6 +18,13 @@ import {
 } from './wherewolfPhases';
 
 function Wherewolf(props) {
+    const divRefForScroll = useRef(null);
+
+    // TODO: this is a start, but we can do better
+    useEffect(() => {
+        divRefForScroll.current.scrollIntoView({ behavior: 'smooth' });
+    }, []);
+
     const phaseName = GetPhaseName(props);
     const subphaseName = GetSubphaseName(props);
     const subphaseDescription = GetSubphaseDescription(props);
@@ -38,7 +46,14 @@ function Wherewolf(props) {
                 {subphaseContent}
             </SceneContent>
 
-            <NextButton variant="contained" onClick={() => PerformNext()}>Next</NextButton>
+            {/* This needs to become enabled/disabled based on the phase */}
+            <NextButton
+                variant="contained"
+                onClick={() => PerformNext()}
+                ref={divRefForScroll}
+            >
+                Next
+            </NextButton>
         </>
     );
 }
