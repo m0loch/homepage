@@ -332,7 +332,7 @@
             "eng": "On the first night, the Pack Leader identifies the TRAITOR and recognizes the other Pack Wolves. From the second night onwards, they can point to a player, including themselves, another wolf, or no one. The pointed player, if not protected for any reason by Shadow Creatures, dies."
         },
         "faction": "Werewolf",
-        "isTainted": false,
+        "isTainted": true,
         "isMystic": false,
         "winCondition": {
             "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
@@ -349,7 +349,7 @@
             "eng": "On the first night, the Pack Wolf identifies the TRAITOR and recognizes the other Wolves. From the second night onwards, if there is no Pack Leader, they can point to a player, including themselves, another wolf, or no one. The pointed player, if not protected for any reason by Shadow Creatures, dies."
         },
         "faction": "Werewolf",
-        "isTainted": false,
+        "isTainted": true,
         "isMystic": false,
         "winCondition": {
             "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
@@ -366,7 +366,7 @@
             "eng": "On the first night, the Young wolf identifies the TRAITOR and recognizes the other Pack Wolves. The Young Wolf can never attack. If they are burned at the stake, the following night, Wolves can attack twice. Both attacks are resolved simultaneously."
         },
         "faction": "Werewolf",
-        "isTainted": false,
+        "isTainted": true,
         "isMystic": false,
         "winCondition": {
             "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
