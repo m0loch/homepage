@@ -259,7 +259,6 @@ function Sudoku(props) {
   );
 }
 
-
 function mapStateToProps(state) {
   return { ...state.Sudoku };
 }
