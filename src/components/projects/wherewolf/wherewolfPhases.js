@@ -3,17 +3,7 @@ import PlayerInsertForm from "./subcomponents/pregame/playerInsertForm";
 import RoleAssignForm from "./subcomponents/pregame/roleAssignForm";
 import RoleSelectForm from "./subcomponents/pregame/roleSelectForm";
 import NightTimeHandler from "./subcomponents/game/nighttimeHandler";
-
-const nightSteps = [
-    { name: "Seer", timing: "Always" },
-    { name: "Monk", timing: "First night" },
-    { name: "Priest", timing: "First night" },
-    { name: "Juliet", timing: "First night" },
-    { name: "Medium", timing: "Regular nights" },
-    { name: "Witch", timing: "Regular nights" },
-    { name: "Werewolves", timing: "Always" },
-    { name: "Healer", timing: "Regular nights" },
-];
+import { nightSteps } from "./subcomponents/game/phasesSteps/nightSteps";
 
 const GamePhases = [
     {
@@ -34,7 +24,8 @@ const GamePhases = [
                             Villagers: [...InitialState.wherewolf.roles.Villagers, ...Array(villagersCount - 1).fill(null)],
                             Werewolves: [...InitialState.wherewolf.roles.Werewolves, ...Array(wolvesCount - 1).fill(null)],
                             Extras: Array(3).fill(null),
-                        }
+                        },
+                        assignments: [],
                     }
                 }
             },
@@ -43,15 +34,16 @@ const GamePhases = [
                 description: "Select which roles will be used in the game.\nThey will be assigned to the players later.",
                 content: <RoleSelectForm />,
                 validationClause: ({ roles }) => ![...roles.Villagers, ...roles.Werewolves, ...roles.Extras].some(item => !item),
-                onLeave: () => {
-                    return { assignments: [] }
-                }
             },
             {
                 name: "Roles assignment",
                 description: "Assign roles to players.\nYou can assign roles manually or randomize them.",
                 content: <RoleAssignForm />,
                 validationClause: ({ players, assignments }) => !players.some(player => !assignments[player] || assignments[player] === 'Random'),
+                onLeave: () => {
+                    // After ther roles are assigned, the game will effectively start - time to reset the logs
+                    return { logs: [] }
+                }
             },
         ],
      },
@@ -62,7 +54,7 @@ const GamePhases = [
                 name: "Night",
                 content: <NightTimeHandler />,
                 overrideNext: localState => {
-                    const isFirstNight = false; // TEMP: find an actual condition
+                    const isFirstNight = localState.logs?.length < 2;
 
                     const correctedNightSteps = nightSteps
                         .filter(step => step.timing !== (isFirstNight ? "Regular nights" : "First night"));
@@ -73,13 +65,23 @@ const GamePhases = [
                         const next = correctedNightSteps[idx + 1];
                         const nextIdx = nightSteps.findIndex(item => item.name === next.name);
 
-                        return { phaseStep: nextIdx };
+                        // Finalizes today's log
+                        return { phaseStep: nextIdx, currDayLog: [...(localState.currDayLog || []), localState.currPhaseLog], currPhaseLog: {} };
                     }
 
                     // Move to the following day
                     return { subphase: localState.subphase + 1 };
                 },
-                getContent: step => nightSteps[step]?.name,
+                getContent: stepIdx => {
+                    const step = nightSteps[stepIdx];
+
+                    if (!step) {
+                        return "Unknown Night Step";
+                    } else if (step.component) {
+                        return step.component;
+                    }
+                    return step.name;
+                },
             },
             {
                 name: "Day",
@@ -94,7 +96,7 @@ const GamePhases = [
                 overrideNext: localState => {
 
                     // TEMP: endless night loop
-                    return { phase: localState.phase, subphase: 0 };
+                    return { phase: localState.phase, subphase: 0, currDayLog: [], logs: [] };
                 }
             },
         ],

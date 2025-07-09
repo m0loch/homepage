@@ -1,22 +1,24 @@
 import { connect } from 'react-redux';
-import { wherewolfSetRoles } from '../../../../../redux/actions';
+import { wherewolfSetCurrPhaseLog } from '../../../../../redux/actions';
 
-import { FormContainer } from '../../styledComponents/sharedComponents';
-import { splitText } from '../../../../common/textFunctions';
-
+import { FormContainer, FormColumn } from '../../styledComponents/sharedComponents';
 import { GetPhaseStep } from '../../wherewolfPhases';
 
 function NighttimeHandler(props) {
 
     return (
         <FormContainer>
-            {splitText(`
-            Temmporary text
-            `)}
-            <p>Nighttime handler</p>
-            <p>Phase: {props.phase}</p>
-            <p>Subphase: {props.subphase}</p>
-            <p>Phase Step: {GetPhaseStep(props)}</p>
+            <FormColumn style={{ alignSelf: 'center' }}>
+                {props.currDayLog.map((action, index) => (
+                    <div key={index}>
+                        <p>
+                            {action.text}
+                        </p>
+                        <br/>
+                    </div>
+                ))}
+                {GetPhaseStep(props)}
+            </FormColumn>
         </FormContainer>
     );
 }
@@ -26,7 +28,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  wherewolfSetRoles,
+  wherewolfSetCurrPhaseLog,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NighttimeHandler);
