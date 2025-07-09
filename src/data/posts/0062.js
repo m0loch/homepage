@@ -51,6 +51,7 @@ const post = {
 
             Let's just say that back in the day I played a fan translated version of it on a NES emulator and I enjoyed it much more than the way cuter remake.
             That speaks more about me and my grumpiness than about the game, though.
+
             <h3>Magic: The Gathering - FINAL FANTASY expansion</h3>`)}<CustomImage
                 src="https://www.cardtrader.com/uploads/blueprints/image/332082/show_cloud-midgar-mercenary-magic-the-gathering-final-fantasy.jpg"
                 alt="Cloud, Midgar Mercenary"
