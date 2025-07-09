@@ -157,3 +157,10 @@ export function wherewolfSetAssignments(value) {
         assignments: value,
     }
 }
+
+export function wherewolfSetCurrPhaseLog(value) {
+    return {
+        type: 'WHEREWOLF_SET_CURR_PHASE_LOG',
+        currPhaseLog: value,
+    }
+}

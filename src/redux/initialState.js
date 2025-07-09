@@ -28,6 +28,8 @@ const InitialState = {
       },
       takenRoles: ["The Seer", "The Pack Leader"],
       assignments: {},
+      currDayLog: [],
+      currPhaseLog: {},
       logs: [],
    },
 };

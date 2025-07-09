@@ -53,6 +53,10 @@ const SettingsReducer = (state = InitialState, action) => {
             } };
         case 'WHEREWOLF_SET_ASSIGNMENTS':
             return { ...state, wherewolf: { ...state.wherewolf, assignments: { ...action.assignments } } };
+        case 'WHEREWOLF_SET_CURR_DAY_LOG':
+            return { ...state, wherewolf: { ...state.wherewolf, currDayLog: [...state.wherewolf.currDayLog, action.currDayLog] } };
+        case 'WHEREWOLF_SET_CURR_PHASE_LOG':
+            return { ...state, wherewolf: { ...state.wherewolf, currPhaseLog: action.currPhaseLog } };
         default:
             return state;
     }
