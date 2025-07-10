@@ -81,7 +81,8 @@ export const FormColumn = styled('div')(
         width: "70%",
         flexDirection: "column",
         [theme.breakpoints.down('md')]: {
-            width: "100%"
+            width: "90%",
+            alignItems: "baseline"
         }
     })
 );
