@@ -227,7 +227,7 @@
         },
         "description": {
             "ita": "Il CONTADINO ha una delle seguenti identità nascoste (a sua insaputa): Semplice, Eroe, Discendente dei Lupi.\nCONTADINO SEMPLICE: nessun potere.\nDISCENDENTE DEI LUPI: se viene attaccato dai lupi (anche se fosse ROMEO o protetto dalla STREGA) questo riceve i tratti Lupo Mannaro e Creatura dell'Ombra. Apre gli occhi, riconosce i Lupi del Branco e riceve fazione Lupi del Branco. Nella gerarchia dei Lupi, è l'ultimo lupo che può attaccare (dopo il LUPO DEL BRANCO).\nEROE: se attaccato e ucciso dal lupo più forte in gioco, quest'ultimo muore insieme al CONTADINO EROE stesso, anche se il lupo fosse ROMEO o protetto dalla STREGA. Se il CONTADINO EROE è protetto dall'attacco, il suo potere non si attiva.",
-            "eng": "The PEASANT has one of the following hidden identities (unknown to them): Simple, Hero, Descendant of Wolves.\nSIMPLE PEASANT: no power.\nDESCENDANT OF WOLVES: if attacked by wolves (even if they are ROMEO or protected by the WITCH), this player receives the traits Werewolf and Shadow Creature. They open their eyes, recognize the Pack Wolves, and receive the Pack Wolves faction. In the hierarchy of Wolves, they are the last wolf that can attack (after the PACK WOLF).\nHERO: if attacked and killed by the strongest wolf in play, that wolf dies along with the HERO PEASANT themselves, even if the wolf is ROMEO or protected by the WITCH. If the HERO PEASANT is protected from the attack, their power does not activate."
+            "eng": "The PEASANT has one of the following hidden identities (unknown to them): Simple, Hero, Descendant of Wolves.\nSIMPLE PEASANT: no power.\nDESCENDANT OF WOLVES: if attacked by wolves (even if they are ROMEO or protected by the WITCH), this player receives the traits Werewolf and Shadow Creature. They open their eyes, recognize the Pack Wolves, and receive the Pack Wolves faction. In the hierarchy of Wolves, they are the last wolf that can attack (after the WOLF OF THE PACK).\nHERO: if attacked and killed by the strongest wolf in play, that wolf dies along with the HERO PEASANT themselves, even if the wolf is ROMEO or protected by the WITCH. If the HERO PEASANT is protected from the attack, their power does not activate."
         },
         "faction": "Town",
         "isTainted": false,
@@ -235,7 +235,8 @@
         "winCondition": {
             "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
             "eng": "There are no more Shadow Creatures and at least one player is still in the game."
-        }
+        },
+        "rank": 4
     },
     {
         "name": {
@@ -312,7 +313,7 @@
         },
         "description": {
             "ita": "Se la NONNA si trasforma in Lupo, il CACCIATORE è protetto dal Lupo ex NONNA. Se in gioco è rimasto un solo Lupo del Branco, il CACCIATORE è protetto da questo Lupo e se viene da questo attaccato, il Lupo muore, anche se uno tra il Lupo ed il CACCIATORE fosse ROMEO o protetto dalla STREGA",
-            "eng": "If the GRANDMOTHER transforms into a Wolf, the HUNTER is protected from the former GRANDMOTHER Wolf. If there is only one Pack Wolf left in the game, the HUNTER is protected from this Wolf, and if attacked by this Wolf, the Wolf dies, even if either the Wolf or the HUNTER is ROMEO or protected by the WITCH."
+            "eng": "If the GRANDMOTHER transforms into a Wolf, the HUNTER is protected from the former GRANDMOTHER Wolf. If there is only one Wolf of the Pack left in the game, the HUNTER is protected from this Wolf, and if attacked by this Wolf, the Wolf dies, even if either the Wolf or the HUNTER is ROMEO or protected by the WITCH."
         },
         "faction": "Town",
         "isTainted": false,
@@ -337,16 +338,17 @@
         "winCondition": {
             "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
             "eng": "There are no more humans and at least one wolf is still in the game."
-        }
+        },
+        "rank": 1
     },
     {
         "name": {
             "ita": "Lupo del branco",
-            "eng": "The Pack Wolf"
+            "eng": "The Wolf of the Pack"
         },
         "description": {
             "ita": "La prima notte individua il TRADITORE e riconosce gli altri Lupi del Branco. Dalla seconda notte, se Il Capo Brando non è più della partita, può indicare un giocatore, anche sé stesso, un altro Lupo o nessuno. Il giocatore indicato, se non è protetto per qualsiasi motivo dalle Creature dell'Ombra, muore",
-            "eng": "On the first night, the Pack Wolf identifies the TRAITOR and recognizes the other Wolves. From the second night onwards, if there is no Pack Leader, they can point to a player, including themselves, another wolf, or no one. The pointed player, if not protected for any reason by Shadow Creatures, dies."
+            "eng": "On the first night, the Wolf of the Pack identifies the TRAITOR and recognizes the other Wolves. From the second night onwards, if there is no Pack Leader, they can point to a player, including themselves, another wolf, or no one. The pointed player, if not protected for any reason by Shadow Creatures, dies."
         },
         "faction": "Werewolf",
         "isTainted": true,
@@ -354,7 +356,8 @@
         "winCondition": {
             "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
             "eng": "There are no more humans and at least one wolf is still in the game."
-        }
+        },
+        "rank": 3
     },
     {
         "name": {
@@ -371,6 +374,7 @@
         "winCondition": {
             "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
             "eng": "There are no more humans and at least one wolf is still in the game."
-        }
+        },
+        "rank": 5
     }
 ]
