@@ -26,9 +26,9 @@ function MonkNightAction(props) {
     [monkText]);
 
     return (
-        <>
+        <div>
             {splitText(monkText)}
-        </>
+        </div>
     );
 }
 

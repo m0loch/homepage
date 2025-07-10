@@ -1,5 +1,7 @@
 import MonkNightAction from "./nightActions/monkNightAction";
 import SeerNightAction from "./nightActions/seerNightAction";
+import PriestNightAction from "./nightActions/priestNightAction";
+import JulietNightAction from "./nightActions/julietNightAction";
 
 export const nightSteps = [
     {
@@ -15,11 +17,27 @@ export const nightSteps = [
     {
         name: "Priest",
         timing: "First night",
-        // TODO
+        component: <PriestNightAction />,
     },
-    { name: "Juliet", timing: "First night" },
-    { name: "Medium", timing: "Regular nights" },
-    { name: "Witch", timing: "Regular nights" },
-    { name: "Werewolves", timing: "Always" },
-    { name: "Healer", timing: "Regular nights" },
+    {
+        name: "Juliet",
+        timing: "First night",
+        component: <JulietNightAction/>
+    },
+    {
+        name: "Medium",
+        timing: "Regular nights",
+    },
+    {
+        name: "Witch",
+        timing: "Regular nights",
+    },
+    {
+        name: "Werewolves",
+        timing: "Always",
+    },
+    {
+        name: "Healer",
+        timing: "Regular nights",
+    },
 ];

@@ -6,7 +6,7 @@ import roles from '../../../../data/roles.json';
 
 function SeerNightAction(props) {
 
-    // TODO: Check that seer is present and alive, if not set control as inactive and push empty log
+    // TODO: Check that Seer is present and ALIVE, if not set control as inactive and push empty log
 
     const SelectTarget = player => {
         const sensedRole = props.assignments[player];
@@ -17,7 +17,7 @@ function SeerNightAction(props) {
             type: "Seer",
             target: player,
             success: isTainted,
-            text: `The Seer investigated ${player} and discovered their aura to be ${isTainted ? "tainted" : "pure"}.`
+            text: `The Seer investigated ${player} and discovered their aura to be ${isTainted ? "tainted" : "pure"}.<br/><br/>`
         });
     }
 
