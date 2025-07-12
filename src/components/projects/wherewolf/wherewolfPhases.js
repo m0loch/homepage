@@ -2,7 +2,10 @@ import InitialState from "../../../redux/initialState";
 import PlayerInsertForm from "./subcomponents/pregame/playerInsertForm";
 import RoleAssignForm from "./subcomponents/pregame/roleAssignForm";
 import RoleSelectForm from "./subcomponents/pregame/roleSelectForm";
+
+import DayTimeHandler from "./subcomponents/game/daytimeHandler";
 import NightTimeHandler from "./subcomponents/game/nighttimeHandler";
+import { daySteps } from "./subcomponents/game/phasesSteps/daySteps";
 import { nightSteps } from "./subcomponents/game/phasesSteps/nightSteps";
 
 const GamePhases = [
@@ -65,12 +68,18 @@ const GamePhases = [
                         const next = correctedNightSteps[idx + 1];
                         const nextIdx = nightSteps.findIndex(item => item.name === next.name);
 
-                        // Finalizes today's log
+                        // Pushes the current phase log in the day log and resets it
                         return { phaseStep: nextIdx, currDayLog: [...(localState.currDayLog || []), localState.currPhaseLog], currPhaseLog: {} };
                     }
 
                     // Move to the following day
-                    return { subphase: localState.subphase + 1 };
+                    return {
+                        subphase: localState.subphase + 1,
+                        logs: [...(localState.logs || []),localState.currDayLog],
+                        currDayLog: [],
+                        currPhaseLog: {},
+                        phaseStep: 0
+                    };
                 },
                 getContent: stepIdx => {
                     const step = nightSteps[stepIdx];
@@ -85,7 +94,17 @@ const GamePhases = [
             },
             {
                 name: "Day",
-                description: "Discussion time, move on to vote after everyone has spoken.",
+                content: <DayTimeHandler />,
+                getContent: stepIdx => {
+                    const step = daySteps[stepIdx];
+
+                    if (!step) {
+                        return "Unknown Day";
+                    } else if (step.component) {
+                        return step.component;
+                    }
+                    return step.name;
+                },
             },
             {
                 name: "End of Day votation",
