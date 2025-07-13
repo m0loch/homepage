@@ -72,10 +72,13 @@ const GamePhases = [
                         return { phaseStep: nextIdx, currDayLog: [...(localState.currDayLog || []), localState.currPhaseLog], currPhaseLog: {} };
                     }
 
-                    // Move to the following day
+                    // Move to the following subphase
                     return {
                         subphase: localState.subphase + 1,
-                        logs: [...(localState.logs || []),localState.currDayLog],
+                        logs: [...(localState.logs || []), {
+                            type: isFirstNight ? "First Night" : "Night",
+                            log: localState.currDayLog
+                        }],
                         currDayLog: [],
                         currPhaseLog: {},
                         phaseStep: 0
@@ -95,6 +98,25 @@ const GamePhases = [
             {
                 name: "Day",
                 content: <DayTimeHandler />,
+                overrideNext: localState => {
+
+                    if (localState.phaseStep < daySteps.length - 1) {
+                        // Pushes the current phase log in the day log and resets it
+                        return { phaseStep: localState.phaseStep + 1, currDayLog: [...(localState.currDayLog || []), localState.currPhaseLog], currPhaseLog: {} };
+                    }
+
+                    // Move to the following subphase
+                    return {
+                        subphase: localState.subphase + 1,
+                        logs: [...(localState.logs || []), {
+                            type: "Day",
+                            log: localState.currDayLog,
+                        }],
+                        currDayLog: [],
+                        currPhaseLog: {},
+                        phaseStep: 0
+                    };
+                },
                 getContent: stepIdx => {
                     const step = daySteps[stepIdx];
 

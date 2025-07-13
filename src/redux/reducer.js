@@ -41,6 +41,8 @@ const SettingsReducer = (state = InitialState, action) => {
                 levels.push(action.level);
             }
             return { ...state, sudoku: { ...state.sudoku, doneList: [...levels] } };
+        case 'WHEREWOLF_SET_CAN_PERFORM_NEXT':
+            return { ...state, wherewolf: { ...state.wherewolf, canPerformNext: action.canPerformNext } };
         case 'WHEREWOLF_SET_GAME_PHASE':
             return { ...state, wherewolf: { ...state.wherewolf, ...action } };
         case 'WHEREWOLF_SET_PLAYERS':
@@ -53,8 +55,6 @@ const SettingsReducer = (state = InitialState, action) => {
             } };
         case 'WHEREWOLF_SET_ASSIGNMENTS':
             return { ...state, wherewolf: { ...state.wherewolf, assignments: { ...action.assignments } } };
-        case 'WHEREWOLF_SET_CURR_DAY_LOG':
-            return { ...state, wherewolf: { ...state.wherewolf, currDayLog: [...state.wherewolf.currDayLog, action.currDayLog] } };
         case 'WHEREWOLF_SET_CURR_PHASE_LOG':
             return { ...state, wherewolf: { ...state.wherewolf, currPhaseLog: action.currPhaseLog } };
         default:

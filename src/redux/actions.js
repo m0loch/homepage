@@ -128,6 +128,13 @@ export function sudokuSetLevelDone(value) {
 }
 
 // Wherewolf
+export function wherewolfSetCanPerformNext(value) {
+    return {
+        type: 'WHEREWOLF_SET_CAN_PERFORM_NEXT',
+        canPerformNext: value,
+    }
+}
+
 export function wherewolfSetGamePhase(value) {
     return {
         ...value,

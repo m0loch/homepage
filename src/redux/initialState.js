@@ -17,6 +17,7 @@ const InitialState = {
       doneList: [],
    },
    wherewolf: {
+      canPerformNext: true,
       phase: 0,
       subphase: 0,
       phaseStep: 0,

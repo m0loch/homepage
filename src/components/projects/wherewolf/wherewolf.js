@@ -46,14 +46,15 @@ function Wherewolf(props) {
                 {subphaseContent}
             </SceneContent>
 
-            {/* This needs to become enabled/disabled based on the phase */}
             <NextButton
                 variant="contained"
                 onClick={() => PerformNext()}
                 ref={divRefForScroll}
+                disabled={!props.canPerformNext}
             >
                 Next
             </NextButton>
+            <br/><br/>
         </>
     );
 }
