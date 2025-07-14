@@ -126,14 +126,14 @@ function Chapter4() {
 
             It's no wonder that, when the game became playable, everyone was on their toes waiting to see how this scene would play out.
             `)}
-            <YouTubeVideo videoId={"jaoqJzYXJso"} align="right"  caption="By the way: why can't they just upload the OST on Spotify?!?" />
+            <YouTubeVideo videoId={"jaoqJzYXJso"} align="right" caption={<><s>By the way: why can't they just upload the OST on Spotify?!?</s><br/>Aw come on, this is ridicolous</>} />
 
             {splitText(`
             On one hand, <i>everybody</i> knew Aerith is supposed to die, on the other they spent a lot of effort marketing Rebirth with the key sentence "The Unknown Journey Continues", so people had some kind of hope.
 
             They decided to go with the third option: a completely serious scene where she both dies and doesn't.
 
-            <i>Hilarity ensued</i>.
+            <i>Hilarity ensues</i>.
 
             Did they want to take a risk?
             Did they just refuse to be predictable?

@@ -49,7 +49,7 @@ function StatefulPost() {
             <li>Metaphor: ReFantazio</li>
         </ul>
 
-        ...and the winner, <i>I don't know I've been beating around the bush for so long</i>, is of course Astro Bot.
+        ...and the winner, <i>I don't know why I've been beating around the bush for so long</i>, is of course Astro Bot.
         `)}
         <YouTubeVideo videoId={"unYFdcEjV9k"} align={"center"}/>
         {splitText(`
