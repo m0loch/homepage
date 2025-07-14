@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.26ed330b.js",
+    "main.js": "/homepage/static/js/main.6b2339cb.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -44,6 +44,7 @@
     "static/media/cloud.jpg": "/homepage/static/media/cloud.80cc1577ad700e9f1c11.jpg",
     "static/media/corel-gs-from-north.jpg": "/homepage/static/media/corel-gs-from-north.2e71957c620e6c7a2055.jpg",
     "static/media/mythril-museum.jpg": "/homepage/static/media/mythril-museum.8e20f324dc23296aae1a.jpg",
+    "static/media/famitsuad.jpeg": "/homepage/static/media/famitsuad.a83bc421b392327d7ee4.jpeg",
     "static/media/junon-fort-condor-board.jpg": "/homepage/static/media/junon-fort-condor-board.c2281291a43f11c83f50.jpg",
     "static/media/red_xiii.jpg": "/homepage/static/media/red_xiii.e60660c7b30132fa2881.jpg",
     "static/media/yuffie.jpg": "/homepage/static/media/yuffie.b944d8a229fd70deec9a.jpg",
@@ -93,6 +94,7 @@
     "static/media/ff16quest.jpg": "/homepage/static/media/ff16quest.b3f9a949adfe50fdfcca.jpg",
     "static/media/ahriman.jpg": "/homepage/static/media/ahriman.775f93217477d2c9489a.jpg",
     "static/media/e33-white-nevron.jpg": "/homepage/static/media/e33-white-nevron.64584da789608e40a740.jpg",
+    "static/media/ff-cover.png": "/homepage/static/media/ff-cover.b50b8c509e3f70d60777.png",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
     "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
     "static/media/bahamut.png": "/homepage/static/media/bahamut.9fa62c6f7fa42071c67e.png",
@@ -114,10 +116,12 @@
     "static/media/Jumbo-Cactuar-2.webp": "/homepage/static/media/Jumbo-Cactuar-2.436dc9846524b0ddea33.webp",
     "static/media/kob.png": "/homepage/static/media/kob.0fce5f27fe6562753704.png",
     "static/media/ifrit-garuda.webp": "/homepage/static/media/ifrit-garuda.d97f98745afdb5efd60c.webp",
+    "static/media/garland.png": "/homepage/static/media/garland.8f78d79155ef5183347e.png",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/wizardry.jpg": "/homepage/static/media/wizardry.c42ff6f9930a9d47f3eb.jpg",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
+    "static/media/ffxmtg.svg": "/homepage/static/media/ffxmtg.65fec0d8d17b9897dc016d845c562f00.svg",
     "static/media/inter20.svg": "/homepage/static/media/inter20.752f8e742172428f50e4498f95670b33.svg",
     "static/media/game-awards-logo.svg": "/homepage/static/media/game-awards-logo.fbd95e7d30cef3c0602a993e89d98cb6.svg",
     "static/media/explosion.svg": "/homepage/static/media/explosion.2667c6eb52ac06a390e5d2f91fee38eb.svg",
@@ -125,9 +129,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.26ed330b.js.map": "/homepage/static/js/main.26ed330b.js.map"
+    "main.6b2339cb.js.map": "/homepage/static/js/main.6b2339cb.js.map"
   },
   "entrypoints": [
-    "static/js/main.26ed330b.js"
+    "static/js/main.6b2339cb.js"
   ]
 }
