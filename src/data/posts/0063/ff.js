@@ -60,12 +60,8 @@ function FF1() {
         No worries though: this lack of actual characters is solved by creating a set of thematic equipments that bear the <b>Job select</b> keyword - thus creating a 1/1 hero token when put on the battlefield that gets immediately attached to your freshly created artifact.
         They're not even legendary, because everyone deserves their fair chance of lining up four Black Belts like in the original game.
 
-        <a href=" ttps://gatherer.wizards.com/FIN/en-us/169/warriors-sword" target="_blank" rel="noreferrer">Warrior's Sword</a>,
-        <a href=" https://gatherer.wizards.com/FIN/en-us/81/thiefs-knife" target="_blank" rel="noreferrer">Thief's Knife</a>,
-        <a href="https://gatherer.wizards.com/FIN/en-us/265/monks-fist" target="_blank" rel="noreferrer">Monk's Fist</a>,
-        <a href="https://gatherer.wizards.com/FIN/en-us/152/red-mages-rapier" target="_blank" rel="noreferrer">Red Mage's Rapier</a>,
-        <a href="https://gatherer.wizards.com/FIN/en-us/42/white-mages-staff" target="_blank" rel="noreferrer">White Mage's Staff</a>,
-        <a href="https://gatherer.wizards.com/FIN/en-us/90/black-mages-rod" target="_blank" rel="noreferrer">Black Mage's Rod</a>
+        They are, as follows:
+        the <a href="https://gatherer.wizards.com/FIN/en-us/169/warriors-sword" target="_blank" rel="noreferrer">Warrior's Sword</a>, the <a href="https://gatherer.wizards.com/FIN/en-us/81/thiefs-knife" target="_blank" rel="noreferrer">Thief's Knife</a>, the <a href="https://gatherer.wizards.com/FIN/en-us/265/monks-fist" target="_blank" rel="noreferrer">Monk's Fist</a>, the <a href="https://gatherer.wizards.com/FIN/en-us/152/red-mages-rapier" target="_blank" rel="noreferrer">Red Mage's Rapier</a>, the <a href="https://gatherer.wizards.com/FIN/en-us/42/white-mages-staff" target="_blank" rel="noreferrer">White Mage's Staff</a>, and the <a href="https://gatherer.wizards.com/FIN/en-us/90/black-mages-rod" target="_blank" rel="noreferrer">Black Mage's Rod</a>
         `)}
         <CustomImage
             alt="The Cloudsea Djinn"
