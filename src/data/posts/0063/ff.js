@@ -12,7 +12,7 @@ function FF1() {
         <>
         <Bookmark id="FF1Nutshell">A bit of context</Bookmark>
         <CustomImage
-            alt="Where to start"
+            alt="Cover art for the original Final Fantasy (japanese version)"
             src={CoverArt}
             align="right"
         />
