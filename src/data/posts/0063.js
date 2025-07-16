@@ -9,6 +9,7 @@ import { Collapse } from "@mui/material";
 import { ReactComponent as Logo } from '../../images/post-0063/ffxmtg.svg';
 
 import FFpage from "./0063/ff";
+import FF2page from "./0063/ff2";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -61,10 +62,16 @@ function StatefulPost() {
             <StyledCollapse in={open[0]} timeout="auto" unmountOnExit>
                 <BookmarkLink id="Set description" isTitle>Set description</BookmarkLink>
                 <ol>
-                    <BookmarkLink id="Final Fantasy" isTitle>Final Fantasy</BookmarkLink>
+                    <BookmarkLink id="FinalFantasy" isTitle>Final Fantasy</BookmarkLink>
                     <li><BookmarkLink id="FF1Nutshell" onPreClick={() => forcePanelOpen(1)}>A bit of context</BookmarkLink></li>
                     <li><BookmarkLink id="FF1Game" onPreClick={() => forcePanelOpen(1)}>The game</BookmarkLink></li>
                     <li><BookmarkLink id="FF1Cards" onPreClick={() => forcePanelOpen(1)}>The cards</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy2" isTitle>Final Fantasy II</BookmarkLink>
+                    <li><BookmarkLink id="FF2Nutshell" onPreClick={() => forcePanelOpen(2)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF2Game" onPreClick={() => forcePanelOpen(2)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF2Cards" onPreClick={() => forcePanelOpen(2)}>The cards</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 
@@ -105,11 +112,23 @@ function StatefulPost() {
                 onClick={() => handleStateChange(1)}
                 isSectionTitle
             >
-                <Bookmark id="Final Fantasy" isTitle>Final Fantasy</Bookmark>
+                <Bookmark id="FinalFantasy" isTitle>Final Fantasy</Bookmark>
             </StyledCollapseHeader>
 
             <Collapse in={open[1]} timeout="auto" unmountOnExit>
                 <FFpage/>
+            </Collapse>
+
+            <StyledCollapseHeader
+                open={open[2]}
+                onClick={() => handleStateChange(2)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy2" isTitle>Final Fantasy II</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[2]} timeout="auto" unmountOnExit>
+                <FF2page/>
             </Collapse>
         </>
     );
@@ -118,7 +137,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-012"),
-    lastUpdate: new Date("2025-07-14"),
+    lastUpdate: new Date("2025-07-16"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };
