@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.ec33e22d.js",
+    "main.js": "/homepage/static/js/main.a65afd39.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -88,6 +88,7 @@
     "static/media/cosmo-gi-nattak.jpg": "/homepage/static/media/cosmo-gi-nattak.3b274f4a636c75297f5c.jpg",
     "static/media/tifa-past.jpg": "/homepage/static/media/tifa-past.b26df87af99c891a0ecc.jpg",
     "static/media/red-seto.jpg": "/homepage/static/media/red-seto.a63ac462b448c9d20e0a.jpg",
+    "static/media/ff2-cover.webp": "/homepage/static/media/ff2-cover.1b9468e598a2e8cf9dfc.webp",
     "static/media/cetra-final-showdown.jpg": "/homepage/static/media/cetra-final-showdown.649a196d5de45d73b621.jpg",
     "static/media/tifa.jpg": "/homepage/static/media/tifa.4a37d45ccffaac8abe32.jpg",
     "static/media/sephiroth-pose.jpg": "/homepage/static/media/sephiroth-pose.6c425418f36df6940262.jpg",
@@ -115,13 +116,14 @@
     "static/media/active-time-lore.jpg": "/homepage/static/media/active-time-lore.53896a7549c70a1c28f2.jpg",
     "static/media/Jumbo-Cactuar-2.webp": "/homepage/static/media/Jumbo-Cactuar-2.436dc9846524b0ddea33.webp",
     "static/media/kob.png": "/homepage/static/media/kob.0fce5f27fe6562753704.png",
+    "static/media/ff2-amano.webp": "/homepage/static/media/ff2-amano.c76515f09b6c4cc77d65.webp",
     "static/media/ifrit-garuda.webp": "/homepage/static/media/ifrit-garuda.d97f98745afdb5efd60c.webp",
     "static/media/garland.png": "/homepage/static/media/garland.8f78d79155ef5183347e.png",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/wizardry.jpg": "/homepage/static/media/wizardry.c42ff6f9930a9d47f3eb.jpg",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
-    "static/media/ffxmtg.svg": "/homepage/static/media/ffxmtg.65fec0d8d17b9897dc016d845c562f00.svg",
+    "static/media/ffxmtg.svg": "/homepage/static/media/ffxmtg.9d9e5952db0c4d0779fcc57082c12a48.svg",
     "static/media/inter20.svg": "/homepage/static/media/inter20.752f8e742172428f50e4498f95670b33.svg",
     "static/media/game-awards-logo.svg": "/homepage/static/media/game-awards-logo.fbd95e7d30cef3c0602a993e89d98cb6.svg",
     "static/media/explosion.svg": "/homepage/static/media/explosion.2667c6eb52ac06a390e5d2f91fee38eb.svg",
@@ -129,9 +131,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.ec33e22d.js.map": "/homepage/static/js/main.ec33e22d.js.map"
+    "main.a65afd39.js.map": "/homepage/static/js/main.a65afd39.js.map"
   },
   "entrypoints": [
-    "static/js/main.ec33e22d.js"
+    "static/js/main.a65afd39.js"
   ]
 }
