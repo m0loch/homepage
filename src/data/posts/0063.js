@@ -10,6 +10,7 @@ import { ReactComponent as Logo } from '../../images/post-0063/ffxmtg.svg';
 
 import FFpage from "./0063/ff";
 import FF2page from "./0063/ff2";
+import FF3page from "./0063/ff3";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -73,6 +74,12 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF2Game" onPreClick={() => forcePanelOpen(2)}>The game</BookmarkLink></li>
                     <li><BookmarkLink id="FF2Cards" onPreClick={() => forcePanelOpen(2)}>The cards</BookmarkLink></li>
                 </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy3" isTitle>Final Fantasy III</BookmarkLink>
+                    <li><BookmarkLink id="FF3Nutshell" onPreClick={() => forcePanelOpen(3)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF3Game" onPreClick={() => forcePanelOpen(3)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF3Cards" onPreClick={() => forcePanelOpen(3)}>The cards</BookmarkLink></li>
+                </ol>
             </StyledCollapse>
 
             <br/>
@@ -130,6 +137,18 @@ function StatefulPost() {
             <Collapse in={open[2]} timeout="auto" unmountOnExit>
                 <FF2page/>
             </Collapse>
+
+            <StyledCollapseHeader
+                open={open[3]}
+                onClick={() => handleStateChange(3)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy3" isTitle>Final Fantasy III</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[3]} timeout="auto" unmountOnExit>
+                <FF3page/>
+            </Collapse>
         </>
     );
 }
@@ -137,7 +156,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-012"),
-    lastUpdate: new Date("2025-07-16"),
+    lastUpdate: new Date("2025-07-19"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };
