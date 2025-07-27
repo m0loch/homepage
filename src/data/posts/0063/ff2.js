@@ -43,16 +43,15 @@ function FF2() {
 
         The fact that characters will now increase their stats by using them, while innovative, is what in the end made this game so hated: while you <i>could</i> try to play the game as intended, players often end up grinding their ass off by having characters attack themselves over and over in order to increase their HP stat.
 
-        Now, a quick list of facts:<ul>`)}
-
+        Now, a quick list of facts:`)}
+        <ul>
         <p><li>the party features named characters - the canon wants them to be Firion, Maria, Guy and Leon<InlineSpoiler mask='*'>Firion and Leon were actually named Frioniel and Lionheart before the late ports, but I'm being pedantic here</InlineSpoiler></li></p>
-        {splitText(`<li>the party composition is volatile: while Firion, Maria and Guy are mandatory, the fourth slot will see guest characters come and go - often after an heroic sacrifice of sorts</li>
-        <li>Leon, brother of Maria, will immediately disappear from the party and become the main enemy's first general (err... dark knight), but will come back later</i>
-        <li>this is the first game featuring a character named Cid</li>
-        <li>chocobos make their first appearance as well - even though they have no impact on the game and secluded to a single forest</li>
-        <li>while the first game was pretty linear, FF2 lets you wander off the beaten path <i>for example reaching Mysidia well before intended</i>, because this is a game of abuses</i>
+        <p><li>the party composition is volatile: while Firion, Maria and Guy are mandatory, the fourth slot will see guest characters come and go - often after an heroic sacrifice of sorts</li></p>
+        <p><li>Leon, brother of Maria, will immediately disappear from the party and become the main enemy's first general (err... dark knight), but will come back later</li></p>
+        <p><li>this is the first game featuring a character named Cid (so we have our first <a href="https://gatherer.wizards.com/FIN/en-us/407/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timeless Artificer</a> variant)</li></p>
+        <p><li>chocobos make their first appearance as well - even though they have no impact on the game and secluded to a single forest</li></p>
+        <p><li>while the first game was pretty linear, FF2 lets you wander off the beaten path <i>for example reaching Mysidia well before intended</i>, because this is a game of abuses</li></p>
         </ul>
-        `)}
 
         <Bookmark id="FF2Cards">The cards</Bookmark>
         {splitText(`
