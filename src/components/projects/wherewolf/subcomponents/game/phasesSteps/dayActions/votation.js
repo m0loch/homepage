@@ -14,6 +14,7 @@ function Votation(props) {
     // Only run once when the component mounts to avoid skipping this phase
     useEffect(() => {
         props.wherewolfSetCanPerformNext(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const SetVotes = (player, value) => {
