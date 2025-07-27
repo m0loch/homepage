@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { wherewolfSetCanPerformNext, wherewolfSetCurrPhaseLog } from '../../../../../../../redux/actions';
 import { FormContainer, FormRow, FormLabel, FormButton } from '../../../../styledComponents/sharedComponents';
@@ -10,6 +10,11 @@ function Votation(props) {
     const [votes, setVotes] = useState({});
 
     const playerNumber = props.players?.length || 0;
+
+    // Only run once when the component mounts to avoid skipping this phase
+    useEffect(() => {
+        props.wherewolfSetCanPerformNext(false);
+    }, []);
 
     const SetVotes = (player, value) => {
         const playerVotes = votes[player] || 0;
