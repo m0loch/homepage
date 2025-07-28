@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.a65afd39.js",
+    "main.js": "/homepage/static/js/main.cccdff58.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -15,6 +15,7 @@
     "static/media/junon-panorama.jpg": "/homepage/static/media/junon-panorama.29d50cc326e9e309c565.jpg",
     "static/media/corel-prison.jpg": "/homepage/static/media/corel-prison.bb23caa2b553581f676f.jpg",
     "static/media/nibelheim-water-tower.jpg": "/homepage/static/media/nibelheim-water-tower.f5c6f55ecbe4fa93e8c1.jpg",
+    "static/media/moon.png": "/homepage/static/media/moon.2bba10986ec26cc06a50.png",
     "static/media/cosmo-observatory.jpg": "/homepage/static/media/cosmo-observatory.f511611ebfef9994d466.jpg",
     "static/media/gongaga-reactor.jpg": "/homepage/static/media/gongaga-reactor.9c63c5a896e42dbf2dc1.jpg",
     "static/media/cosmo-planetologists.jpg": "/homepage/static/media/cosmo-planetologists.d3b6206cad2e760fbccf.jpg",
@@ -98,7 +99,9 @@
     "static/media/ff-cover.png": "/homepage/static/media/ff-cover.b50b8c509e3f70d60777.png",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
     "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
+    "static/media/ff3-cover.webp": "/homepage/static/media/ff3-cover.66c00b167b8407832a44.webp",
     "static/media/bahamut.png": "/homepage/static/media/bahamut.9fa62c6f7fa42071c67e.png",
+    "static/media/3dremake.jpg": "/homepage/static/media/3dremake.54966f43ca4911b8ac36.jpg",
     "static/media/mythril-turks.jpg": "/homepage/static/media/mythril-turks.1d1fa3948fee314fc3c5.jpg",
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
     "static/media/e33-piano.jpg": "/homepage/static/media/e33-piano.b727e7aefe1fa2d3c785.jpg",
@@ -108,8 +111,10 @@
     "static/media/ff16-clive.webp": "/homepage/static/media/ff16-clive.6f6b893ad25d54666080.webp",
     "static/media/scales.png": "/homepage/static/media/scales.3903525779ceb3551419.png",
     "static/media/cassette_beasts.png": "/homepage/static/media/cassette_beasts.cd29596068f077a99b00.png",
+    "static/media/ff3-modern.jpg": "/homepage/static/media/ff3-modern.79db135d9678952dd318.jpg",
     "static/media/e33-mystery.jpg": "/homepage/static/media/e33-mystery.7dc20bd5489f6c246d73.jpg",
     "static/media/angry-pope.png": "/homepage/static/media/angry-pope.80f3f02e9d8b2d3532f1.png",
+    "static/media/babil.webp": "/homepage/static/media/babil.65deaee90aceaa66d5e6.webp",
     "static/media/benedikta.jpg": "/homepage/static/media/benedikta.85fe1318825fccfa4cf2.jpg",
     "static/media/e33-head.jpg": "/homepage/static/media/e33-head.20f17efc516ee20fd9f8.jpg",
     "static/media/hooded-man.jpg": "/homepage/static/media/hooded-man.c7e8e51b11da7c5e60ef.jpg",
@@ -119,9 +124,11 @@
     "static/media/ff2-amano.webp": "/homepage/static/media/ff2-amano.c76515f09b6c4cc77d65.webp",
     "static/media/ifrit-garuda.webp": "/homepage/static/media/ifrit-garuda.d97f98745afdb5efd60c.webp",
     "static/media/garland.png": "/homepage/static/media/garland.8f78d79155ef5183347e.png",
+    "static/media/logo-orig.jpg": "/homepage/static/media/logo-orig.31de11d70953d88bd63e.jpg",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/wizardry.jpg": "/homepage/static/media/wizardry.c42ff6f9930a9d47f3eb.jpg",
+    "static/media/logo-ds.jpg": "/homepage/static/media/logo-ds.e613c02bde930c701a87.jpg",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
     "static/media/ffxmtg.svg": "/homepage/static/media/ffxmtg.9d9e5952db0c4d0779fcc57082c12a48.svg",
     "static/media/inter20.svg": "/homepage/static/media/inter20.752f8e742172428f50e4498f95670b33.svg",
@@ -131,9 +138,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.a65afd39.js.map": "/homepage/static/js/main.a65afd39.js.map"
+    "main.cccdff58.js.map": "/homepage/static/js/main.cccdff58.js.map"
   },
   "entrypoints": [
-    "static/js/main.a65afd39.js"
+    "static/js/main.cccdff58.js"
   ]
 }
