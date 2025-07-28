@@ -58,7 +58,7 @@ function FF3() {
             src={ModernIllustration}
             align="right"
         >
-            <i>From the left: Refia, Luneth, Ingus and Arc.<br/>We don't acknowledge this existence of this port, though.</i>
+            <i>From the left: Refia, Luneth, Ingus and Arc.<br/>We don't acknowledge the existence of this port, though.</i>
         </CustomImage>
         {splitText(`
             This game's version of <a href="https://gatherer.wizards.com/FIN/en-us/408/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timelesse Artificer</a> speaks volumes about how wacky this game can be compared to its gloomy predecessor.
