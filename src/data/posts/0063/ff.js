@@ -37,7 +37,7 @@ function FF1() {
             src={GarlandFight}
             align="left"
         >
-            The first boss fight of the series!
+            <i>The first boss fight of the series!</i>
         </CustomImage>
         {splitText(`
         Over the course of the game, the party will venture through various dungeons, defeat four elemental fiends, travel through various means of transportation (no chocobos yet, but the airship makes its first appearance here) and eventually face Chaos, the final boss of the game.
@@ -68,7 +68,7 @@ function FF1() {
             src={FamitsuAd}
             align="left"
         >
-            The Cloudsea Djinn art, as seen in the Famitsu ad for the original game. ICONIC.
+            <i>The Cloudsea Djinn art, as seen in the Famitsu ad for the original game. ICONIC.</i>
         </CustomImage>
         {splitText(`
         The prologue phase of the game is referenced by the <a href="https://gatherer.wizards.com/FIN/en-us/289/starting-town" target="_blank" rel="noreferrer">Starting Town</a> and the <a href="https://gatherer.wizards.com/FIN/en-us/209/town-greeter" target="_blank" rel="noreferrer">Town Greeter</a> cards, a nod to the party first visiting the town of Cornelia, while the <a href="https://gatherer.wizards.com/FIN/en-us/252/adventurers-airship" target="_blank" rel="noreferrer">Adventurer's Ship</a> and the <a href="https://gatherer.wizards.com/FIN/en-us/270/world-map" target="_blank" rel="noreferrer">World Map</a> card represent what would soon become staples of the series.
