@@ -5,7 +5,7 @@ import { wherewolfSetCurrPhaseLog } from '../../../../../redux/actions';
 import { FormContainer, FormColumn } from '../../styledComponents/sharedComponents';
 import { GetPhaseStep } from '../../wherewolfPhases';
 
-function DayTimeHandler(props) {
+function PhaseHandler(props) {
 
     return (
         <FormContainer>
@@ -29,4 +29,4 @@ const mapDispatchToProps = {
     wherewolfSetCurrPhaseLog,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DayTimeHandler);
+export default connect(mapStateToProps, mapDispatchToProps)(PhaseHandler);
