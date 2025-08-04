@@ -38,7 +38,8 @@ function Trial(props) {
 
       // If there's a tie in the first place, those players will be enough to have a trial,
       // otherwise we will include the second most voted players in the tie
-      const possibleEliminations = sortedGroupedVotes[0][1].length > 1 ?
+      // + security check (the first vote could end in an unanimous vote)
+      const possibleEliminations = (sortedGroupedVotes[0][1].length > 1 || sortedGroupedVotes.length === 1) ?
         sortedGroupedVotes[0][1] : [...sortedGroupedVotes[0][1], ...sortedGroupedVotes[1][1]];
 
       const voters = props.players?.length - possibleEliminations.length;
