@@ -3,8 +3,7 @@ import PlayerInsertForm from "./subcomponents/pregame/playerInsertForm";
 import RoleAssignForm from "./subcomponents/pregame/roleAssignForm";
 import RoleSelectForm from "./subcomponents/pregame/roleSelectForm";
 
-import DayTimeHandler from "./subcomponents/game/daytimeHandler";
-import NightTimeHandler from "./subcomponents/game/nighttimeHandler";
+import PhaseHandler from "./subcomponents/game/phaseHandler";
 import { daySteps } from "./subcomponents/game/phasesSteps/daySteps";
 import { nightSteps } from "./subcomponents/game/phasesSteps/nightSteps";
 
@@ -55,7 +54,7 @@ const GamePhases = [
         subphases: [
             { 
                 name: "Night",
-                content: <NightTimeHandler />,
+                content: <PhaseHandler />,
                 overrideNext: localState => {
                     const isFirstNight = localState.logs?.length < 2;
 
@@ -97,7 +96,7 @@ const GamePhases = [
             },
             {
                 name: "Day",
-                content: <DayTimeHandler />,
+                content: <PhaseHandler />,
                 overrideNext: localState => {
 
                     if (localState.phaseStep < daySteps.length - 1) {
