@@ -4,7 +4,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 
 const ResetButtonInternal = styled(Button)(
     ({ theme }) => ({
-        position: "fixed",
+        position: "absolute",
         right: "16px",
         margin: "8px auto",
         fontSize: "3vmin",
