@@ -29,25 +29,25 @@ export const nightSteps = [
     },
     {
         name: "Medium",
-        timing: "Regular nights",
+        timing: "Regular night",
     },
     {
         name: "Witch",
-        timing: "Regular nights",
+        timing: "Regular night",
     },
     {
-        name: "Werewolves",
+        name: "WerewolvesRecognition",
         timing: "First night",
         component: <WolvesFirstNightAction />,
     },
     {
         name: "Werewolves",
-        timing: "Regular nights",
+        timing: "Regular night",
         component: <WolvesNightAction />,
     },
     {
         name: "Healer",
-        timing: "Regular nights",
+        timing: "Regular night",
     },
     {
         name: "End of Night",
