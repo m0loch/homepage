@@ -2,6 +2,7 @@ import DailyStandup from "./dayActions/dailyStandup";
 import InnkeeperDayAction from "./dayActions/innkeeperDayAction";
 import Votation from "./dayActions/votation";
 import Trial from "./dayActions/trial";
+import DayRecap from "./dayActions/dayRecap";
 
 export const daySteps = [
     {
@@ -30,13 +31,8 @@ export const daySteps = [
         component: <Trial />,
     },
     {
-        name: "Final votation",
-        timing: "Always",
-        component: <p><i>Final votation phase</i></p>,
-    },
-    {
         name: "End of Day",
         timing: "Always",
-        component: <p><i>End of Day phase</i></p>,
+        component: <DayRecap />,
     },
 ];

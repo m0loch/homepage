@@ -71,7 +71,7 @@ const GamePhases = [
                         return { phaseStep: nextIdx, currDayLog: [...(localState.currDayLog || []), localState.currPhaseLog], currPhaseLog: {} };
                     }
 
-                    // Move to the following subphase
+                    // Move to the following subphase (day)
                     return {
                         subphase: localState.subphase + 1,
                         logs: [...(localState.logs || []), {
@@ -104,9 +104,9 @@ const GamePhases = [
                         return { phaseStep: localState.phaseStep + 1, currDayLog: [...(localState.currDayLog || []), localState.currPhaseLog], currPhaseLog: {} };
                     }
 
-                    // Move to the following subphase
+                    // Move to the previous subphase (night)
                     return {
-                        subphase: localState.subphase + 1,
+                        subphase: localState.subphase - 1,
                         logs: [...(localState.logs || []), {
                             type: "Day",
                             log: localState.currDayLog,
@@ -126,18 +126,6 @@ const GamePhases = [
                     }
                     return step.name;
                 },
-            },
-            {
-                name: "End of Day votation",
-                description: "The players will now decide who they want to burn at the stake.",
-            },
-            {
-                name: "Trial",
-                overrideNext: localState => {
-
-                    // TEMP: endless night loop
-                    return { phase: localState.phase, subphase: 0, currDayLog: [], logs: [] };
-                }
             },
         ],
     },
