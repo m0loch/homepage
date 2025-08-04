@@ -39,7 +39,9 @@ function Wherewolf(props) {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <ResetButton/>
+            <ResetButton
+                onClick={() => props.wherewolfSetGamePhase({ phase: 0, subphase: 0, phaseStep: 0, currDayLog: [], logs: [] })}
+            />
             <SceneTitle>{phaseName}</SceneTitle>
 
             <SceneContent>
