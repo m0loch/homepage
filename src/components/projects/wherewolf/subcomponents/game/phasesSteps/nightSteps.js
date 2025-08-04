@@ -2,6 +2,7 @@ import MonkNightAction from "./nightActions/monkNightAction";
 import SeerNightAction from "./nightActions/seerNightAction";
 import PriestNightAction from "./nightActions/priestNightAction";
 import JulietNightAction from "./nightActions/julietNightAction";
+import WolvesFirstNightAction from "./nightActions/wolvesFirstNightAction";
 import WolvesNightAction from "./nightActions/wolvesNightAction";
 import NightRecap from "./nightActions/nightRecap";
 
@@ -36,7 +37,12 @@ export const nightSteps = [
     },
     {
         name: "Werewolves",
-        timing: "Always",
+        timing: "First night",
+        component: <WolvesFirstNightAction />,
+    },
+    {
+        name: "Werewolves",
+        timing: "Regular nights",
         component: <WolvesNightAction />,
     },
     {
