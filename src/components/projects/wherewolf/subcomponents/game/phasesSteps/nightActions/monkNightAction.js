@@ -14,7 +14,7 @@ function MonkNightAction(props) {
             ${props.roles.Extras.map(item => `<li>${item}</li>`).join('')}
         </ul>
         ` :
-        "There is no Monk in this game";
+        "There is no Monk in this game<br/><br/>";
 
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
