@@ -18,7 +18,7 @@ export const daySteps = [
     {
         name: "Discussion",
         timing: "Always",
-        component: <p><i>Discussion phase</i></p>,
+        component: <p><i>Discussion phase<br/><br/></i></p>,
     },
     {
         name: "Votation",

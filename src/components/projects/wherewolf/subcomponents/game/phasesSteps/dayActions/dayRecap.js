@@ -23,8 +23,8 @@ function DayRecap(props) {
     const killPerformed = mostVoted.length === 1;
 
     const msg = killPerformed
-        ? `${mostVoted[0]} has gathered the majority of the votes and will be burnt at the stake.`
-        : `No one died, as there was a tie between the following players: ${mostVoted.join(', ')}.`;
+        ? `The angry mob gathers around ${mostVoted[0]}, who will be burned at the stake.`
+        : `No one was sacrificed, as there was a tie between the following players: ${mostVoted.join(', ')}.`;
 
     useEffect(() => {
         if (killPerformed) {

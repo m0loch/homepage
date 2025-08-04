@@ -13,8 +13,8 @@ function DailyStandup(props) {
     // TODO: check win conditions
 
     const actionText = isFirstDay ?
-        `The first day begins<br/><br/>` :
-        `Everybody shows up<br/><br/>`;
+        `The first day begins` :
+        `Everybody shows up`;
 
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
@@ -27,7 +27,7 @@ function DailyStandup(props) {
 
     return (
         <div>
-            {splitText(actionText)}
+            {splitText(actionText + `<i>(players can open their eyes)</i><br/><br/>`)}
         </div>
     );
 }
