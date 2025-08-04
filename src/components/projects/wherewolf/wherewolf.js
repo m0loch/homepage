@@ -7,6 +7,7 @@ import SceneSubTitle from './styledComponents/sceneSubTitle';
 import SceneDescription from './styledComponents/sceneDescription';
 import SceneContent from './styledComponents/sceneContent';
 import NextButton from './styledComponents/nextButton';
+import ResetButton from './styledComponents/resetButton';
 
 import { 
     GetPhaseName,
@@ -37,7 +38,8 @@ function Wherewolf(props) {
     }
 
     return (
-        <>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <ResetButton/>
             <SceneTitle>{phaseName}</SceneTitle>
 
             <SceneContent>
@@ -55,7 +57,7 @@ function Wherewolf(props) {
                 Next
             </NextButton>
             <br/><br/>
-        </>
+        </div>
     );
 }
 
