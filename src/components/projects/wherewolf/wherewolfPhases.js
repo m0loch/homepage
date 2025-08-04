@@ -59,7 +59,7 @@ const GamePhases = [
                     const isFirstNight = localState.logs?.length < 2;
 
                     const correctedNightSteps = nightSteps
-                        .filter(step => step.timing !== (isFirstNight ? "Regular nights" : "First night"));
+                        .filter(step => step.timing !== (isFirstNight ? "Regular night" : "First night"));
 
                     const idx = correctedNightSteps.findIndex(item => item.name === nightSteps[localState.phaseStep]?.name);
 
