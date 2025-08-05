@@ -59,7 +59,7 @@
             "ita": "La prima notte è individuato dai Lupi del Branco. È protetto da tutti i Lupi, se è da loro attaccato, apre gli occhi e li riconosce.",
             "eng": "On the first night, the Traitor is identified by the Pack Wolves. The Traitor is protected by all Wolves, and if attacked by them, opens the eyes and recognizes them."
         },
-        "faction": "Town",
+        "faction": "None",
         "isTainted": false,
         "isMystic": false,
         "winCondition": {
@@ -295,15 +295,15 @@
             "eng": "The Grandmother"
         },
         "description": {
-            "ita": "Finchè è in gioco e non si è trasformata in Lupo, CAPPUCCETTO ROSSO è protetta da tutti i Lupi. Se un qualsiasi Lupo (anche se fosse ROMEO o protetto dalla STREGA) attacca ed uccide la NONNA non ROMEO non protetta dalla STREGA, la NONNA scarta la propria carta, prende quella del Lupo che l'ha attaccata e riconosce gli altri Lupi del Branco e individua il TRADITORE. Il Lupo che l'ha attaccata è immediatamente e definitivamente eliminato, e non verrà visto tra i morti di quella notte dal GUARITORE",
+            "ita": "Finché è in gioco e non si è trasformata in Lupo, CAPPUCCETTO ROSSO è protetta da tutti i Lupi. Se un qualsiasi Lupo (anche se fosse ROMEO o protetto dalla STREGA) attacca ed uccide la NONNA non ROMEO non protetta dalla STREGA, la NONNA scarta la propria carta, prende quella del Lupo che l'ha attaccata e riconosce gli altri Lupi del Branco e individua il TRADITORE. Il Lupo che l'ha attaccata è immediatamente e definitivamente eliminato, e non verrà visto tra i morti di quella notte dal GUARITORE",
             "eng": "If the GRANDMOTHER is in play and has not transformed into a Wolf, LITTLE RED RIDING HOOD is protected from all Wolves. If any Wolf (even if they are ROMEO or protected by the WITCH) attacks and kills the non-ROMEO GRANDMOTHER who is not protected by the WITCH, the GRANDMOTHER discards their card, takes the card of the Wolf that attacked them, recognizes the other Pack Wolves, and identifies the TRAITOR. The Wolf that attacked them is immediately and permanently eliminated and will not be seen among the dead of that night by the HEALER."
         },
         "faction": "Town",
         "isTainted": false,
         "isMystic": false,
         "winCondition": {
-            "ita": "Non ci sono più Cittadini ed almeno un Lupo è in gioco.",
-            "eng": "There are no more humans and at least one wolf is still in the game."
+            "ita": "Non ci sono più Creature dell'Ombra ed almeno un giocatore è in gioco.",
+            "eng": "There are no more Shadow Creatures and at least one player is still in the game."
         }
     },
     {

@@ -46,6 +46,7 @@ function Wherewolf(props) {
                     phaseStep: 0,
                     currDayLog: [],
                     logs: [],
+                    takenRoles: [],
                     canPerformNext: true
                 })}
             />

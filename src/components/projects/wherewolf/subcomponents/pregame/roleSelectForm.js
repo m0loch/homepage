@@ -45,7 +45,8 @@ function RoleSelectForm(props) {
                                     ) : (
                                     <>
                                         {selectedRole === "Select" ? <option value="Select" disabled>--Select Role--</option> : null}
-                                        {roles.filter(role => role.faction === faction.type)
+                                        {roles
+                                            .filter(role => faction.type === "Werewolf" ? role.faction === "Werewolf" : role.faction !== "Werewolf")
                                             .filter(role => (role.name.eng === selectedRole) || !props.takenRoles.includes(role.name.eng))
                                             .map((role, j) => (
                                             <option key={j} value={role.name.eng}>
