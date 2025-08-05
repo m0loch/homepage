@@ -165,10 +165,10 @@ export function wherewolfSetAssignments(value) {
     }
 }
 
-export function wherewolfSetCurrPhaseLog(value, victims) {
+export function wherewolfSetCurrPhaseLog(value) {
     return {
         type: 'WHEREWOLF_SET_CURR_PHASE_LOG',
         currPhaseLog: value,
-        victims,
+        victims: value.kills,
     }
 }
