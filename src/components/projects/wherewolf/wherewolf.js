@@ -31,6 +31,18 @@ function Wherewolf(props) {
     const subphaseDescription = GetSubphaseDescription(props);
     const subphaseContent = GetSubphaseContent(props);
 
+    const ResetGame = () => {
+        props.wherewolfSetGamePhase({
+            phase: 0,
+            subphase: 0,
+            phaseStep: 0,
+            currDayLog: [],
+            logs: [],
+            takenRoles: [],
+            canPerformNext: true
+        })
+    };
+
     const PerformNext = () => {
         if (ValidatePhase(props)) {
             props.wherewolfSetGamePhase(GetNextPhase(props));
@@ -40,15 +52,7 @@ function Wherewolf(props) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <ResetButton
-                onClick={() => props.wherewolfSetGamePhase({
-                    phase: 0,
-                    subphase: 0,
-                    phaseStep: 0,
-                    currDayLog: [],
-                    logs: [],
-                    takenRoles: [],
-                    canPerformNext: true
-                })}
+                onClick={ResetGame}
             />
             <SceneTitle>{phaseName}</SceneTitle>
 
@@ -60,7 +64,7 @@ function Wherewolf(props) {
 
             <NextButton
                 variant="contained"
-                onClick={() => PerformNext()}
+                onClick={PerformNext}
                 ref={divRefForScroll}
                 disabled={!props.canPerformNext}
             >
