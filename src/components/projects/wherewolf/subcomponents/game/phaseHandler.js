@@ -10,6 +10,10 @@ function PhaseHandler(props) {
     return (
         <FormContainer>
             <FormColumn style={{ alignSelf: 'center' }}>
+                <p><i>
+                    {props.survivors ? `The survivors are ${props.survivors.length}: ${props.survivors.join(', ')}` : 'No survivors'}
+                </i></p>
+                <br/>
                 {props.currDayLog.map((action, index) => (
                     <div key={index}>
                         {splitText(action.text)}
