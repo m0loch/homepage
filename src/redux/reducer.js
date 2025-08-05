@@ -46,17 +46,41 @@ const SettingsReducer = (state = InitialState, action) => {
         case 'WHEREWOLF_SET_GAME_PHASE':
             return { ...state, wherewolf: { ...state.wherewolf, ...action } };
         case 'WHEREWOLF_SET_PLAYERS':
-            return { ...state, wherewolf: { ...state.wherewolf, players: action.players } };
+            return {
+                ...state,
+                wherewolf: {
+                    ...state.wherewolf,
+                    players: action.players,
+                    survivors: action.players
+                }
+            };
         case 'WHEREWOLF_SET_ROLES':
-            return { ...state, wherewolf: {
-                ...state.wherewolf,
-                roles: action.roles,
-                takenRoles: [...action.roles.Villagers, ...action.roles.Werewolves, ...action.roles.Extras].filter(item => item)
-            } };
+            return {
+                ...state, 
+                wherewolf: {
+                    ...state.wherewolf,
+                    roles: action.roles,
+                    takenRoles: [...action.roles.Villagers, ...action.roles.Werewolves, ...action.roles.Extras].filter(item => item),
+                }
+            };
         case 'WHEREWOLF_SET_ASSIGNMENTS':
-            return { ...state, wherewolf: { ...state.wherewolf, assignments: { ...action.assignments } } };
+            return { 
+                ...state,
+                wherewolf: { 
+                    ...state.wherewolf, 
+                    assignments: { ...action.assignments },
+                    survivors: state.wherewolf.players
+                }
+            };
         case 'WHEREWOLF_SET_CURR_PHASE_LOG':
-            return { ...state, wherewolf: { ...state.wherewolf, currPhaseLog: action.currPhaseLog } };
+            return {
+                ...state,
+                wherewolf: { 
+                    ...state.wherewolf, 
+                    currPhaseLog: action.currPhaseLog,
+                    survivors: state.wherewolf.survivors?.filter(player => !action.victims?.includes(player))
+                }
+            };
         default:
             return state;
     }

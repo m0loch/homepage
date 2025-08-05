@@ -165,9 +165,10 @@ export function wherewolfSetAssignments(value) {
     }
 }
 
-export function wherewolfSetCurrPhaseLog(value) {
+export function wherewolfSetCurrPhaseLog(value, victims) {
     return {
         type: 'WHEREWOLF_SET_CURR_PHASE_LOG',
         currPhaseLog: value,
+        victims,
     }
 }

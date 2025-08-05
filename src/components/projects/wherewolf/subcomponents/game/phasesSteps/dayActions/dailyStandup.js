@@ -19,7 +19,7 @@ function DailyStandup(props) {
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
             type: "Standup",
-            text: actionText
+            text: actionText + "<br/><br/>"
         });
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,7 +27,7 @@ function DailyStandup(props) {
 
     return (
         <div>
-            {splitText(actionText + `<i>(players can open their eyes)</i><br/><br/>`)}
+            {splitText(actionText + ` <i>(players can open their eyes)</i><br/><br/>`)}
         </div>
     );
 }

@@ -22,6 +22,7 @@ const InitialState = {
       subphase: 0,
       phaseStep: 0,
       players: [],
+      survivors: [],
       roles: {
          Villagers: ["The Seer"],
          Werewolves: ["The Pack Leader"],

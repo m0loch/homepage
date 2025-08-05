@@ -20,6 +20,7 @@ function DayRecap(props) {
 
     const mostVoted = sortedGroupedVotes[0][1];
 
+    // TODO: jester death check and effects
     const killPerformed = mostVoted.length === 1;
 
     const msg = killPerformed
@@ -27,15 +28,11 @@ function DayRecap(props) {
         : `No one was sacrificed, as there was a tie between the following players: ${mostVoted.join(', ')}.`;
 
     useEffect(() => {
-        if (killPerformed) {
-            // TODO: handle death in the game state
-            // TODO: jester death check and effects
-        }
-
         props.wherewolfSetCurrPhaseLog({
             type: "Day Recap",
             text: msg
-        });
+        },
+        killPerformed ? [mostVoted[0]] : []);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []);
