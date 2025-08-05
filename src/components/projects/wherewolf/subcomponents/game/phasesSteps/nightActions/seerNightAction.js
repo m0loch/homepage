@@ -31,7 +31,7 @@ function SeerNightAction(props) {
                 >
                     <option value="default" disabled>Select one</option>
 
-                    {props.players.map((player, index) => (
+                    {props.survivors?.map((player, index) => (
                         <option key={index} value={player}>{player}</option>
                     ))}
                 </FormSelector>

@@ -58,7 +58,7 @@ function WolvesNightAction(props) {
                     onChange={e => SelectTarget(e.target.value)}
                 >
                     <option value="default" disabled>Select one</option>
-                    {props.players.map((player, index) => <option key={index} value={player}>{player}</option>)}
+                    {props.survivors.map((player, index) => <option key={index} value={player}>{player}</option>)}
                 </FormSelector>
             </FormRow>
         </>
