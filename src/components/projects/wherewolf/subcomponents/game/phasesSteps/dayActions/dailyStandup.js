@@ -2,19 +2,23 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { wherewolfSetCurrPhaseLog } from '../../../../../../../redux/actions';
 import { splitText } from '../../../../../../common/textFunctions';
+import { listToString } from '../../../../../../common/grammar';
 
 function DailyStandup(props) {
 
     // Check if the previous night was the first
-    const isFirstDay = props.logs.slice(-1)[0].type === "First Night";
+    const lastNightLog = props.logs.slice(-1)[0];
+    const isFirstDay = lastNightLog.type === "First Night";
 
-    // TODO: check if somebody died during the night (could be zero in case of protections, or even two if the Young Wolf died)
-    // TODO: handle a list of deaths per day and a structure for survivors
     // TODO: check win conditions
+
+    const victims = lastNightLog.log.slice(-1)[0].kills;
 
     const actionText = isFirstDay ?
         `The first day begins` :
-        `Everybody shows up`;
+        victims.length > 0 ?
+            `The day begins. Unfortunately, ${listToString(victims)} failed to show up.` :
+            `Everybody show up, ready to investigate.`;
 
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
@@ -27,7 +31,7 @@ function DailyStandup(props) {
 
     return (
         <div>
-            {splitText(actionText + ` <i>(players can open their eyes)</i><br/><br/>`)}
+            {splitText(actionText + ` <i>(Players can open their eyes now)</i><br/><br/>`)}
         </div>
     );
 }
