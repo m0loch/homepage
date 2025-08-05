@@ -43,7 +43,7 @@ function Votation(props) {
                 <li>the most voted players will get a chance to defend themselves before the second round of voting;</li>
                 <li>some roles will tamper with the final numbers.</li>
             </ul>
-            {props.players?.map((player, index) => (
+            {props.survivors?.map((player, index) => (
                 <FormRow key={index} style={{ flexDirection: 'row' }}>
                     <FormLabel
                         type="text"
