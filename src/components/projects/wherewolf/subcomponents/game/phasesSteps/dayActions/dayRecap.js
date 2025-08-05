@@ -30,9 +30,9 @@ function DayRecap(props) {
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
             type: "Day Recap",
-            text: msg
-        },
-        killPerformed ? [mostVoted[0]] : []);
+            text: msg,
+            kills: killPerformed ? [mostVoted[0]] : [],
+        });
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []);

@@ -76,7 +76,7 @@ const GamePhases = [
                         subphase: localState.subphase + 1,
                         logs: [...(localState.logs || []), {
                             type: isFirstNight ? "First Night" : "Night",
-                            log: localState.currDayLog
+                            log: [...(localState.currDayLog || []), localState.currPhaseLog]
                         }],
                         currDayLog: [],
                         currPhaseLog: {},
@@ -109,7 +109,7 @@ const GamePhases = [
                         subphase: localState.subphase - 1,
                         logs: [...(localState.logs || []), {
                             type: "Day",
-                            log: localState.currDayLog,
+                            log: [...(localState.currDayLog || []), localState.currPhaseLog],
                         }],
                         currDayLog: [],
                         currPhaseLog: {},

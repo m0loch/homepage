@@ -29,9 +29,9 @@ function NightRecap(props) {
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
             type: "Night Recap",
-            text: msg
-        },
-        kills);
+            text: msg,
+            kills: kills ?? [],
+        });
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []);
