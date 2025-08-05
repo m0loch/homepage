@@ -42,7 +42,7 @@ function Trial(props) {
       const possibleEliminations = (sortedGroupedVotes[0][1].length > 1 || sortedGroupedVotes.length === 1) ?
         sortedGroupedVotes[0][1] : [...sortedGroupedVotes[0][1], ...sortedGroupedVotes[1][1]];
 
-      const voters = props.players?.length - possibleEliminations.length;
+      const voters = props.survivors?.length - possibleEliminations.length;
 
       const SetVotes = (player, value) => {
         const playerVotes = votes[player] || 0;

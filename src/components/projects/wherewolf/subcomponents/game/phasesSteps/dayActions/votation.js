@@ -9,7 +9,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 function Votation(props) {
     const [votes, setVotes] = useState({});
 
-    const playerNumber = props.players?.length || 0;
+    const playerNumber = props.survivors?.length || 0;
 
     // Only run once when the component mounts to avoid skipping this phase
     useEffect(() => {
