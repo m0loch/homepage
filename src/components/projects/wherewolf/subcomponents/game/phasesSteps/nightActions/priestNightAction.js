@@ -9,7 +9,6 @@ function PriestNightAction(props) {
     const sinnerIdx = Object.values(props.assignments).findIndex(item => item === 'The Sinner');
     const isRosemouthPresent = props.roles.Villagers.includes('Rosemouth');
 
-    // NB: the .join('') clause is used to avoid unwanted commas in the resulting HTML
     const priestText = isPriestPresent ?
         `The Priest discovered that:
         <ul>
