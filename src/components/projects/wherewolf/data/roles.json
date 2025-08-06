@@ -76,7 +76,7 @@
             "ita": "Se viene bruciato sul rogo, il giorno successivo il rogo è annullato a prescindere dai voti e dai poteri eventualmente utilizzati dagli altri giocatori. Questo significa che le votazioni e la discussione tra accusa e ballottaggio si svolgono normalmente, ma l'esito del rogo sarà sempre 'nessuno brucia sul rogo', come se ci fosse stato un pareggio di voti al ballottaggio",
             "eng": "If the JESTER is burned at the stake, the next day the stake is canceled regardless of the votes and powers used by other players. This means that voting and discussion between accusation and runoff proceed normally, but the outcome of the stake will always be 'no one burns at the stake', as if there had been a tie in the runoff votes."
         },
-        "faction": "Town",
+        "faction": "None",
         "isTainted": false,
         "isMystic": false,
         "winCondition": {
@@ -93,7 +93,7 @@
             "ita": "Se viene attaccato ed ucciso (senza essere resuscitato) da un qualsiasi Lupo, la notte successiva solo il primo attacco dei Lupi (in caso dispongano di 2 attacchi, vedi GIOVANE LUPO) è annullato. Questo significa che chiunque i Lupi attacchino, l'attacco è sempre fallito e sprecato, come se avessero tentato di attaccare un giocatore protetto dalle Creature dell'Ombra",
             "eng": "If the MADMAN is attacked and killed (without being resurrected) by any Wolf, the next night only the first attack of the Wolves (in case they have 2 attacks, see YOUNG WOLF) is canceled. This means that whoever the Wolves attack, the attack always fails and is wasted, as if they had attempted to attack a player protected by Shadow Creatures."
         },
-        "faction": "Town",
+        "faction": "None",
         "isTainted": false,
         "isMystic": false,
         "winCondition": {
