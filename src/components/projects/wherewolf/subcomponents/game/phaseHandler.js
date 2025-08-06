@@ -5,13 +5,15 @@ import { wherewolfSetCurrPhaseLog } from '../../../../../redux/actions';
 import { FormContainer, FormColumn } from '../../styledComponents/sharedComponents';
 import { GetPhaseStep } from '../../wherewolfPhases';
 
+import { listToString } from '../../../../common/grammar';
+
 function PhaseHandler(props) {
 
     return (
         <FormContainer>
             <FormColumn style={{ alignSelf: 'center' }}>
                 <p><i>
-                    {props.survivors ? `The survivors are ${props.survivors.length}: ${props.survivors.join(', ')}` : 'No survivors'}
+                    {props.survivors ? `The survivors are ${props.survivors.length}: ${listToString(props.survivors)}` : 'No survivors'}
                 </i></p>
                 <br/>
                 {props.currDayLog.map((action, index) => (
