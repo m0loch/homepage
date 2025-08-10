@@ -3,20 +3,29 @@ import { wherewolfSetAssignments } from '../../../../../redux/actions';
 
 import { FormContainer, FormRow, FormSelector, FormLabel, FormButton } from '../../styledComponents/sharedComponents';
 
+import roles from '../../data/roles.json';
+
+function CheckRoleInAssignments(assignments, role) {
+    return Object.values(assignments).some(item => item.name.eng === role);
+}
+
 function RoleAssignForm(props) {
 
     const AssignRole = (player, role) => {
         const assignments = props.assignments || {};
-        assignments[player] = role;
+        assignments[player] = roles.find(r => r.name.eng === role);
 
         props.wherewolfSetAssignments(assignments);
     }
 
     const RandomizeRoles = () => {
+        // TODO: double check that it doesnt't duplicate roles when selecting some then randomizing
+        // TODO: check that 'Random' doesn't break everything
         const assignments = props.assignments || {};
 
         // Get unassigned roles and players
-        const unassignedRoles = [...props.roles.Villagers, ...props.roles.Werewolves].filter(role => !Object.values(props.assignments).includes(role));
+        const unassignedRoles = [...props.roles.Villagers, ...props.roles.Werewolves]
+            .filter(role => !CheckRoleInAssignments(props.assignments, role));
         const unassignedPlayers = props.players.filter(player => !props.assignments[player] || props.assignments[player] === 'Random');
 
         // Randomly assign spare roles to unassigned players
@@ -24,7 +33,7 @@ function RoleAssignForm(props) {
             const player = unassignedPlayers.pop();
             const role = unassignedRoles.splice(Math.floor(Math.random() * unassignedRoles.length), 1)[0];
 
-            assignments[player] = role;
+            assignments[player] = roles.find(r => r.name.eng === role);
         }
 
         props.wherewolfSetAssignments(assignments);
@@ -41,19 +50,19 @@ function RoleAssignForm(props) {
                     />
                     <FormSelector
                         key={index}
-                        value={props.assignments?.[player] || 'Random'}
+                        value={props.assignments?.[player]?.name?.eng || 'Random'}
                         onChange={e => AssignRole(player, e.target.value)}
                     >
                         <option value="Random">--Random--</option>
                         {props.roles.Villagers
-                            .filter(role => role === props.assignments?.[player] || !Object.values(props.assignments).includes(role))
+                            .filter(role => role === props.assignments?.[player]?.name?.eng || !CheckRoleInAssignments(props.assignments, role))
                             .map((role, i) => (
                                 <option key={i} value={role}>
                                     {role}
                                 </option>
                             ))}
                         {props.roles.Werewolves
-                            .filter(role => role === props.assignments?.[player] || !Object.values(props.assignments).includes(role))
+                            .filter(role => role === props.assignments?.[player]?.name?.eng || !CheckRoleInAssignments(props.assignments, role))
                             .map((role, i) => (
                             <option key={i} value={role}>
                                 {role}
