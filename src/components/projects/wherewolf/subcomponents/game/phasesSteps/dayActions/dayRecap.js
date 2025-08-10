@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { wherewolfSetCurrPhaseLog } from '../../../../../../../redux/actions';
+import { listToString } from '../../../../../../common/grammar';
 
 function DayRecap(props) {
 
@@ -21,11 +22,12 @@ function DayRecap(props) {
     const mostVoted = sortedGroupedVotes[0][1];
 
     // TODO: jester death check and effects
-    const killPerformed = mostVoted.length === 1;
+    const killPerformed = mostVoted.length === 1 && sortedGroupedVotes[0][0] > 0;
 
     const msg = killPerformed
         ? `The angry mob gathers around ${mostVoted[0]}, who will be burned at the stake.`
-        : `No one was sacrificed, as there was a tie between the following players: ${mostVoted.join(', ')}.`;
+        : mostVoted.length > 1 ? `No one was sacrificed, as there was a tie between ${listToString(mostVoted)}.`
+            : `No one was sacrificed, as no one received any vote.`;
 
     useEffect(() => {
         props.wherewolfSetCurrPhaseLog({
