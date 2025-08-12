@@ -2,10 +2,12 @@ import InitialState from "../../../redux/initialState";
 import PlayerInsertForm from "./subcomponents/pregame/playerInsertForm";
 import RoleAssignForm from "./subcomponents/pregame/roleAssignForm";
 import RoleSelectForm from "./subcomponents/pregame/roleSelectForm";
+import FinalRecap from "./subcomponents/postgame/finalRecap";
 
 import PhaseHandler from "./subcomponents/game/phaseHandler";
 import { daySteps } from "./subcomponents/game/phasesSteps/daySteps";
 import { nightSteps } from "./subcomponents/game/phasesSteps/nightSteps";
+import { VictoryChecker } from "./subcomponents/game/phasesSteps/victoryChecker";
 
 const GamePhases = [
     {
@@ -52,10 +54,26 @@ const GamePhases = [
     { 
         name: "Game",
         subphases: [
-            { 
+            {
                 name: "Night",
                 content: <PhaseHandler />,
                 overrideNext: localState => {
+                    const victoryCheck = VictoryChecker(localState);
+                    if (victoryCheck.isGameOver) {
+                        return {
+                            phase: 2,
+                            subphase: 0,
+                            logs: [...(localState.logs || []), {
+                                type: "Day",
+                                log: [...(localState.currDayLog || []), localState.currPhaseLog],
+                            }],
+                            currDayLog: [],
+                            currPhaseLog: {},
+                            phaseStep: 0,
+                            winners: [...victoryCheck.winners]
+                        }
+                    }
+
                     const isFirstNight = localState.logs?.length < 2;
 
                     const correctedNightSteps = nightSteps
@@ -98,6 +116,21 @@ const GamePhases = [
                 name: "Day",
                 content: <PhaseHandler />,
                 overrideNext: localState => {
+                    const victoryCheck = VictoryChecker(localState);
+                    if (victoryCheck.isGameOver) {
+                        return {
+                            phase: 2,
+                            subphase: 0,
+                            logs: [...(localState.logs || []), {
+                                type: "Day",
+                                log: [...(localState.currDayLog || []), localState.currPhaseLog],
+                            }],
+                            currDayLog: [],
+                            currPhaseLog: {},
+                            phaseStep: 0,
+                            winners: [...victoryCheck.winners]
+                        }
+                    }
 
                     if (localState.phaseStep < daySteps.length - 1) {
                         // Pushes the current phase log in the day log and resets it
@@ -113,7 +146,8 @@ const GamePhases = [
                         }],
                         currDayLog: [],
                         currPhaseLog: {},
-                        phaseStep: 0
+                        phaseStep: 0,
+                        winners: [...(localState.winners || []), ...victoryCheck.winners]
                     };
                 },
                 getContent: stepIdx => {
@@ -132,7 +166,11 @@ const GamePhases = [
     {
         name: "End",
         subphases: [
-            { name: "Recap" }
+            {
+                name: "Recap",
+                description: "The game has ended. Here's some placeholder text.",
+                content: <FinalRecap />,
+            }
         ],
     },
 ];
@@ -156,7 +194,7 @@ export function GetSubphaseName({ phase, subphase }) {
 }
 
 export function GetSubphaseDescription({ phase, subphase }) {
-    return GamePhases[phase].subphases[subphase].description;
+    return GamePhases[phase].subphases[subphase]?.description;
 }
 
 export function GetSubphaseContent({ phase, subphase }) {

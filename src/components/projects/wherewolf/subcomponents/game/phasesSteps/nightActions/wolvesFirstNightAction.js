@@ -6,7 +6,7 @@ import { splitText } from '../../../../../../common/textFunctions';
 function WolvesFirstNightAction(props) {
 
     const text = `<p>Wolves open their eyes and recognize each other.</p>
-        <p>The traitor - if present, raises his hand in order to be identified.</p>
+        <p>The Traitor - if present - raise their hand in order to be identified.</p>
         <br/>`;
 
 
