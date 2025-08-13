@@ -56,7 +56,7 @@ function FF4() {
         {splitText(`
             After losing contact with Kain, Cecil will then decide to protect the young orphan while trying to find a way to redeem himself, and this will mark the start of a long journey that will make him cross the lands and meet many other characters, redeeming himself in the process and becoming a paladin, while trying to stop the evil plans of the mysterious Golbez that took his place as commander of the Red Wings.
 
-            Along the way, Cecil will meet many other characters, like Tellah the old sage that wants to avenge his daughter, the tormented prince Edward disguising as a bard (a <i>spoony bard</i>), Yang the monk, the twins Palom and Porom from Mysidia, or Edge the ninja.
+            Along the way, Cecil meets many other characters, like Tellah the old sage that wants to avenge his daughter, the tormented prince Edward disguising as a bard (a <i>spoony</i> bard), Yang the monk, the twins Palom and Porom from Mysidia, or Edge the ninja prince.
 
             The party itself is very fluid, as characters join and leave the party multiple times as the plot advances, sometimes multiple times like in the case of Kain that gets mind controlled multiple times, or like Rydia that at some point goes missing for a while after being swallowed by Leviathan (a nod to FF2), but comes back after growing suddenly older.
 
@@ -92,7 +92,7 @@ function FF4() {
 
             We also have <a href="https://gatherer.wizards.com/FIN/en-us/239/rydia-summoner-of-mist" target="_blank" rel="noreferrer">Rydia, Summoner of Mist</a> that, true to her class, has sinergies with sagas, and <a href="https://gatherer.wizards.com/FIN/en-us/244/tellah-great-sage" target="_blank" rel="noreferrer">Tellah, Great Sage</a> that comes with a built-in self-sacrifice mechanic.
 
-            And then of course we have <a href="https://gatherer.wizards.com/FIN/en-us/408/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timelesse Artificer</a> with his first appearance as playable character.
+            And then of course we have <a href="https://gatherer.wizards.com/FIN/en-us/409/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timelesse Artificer</a> with his first appearance as playable character.
 
             No card for Edward, Palom, Porom, Yang, Edge or Fusoya, but that's fine as they're either too bland or stay in the party for a very short amount of time.
 
