@@ -43,7 +43,7 @@ function FF5() {
             But let's start with the plot: the game opens with a brief introduction showing King Tycoon, worried by the wind stopping, leaving his castle to investigate the Wind Crystal and witness its shattering.
         `)}
         <CustomImage
-            alt="The room of the Sealed Weapons in Final Fantasy V"
+            alt="The party, as imagined by Yoshitaka Amano"
             src={Party}
             align="left"
         >
