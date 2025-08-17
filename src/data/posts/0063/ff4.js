@@ -110,6 +110,7 @@ function FF4() {
             The card <a href="https://gatherer.wizards.com/FIN/en-us/273/baron-airship-kingdom" target="_blank" rel="noreferrer">Baron, Airship Kingdom</a> represents the kingdom where it all starts, while the momentous event of <a href="https://gatherer.wizards.com/FIN/en-us/198/rydias-return" target="_blank" rel="noreferrer">Rydia's Return</a> deserves a card in its own right.
 
             To conclude, I'll be completely honest with you and say that I don't really get what the card <a href="https://gatherer.wizards.com/FCA/en-us/33/deadly-dispute" target="_blank" rel="noreferrer">Deadly Dispute</a> represents, but it features a fancy artwork by Airi Yoshioka from the DS artbook so I won't complain.`)}
+        <YouTubeVideo videoId={"_N8nK2HmT2I"} align="center" caption={`"It's actually Final Fantasy 4 you idiot!"`} />
         </>
     )
 }
