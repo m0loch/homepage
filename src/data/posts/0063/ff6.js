@@ -118,7 +118,7 @@ function FF6() {
             The first part of the game revolves around the party forming up and bringing her to the Returners, but her character arc is completely focused on her struggle to find her place in the world, given that at first she just has no recollection of her past and, later on, she even learns she's just half-human.
 
             When Celes and the rest of the party find her in the World of Ruin, she has found her place in the town of Mobliz where only children managed to survive, thus finding meaning and purpose in protecting them.
-            `)}
+        `)}
         <CustomImage
             alt="Locke"
             src={Locke}
@@ -132,7 +132,7 @@ function FF6() {
             He is a solid character but a bit creepy - it's no wonder that his character arc is just about learning to let the past go.
 
             It is strongly implied that, after the end of the game, he and Celes end up moving on from their traumas together, but I thing it's up to the player to believe what they want about it.
-            `)}
+        `)}
         <CustomImage
             alt="Edgar"
             src={Edgar}
@@ -351,7 +351,7 @@ function FF6() {
             </ul>
 
             Speaking of story beats, I consider <a href="https://gatherer.wizards.com/FIN/en-us/68/retrieve-the-esper" target="_blank" rel="noreferrer">Retrieve the Esper</a> a reference to the first, introductory mission, and the same goes for <a href="https://gatherer.wizards.com/FCA/en-us/47/natures-claim" target="_blank" rel="noreferrer">Search for the Frozen Esper</a> (which, after having seen it in real life, wins my personal "ugliest card ever" award).
-            `)}<YouTubeVideo videoId={"kdot7vHzmZg"} align="right" caption='Did you say "Opera Love Song"?' />
+        `)}<YouTubeVideo videoId={"kdot7vHzmZg"} align="right" caption='Did you say "Opera Love Song"?' />
             {splitText(`
             The other entries for this categories are <a href="https://gatherer.wizards.com/FIN/en-us/27/moogles-valor" target="_blank" rel="noreferrer">Moogle's Valor</a>, referencing how a pack of moogles helped out Terra and Locke in Narshe, <a href="https://gatherer.wizards.com/FIN/en-us/75/stolen-uniform" target="_blank" rel="noreferrer">Stolen Uniform</a> as a nod to Locke's solo mission in South Figaro, and <a href="https://gatherer.wizards.com/FIN/en-us/147/opera-love-song" target="_blank" rel="noreferrer">Opera Love Song</a> which is pretty self-explanatory as it's probably the most famous moment of the whole game.
 
@@ -392,7 +392,7 @@ function FF6() {
             <li><a href="https://gatherer.wizards.com/FIC/en-us/63/umaro-raging-yeti" target="_blank" rel="noreferrer">Umaro, Raging Yeti</a></li>
             <li><a href="https://gatherer.wizards.com/FIC/en-us/56/gogo-mysterious-mime" target="_blank" rel="noreferrer">Gogo, Mysterious Mime</a></li>
             </ul>
-            `)}<YouTubeVideo videoId={"jm1a-DwLExU"} align="right" caption='"Dancing Mad" is a great reference' />
+        `)}<YouTubeVideo videoId={"jm1a-DwLExU"} align="right" caption='"Dancing Mad" is a great reference' />
             {splitText(`
             In the same vein, some major NPCs get their own cards as well:
             <ul>
