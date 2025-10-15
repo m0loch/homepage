@@ -331,7 +331,7 @@ function FF6() {
         {splitText(`
             The first thing we have to mention here is this is the first game of the series that deserved his own thematic deck, so this section is actually split in two as you might have already noticed.
 
-            As a consequence, even though the full set of playable characters is 14, not everyone was awarded is own card in the base set - but we are already accustomed to this, ain't we?
+            As a consequence, even though the full set of playable characters is 14 (spoiler: the highest number ever, at the time of writing), not everyone was awarded is own card in the base set - but we are already accustomed to this, ain't we?
 
             Still, I find that having only <a href="https://gatherer.wizards.com/FIN/en-us/245/terra-magical-adept" target="_blank" rel="noreferrer">Terra, Magical Adept</a>, <a href="https://gatherer.wizards.com/FIN/en-us/234/locke-cole" target="_blank" rel="noreferrer">Locke Cole</a>, <a href="https://gatherer.wizards.com/FIN/en-us/51/edgar-king-of-figaro" target="_blank" rel="noreferrer">Edgar, King of Figaro</a> and <a href="https://gatherer.wizards.com/FIN/en-us/54/gogo-master-of-mimicry" target="_blank" rel="noreferrer">Gogo, Master of Mimicry</a> is a bit lacking.
             The inclusion of Gogo, in particular, is almost offensive to me, <i>even though I'm building a deck around him</i>, but let's not mix principles and mechanics.

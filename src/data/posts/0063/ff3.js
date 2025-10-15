@@ -61,7 +61,7 @@ function FF3() {
             <i>From the left: Refia, Luneth, Ingus and Arc.<br/>We don't acknowledge the existence of this port, though.</i>
         </CustomImage>
         {splitText(`
-            This game's version of <a href="https://gatherer.wizards.com/FIN/en-us/408/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timelesse Artificer</a> speaks volumes about how wacky this game can be compared to its gloomy predecessor.
+            This game's version of <a href="https://gatherer.wizards.com/FIN/en-us/408/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timeless Artificer</a> speaks volumes about how wacky this game can be compared to its gloomy predecessor.
 
             The characters, as previously mentioned, are once again orphans without a name, so they are just referenced as <a href="https://gatherer.wizards.com/FIN/en-us/14/the-crystals-chosen" target="_blank" rel="noreferrer">The Crystal's Chosen</a> (and as <a href="https://gatherer.wizards.com/FCA/en-us/1/adeline-resplendent-cathar" target="_blank" rel="noreferrer">Hero of Light</a> in the bonus sheet).
 

@@ -92,7 +92,7 @@ function FF4() {
 
             We also have <a href="https://gatherer.wizards.com/FIN/en-us/239/rydia-summoner-of-mist" target="_blank" rel="noreferrer">Rydia, Summoner of Mist</a> that, true to her class, has sinergies with sagas, and <a href="https://gatherer.wizards.com/FIN/en-us/244/tellah-great-sage" target="_blank" rel="noreferrer">Tellah, Great Sage</a> that comes with a built-in self-sacrifice mechanic.
 
-            And then of course we have <a href="https://gatherer.wizards.com/FIN/en-us/409/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timelesse Artificer</a> with his first appearance as playable character.
+            And then of course we have <a href="https://gatherer.wizards.com/FIN/en-us/409/cid-timeless-artificer" target="_blank" rel="noreferrer">Cid, Timeless Artificer</a> with his first appearance as playable character.
 
             No card for Edward, Palom, Porom, Yang, Edge or Fusoya, but that's fine as they're either too bland or stay in the party for a very short amount of time.
 
