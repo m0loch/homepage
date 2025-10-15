@@ -14,6 +14,7 @@ import FF3page from "./0063/ff3";
 import FF4page from "./0063/ff4";
 import FF5page from "./0063/ff5";
 import FF6page from "./0063/ff6";
+import FF7page from "./0063/ff7";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -55,7 +56,9 @@ function StatefulPost() {
 
             TL;DR: this is going to take a <i>long</i> while.
             Have fun, I hope I'll do.
-            `)}
+
+            UPDATE: I'm barely compiling the FF7 section part, and WotC announced <i>extra printings</i> and new products. This is officially a nightmare ^_^;`)}
+            <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">https://magic.wizards.com/en/news/feature/collecting-final-fantasy</a>
 
             <span id="Table_of_contents"></span>
             <StyledCollapseHeader
@@ -102,6 +105,14 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF6Cast" onPreClick={() => forcePanelOpen(6)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF6Cards" onPreClick={() => forcePanelOpen(6)}>The cards</BookmarkLink></li>
                     <li><BookmarkLink id="FF6ThemeDeck" onPreClick={() => forcePanelOpen(6)}>The pre-constructed deck</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy7" isTitle>Final Fantasy VII</BookmarkLink>
+                    <li><BookmarkLink id="FF7Nutshell" onPreClick={() => forcePanelOpen(7)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF7Game" onPreClick={() => forcePanelOpen(7)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF7Cast" onPreClick={() => forcePanelOpen(7)}>The cast</BookmarkLink></li>
+                    <li><BookmarkLink id="FF7Cards" onPreClick={() => forcePanelOpen(7)}>The cards</BookmarkLink></li>
+                    <li><BookmarkLink id="FF7ThemeDeck" onPreClick={() => forcePanelOpen(7)}>The pre-constructed deck</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 
@@ -208,6 +219,18 @@ function StatefulPost() {
             <Collapse in={open[6]} timeout="auto" unmountOnExit>
                 <FF6page/>
             </Collapse>
+
+            <StyledCollapseHeader
+                open={open[7]}
+                onClick={() => handleStateChange(7)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy7" isTitle>Final Fantasy VII</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[7]} timeout="auto" unmountOnExit>
+                <FF7page/>
+            </Collapse>
         </>
     );
 }
@@ -215,7 +238,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2025-08-18"),
+    lastUpdate: new Date("2025-10-15"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };

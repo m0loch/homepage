@@ -70,6 +70,7 @@ export default function CustomImage(props) {
                 alt={props.alt}
                 src={props.src}
                 onClick={zoomImg}
+                style={props.style}
             />
             <figcaption style={{ justifySelf: "center", textAlign: "center" }}>{props.children}</figcaption>
         </StyledFigure>
