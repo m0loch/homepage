@@ -15,6 +15,7 @@ import FF4page from "./0063/ff4";
 import FF5page from "./0063/ff5";
 import FF6page from "./0063/ff6";
 import FF7page from "./0063/ff7";
+import FF8page from "./0063/ff8";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -113,6 +114,14 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF7Cast" onPreClick={() => forcePanelOpen(7)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF7Cards" onPreClick={() => forcePanelOpen(7)}>The cards</BookmarkLink></li>
                     <li><BookmarkLink id="FF7ThemeDeck" onPreClick={() => forcePanelOpen(7)}>The pre-constructed deck</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy8" isTitle>Final Fantasy VIII</BookmarkLink>
+                    <li><BookmarkLink id="FF8Nutshell" onPreClick={() => forcePanelOpen(8)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF8GameMechanics" onPreClick={() => forcePanelOpen(8)}>The mechanics</BookmarkLink></li>
+                    <li><BookmarkLink id="FF8Game" onPreClick={() => forcePanelOpen(8)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF8Cast" onPreClick={() => forcePanelOpen(8)}>The cast</BookmarkLink></li>
+                    <li><BookmarkLink id="FF8Cards" onPreClick={() => forcePanelOpen(8)}>The cards</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 
@@ -231,6 +240,18 @@ function StatefulPost() {
             <Collapse in={open[7]} timeout="auto" unmountOnExit>
                 <FF7page/>
             </Collapse>
+
+            <StyledCollapseHeader
+                open={open[8]}
+                onClick={() => handleStateChange(8)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy8" isTitle>Final Fantasy VIII</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[8]} timeout="auto" unmountOnExit>
+                <FF8page/>
+            </Collapse>
         </>
     );
 }
@@ -238,7 +259,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2025-10-15"),
+    lastUpdate: new Date("2025-12-07"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };
