@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { styled } from '@mui/system';
+import { maxWidth, styled } from '@mui/system';
 
 const StyledFigure = styled('figure', {
     shouldForwardProp: (prop) => prop !== 'align' && prop !== 'hasCaption'
@@ -15,10 +15,14 @@ const StyledFigure = styled('figure', {
     })}
 );
 
-const StyledImg = styled('img')(
-    () => ({
+const StyledImg = styled('img', {
+    shouldForwardProp: (prop) => prop !== 'maxHeight' && prop !== 'maxWidth'
+})(
+    ({ maxHeight, maxWidth }) => ({
         display: 'block',
         width: '100%',
+        maxWidth: maxWidth || 'auto',
+        maxHeight: maxHeight || 'auto',
 
         "&.fullView": {
             position: 'fixed',
@@ -71,6 +75,8 @@ export default function CustomImage(props) {
                 src={props.src}
                 onClick={zoomImg}
                 style={props.style}
+                maxHeight={props.maxHeight}
+                maxWidth={props.maxWidth}
             />
             <figcaption style={{ justifySelf: "center", textAlign: "center" }}>{props.children}</figcaption>
         </StyledFigure>

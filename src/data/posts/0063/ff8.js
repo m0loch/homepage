@@ -147,7 +147,7 @@ function FF8() {
                 alt="Squall"
                 src={Squall}
                 align="left"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
                 <p>
                     <b>Squall</b>, aka the Whatever Boy<InlineSpoiler mask="*">He is infamous for his "Whatever..." quote that he recurrently throws at people around him to show disinterest.<br/>You'll be happy to learn that it wasn't supposed to be a catchphrase of his, it's just something that came up during the english localization.</InlineSpoiler>, is a complex character to judge.
@@ -170,7 +170,7 @@ function FF8() {
                 alt="Rinoa"
                 src={Rinoa}
                 align="right"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Rinoa</b>, also known as "Squall's romantic interest", is one of the most beloved female leads in the series.
@@ -191,7 +191,7 @@ function FF8() {
                 alt="Quistis"
                 src={Quistis}
                 align="left"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Quistis</b> is the second playable character we encounter in the game and she's... something.
@@ -213,7 +213,7 @@ function FF8() {
                 alt="Zell"
                 src={Zell}
                 align="right"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Zell</b> represents the monk of FF8: he's a martial artist and fights with his fists.
@@ -241,7 +241,7 @@ function FF8() {
                 alt="Selphie"
                 src={Selphie}
                 align="left"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Selphie</b> is a transfer student from Trabia Garden, and we get to meet her for the first time mere minutes after the start of the game.
@@ -264,7 +264,7 @@ function FF8() {
                 alt="Irvine"
                 src={Irvine}
                 align="right"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Irvine</b> joins the party with a specific role: he's a <i>sharpshooter</i> and he will be the one sniping the sorceress down during her crowning ceremony in Deling City.
@@ -288,7 +288,7 @@ function FF8() {
                 alt="Seifer"
                 src={Seifer}
                 align="left"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Seifer</b> is the rival of Squall, and that's pretty much that.
@@ -307,7 +307,7 @@ function FF8() {
                 alt="Edea"
                 src={Edea}
                 align="right"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Edea</b> the sorceress is the main antagonist of the game... until she is no more.
@@ -324,7 +324,7 @@ function FF8() {
                 alt="Laguna"
                 src={Laguna}
                 align="left"
-                style={{ maxWidth: '250px' }}
+                maxWidth="250px"
             />
             {splitText(`
                 <b>Laguna</b>, originally meant to be a second protagonist in a different time, is actually Squall's father.

@@ -428,7 +428,7 @@ function FF7() {
             alt="A cute chocobo portrait"
             src={Chocobo}
             align="left"
-            style={{ maxHeight: "256px" }}
+            maxHeight="256px"
         />
         {splitText(`
             Finally, as a last subcategory, we have a subset of cards related to chocobos, as Final Fantasy 7 features both a full-fledged chocobo catching and breeding system and a racing minigame where you can ride your best prospects.
