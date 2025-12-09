@@ -221,7 +221,7 @@ function StatefulPost() {
             <Collapse in={open[5]} timeout="auto" unmountOnExit>
             <CustomImage
                 src={e33Piano}
-                alt="A faceless character"
+                alt="The best scenery to play piano"
             />
             {splitText(`
             There are two different stances that people is taking on this game: on one hand we have the people that are saying that this is a AAA game made by a small indie studio, while on the other hand <a href="https://www.reddit.com/r/IndieDev/comments/1j2wpg5/how_did_sandfall_interactive_clair_obscur/" target="_blank" rel="noreferrer">others</a> (correctly, in my opinion) point out the fact that you can't compare the resources Sanfall Interactive had at their disposal with your average indie studio.
