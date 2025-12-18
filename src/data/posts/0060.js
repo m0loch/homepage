@@ -224,7 +224,7 @@ function StatefulPost() {
                 alt="The best scenery to play piano"
             />
             {splitText(`
-            There are two different stances that people is taking on this game: on one hand we have the people that are saying that this is a AAA game made by a small indie studio, while on the other hand <a href="https://www.reddit.com/r/IndieDev/comments/1j2wpg5/how_did_sandfall_interactive_clair_obscur/" target="_blank" rel="noreferrer">others</a> (correctly, in my opinion) point out the fact that you can't compare the resources Sanfall Interactive had at their disposal with your average indie studio.
+            There are two different stances that people is taking on this game: on one hand we have the people that are saying that this is a AAA game made by a small indie studio, while on the other hand <a href="https://www.reddit.com/r/IndieDev/comments/1j2wpg5/how_did_sandfall_interactive_clair_obscur/" target="_blank" rel="noreferrer">others</a> (correctly, in my opinion) point out the fact that you can't compare the resources Sandfall Interactive had at their disposal with your average indie studio.
 
             It's true that we're talking abount a small team of around 30 people (which beats most indie studios, by the way), but <i>usually</i> you don't expect a company that has yet to release a single game to have access to public funding, to be able to work on their first game for almost 6 years or to come up with such a marketing presence.
 
@@ -249,7 +249,7 @@ function StatefulPost() {
             {splitText(`
             It took me some time to put my thoughts together even though I have to admit that my takes are not that original - sorry for that.
 
-            All in all the I believe the game is far from perfect, but it does so mmany things right that I expect it to not only be a commercial success, but I hope for it to have impact the whole industry.
+            All in all the I believe the game is far from perfect, but it does so many things right that I expect it to not only be a commercial success, but I hope for it to have impact the whole industry.
 
             It certainly had an impact on the meme scene, though, which is promising.
             `)}
