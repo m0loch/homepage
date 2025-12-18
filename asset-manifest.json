@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.8fabc928.js",
+    "main.js": "/homepage/static/js/main.7cca6681.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -32,7 +32,7 @@
     "static/media/gilgamesh.jpg": "/homepage/static/media/gilgamesh.e0cef86094f20a8af898.jpg",
     "static/media/junon-fort-condor.jpg": "/homepage/static/media/junon-fort-condor.99f1044523c297b86c13.jpg",
     "static/media/nibelheim-surveillance.jpg": "/homepage/static/media/nibelheim-surveillance.2a586accdc7ac0d0183f.jpg",
-    "static/media/logo.png": "/homepage/static/media/logo.ebf506595f945ae86d19.png",
+    "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/junon-cpr.jpg": "/homepage/static/media/junon-cpr.b6fa0ed7290f7d3412b8.jpg",
     "static/media/cosmo-river-of-lights.jpg": "/homepage/static/media/cosmo-river-of-lights.c8e883fd28e4b21aa507.jpg",
     "static/media/corel-gold-saucer.jpg": "/homepage/static/media/corel-gold-saucer.9fb5d69fb7b6dfd8e9fc.jpg",
@@ -110,6 +110,7 @@
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
     "static/media/e33-piano.jpg": "/homepage/static/media/e33-piano.b727e7aefe1fa2d3c785.jpg",
     "static/media/cover.jpg": "/homepage/static/media/cover.5d5f522d3381c05ceabd.jpg",
+    "static/media/quina.webp": "/homepage/static/media/quina.36e540e7ccce11fd8214.webp",
     "static/media/joshua.jpg": "/homepage/static/media/joshua.a48bc1f0012278e0264a.jpg",
     "static/media/sanbreque-emperor.jpg": "/homepage/static/media/sanbreque-emperor.f8789f8b62cbb273dcf0.jpg",
     "static/media/e33-noco.jpg": "/homepage/static/media/e33-noco.a580347f080485e935a4.jpg",
@@ -118,6 +119,7 @@
     "static/media/ff16-clive.webp": "/homepage/static/media/ff16-clive.6f6b893ad25d54666080.webp",
     "static/media/scales.png": "/homepage/static/media/scales.3903525779ceb3551419.png",
     "static/media/cassette_beasts.png": "/homepage/static/media/cassette_beasts.cd29596068f077a99b00.png",
+    "static/media/steiner.webp": "/homepage/static/media/steiner.ee1485df9958a4ee61ca.webp",
     "static/media/ff3-modern.jpg": "/homepage/static/media/ff3-modern.79db135d9678952dd318.jpg",
     "static/media/e33-mystery.jpg": "/homepage/static/media/e33-mystery.7dc20bd5489f6c246d73.jpg",
     "static/media/kefka.jpeg": "/homepage/static/media/kefka.9089c2da7c2a7086f55f.jpeg",
@@ -152,18 +154,24 @@
     "static/media/quistis.jpg": "/homepage/static/media/quistis.3618f5d4b0a687e7d650.jpg",
     "static/media/edea.jpg": "/homepage/static/media/edea.ceb1e4d8b920139e5e2d.jpg",
     "static/media/seifer.jpg": "/homepage/static/media/seifer.1f7cd7ca8e9e6d158ac8.jpg",
+    "static/media/zidane.webp": "/homepage/static/media/zidane.25886b50a57827f90171.webp",
     "static/media/garland.png": "/homepage/static/media/garland.8f78d79155ef5183347e.png",
     "static/media/zell.jpg": "/homepage/static/media/zell.ab2a11e2c5d9b88d8277.jpg",
     "static/media/logo-orig.jpg": "/homepage/static/media/logo-orig.31de11d70953d88bd63e.jpg",
     "static/media/irvine.jpg": "/homepage/static/media/irvine.093dd71e3e5c006f1212.jpg",
+    "static/media/freya.webp": "/homepage/static/media/freya.87adc4be8bd88dfba9f4.webp",
     "static/media/selphie.jpg": "/homepage/static/media/selphie.8233d360f9ba2fc414aa.jpg",
     "static/media/floating.png": "/homepage/static/media/floating.054b30c61d388f2daea6.png",
     "static/media/profanities.jpeg": "/homepage/static/media/profanities.21707c501cef62d9c83f.jpeg",
+    "static/media/vivi.webp": "/homepage/static/media/vivi.ca78e0c407dc4a1a1225.webp",
     "static/media/brokenrunner.png": "/homepage/static/media/brokenrunner.513e47cfa8889ceb9204.png",
     "static/media/wizardry.jpg": "/homepage/static/media/wizardry.c42ff6f9930a9d47f3eb.jpg",
+    "static/media/amarant.webp": "/homepage/static/media/amarant.85190e89918dc224083b.webp",
     "static/media/narshe.png": "/homepage/static/media/narshe.b78c542d3a8a68ce7d3f.png",
+    "static/media/eiko.webp": "/homepage/static/media/eiko.5b914c232b7503f02920.webp",
     "static/media/logo-ds.jpg": "/homepage/static/media/logo-ds.e613c02bde930c701a87.jpg",
     "static/media/celes.jpeg": "/homepage/static/media/celes.29c599de517c27fe4565.jpeg",
+    "static/media/garnet.webp": "/homepage/static/media/garnet.1205f986c23d323c227b.webp",
     "static/media/logo.jpg": "/homepage/static/media/logo.b2a4d5ee2372db77eda6.jpg",
     "static/media/opening.png": "/homepage/static/media/opening.06a79661bcf10a764622.png",
     "static/media/chocobo.webp": "/homepage/static/media/chocobo.daeb49718247b677bd0c.webp",
@@ -177,9 +185,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.8fabc928.js.map": "/homepage/static/js/main.8fabc928.js.map"
+    "main.7cca6681.js.map": "/homepage/static/js/main.7cca6681.js.map"
   },
   "entrypoints": [
-    "static/js/main.8fabc928.js"
+    "static/js/main.7cca6681.js"
   ]
 }
