@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.949c9d0e.js",
+    "main.js": "/homepage/static/js/main.a61a2a28.js",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -32,7 +32,7 @@
     "static/media/gilgamesh.jpg": "/homepage/static/media/gilgamesh.e0cef86094f20a8af898.jpg",
     "static/media/junon-fort-condor.jpg": "/homepage/static/media/junon-fort-condor.99f1044523c297b86c13.jpg",
     "static/media/nibelheim-surveillance.jpg": "/homepage/static/media/nibelheim-surveillance.2a586accdc7ac0d0183f.jpg",
-    "static/media/logo.png": "/homepage/static/media/logo.ebf506595f945ae86d19.png",
+    "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/junon-cpr.jpg": "/homepage/static/media/junon-cpr.b6fa0ed7290f7d3412b8.jpg",
     "static/media/cosmo-river-of-lights.jpg": "/homepage/static/media/cosmo-river-of-lights.c8e883fd28e4b21aa507.jpg",
     "static/media/corel-gold-saucer.jpg": "/homepage/static/media/corel-gold-saucer.9fb5d69fb7b6dfd8e9fc.jpg",
@@ -84,15 +84,20 @@
     "static/media/reeve.jpg": "/homepage/static/media/reeve.16efa84b8411603a900a.jpg",
     "static/media/grasslands-swamp.jpg": "/homepage/static/media/grasslands-swamp.13ba10c014b8b839742a.jpg",
     "static/media/barret-dyne-2.jpg": "/homepage/static/media/barret-dyne-2.0f0f92e844c95c9824c6.jpg",
+    "static/media/steiner.jpg": "/homepage/static/media/steiner.84ea72f2d442a7013a79.jpg",
     "static/media/tifa-junon.jpg": "/homepage/static/media/tifa-junon.2e72a4b82637a03620a4.jpg",
     "static/media/sephiroth.jpg": "/homepage/static/media/sephiroth.533071a3183cfc9f98b0.jpg",
     "static/media/vincent.jpg": "/homepage/static/media/vincent.1dc3b0682f8e131bcdb3.jpg",
+    "static/media/quina.jpg": "/homepage/static/media/quina.0667af8e24b8f997053c.jpg",
     "static/media/angry-cat-AI.png": "/homepage/static/media/angry-cat-AI.2de2db30e8a0fcaae8ca.png",
     "static/media/barret-dyne.jpg": "/homepage/static/media/barret-dyne.1d63a33f74fb427d43c4.jpg",
     "static/media/cosmo-gi-nattak.jpg": "/homepage/static/media/cosmo-gi-nattak.3b274f4a636c75297f5c.jpg",
     "static/media/tifa-past.jpg": "/homepage/static/media/tifa-past.b26df87af99c891a0ecc.jpg",
     "static/media/cast.jpeg": "/homepage/static/media/cast.ea3b23c0255ea5868ec7.jpeg",
     "static/media/red-seto.jpg": "/homepage/static/media/red-seto.a63ac462b448c9d20e0a.jpg",
+    "static/media/brahne.jpg": "/homepage/static/media/brahne.4a9dd9e217544e166fa3.jpg",
+    "static/media/vivi.jpg": "/homepage/static/media/vivi.1d29b628dc92d79ad5cc.jpg",
+    "static/media/zidane.jpg": "/homepage/static/media/zidane.94e720f8e6ca9a372a72.jpg",
     "static/media/ff2-cover.webp": "/homepage/static/media/ff2-cover.1b9468e598a2e8cf9dfc.webp",
     "static/media/cetra-final-showdown.jpg": "/homepage/static/media/cetra-final-showdown.649a196d5de45d73b621.jpg",
     "static/media/tifa.jpg": "/homepage/static/media/tifa.d6c7a8b5bf94733db251.jpg",
@@ -100,15 +105,20 @@
     "static/media/ff16quest.jpg": "/homepage/static/media/ff16quest.b3f9a949adfe50fdfcca.jpg",
     "static/media/ahriman.jpg": "/homepage/static/media/ahriman.775f93217477d2c9489a.jpg",
     "static/media/e33-white-nevron.jpg": "/homepage/static/media/e33-white-nevron.64584da789608e40a740.jpg",
+    "static/media/freya.jpg": "/homepage/static/media/freya.68c54cba9167de3c210b.jpg",
+    "static/media/eiko.jpg": "/homepage/static/media/eiko.71018fff6eaf63a3646c.jpg",
     "static/media/ff-cover.png": "/homepage/static/media/ff-cover.b50b8c509e3f70d60777.png",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
+    "static/media/amarant.jpg": "/homepage/static/media/amarant.32c2e659670b467c7e9d.jpg",
     "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
     "static/media/ff3-cover.webp": "/homepage/static/media/ff3-cover.66c00b167b8407832a44.webp",
     "static/media/bahamut.png": "/homepage/static/media/bahamut.9fa62c6f7fa42071c67e.png",
     "static/media/3dremake.jpg": "/homepage/static/media/3dremake.54966f43ca4911b8ac36.jpg",
     "static/media/mythril-turks.jpg": "/homepage/static/media/mythril-turks.1d1fa3948fee314fc3c5.jpg",
+    "static/media/kidnapping_scene.jpg": "/homepage/static/media/kidnapping_scene.98d303e3723f1a117257.jpg",
     "static/media/young-jill.jpg": "/homepage/static/media/young-jill.2f3d2f0b4a0335489560.jpg",
     "static/media/e33-piano.jpg": "/homepage/static/media/e33-piano.b727e7aefe1fa2d3c785.jpg",
+    "static/media/haircut.jpg": "/homepage/static/media/haircut.a273adb575b596c6f080.jpg",
     "static/media/cover.jpg": "/homepage/static/media/cover.5d5f522d3381c05ceabd.jpg",
     "static/media/joshua.jpg": "/homepage/static/media/joshua.a48bc1f0012278e0264a.jpg",
     "static/media/sanbreque-emperor.jpg": "/homepage/static/media/sanbreque-emperor.f8789f8b62cbb273dcf0.jpg",
@@ -132,6 +142,7 @@
     "static/media/hooded-man.jpg": "/homepage/static/media/hooded-man.c7e8e51b11da7c5e60ef.jpg",
     "static/media/shinra.jpg": "/homepage/static/media/shinra.4231a515b20ca2305dc8.jpg",
     "static/media/locke.jpeg": "/homepage/static/media/locke.debb7c46d451d88293f6.jpeg",
+    "static/media/garnet.jpg": "/homepage/static/media/garnet.167d3082b1045b380ccf.jpg",
     "static/media/strago.jpeg": "/homepage/static/media/strago.a2fc61920aa93b2c36fa.jpeg",
     "static/media/setzer.jpeg": "/homepage/static/media/setzer.e77482376ed15599b14c.jpeg",
     "static/media/rinoa.jpg": "/homepage/static/media/rinoa.168724f38aa72a98b8a9.jpg",
@@ -177,9 +188,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.949c9d0e.js.map": "/homepage/static/js/main.949c9d0e.js.map"
+    "main.a61a2a28.js.map": "/homepage/static/js/main.a61a2a28.js.map"
   },
   "entrypoints": [
-    "static/js/main.949c9d0e.js"
+    "static/js/main.a61a2a28.js"
   ]
 }
