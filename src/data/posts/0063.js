@@ -16,6 +16,7 @@ import FF5page from "./0063/ff5";
 import FF6page from "./0063/ff6";
 import FF7page from "./0063/ff7";
 import FF8page from "./0063/ff8";
+import FF9page from "./0063/ff9";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -122,6 +123,13 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF8Game" onPreClick={() => forcePanelOpen(8)}>The game</BookmarkLink></li>
                     <li><BookmarkLink id="FF8Cast" onPreClick={() => forcePanelOpen(8)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF8Cards" onPreClick={() => forcePanelOpen(8)}>The cards</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy9" isTitle>Final Fantasy IX</BookmarkLink>
+                    <li><BookmarkLink id="FF9Nutshell" onPreClick={() => forcePanelOpen(9)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF9Game" onPreClick={() => forcePanelOpen(9)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF9Cast" onPreClick={() => forcePanelOpen(9)}>The cast</BookmarkLink></li>
+                    <li><BookmarkLink id="FF9Cards" onPreClick={() => forcePanelOpen(9)}>The cards</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 
@@ -252,6 +260,18 @@ function StatefulPost() {
             <Collapse in={open[8]} timeout="auto" unmountOnExit>
                 <FF8page/>
             </Collapse>
+
+            <StyledCollapseHeader
+                open={open[9]}
+                onClick={() => handleStateChange(9)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy9" isTitle>Final Fantasy IX</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[9]} timeout="auto" unmountOnExit>
+                <FF9page/>
+            </Collapse>
         </>
     );
 }
@@ -259,7 +279,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2025-12-07"),
+    lastUpdate: new Date("2025-12-26"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };
