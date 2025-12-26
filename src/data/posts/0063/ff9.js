@@ -34,6 +34,7 @@ function FF9() {
                 We will never know whether the idea behind it was to steer away from the direction the franchise was taking with FF8, or if it was just meant to be a tribute to early chapters of the series - what we <i>do</i> know has many fans considering it their favorite entry.
 
                 But what are we talking about, <i>exactly</i>, when we say that FF9 went in a different direction compared to FF8?`)}
+                <YouTubeVideo videoId={"VdxC7FqoNQw"} align="right" />
                 <ul>
                     <li>Thematically, the game featured a higher "philosophical" level for its themes, being them love, death, loneliness or identity.</li>
                     <li>The character models went 100% back to their super-deformed, chibi originals, going against not only FF8 but also FF7 that featured human-shaped characters in combat and (most) FMVs.</li>
@@ -47,12 +48,6 @@ function FF9() {
             `)}
             <Bookmark id="FF9Game">The game</Bookmark>
             {splitText(`
-                Before discussing the game's plot, I'll briefly mention the major design changes that FF9 brought to the table - remember: this game inception was Hironobu Sakaguchi's gut reaction to the direction the series was taking, so the difference is huge.
-
-                Visually, the game went back to a more cute and dreamy style, with the character models being full-time chibis (a look more in line with pre-FF7 entries) and the environments being much more fantasy-oriented instead of the more sci-fi leaning ones the PlayStation era had been going for so far.
-
-                Mechanically, there is no materia-junction system, but we go back to less customizable, job-defined characters and equipments that actually matter - where FF7's armors where just stat boosters with a static ability and FF8 had _no_ armor whatsoever, now equipment pieces teach abilities to characters, and we have head, wrist, body and accessory slots to fill.
-
                 The hard change of direction is really evident in the first story beats as well, as the epic and right-in-the-action introduction sequence we've come to expect over the years have been replaced by a first chapter that, while getting the ball rolling, is more lighthearted with a cartoonish vibe.
             `)}
             <CustomImage
