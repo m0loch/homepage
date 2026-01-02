@@ -279,7 +279,7 @@ function FF9() {
             `)}
                 <p>We then have <a href="https://gatherer.wizards.com/FIN/en-us/34/stiltzkin-moogle-merchant" target="_blank" rel="noreferrer">Stiltzkin, Moogle Merchant</a>, a <b>weird</b> card that inspired some unorthodox, non-competitive decks in <a href="https://www.youtube.com/watch?v=MQn6DuFytzQ" target="_blank" rel="noreferrer">multiple</a> <a href="https://www.youtube.com/watch?v=hDa7Z5Pb-24" target="_blank" rel="noreferrer">formats</a> - and a nod to our favorite wandering merchant in the game.</p><br/>
             {splitText(`
-                <a href="https://gatherer.wizards.com/FIN/en-us/215/choco-seeker-of-paradise" target="_blank" rel="noreferrer">Choco, Seeker of Paradise</a> is another card that caused some commotion when spoiled, I feel like every player has a friend that theorized building a bird tribal deck around it at some point.
+                <a href="https://gatherer.wizards.com/FIN/en-us/215/choco-seeker-of-paradise" target="_blank" rel="noreferrer">Choco, Seeker of Paradise</a> is another card that caused some commotion when spoiled, I feel like every player has a friend that theorized building a bird tribal deck around it at some point (I did, <i>ça va sans dire</i>).
                 `)}
             <YouTubeVideo videoId={"d4AQ7kRcn_A"} align="left" caption={<i>Yes, I'm breaking the usual format for <a href="https://gatherer.wizards.com/FCA/en-us/8/dark-ritual" target="_blank" rel="noreferrer" style={{ fontSize: "1rem" }}>Darkness of Eternity</a></i>}/>
             {splitText(`

@@ -17,6 +17,7 @@ import FF6page from "./0063/ff6";
 import FF7page from "./0063/ff7";
 import FF8page from "./0063/ff8";
 import FF9page from "./0063/ff9";
+import FF10page from "./0063/ff10";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -52,15 +53,22 @@ function StatefulPost() {
             <StyledLogo />
 
             {splitText(`
-            It's been a while since I wrote a lengthier post, but the FFxMTG crossover struck a lot of chords with me, and now I feel like the time has come to let some of my thoughts out.
+                It's been a while since I wrote a lengthier post, but the FFxMTG crossover struck a lot of chords with me, and now I feel like the time has come to let some of my thoughts out.
 
-            This is going to be a post with multiple updates, acting both as a way to explain and <i>sometimes</i> even appreciated what Wizards of the Coast has done with my favourite franchise, but also nostalgia trip of sorts where I'll rumble about an almost infinite number of games.
+                This is going to be a post with multiple updates, acting both as a way to explain and <i>sometimes</i> even appreciated what Wizards of the Coast has done with my favourite franchise, but also nostalgia trip of sorts where I'll rumble about an almost infinite number of games.
 
-            TL;DR: this is going to take a <i>long</i> while.
-            Have fun, I hope I'll do.
+                TL;DR: this is going to take a <i>long</i> while.
+                Have fun, I hope I'll do.
 
-            UPDATE: I'm barely compiling the FF7 section part, and WotC announced <i>extra printings</i> and new products. This is officially a nightmare ^_^;`)}
-            <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">https://magic.wizards.com/en/news/feature/collecting-final-fantasy</a>
+                <b>UPDATE:</b> I'm barely compiling the FF7 section part, and WotC announced <i>extra printings</i> and new products. This is officially a nightmare ^_^;`)}
+            <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">https://magic.wizards.com/en/news/feature/collecting-final-fantasy</a><br/>
+
+            {splitText(`
+
+                <b>UPDATE #2:</b> Given that I'm writing at snail pace, I decided I'll update this post with <i>minor</i> updates while I compile them - you know, every now and then I want to post something else but this whole project has become such a huge roadblocker that I either stop having a job or surrender to my own limits.
+
+                Bear with me, this is something I want to finish, but when I started I didn't plan to actually reinstall all the games and play them again...
+            `)}
 
             <span id="Table_of_contents"></span>
             <StyledCollapseHeader
@@ -130,6 +138,12 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF9Game" onPreClick={() => forcePanelOpen(9)}>The game</BookmarkLink></li>
                     <li><BookmarkLink id="FF9Cast" onPreClick={() => forcePanelOpen(9)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF9Cards" onPreClick={() => forcePanelOpen(9)}>The cards</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy10" isTitle>Final Fantasy X</BookmarkLink>
+                    <li><BookmarkLink id="FF10Nutshell" onPreClick={() => forcePanelOpen(10)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF10Cards" onPreClick={() => forcePanelOpen(10)}>The cards</BookmarkLink></li>
+                    <li><BookmarkLink id="FF10ThemeDeck" onPreClick={() => forcePanelOpen(10)}>The pre-constructed deck</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 
@@ -272,6 +286,18 @@ function StatefulPost() {
             <Collapse in={open[9]} timeout="auto" unmountOnExit>
                 <FF9page/>
             </Collapse>
+
+            <StyledCollapseHeader
+                open={open[10]}
+                onClick={() => handleStateChange(10)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy10" isTitle>Final Fantasy X</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[10]} timeout="auto" unmountOnExit>
+                <FF10page/>
+            </Collapse>
         </>
     );
 }
@@ -279,7 +305,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2025-12-26"),
+    lastUpdate: new Date("2026-01-01"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };
