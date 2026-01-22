@@ -492,6 +492,8 @@ function FF7() {
 
             <a href="https://gatherer.wizards.com/FIC/en-us/67/lifestreams-blessing" target="_blank" rel="noreferrer">Lifestream's Blessing</a> represents the final location, at the bottom of the northern crater, where the party faces Sephiroth for the last time.
 
+            <a href="https://gatherer.wizards.com/FIC/en-us/236/clever-concealment" target="_blank" rel="noreferrer">Clever Concealment</a> seems a commander playable card, while also referencing one of our protagonist's best moments.
+            
             <i>Dulcis in fundo</i>, we have: <a href="https://gatherer.wizards.com/FIC/en-us/253/secret-rendezvous" target="_blank" rel="noreferrer">Secret Rendezvous</a>, a reprint from Strixhaven with four alternate arts, one for which possible date Cloud could be invited to:
         `)}
         <CustomImage

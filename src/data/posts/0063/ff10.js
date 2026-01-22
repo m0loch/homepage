@@ -91,7 +91,7 @@ function FF10() {
                 <li>his father <a href="https://gatherer.wizards.com/FIC/en-us/23/lord-jyscal-guado" target="_blank" rel="noreferrer">Lord Jyscal Guado</a></li>
                 <li><a href="https://gatherer.wizards.com/FIC/en-us/39/oaka-traveling-merchant" target="_blank" rel="noreferrer">O'aka, Traveling Merchant</a> (hint: he's got a good synergy with <a href="https://gatherer.wizards.com/FIN/en-us/235/noctis-prince-of-lucis" target="_blank" rel="noreferrer">Noctis, Prince of Lucis</a>)</li>
                 <li><a href="https://gatherer.wizards.com/FIC/en-us/19/gatta-and-luzzu" target="_blank" rel="noreferrer">Gatta and Luzzu</a> are two young crusaders that take part in Operation Mi'ihen<InlineSpoiler mask="*">sadly, only one of them survives the encounter with Sin, depending on the player's actions</InlineSpoiler></li>
-                <li><a href="https://gatherer.wizards.com/FIC/en-us/94/shelinda-yevon-acolyte" target="_blank" rel="noreferrer">Shelinda, Yevon Acolyte</a> is a naive but gentle cleric of Yevon</li>
+            <li><a href="https://gatherer.wizards.com/FIC/en-us/94/shelinda-yevon-acolyte" target="_blank" rel="noreferrer">Shelinda, Yevon Acolyte</a> is a naive but gentle cleric of Yevon - towards the end of the game, when Yevon's rank grow short in numbers, she has a step up in her career, let's say</li>
                 <li>and, finally, we have the Big Boss himself: <a href="https://gatherer.wizards.com/FIC/en-us/95/sin-unending-cataclysm" target="_blank" rel="noreferrer">Sin, Unending Cataclysm</a> (ok, he's pretty underwhelming)</li>
                 </ul>
                 <br/>
