@@ -162,6 +162,7 @@ function StatefulPost() {
                     <BookmarkLink id="FinalFantasy13" isTitle>Final Fantasy XIII</BookmarkLink>
                     <li><BookmarkLink id="FF13Nutshell" onPreClick={() => forcePanelOpen(13)}>A bit of context</BookmarkLink></li>
                     <li><BookmarkLink id="FF13Cards" onPreClick={() => forcePanelOpen(13)}>The cards</BookmarkLink></li>
+                </ol>
             </StyledCollapse>
 
             <br/>
