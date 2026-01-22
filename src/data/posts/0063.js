@@ -18,6 +18,9 @@ import FF7page from "./0063/ff7";
 import FF8page from "./0063/ff8";
 import FF9page from "./0063/ff9";
 import FF10page from "./0063/ff10";
+import FF11page from "./0063/ff11";
+import FF12page from "./0063/ff12";
+import FF13page from "./0063/ff13";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -145,6 +148,20 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF10Cards" onPreClick={() => forcePanelOpen(10)}>The cards</BookmarkLink></li>
                     <li><BookmarkLink id="FF10ThemeDeck" onPreClick={() => forcePanelOpen(10)}>The pre-constructed deck</BookmarkLink></li>
                 </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy11" isTitle>Final Fantasy XI</BookmarkLink>
+                    <li><BookmarkLink id="FF11Nutshell" onPreClick={() => forcePanelOpen(11)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF11Cards" onPreClick={() => forcePanelOpen(11)}>The cards</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy12" isTitle>Final Fantasy XII</BookmarkLink>
+                    <li><BookmarkLink id="FF12Nutshell" onPreClick={() => forcePanelOpen(12)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF12Cards" onPreClick={() => forcePanelOpen(12)}>The cards</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy13" isTitle>Final Fantasy XIII</BookmarkLink>
+                    <li><BookmarkLink id="FF13Nutshell" onPreClick={() => forcePanelOpen(13)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF13Cards" onPreClick={() => forcePanelOpen(13)}>The cards</BookmarkLink></li>
             </StyledCollapse>
 
             <br/>
@@ -297,6 +314,42 @@ function StatefulPost() {
 
             <Collapse in={open[10]} timeout="auto" unmountOnExit>
                 <FF10page/>
+            </Collapse>
+
+            <StyledCollapseHeader
+                open={open[11]}
+                onClick={() => handleStateChange(11)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy11" isTitle>Final Fantasy XI</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[11]} timeout="auto" unmountOnExit>
+                <FF11page/>
+            </Collapse>
+
+            <StyledCollapseHeader
+                open={open[12]}
+                onClick={() => handleStateChange(12)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy12" isTitle>Final Fantasy XII</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[12]} timeout="auto" unmountOnExit>
+                <FF12page/>
+            </Collapse>
+
+            <StyledCollapseHeader
+                open={open[13]}
+                onClick={() => handleStateChange(13)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy13" isTitle>Final Fantasy XIII</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[13]} timeout="auto" unmountOnExit>
+                <FF13page/>
             </Collapse>
         </>
     );

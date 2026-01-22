@@ -15,7 +15,7 @@ function FF10() {
                 src={CoverArt}
             />
             {splitText(`
-                <center><i>Later, later</i></center>
+                <center><i>Coming "soon"</i></center>
             `)}
 
             <Bookmark id="FF10Cards">The cards</Bookmark>
