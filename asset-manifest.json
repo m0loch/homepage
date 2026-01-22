@@ -1,6 +1,7 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.3f6e47fd.js",
+    "main.js": "/homepage/static/js/main.a83a8411.js",
+    "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
@@ -32,7 +33,6 @@
     "static/media/gilgamesh.jpg": "/homepage/static/media/gilgamesh.e0cef86094f20a8af898.jpg",
     "static/media/junon-fort-condor.jpg": "/homepage/static/media/junon-fort-condor.99f1044523c297b86c13.jpg",
     "static/media/nibelheim-surveillance.jpg": "/homepage/static/media/nibelheim-surveillance.2a586accdc7ac0d0183f.jpg",
-    "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/junon-cpr.jpg": "/homepage/static/media/junon-cpr.b6fa0ed7290f7d3412b8.jpg",
     "static/media/cosmo-river-of-lights.jpg": "/homepage/static/media/cosmo-river-of-lights.c8e883fd28e4b21aa507.jpg",
     "static/media/corel-gold-saucer.jpg": "/homepage/static/media/corel-gold-saucer.9fb5d69fb7b6dfd8e9fc.jpg",
@@ -188,9 +188,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.3f6e47fd.js.map": "/homepage/static/js/main.3f6e47fd.js.map"
+    "main.a83a8411.js.map": "/homepage/static/js/main.a83a8411.js.map"
   },
   "entrypoints": [
-    "static/js/main.3f6e47fd.js"
+    "static/js/main.a83a8411.js"
   ]
 }
