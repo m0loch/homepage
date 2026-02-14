@@ -13,13 +13,11 @@ const post = {
                 In a moment reminiscent of a cheap horror movie, the Lega Serie A decided to ruin my day by scheduling a match between Inter and Juventus on Valentine's day.
 
                 But, don't get me wrong, I'm not here to complain about football or even talk about love or anything, I'm just posting a quickie to share with you my joy for Edmund McMillen's last work: Mewgenics!
-
-                It all started with a simple tweet, and now all my regular schedule is ruined - tough luck.
-
-                Well I'm going to San Siro, catch you later!
             `)}
 
-            <CustomImage src={Mewgenics} alt="Mewgenics" />
+            <CustomImage src={Mewgenics} alt="Mewgenics"><i>It all started with a simple tweet, and now all my regular schedule is ruined - tough luck.</i></CustomImage>
+            <br />
+            <p>Well I'm going to San Siro, catch you later!</p>
         </>
     ),
     signature: `Meow`
