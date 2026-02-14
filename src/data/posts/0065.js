@@ -1,6 +1,4 @@
 import { splitText } from '../../components/common/textFunctions';
-import { Link } from 'react-router-dom';
-import YouTubeVideo from '../../components/posts/youtubeVideo';
 
 const post = {
     title: "Happy new year!",
