@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { maxWidth, styled } from '@mui/system';
+import { styled } from '@mui/system';
 
 const StyledFigure = styled('figure', {
     shouldForwardProp: (prop) => prop !== 'align' && prop !== 'hasCaption'

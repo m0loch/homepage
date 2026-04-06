@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import { styled, width } from '@mui/system';
 
 const SpoilerInternal = styled('span')(
     ({ theme }) => ({
@@ -10,13 +10,13 @@ const SpoilerInternal = styled('span')(
             position: 'absolute',
             color: theme.palette.text.primary,
             backgroundColor: theme.palette.background.card,
-            width: '30vw',
             textAlign: 'center',
             borderRadius: '5px',
-            padding: '5px 0',
+            padding: '5px 10px',
             zIndex: 1,
             top: '120%',
             translate: '-50%',
+            width: 'max-content'
         },
 
         ".tooltip::after": {

@@ -145,6 +145,9 @@ function StatefulPost() {
                 <ol>
                     <BookmarkLink id="FinalFantasy10" isTitle>Final Fantasy X</BookmarkLink>
                     <li><BookmarkLink id="FF10Nutshell" onPreClick={() => forcePanelOpen(10)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF10Mechanics" onPreClick={() => forcePanelOpen(10)}>The mechanics</BookmarkLink></li>
+                    <li><BookmarkLink id="FF10Game" onPreClick={() => forcePanelOpen(10)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF10Cast" onPreClick={() => forcePanelOpen(10)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF10Cards" onPreClick={() => forcePanelOpen(10)}>The cards</BookmarkLink></li>
                     <li><BookmarkLink id="FF10ThemeDeck" onPreClick={() => forcePanelOpen(10)}>The pre-constructed deck</BookmarkLink></li>
                 </ol>
