@@ -1,4 +1,4 @@
-import { styled, width } from '@mui/system';
+import { styled } from '@mui/system';
 
 const SpoilerInternal = styled('span')(
     ({ theme }) => ({

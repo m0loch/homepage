@@ -154,6 +154,7 @@ function StatefulPost() {
                 <ol>
                     <BookmarkLink id="FinalFantasy11" isTitle>Final Fantasy XI</BookmarkLink>
                     <li><BookmarkLink id="FF11Nutshell" onPreClick={() => forcePanelOpen(11)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF11Game" onPreClick={() => forcePanelOpen(11)}>The game</BookmarkLink></li>
                     <li><BookmarkLink id="FF11Cards" onPreClick={() => forcePanelOpen(11)}>The cards</BookmarkLink></li>
                 </ol>
                 <ol>
@@ -362,7 +363,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2026-01-01"),
+    lastUpdate: new Date("2026-04-07"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };

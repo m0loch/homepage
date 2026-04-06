@@ -1,10 +1,10 @@
 import { splitText } from '../../../components/common/textFunctions';
 import { Bookmark } from "../../../components/posts/bookmarks";
-import InlineSpoiler from '../../../components/posts/inlineSpoiler';
 import CustomImage from "../../../components/posts/customImage";
 import YouTubeVideo from '../../../components/posts/youtubeVideo';
 
 import CoverArt from '../../../images/post-0063/ffxi/logo.png';
+import Races from '../../../images/post-0063/ffxi/races.jpg';
 
 function FF11() {
     return (
@@ -15,7 +15,44 @@ function FF11() {
                 src={CoverArt}
             />
             {splitText(`
-                <center><i>Coming "soon"</i></center>
+                Following Final Fantasy X's success, but also the <i>disastrous</i> reception of Final Fantasy: The Spirits Within, Square ended up in a precarious financial situation (something that would lead to the merger with Enix a few years later).
+
+                This led to the company doing something that I take as personally offensive: they decided that their first attempt at a MMORPG would <i>not only</i> be branded as a Final Fantasy game, but it would also be a mainline entry, out of fear that calling it Final Fantasy Online would not maximize its sales potential.
+
+                This means that somebody like me, being a huge fan of the franchise <i>but also</i> a big hater of MMORPGs, had to choose between playing it anyway or just pretend it never existed - I'll let you guess which option I chose, but if you haven't found your answer already, please note that this section is very short.
+
+                I still do have to give it some credit, though: the game was a big commercial success and, after its release on on 16/05/2002, the last additional chapter of its more recent scenario (<i>The Voracious Resurgence</i>) has been released on May 2023 -21 years after the original release- and it is, at the time of writing, still receiving updates.
+            `)}
+            <Bookmark id="FF11Game">The game</Bookmark>
+            {splitText(`
+                After moving to Hawaii (let's just stop discussing <i><a href="https://www.youtube.com/watch?v=_tWU5JW1Qw4" target="_blank" rel="noreferrer">why</a></i>), Sakaguchi started playing Everquest and Ultima Online, noting that there was no Japanese MMORPG available on the market.
+
+                With this thought in mind, despite his interest in other venues that moved him away from active game development, he <i>strongly suggested</i> the company to start working on its own spin on the genre, focusing in particular on the social side of online gaming.
+
+                FFXI was developed with heavy focus on being a global game, with the game being cross-platform (PS2, PC, Xbox) and its servers being non-region specific, a testament on the social-driven, progressive-driven design of the game.
+
+                I won't dwell too much on the gameplay (it wouldn't make sense, with me not having played it), I'll just quickly mention that the game <i>allegedly</i> features a dynamic class system, taken from FF3 and FF5, that lets you change jobs at will (provided you have access to a Mog House or a Nomad Moogle), letting you choose a primary and a secondary job from a pool of 22 different options, with the support job being capped at half the level of the player.
+            `)}
+            <CustomImage
+                alt="Cover art for the Final Fantasy XI"
+                src={Races}
+                align="right"
+            >
+                <i>Artwork for the different races in Final Fantasy XI by <a href="https://we-are-vanadiel.finalfantasyxi.com/gallery/detail/?s=7&vol=1&id=0" target="_blank" rel="noreferrer" style={{ fontSize: "1rem" }}>Ryosuke Aiba</a></i>
+            </CustomImage>
+            {splitText(`
+                Such jobs are:
+                Warrior, Monk, White Mage, Black Mage, Red Mage and Thief (basic jobs) + Paladin, Dark Knight, Beastmaster, Bard, Ranger, Samurai, Ninja, Dragoon, Summoner, Blue Mage, Corsair, Puppetmaster, Dancer, Scholar, Geomancer and Rune Fencer (available from level 30, after completing job-specific quests).
+
+                Also, every player belongs to one of the following races:
+                Hume, aka your regular human;
+                Elvaan, your elvish-looking variant;
+                Tarutaru, child-like creatures, akin to moogles in other entries for their magical proficiency;
+                Mithra, a female-only race of cat-like humanoids;
+                Galka, male-only race of bulkier, ursine hominids.
+ 
+                Fun fact: since 19/05/2025 you'll finally be <a href="http://www.playonline.com/ff11eu/envi/racechange/" target="_blank" rel="noreferrer">able to change race!</a>
+                You'll just have to pay 11€ (or dollars).
             `)}
 
             <Bookmark id="FF11Cards">The cards</Bookmark>
@@ -29,10 +66,9 @@ function FF11() {
                 The card is not that powerful to be honest, but plays well in limited with the "X is 4 or more" spellslinging archetype.
             `)}
 
-            <YouTubeVideo videoId={"aaiZCZ0HY1w"} align="right" caption={<i><a href="https://gatherer.wizards.com/FIN/en-us/212/absolute-virtue" target="_blank" rel="noreferrer">Absolute Virtue</a> is an infamously difficult boss fight from the Chains of Promathia expansion, I'll let Darryl from FF Union fill you in with the details</i>} />
+            <YouTubeVideo videoId={"aaiZCZ0HY1w"} align="right" caption={<i><a href="https://gatherer.wizards.com/FIN/en-us/212/absolute-virtue" target="_blank" rel="noreferrer" style={{ fontSize: "1rem" }}>Absolute Virtue</a> is an infamously difficult boss fight from the Chains of Promathia expansion, I'll let Darryl from FF Union fill you in with the details</i>} />
 
             {splitText(`
-
                 She's also represented in the Through the Ages reprint <a href="https://gatherer.wizards.com/FCA/en-us/34/diabolic-intent" target="_blank" rel="noreferrer">Shantotto's Coercion</a>, a tutor that finds some play in commander.
 
                 Similarly, <a href="https://gatherer.wizards.com/FIN/en-us/193/prishes-wanderings" target="_blank" rel="noreferrer">Prishe's Wanderings</a> references Prishe, an elvaan monk/white mage that acts as the main character of the Chains of Promathia expansion - the card is nothing more than a limited ramp spell, though.
