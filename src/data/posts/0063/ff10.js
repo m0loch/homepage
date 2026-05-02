@@ -391,9 +391,9 @@ function FF10() {
             </ul>
             <br/>
             <Bookmark id="FF10Cards">The cards</Bookmark>
+                <p>For the regular set, the amount of characters is quite limited:</p>
+                <p>the protagonist <a href="https://gatherer.wizards.com/FIN/en-us/246/tidus-blitzball-star" target="_blank" rel="noreferrer">Tidus, Blitzball Star</a>, which also features as <a href="https://gatherer.wizards.com/FCA/en-us/58/thrasios-triton-hero" target="_blank" rel="noreferrer">Tidus, Zanarkand Fayth</a><InlineSpoiler mask="*">Please: see my comment about Clive in the FF16 section</InlineSpoiler>, is really nothing to write home about, while <a href="https://gatherer.wizards.com/FIN/en-us/250/yuna-hope-of-spira" target="_blank" rel="noreferrer">Yuna, Hope of Spira</a> Yuna is a sensibly better mythic rare with some good enchantment/saga synergies, given her role as summoner.</p>
             {splitText(`
-                For the regular set, the amount of characters is quite limited:
-                the protagonist <a href="https://gatherer.wizards.com/FIN/en-us/246/tidus-blitzball-star" target="_blank" rel="noreferrer">Tidus, Blitzball Star</a>, which also features as <a href="https://gatherer.wizards.com/FCA/en-us/58/thrasios-triton-hero" target="_blank" rel="noreferrer">Tidus, Zanarkand Fayth</a>, is really nothing to write home about, while <a href="https://gatherer.wizards.com/FIN/en-us/250/yuna-hope-of-spira" target="_blank" rel="noreferrer">Yuna, Hope of Spira</a> Yuna is a sensibly better mythic rare with some good enchantment/saga synergies, given her role as summoner.
 
                 On the antagonists' side we have <a href="https://gatherer.wizards.com/FIN/en-us/242/sin-spiras-punishment" target="_blank" rel="noreferrer">Sin, Spira's Punisher</a> - I wonder if his graveyard interacting mechanic is meant as a nod to his ability of bringing people back and forth between Spira and Zanarkand, if somebody does please let me know.
 

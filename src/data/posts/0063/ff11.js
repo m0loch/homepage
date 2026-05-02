@@ -73,7 +73,7 @@ function FF11() {
 
                 Similarly, <a href="https://gatherer.wizards.com/FIN/en-us/193/prishes-wanderings" target="_blank" rel="noreferrer">Prishe's Wanderings</a> references Prishe, an elvaan monk/white mage that acts as the main character of the Chains of Promathia expansion - the card is nothing more than a limited ramp spell, though.
 
-                <a href="https://gatherer.wizards.com/FCA/en-us/2/ranger-captain-of-eos" target="_blank" rel="noreferrer">Knights of San d'Oria</a> - not to be confused with <a href="https://en.wikipedia.org/wiki/UC_Sampdoria" target="_blank" rel="noreferrer">Sampdoria</a> - is the reprint of a card that see some eternal play, other than being a shoutout to the Royal Knights of the kingdom of San d'Oria, an elite group of Elvaan knights at the direct service of the king.
+                <a href="https://gatherer.wizards.com/FCA/en-us/2/ranger-captain-of-eos" target="_blank" rel="noreferrer">Knights of San d'Oria</a> - not to be confused with <a href="https://en.wikipedia.org/wiki/UC_Sampdoria" target="_blank" rel="noreferrer">Sampdoria</a> - is the reprint of a card that see some eternal play, other than being a shout-out to the Royal Knights of the kingdom of San d'Oria, an elite group of Elvaan knights at the direct service of the king.
 
                 <a href="https://gatherer.wizards.com/FCA/en-us/35/gix-yawgmoth-praetor" target="_blank" rel="noreferrer">The Shadow Lord</a> is the original big bad of the game, so its Through the Ages reprint is a fitting one.
 

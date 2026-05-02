@@ -22,6 +22,8 @@ import FF11page from "./0063/ff11";
 import FF12page from "./0063/ff12";
 import FF13page from "./0063/ff13";
 import FF14page from "./0063/ff14";
+import FF15page from "./0063/ff15";
+import FF16page from "./0063/ff16";
 import CustomImage from "../../components/posts/customImage";
 
 const StyledLogo = styled(Logo)(
@@ -173,6 +175,16 @@ function StatefulPost() {
                     <li><BookmarkLink id="FF14Nutshell" onPreClick={() => forcePanelOpen(14)}>A bit of context</BookmarkLink></li>
                     <li><BookmarkLink id="FF14Cards" onPreClick={() => forcePanelOpen(14)}>The cards</BookmarkLink></li>
                     <li><BookmarkLink id="FF14ThemeDeck" onPreClick={() => forcePanelOpen(14)}>The pre-constructed deck</BookmarkLink></li>                    
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy15" isTitle>Final Fantasy XV</BookmarkLink>
+                    <li><BookmarkLink id="FF15Nutshell" onPreClick={() => forcePanelOpen(15)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF15Cards" onPreClick={() => forcePanelOpen(15)}>The cards</BookmarkLink></li>
+                </ol>
+                <ol>
+                    <BookmarkLink id="FinalFantasy16" isTitle>Final Fantasy XVI</BookmarkLink>
+                    <li><BookmarkLink id="FF16Nutshell" onPreClick={() => forcePanelOpen(16)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF16Cards" onPreClick={() => forcePanelOpen(16)}>The cards</BookmarkLink></li>
                 </ol>
             </StyledCollapse>
 
@@ -375,6 +387,30 @@ function StatefulPost() {
             <Collapse in={open[14]} timeout="auto" unmountOnExit>
                 <FF14page/>
             </Collapse>
+
+            <StyledCollapseHeader
+                open={open[15]}
+                onClick={() => handleStateChange(15)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy15" isTitle>Final Fantasy XV</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[15]} timeout="auto" unmountOnExit>
+                <FF15page/>
+            </Collapse>
+
+            <StyledCollapseHeader
+                open={open[16]}
+                onClick={() => handleStateChange(16)}
+                isSectionTitle
+            >
+                <Bookmark id="FinalFantasy16" isTitle>Final Fantasy XVI</Bookmark>
+            </StyledCollapseHeader>
+
+            <Collapse in={open[16]} timeout="auto" unmountOnExit>
+                <FF16page/>
+            </Collapse>
         </>
     );
 }
@@ -382,7 +418,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2026-04-26"),
+    lastUpdate: new Date("2026-05-02"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };

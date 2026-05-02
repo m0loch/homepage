@@ -12,7 +12,7 @@ function FF12() {
             <CustomImage
                 alt="Cover art for the Final Fantasy XII"
                 src={CoverArt}
-                // align="right"
+                align="center"
             />
             {splitText(`
                 <center><i>Coming "soon"</i></center>

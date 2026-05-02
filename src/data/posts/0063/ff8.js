@@ -338,7 +338,7 @@ function FF8() {
 
                 In the end, both Squall and Laguna take a central role in saving the world from Ultimecia, and both do so by growing into well-regarded leaders in their own circles, but they do so by coming from veri different backgrounds, with Laguna placing others before himself, while Squall starts off by not wanting to either relay on others or letting others <s>rely</s><i>place their burden</i> on him.
             `)}
-            <YouTubeVideo videoId={"l6Mg0mWMUs0"} />
+            <YouTubeVideo videoId={"zCwByvNYYY0"} caption="I originally shared the video from Faye Wong's channel, but it got unlisted..."/>
             <Bookmark id="FF8Cards">The cards</Bookmark>
             {splitText(`
                 After FF6 and FF7, I have to say it's a relief to see a smaller set of cards to tackle.
@@ -378,7 +378,7 @@ function FF8() {
 
                 <a href="https://gatherer.wizards.com/FIN/en-us/159/sorceresss-schemes" target="_blank" rel="noreferrer">Sorceress's Schemes</a> is the third <b>flashback</b> card in a row, even if it involves no memory-based justification. Given that we're talking about mind control and time manipulation, though, we accept this design anyway.
 
-                <a href="https://gatherer.wizards.com/FCA/en-us/39/light-up-the-stage" target="_blank" rel="noreferrer">A Promise Fulfilled</a> is a sweet shoutout to the ending <i>and</i> the opening scene, with the promise in question being the one Squall makes to Rinoa after she dreams about them being separated and lost - the thread that binds them together during the final time compression, saving them from oblivion.
+                <a href="https://gatherer.wizards.com/FCA/en-us/39/light-up-the-stage" target="_blank" rel="noreferrer">A Promise Fulfilled</a> is a sweet shout-out to the ending <i>and</i> the opening scene, with the promise in question being the one Squall makes to Rinoa after she dreams about them being separated and lost - the thread that binds them together during the final time compression, saving them from oblivion.
 
                 Too bad such a big plot point is a reprint of a not-so-great card that just found some use in the standard format.
             `)}

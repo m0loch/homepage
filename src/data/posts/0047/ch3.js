@@ -345,7 +345,7 @@ function Chapter3() {
             Gongaga is a weird one.
             After starting out as an optional village -or rather, the ruins of one- in the original game, it took a much more central role in Crisis Core, being the hometown of the late Zack Fair.
             
-            It has basically become a big Crisis Core shout out, to be completely honest.
+            It has basically become a big Crisis Core shout-out, to be completely honest.
             Not that it's a bad thing by any means.`)}
             <CustomImage
                 alt="Cissnei and Cait Sith praying"
