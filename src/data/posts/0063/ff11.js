@@ -13,6 +13,8 @@ function FF11() {
             <CustomImage
                 alt="Cover art for the Final Fantasy XI"
                 src={CoverArt}
+                style={{ backgroundColor: "white", padding: "0 0 1%" }}
+
             />
             {splitText(`
                 Following Final Fantasy X's success, but also the <i>disastrous</i> reception of Final Fantasy: The Spirits Within, Square ended up in a precarious financial situation (something that would lead to the merger with Enix a few years later).
