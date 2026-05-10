@@ -66,11 +66,11 @@ function StatefulPost() {
                 TL;DR: this is going to take a <i>long</i> while.
                 Have fun, I hope I'll do.
 
-                <b>UPDATE:</b> I'm barely compiling the FF7 section part, and WotC announced <i>extra printings</i> and new products. This is officially a nightmare ^_^;`)}
-            <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">https://magic.wizards.com/en/news/feature/collecting-final-fantasy</a><br/>
+                <b>UPDATE:</b> I'm barely compiling the FF7 section part, and WotC announced <i>extra printings</i> and new products. This is officially a nightmare ^_^;
+                <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">Official announcement.</a>
+            `)}
 
             {splitText(`
-
                 <b>UPDATE #2:</b> Given that I'm writing at snail pace, I decided I'll update this post with <i>minor</i> updates while I compile them - you know, every now and then I want to post something else but this whole project has become such a huge roadblocker that I either stop having a job or surrender to my own limits.
 
                 Bear with me, this is something I want to finish, but when I started I didn't plan to actually reinstall all the games and play them again...
