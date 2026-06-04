@@ -13,7 +13,7 @@ function FF5() {
         <>
         <Bookmark id="FF5Nutshell">A bit of context</Bookmark>
         <CustomImage
-            alt="Cover art for the original Final Fantasy V"
+            alt="Cover art original Final Fantasy V"
             src={CoverArt}
             align="right"
         />

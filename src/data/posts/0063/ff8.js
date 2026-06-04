@@ -24,7 +24,7 @@ function FF8() {
         <>
             <Bookmark id="FF8Nutshell">A bit of context</Bookmark>
             <CustomImage
-                alt="Cover art for the original Final Fantasy VIII"
+                alt="Cover art for Final Fantasy VIII"
                 src={CoverArt}
             />
             {splitText(`

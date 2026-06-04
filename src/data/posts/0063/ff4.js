@@ -33,7 +33,7 @@ function FF4() {
         <Bookmark id="FF4Game">The game</Bookmark>
         <p>The first issue that Hironobu Sakaguchi wanted to address with this new game was the nearly anonymous cast of characters that moved the story forward: while the first game contained a plot that appeared to be compleately disconnected from the party members, the following two -even in a slightly different way- ended up having the plot pushed forward by the guest characters more than the main protagonists themselves, who where either not memorable when not straight up nameless.</p>
         <CustomImage
-            alt="Cover art for the original Final Fantasy IV"
+            alt="FF4 3D remake graphics"
             src={Remake3D}
             align="left"
         >
@@ -47,7 +47,7 @@ function FF4() {
             En passant, his girlfriend Rosa and Cid the engineer are introduced, as well as his best friend Kain that will join him on this brief quest - a quest that ends with the two delivering the package and unwillingly causing the death of pretty much everyone in the village, except for the young summoner Rydia.
         `)}
         <CustomImage
-            alt="Cover art for the original Final Fantasy IV"
+            alt="Cover art for Final Fantasy IV (DS remake)"
             src={DSCover}
             align="right"
         >

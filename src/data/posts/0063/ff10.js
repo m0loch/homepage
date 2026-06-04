@@ -27,7 +27,7 @@ function FF10() {
         <>
             <Bookmark id="FF10Nutshell">A bit of context</Bookmark>
             <CustomImage
-                alt="Cover art for the original Final Fantasy X"
+                alt="Cover art for Final Fantasy X"
                 src={CoverArt}
             />
             <p>Final Fantasy X is the epicenter of a lot of things that happen in and around the franchise in the first 2000s: at this point, the popularity of the series is at an all-time high, Square is on a rampage after also coming out with loads of successful other games, both in the JRPG sphere (like Chrono Trigger and Xenogears) and outside of it (like Parasite Eve), and they're even investing outside the videogame realm, having set up a movie studio from scratch that will soon, by this time, launch Final Fantasy: The Spirits Within<InlineSpoiler mask='*'><a href='https://tvtropes.org/pmwiki/pmwiki.php/Main/Foreshadowing' target="_blank" rel="noreferrer"><i>Foreshadowing</i></a></InlineSpoiler>.</p>

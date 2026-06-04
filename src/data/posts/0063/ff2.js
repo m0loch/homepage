@@ -31,7 +31,7 @@ function FF2() {
         `)}
         <p>Given the similarities between the two games, especially in terms of graphics and presentation, these first few minutes are a statement: where the first game could not really convey a plot due to its limitations<InlineSpoiler mask='*'>For example: NPCs could just say a single box of text; when the game needed some longer exposition the developers ended up creating the Circle of Sages, as Lukahn could not talk that much</InlineSpoiler>, this time the player experiences the closest thing to a cutscene the series ever had.</p>
         <CustomImage
-            alt="Cover art for the original Final Fantasy II"
+            alt="The cast depicted by Yoshitaka Amano"
             src={AmanoArt}
             align="left"
         >

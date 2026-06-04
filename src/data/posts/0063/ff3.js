@@ -36,7 +36,7 @@ function FF3() {
             Gone is the idea of having a named party member being able to use any piece of equipment or magic, but in need of proper training in order to get proficient at it, it's time to go back to the good old job system that everyone loved from the first game - with a twist! Now characters can change class at any time, and this becomes the focus on the game.
         `)}
         <CustomImage
-            alt="Cover art for the original Final Fantasy III"
+            alt="The jobs of Final Fantasy III"
             src="https://images.steamusercontent.com/ugc/1838035412344235136/04266AEC7911FF92CBC8F0C3D2C1C0277A1B352C/"
             align="left"
         >
@@ -54,7 +54,7 @@ function FF3() {
 
         <Bookmark id="FF3Cards">The cards</Bookmark>
         <CustomImage
-            alt="Cover art for the original Final Fantasy III"
+            alt="The main cast, from the 3D remake of Final Fantasy III"
             src={ModernIllustration}
             align="right"
         >

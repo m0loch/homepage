@@ -10,7 +10,7 @@ function FF16() {
         <>
             <Bookmark id="FF16Nutshell">A bit of context</Bookmark>
             <CustomImage
-                alt="Cover art for the Final Fantasy XVI"
+                alt="Cover art for Final Fantasy XVI"
                 src={CoverArt}
             />
             {splitText(`

@@ -22,7 +22,7 @@ function FF9() {
         <>
             <Bookmark id="FF9Nutshell">A bit of context</Bookmark>
             <CustomImage
-                alt="Cover art for the original Final Fantasy IX"
+                alt="Cover art for Final Fantasy IX"
                 src={CoverArt}
             />
             {splitText(`

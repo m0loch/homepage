@@ -11,7 +11,7 @@ function FF11() {
         <>
             <Bookmark id="FF11Nutshell">A bit of context</Bookmark>
             <CustomImage
-                alt="Cover art for the Final Fantasy XI"
+                alt="Cover art for Final Fantasy XI"
                 src={CoverArt}
                 style={{ backgroundColor: "white", padding: "0 0 1%" }}
 
@@ -36,7 +36,7 @@ function FF11() {
                 I won't dwell too much on the gameplay (it wouldn't make sense, with me not having played it), I'll just quickly mention that the game <i>allegedly</i> features a dynamic class system, taken from FF3 and FF5, that lets you change jobs at will (provided you have access to a Mog House or a Nomad Moogle), letting you choose a primary and a secondary job from a pool of 22 different options, with the support job being capped at half the level of the player.
             `)}
             <CustomImage
-                alt="Cover art for the Final Fantasy XI"
+                alt="Cover art for Final Fantasy XI"
                 src={Races}
                 align="right"
             >
