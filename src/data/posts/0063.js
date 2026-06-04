@@ -26,6 +26,8 @@ import FF15page from "./0063/ff15";
 import FF16page from "./0063/ff16";
 import CustomImage from "../../components/posts/customImage";
 
+import ZackReprint from "../../images/post-0063/zack-reprint.jpg";
+
 const StyledLogo = styled(Logo)(
     ({ theme }) => ({
         display: "block",
@@ -66,15 +68,20 @@ function StatefulPost() {
                 TL;DR: this is going to take a <i>long</i> while.
                 Have fun, I hope I'll do.
 
-                <b>UPDATE:</b> I'm barely compiling the FF7 section part, and WotC announced <i>extra printings</i> and new products. This is officially a nightmare ^_^;
-                <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">Official announcement.</a>
-            `)}
+                <b>UPDATE:</b> I'm barely compiling the FF7 section part, and WotC announced <a href="https://magic.wizards.com/en/news/feature/collecting-final-fantasy" target="_blank" rel="noreferrer">extra printings</a> and new products. This is officially a nightmare ^_^;
 
-            {splitText(`
                 <b>UPDATE #2:</b> Given that I'm writing at snail pace, I decided I'll update this post with <i>minor</i> updates while I compile them - you know, every now and then I want to post something else but this whole project has become such a huge roadblocker that I either stop having a job or surrender to my own limits.
 
                 Bear with me, this is something I want to finish, but when I started I didn't plan to actually reinstall all the games and play them again...
+
+                <b>UPDATE #3:</b> I'm starting to get seasick, <a href="https://www.cardmarket.com/en/Magic/Products/Singles/Magic-The-Gathering-FINAL-FANTASY-Holiday-Release" target="_blank" rel="noreferrer">here</a> are some extra printings with some brand-new entries!
+
+                <b>UPDATE #4:</b> They just printed a new Zack Fair promo exclusive for the Nintendo Switch 2 release of FF7: Rebirth. Please stop.
             `)}
+            <CustomImage
+                alt="The announcement image for the FF7: Rebirth release for the Nintendo Switch 2, with a special Zack Fair promo"
+                src={ZackReprint}
+            />
 
             <span id="Table_of_contents"></span>
             <StyledCollapseHeader
@@ -163,6 +170,9 @@ function StatefulPost() {
                 <ol>
                     <BookmarkLink id="FinalFantasy12" isTitle>Final Fantasy XII</BookmarkLink>
                     <li><BookmarkLink id="FF12Nutshell" onPreClick={() => forcePanelOpen(12)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF12Mechanics" onPreClick={() => forcePanelOpen(12)}>The mechanics</BookmarkLink></li>
+                    <li><BookmarkLink id="FF12Game" onPreClick={() => forcePanelOpen(12)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF12Cast" onPreClick={() => forcePanelOpen(12)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF12Cards" onPreClick={() => forcePanelOpen(12)}>The cards</BookmarkLink></li>
                 </ol>
                 <ol>
@@ -418,7 +428,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2026-05-02"),
+    lastUpdate: new Date("2026-06-04"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };
