@@ -44,7 +44,7 @@ function FF12() {
 
                 Similarly, instead of having an original setting of its own, FFXII takes place in Ivalice, a world originally created for Final Fantasy Tactics, which would end up being the common denominator for a related project called "Ivalice Alliance", which would also include Vagrant Story and Final Fantasy Tactics Advance, among others.
             `)}
-            <YouTubeVideo videoId="IqY4Fj-s2Ek" align="left" caption="The"/>
+            <YouTubeVideo videoId="IqY4Fj-s2Ek" align="left" caption="The main theme, performed by Yui Morishita"/>
             <p>Despite some serious behind-the-scenes drama<InlineSpoiler mask="*">Nothing that could ever compete with Final Fantasy 15, though</InlineSpoiler>, with Yasumi Matsuno (incidentally: the mastermind behind the Ivalice Alliance project) leaving the project in the hands of Hiroyuki Ito and multiple late changes during the development, the game was released on 16/03/2006, <b>five years after the previous single-player mainline entry</b>, partly because of the sudden competition from previous entries' expanded universes (see: FF7 Compilation, FFX-2), something that Hironobu Sakaguchi strongly opposed in the past.</p>
             <br/>
             <p>Something that -in my opinion- contributedto the loss of momentum the franchise experienced from this time onwards.</p>
