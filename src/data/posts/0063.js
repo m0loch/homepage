@@ -77,6 +77,8 @@ function StatefulPost() {
                 <b>UPDATE #3:</b> I'm starting to get seasick, <a href="https://www.cardmarket.com/en/Magic/Products/Singles/Magic-The-Gathering-FINAL-FANTASY-Holiday-Release" target="_blank" rel="noreferrer">here</a> are some extra printings with some brand-new entries!
 
                 <b>UPDATE #4:</b> They just printed a new Zack Fair promo exclusive for the Nintendo Switch 2 release of FF7: Rebirth. Please stop.
+
+                <b>UPDATE #5:</b> I've just published the full FFXIII section. More than a year went by since the beginning of this madness, but at least I'm seeing the light at the end of the tunnel.
             `)}
             <CustomImage
                 alt="The announcement image for the FF7: Rebirth release for the Nintendo Switch 2, with a special Zack Fair promo"
@@ -178,6 +180,9 @@ function StatefulPost() {
                 <ol>
                     <BookmarkLink id="FinalFantasy13" isTitle>Final Fantasy XIII</BookmarkLink>
                     <li><BookmarkLink id="FF13Nutshell" onPreClick={() => forcePanelOpen(13)}>A bit of context</BookmarkLink></li>
+                    <li><BookmarkLink id="FF13Mechanics" onPreClick={() => forcePanelOpen(13)}>The mechanics</BookmarkLink></li>
+                    <li><BookmarkLink id="FF13Game" onPreClick={() => forcePanelOpen(13)}>The game</BookmarkLink></li>
+                    <li><BookmarkLink id="FF13Cast" onPreClick={() => forcePanelOpen(13)}>The cast</BookmarkLink></li>
                     <li><BookmarkLink id="FF13Cards" onPreClick={() => forcePanelOpen(13)}>The cards</BookmarkLink></li>
                 </ol>
                 <ol>
@@ -428,7 +433,7 @@ function StatefulPost() {
 const post = {
     title: "The. Biggest. Post. Ever.",
     date: new Date("2025-07-12"),
-    lastUpdate: new Date("2026-06-04"),
+    lastUpdate: new Date("2026-08-02"),
     smartContent: <StatefulPost />,
     signature: `Romeo`
 };

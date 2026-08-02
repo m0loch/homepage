@@ -16,7 +16,13 @@ const SpoilerInternal = styled('span')(
             zIndex: 1,
             top: '120%',
             translate: '-50%',
-            width: 'max-content'
+            width: 'max-content',
+
+            maxWidth: '50vmax',
+            [theme.breakpoints.down('md')]: {
+                maxWidth: '20vmax',
+            }
+
         },
 
         ".tooltip::after": {
