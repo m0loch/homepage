@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.9fff0ec3.js",
+    "main.js": "/homepage/static/js/main.44c8ac4f.js",
     "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
@@ -44,11 +44,14 @@
     "static/media/cosmo-canyon.jpg": "/homepage/static/media/cosmo-canyon.fa10ceed91129334c405.jpg",
     "static/media/gongaga-prayer.jpg": "/homepage/static/media/gongaga-prayer.abf8d5184bc452b52d28.jpg",
     "static/media/e33-ending.jpg": "/homepage/static/media/e33-ending.cd89bb97e5f2bee0956e.jpg",
+    "static/media/alexander.jpg": "/homepage/static/media/alexander.2655ef18cb591e58044f.jpg",
     "static/media/cloud.jpg": "/homepage/static/media/cloud.43104ff61b971aef9870.jpg",
     "static/media/corel-gs-from-north.jpg": "/homepage/static/media/corel-gs-from-north.2e71957c620e6c7a2055.jpg",
     "static/media/mythril-museum.jpg": "/homepage/static/media/mythril-museum.8e20f324dc23296aae1a.jpg",
     "static/media/famitsuad.jpeg": "/homepage/static/media/famitsuad.a83bc421b392327d7ee4.jpeg",
     "static/media/junon-fort-condor-board.jpg": "/homepage/static/media/junon-fort-condor-board.c2281291a43f11c83f50.jpg",
+    "static/media/pshift.jpg": "/homepage/static/media/pshift.ec4e51980da3a5560adf.jpg",
+    "static/media/navigation.jpg": "/homepage/static/media/navigation.455e2684e7520d27e2e5.jpg",
     "static/media/red_xiii.jpg": "/homepage/static/media/red_xiii.e60660c7b30132fa2881.jpg",
     "static/media/yuffie.jpg": "/homepage/static/media/yuffie.adc065d137f7525a3bd8.jpg",
     "static/media/corel-costa-del-sol.jpg": "/homepage/static/media/corel-costa-del-sol.0353303eba9fd1457fae.jpg",
@@ -71,9 +74,11 @@
     "static/media/e33-mansion.jpg": "/homepage/static/media/e33-mansion.77f9be13dc787cec8b67.jpg",
     "static/media/cetra-temple-run.jpg": "/homepage/static/media/cetra-temple-run.df0776040b54b7e10160.jpg",
     "static/media/cid.jpg": "/homepage/static/media/cid.8bf66854e09a347c5814.jpg",
+    "static/media/summon.jpg": "/homepage/static/media/summon.4b6cf2cdbf8574502946.jpg",
     "static/media/grid.jpg": "/homepage/static/media/grid.a2e45c7ec28ce310ddb5.jpg",
     "static/media/nibelheim-model-employee.jpg": "/homepage/static/media/nibelheim-model-employee.4d755f95b933216f1a7a.jpg",
     "static/media/gongaga-zack-parents.jpg": "/homepage/static/media/gongaga-zack-parents.b468d4c0b30be53b9282.jpg",
+    "static/media/crystarium.jpg": "/homepage/static/media/crystarium.ec10c0080a972c597f6d.jpg",
     "static/media/cait-sacrifice.jpg": "/homepage/static/media/cait-sacrifice.97f78ba2d9c4e1996950.jpg",
     "static/media/ttriad.jpg": "/homepage/static/media/ttriad.9fa6fe2a995b47cd27b1.jpg",
     "static/media/cetra-aerith-powers.jpg": "/homepage/static/media/cetra-aerith-powers.e6429aab08d238f230ad.jpg",
@@ -117,6 +122,7 @@
     "static/media/ff-cover.png": "/homepage/static/media/ff-cover.b50b8c509e3f70d60777.png",
     "static/media/cloud-homecoming.jpg": "/homepage/static/media/cloud-homecoming.afaf9d8c77c36e060045.jpg",
     "static/media/seymourzaon.jpg": "/homepage/static/media/seymourzaon.7d749081d73d5e3070cb.jpg",
+    "static/media/vanille.png": "/homepage/static/media/vanille.3fe820dc0520e7a3d560.png",
     "static/media/amarant.jpg": "/homepage/static/media/amarant.32c2e659670b467c7e9d.jpg",
     "static/media/e33-main.jpg": "/homepage/static/media/e33-main.4b503e07feb69ca9224a.jpg",
     "static/media/ff3-cover.webp": "/homepage/static/media/ff3-cover.66c00b167b8407832a44.webp",
@@ -133,17 +139,22 @@
     "static/media/balthier-fran.jpg": "/homepage/static/media/balthier-fran.3b9d15f9619222330d34.jpg",
     "static/media/cover.jpg": "/homepage/static/media/cover.5d5f522d3381c05ceabd.jpg",
     "static/media/foreshadowing.jpg": "/homepage/static/media/foreshadowing.d939e13248910125749b.jpg",
+    "static/media/sazh.png": "/homepage/static/media/sazh.881f172ba4542ba5bcbe.png",
     "static/media/joshua.jpg": "/homepage/static/media/joshua.a48bc1f0012278e0264a.jpg",
     "static/media/sanbreque-emperor.jpg": "/homepage/static/media/sanbreque-emperor.f8789f8b62cbb273dcf0.jpg",
     "static/media/reks.jpg": "/homepage/static/media/reks.0ade2b54d3939ef10a7f.jpg",
     "static/media/e33-noco.jpg": "/homepage/static/media/e33-noco.a580347f080485e935a4.jpg",
+    "static/media/hope.png": "/homepage/static/media/hope.03c87d301a115ca179a3.png",
     "static/media/first-reactor.jpg": "/homepage/static/media/first-reactor.6e4aaaa3d2661b3b1a0b.jpg",
     "static/media/races.jpg": "/homepage/static/media/races.9fe906a19a903559eb59.jpg",
     "static/media/edgar.jpeg": "/homepage/static/media/edgar.850af0d4af47b9e46380.jpeg",
     "static/media/ff16-clive.webp": "/homepage/static/media/ff16-clive.6f6b893ad25d54666080.webp",
+    "static/media/fang.png": "/homepage/static/media/fang.34ec76921b34b32635e2.png",
     "static/media/battle.jpg": "/homepage/static/media/battle.f04039257864be7a9a69.jpg",
     "static/media/logo.webp": "/homepage/static/media/logo.a9d08ba8c4965d223c96.webp",
     "static/media/scales.png": "/homepage/static/media/scales.3903525779ceb3551419.png",
+    "static/media/snow.png": "/homepage/static/media/snow.ccb3a7369d57b44b7fba.png",
+    "static/media/lightning.png": "/homepage/static/media/lightning.177301106710d111e4c8.png",
     "static/media/cassette_beasts.png": "/homepage/static/media/cassette_beasts.cd29596068f077a99b00.png",
     "static/media/ff3-modern.jpg": "/homepage/static/media/ff3-modern.79db135d9678952dd318.jpg",
     "static/media/e33-mystery.jpg": "/homepage/static/media/e33-mystery.7dc20bd5489f6c246d73.jpg",
@@ -223,9 +234,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.9fff0ec3.js.map": "/homepage/static/js/main.9fff0ec3.js.map"
+    "main.44c8ac4f.js.map": "/homepage/static/js/main.44c8ac4f.js.map"
   },
   "entrypoints": [
-    "static/js/main.9fff0ec3.js"
+    "static/js/main.44c8ac4f.js"
   ]
 }
