@@ -1,16 +1,27 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.44c8ac4f.js",
+    "main.js": "/homepage/static/js/main.b0d55c52.js",
     "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
+    "static/media/evercold-amano.png": "/homepage/static/media/evercold-amano.72e9f394111683ff1844.png",
+    "static/media/dawntrail-yoshida.png": "/homepage/static/media/dawntrail-yoshida.ceca7103819f6509a08f.png",
     "static/media/balatro.png": "/homepage/static/media/balatro.2582b3b868702d8b0ba4.png",
     "static/media/moron.png": "/homepage/static/media/moron.1b8d5ec9da786d4097c8.png",
+    "static/media/realmreborn-amano.png": "/homepage/static/media/realmreborn-amano.62a93653ecd52b7541b7.png",
+    "static/media/heavensward-yoshida.png": "/homepage/static/media/heavensward-yoshida.72470ff0c70f5312c746.png",
+    "static/media/endsinger-amano.png": "/homepage/static/media/endsinger-amano.b1b238d52ddbfa6d5799.png",
+    "static/media/endwalker-yoshida.png": "/homepage/static/media/endwalker-yoshida.8743b67a2ac9a516d124.png",
+    "static/media/shadowbringers-yoshida.png": "/homepage/static/media/shadowbringers-yoshida.dd979f7191faebe7638c.png",
+    "static/media/endwalker-amano.png": "/homepage/static/media/endwalker-amano.be89d704b7d8b2952d3f.png",
+    "static/media/stormblood-yoshida.png": "/homepage/static/media/stormblood-yoshida.c00b56f8bab3248c89ee.png",
     "static/media/kalm-invasion.jpg": "/homepage/static/media/kalm-invasion.daa1cb984cec6b264622.jpg",
     "static/media/roland.png": "/homepage/static/media/roland.a9e74c7de11f77e7784f.png",
+    "static/media/classes-yoshida.png": "/homepage/static/media/classes-yoshida.ded95e1b58b4c3a44928.png",
     "static/media/frederica.png": "/homepage/static/media/frederica.b4d15084744b699174d3.png",
     "static/media/serenoa.png": "/homepage/static/media/serenoa.a165165f6836e057f25a.png",
     "static/media/benedict.png": "/homepage/static/media/benedict.36b59398be3c1166ceaa.png",
+    "static/media/ff14-amano.png": "/homepage/static/media/ff14-amano.a7ba1b611dab66293d69.png",
     "static/media/intro.jpg": "/homepage/static/media/intro.ff4533332a5fd2d2b8a5.jpg",
     "static/media/grasslands-farm.jpg": "/homepage/static/media/grasslands-farm.010c137c53906b6f8db4.jpg",
     "static/media/world_map.jpg": "/homepage/static/media/world_map.508cd73c4e767654fce4.jpg",
@@ -26,6 +37,7 @@
     "static/media/cetra-ancient-city.jpg": "/homepage/static/media/cetra-ancient-city.983970030542351680bd.jpg",
     "static/media/corel-reactor.jpg": "/homepage/static/media/corel-reactor.64d995e56eb1f54c30f4.jpg",
     "static/media/vincent-monster.jpg": "/homepage/static/media/vincent-monster.d92f7e8a3e1fbed7c755.jpg",
+    "static/media/stormblood-amano.png": "/homepage/static/media/stormblood-amano.dffe34e0023c00f0f4dd.png",
     "static/media/junon-highwind.jpg": "/homepage/static/media/junon-highwind.7194c02b22b9737c3816.jpg",
     "static/media/chadley-end.jpg": "/homepage/static/media/chadley-end.0f43da1614131bbad029.jpg",
     "static/media/tiny-bronco.jpg": "/homepage/static/media/tiny-bronco.93f0017942b49af91cf5.jpg",
@@ -38,6 +50,7 @@
     "static/media/cosmo-river-of-lights.jpg": "/homepage/static/media/cosmo-river-of-lights.c8e883fd28e4b21aa507.jpg",
     "static/media/corel-gold-saucer.jpg": "/homepage/static/media/corel-gold-saucer.9fb5d69fb7b6dfd8e9fc.jpg",
     "static/media/red-back-home.jpg": "/homepage/static/media/red-back-home.bfd42b789b1db80e8b6d.jpg",
+    "static/media/heavensward-amano.png": "/homepage/static/media/heavensward-amano.ec7050cd48b9cbbe1a0d.png",
     "static/media/mythril-golem.jpg": "/homepage/static/media/mythril-golem.2c10fa1a705db693bf42.jpg",
     "static/media/barret.jpg": "/homepage/static/media/barret.75303dc82803354c9c81.jpg",
     "static/media/post46.png": "/homepage/static/media/post46.1b5ab3fd7523cff231a0.png",
@@ -234,9 +247,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.44c8ac4f.js.map": "/homepage/static/js/main.44c8ac4f.js.map"
+    "main.b0d55c52.js.map": "/homepage/static/js/main.b0d55c52.js.map"
   },
   "entrypoints": [
-    "static/js/main.44c8ac4f.js"
+    "static/js/main.b0d55c52.js"
   ]
 }
