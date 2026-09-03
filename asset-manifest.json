@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/homepage/static/js/main.b0d55c52.js",
+    "main.js": "/homepage/static/js/main.f0e177de.js",
     "static/media/logo.png": "/homepage/static/media/logo.dd5f3972e58f56ddc6b8.png",
     "static/media/zack.jpg": "/homepage/static/media/zack.4ced3a3436d037ff8d3b.jpg",
     "static/media/cloud-unreliable-2.jpg": "/homepage/static/media/cloud-unreliable-2.e6d0c92ecd1bbaaa0bdc.jpg",
@@ -118,6 +118,7 @@
     "static/media/tifa-past.jpg": "/homepage/static/media/tifa-past.b26df87af99c891a0ecc.jpg",
     "static/media/cast.jpeg": "/homepage/static/media/cast.ea3b23c0255ea5868ec7.jpeg",
     "static/media/red-seto.jpg": "/homepage/static/media/red-seto.a63ac462b448c9d20e0a.jpg",
+    "static/media/final-showdown.jpg": "/homepage/static/media/final-showdown.fb6ec8266ceca51530ab.jpg",
     "static/media/brahne.jpg": "/homepage/static/media/brahne.4a9dd9e217544e166fa3.jpg",
     "static/media/vivi.jpg": "/homepage/static/media/vivi.1d29b628dc92d79ad5cc.jpg",
     "static/media/zidane.jpg": "/homepage/static/media/zidane.94e720f8e6ca9a372a72.jpg",
@@ -196,6 +197,7 @@
     "static/media/ff12-international-1.jpg": "/homepage/static/media/ff12-international-1.fe27f81c5a8a049eb3da.jpg",
     "static/media/squall.jpg": "/homepage/static/media/squall.2bb4336c0a312537668e.jpg",
     "static/media/active-time-lore.jpg": "/homepage/static/media/active-time-lore.53896a7549c70a1c28f2.jpg",
+    "static/media/ff-collectors.jpg": "/homepage/static/media/ff-collectors.d615402a8c40b506500e.jpg",
     "static/media/kimahri.jpg": "/homepage/static/media/kimahri.7f71ba54a69f1cd5139f.jpg",
     "static/media/lulu.jpg": "/homepage/static/media/lulu.c4a044acd75e36c0da15.jpg",
     "static/media/ff12-balthier.jpg": "/homepage/static/media/ff12-balthier.442c51d6e516c170d4fe.jpg",
@@ -247,9 +249,9 @@
     "static/media/bomb-off.svg": "/homepage/static/media/bomb-off.f02b7167b5d5f8f498772c7aa966a090.svg",
     "static/media/bomb.svg": "/homepage/static/media/bomb.c72b904c502395d64390894d0d28cffa.svg",
     "index.html": "/homepage/index.html",
-    "main.b0d55c52.js.map": "/homepage/static/js/main.b0d55c52.js.map"
+    "main.f0e177de.js.map": "/homepage/static/js/main.f0e177de.js.map"
   },
   "entrypoints": [
-    "static/js/main.b0d55c52.js"
+    "static/js/main.f0e177de.js"
   ]
 }
