@@ -60,29 +60,9 @@ function About() {
                 <h1>About me</h1>
                 <br/>
                 <StyledContainer>
-                    <p>Hi, my name is Romeo Graifenberg,</p>
-                    <p>born near <a href="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=it&msa=0&ll=46.06286390189817%2C11.146944484837856&spn=0.02025%2C0.058193&z=12&om=0&mid=1KXpKOoOTpXmqH9Hhr7aah7l2CkI">Trento, Italy</a> {calcAge()} years ago, I'm currently a Unity developer working for <a href="https://www.sisal.it/">Sisal</a>.</p>
+                    <p>Hi, my name is Romeo, and I'm a software developer born near <a href="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=it&msa=0&ll=46.06286390189817%2C11.146944484837856&spn=0.02025%2C0.058193&z=12&om=0&mid=1KXpKOoOTpXmqH9Hhr7aah7l2CkI">Trento, Italy</a> {calcAge()} years ago.</p>
 
-                    <h2>Hobbies</h2>
-                    <ul>
-                        <li>Loves JRPGs and indie games</li>
-                        <li>Former Magic the Gathering player</li>
-                        <li>Former RTS player (Starcraft, Warcraft 3)</li>
-                        <li>Former Go player</li>
-                        <li>Football lover (just don't call it "soccer"...)</li>
-                        <li>Loves any kind of music - as long as it's metal</li>
-                    </ul>
-
-                    <h2>You can reach me via any of the following:</h2>
-                    <br/>
-                    
-                    <StyledContact href="https://github.com/m0loch"><GitHubIcon/>m0loch on GitHub</StyledContact>
-                    <StyledContact href="https://m0loch666.itch.io/"><StyledItchIoIcon/>m0loch666 on itch.io</StyledContact>
-                    <StyledContact href="https://www.linkedin.com/in/romeo-graifenberg-a5770117b"><LinkedInIcon/>My LinkedIn profile</StyledContact>
-                    <StyledContact href="mailto:romeo.graifenberg@gmail.com"><MailOutlineIcon/>Send me an email</StyledContact>
-
-                    <h2>Special thanks to:</h2>
-                    <p>My friend <a href="https://www.instagram.com/silviasheroo/?hl=en">Silvia</a> for the logo image</p>
+                    <p>A special thanks to my friend <a href="https://www.instagram.com/silviasheroo/?hl=en">Silvia</a> for the logo image</p>
                 </StyledContainer>
             </MainText>
         </TextSection>
